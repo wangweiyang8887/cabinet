@@ -9,6 +9,9 @@ class CurrentDateVC : BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .cabinetWhite
+        timeLabel.textColor = .cabinetBlack
+        dateLabel.textColor = .cabinetBlack
         let value = UIInterfaceOrientation.landscapeLeft.rawValue
         UIDevice.current.setValue(value, forKey: "orientation")
         closeButton.addTapHandler { [unowned self] in self.navigationController?.popViewController(animated: true) }
