@@ -14,7 +14,11 @@
 		9DB7580E26D3837A006D2246 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB7580D26D3837A006D2246 /* BaseViewController.swift */; };
 		9DB7581026D383A7006D2246 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB7580F26D383A7006D2246 /* BaseNavigationController.swift */; };
 		9DB7581226D383D5006D2246 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB7581126D383D5006D2246 /* BaseView.swift */; };
-		9DB7581426D38BD5006D2246 /* HomePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB7581326D38BD5006D2246 /* HomePageVC.swift */; };
+		9DB7581626D38D43006D2246 /* HomePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB7581526D38D43006D2246 /* HomePageVC.swift */; };
+		9DB7581926D38D90006D2246 /* CurrentDateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB7581726D38D90006D2246 /* CurrentDateVC.swift */; };
+		9DB7581A26D38D90006D2246 /* CurrentDateVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DB7581826D38D90006D2246 /* CurrentDateVC.xib */; };
+		9DB7582026D3961D006D2246 /* TargetActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB7581F26D3961D006D2246 /* TargetActionHandler.swift */; };
+		9DB7582226D39656006D2246 /* NSObject+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB7582126D39656006D2246 /* NSObject+Helper.swift */; };
 		AFA6AA210B9F1F644AFC9D94 /* Pods_cabinet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4970BD821DAEA3849FC9D057 /* Pods_cabinet.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +34,11 @@
 		9DB7580D26D3837A006D2246 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		9DB7580F26D383A7006D2246 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		9DB7581126D383D5006D2246 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
-		9DB7581326D38BD5006D2246 /* HomePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageVC.swift; sourceTree = "<group>"; };
+		9DB7581526D38D43006D2246 /* HomePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageVC.swift; sourceTree = "<group>"; };
+		9DB7581726D38D90006D2246 /* CurrentDateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentDateVC.swift; sourceTree = "<group>"; };
+		9DB7581826D38D90006D2246 /* CurrentDateVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentDateVC.xib; sourceTree = "<group>"; };
+		9DB7581F26D3961D006D2246 /* TargetActionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetActionHandler.swift; sourceTree = "<group>"; };
+		9DB7582126D39656006D2246 /* NSObject+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Helper.swift"; sourceTree = "<group>"; };
 		B642AE47EABCDE40DBF357F2 /* Pods-cabinet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cabinet.debug.xcconfig"; path = "Target Support Files/Pods-cabinet/Pods-cabinet.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,6 +84,9 @@
 		9DB757F526D37B24006D2246 /* cabinet */ = {
 			isa = PBXGroup;
 			children = (
+				9DB7581D26D39605006D2246 /* Helper */,
+				9DB7581C26D38DAC006D2246 /* HomePage */,
+				9DB7581B26D38D98006D2246 /* CurrentDate */,
 				9DB7580A26D3831D006D2246 /* Base */,
 				9DB757F626D37B24006D2246 /* AppDelegate.swift */,
 				9DB757FC26D37B24006D2246 /* Main.storyboard */,
@@ -92,9 +103,42 @@
 				9DB7581126D383D5006D2246 /* BaseView.swift */,
 				9DB7580D26D3837A006D2246 /* BaseViewController.swift */,
 				9DB7580F26D383A7006D2246 /* BaseNavigationController.swift */,
-				9DB7581326D38BD5006D2246 /* HomePageVC.swift */,
 			);
 			name = Base;
+			sourceTree = "<group>";
+		};
+		9DB7581B26D38D98006D2246 /* CurrentDate */ = {
+			isa = PBXGroup;
+			children = (
+				9DB7581726D38D90006D2246 /* CurrentDateVC.swift */,
+				9DB7581826D38D90006D2246 /* CurrentDateVC.xib */,
+			);
+			name = CurrentDate;
+			sourceTree = "<group>";
+		};
+		9DB7581C26D38DAC006D2246 /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				9DB7581526D38D43006D2246 /* HomePageVC.swift */,
+			);
+			name = HomePage;
+			sourceTree = "<group>";
+		};
+		9DB7581D26D39605006D2246 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				9DB7581E26D3960C006D2246 /* Utilities */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		9DB7581E26D3960C006D2246 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				9DB7581F26D3961D006D2246 /* TargetActionHandler.swift */,
+				9DB7582126D39656006D2246 /* NSObject+Helper.swift */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 		E3701FF25E82A516F9A5F9A4 /* Frameworks */ = {
@@ -165,6 +209,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DB7581A26D38D90006D2246 /* CurrentDateVC.xib in Resources */,
 				9DB7580326D37B25006D2246 /* LaunchScreen.storyboard in Resources */,
 				9DB7580026D37B25006D2246 /* Assets.xcassets in Resources */,
 				9DB757FE26D37B24006D2246 /* Main.storyboard in Resources */,
@@ -220,7 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DB7581426D38BD5006D2246 /* HomePageVC.swift in Sources */,
+				9DB7581926D38D90006D2246 /* CurrentDateVC.swift in Sources */,
+				9DB7582026D3961D006D2246 /* TargetActionHandler.swift in Sources */,
+				9DB7581626D38D43006D2246 /* HomePageVC.swift in Sources */,
+				9DB7582226D39656006D2246 /* NSObject+Helper.swift in Sources */,
 				9DB7580E26D3837A006D2246 /* BaseViewController.swift in Sources */,
 				9DB757F726D37B24006D2246 /* AppDelegate.swift in Sources */,
 				9DB7581226D383D5006D2246 /* BaseView.swift in Sources */,
