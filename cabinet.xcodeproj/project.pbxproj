@@ -19,9 +19,10 @@
 		9DB7581A26D38D90006D2246 /* CurrentDateVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DB7581826D38D90006D2246 /* CurrentDateVC.xib */; };
 		9DB7582026D3961D006D2246 /* TargetActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB7581F26D3961D006D2246 /* TargetActionHandler.swift */; };
 		9DB7582226D39656006D2246 /* NSObject+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB7582126D39656006D2246 /* NSObject+Helper.swift */; };
-		9DB7582426D399AC006D2246 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DB7582326D399AC006D2246 /* Colors.xcassets */; };
 		9DB7582726D399E6006D2246 /* BaseColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB7582626D399E6006D2246 /* BaseColor.swift */; };
 		9DB7582A26D39A50006D2246 /* BaseBuddle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB7582926D39A50006D2246 /* BaseBuddle.swift */; };
+		9DB7582C26D39CF3006D2246 /* BaseDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB7582B26D39CF3006D2246 /* BaseDateFormatter.swift */; };
+		9DB7582E26D3A371006D2246 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DB7582D26D3A371006D2246 /* Colors.xcassets */; };
 		AFA6AA210B9F1F644AFC9D94 /* Pods_cabinet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4970BD821DAEA3849FC9D057 /* Pods_cabinet.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,9 +43,10 @@
 		9DB7581826D38D90006D2246 /* CurrentDateVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentDateVC.xib; sourceTree = "<group>"; };
 		9DB7581F26D3961D006D2246 /* TargetActionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetActionHandler.swift; sourceTree = "<group>"; };
 		9DB7582126D39656006D2246 /* NSObject+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Helper.swift"; sourceTree = "<group>"; };
-		9DB7582326D399AC006D2246 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		9DB7582626D399E6006D2246 /* BaseColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseColor.swift; sourceTree = "<group>"; };
 		9DB7582926D39A50006D2246 /* BaseBuddle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseBuddle.swift; sourceTree = "<group>"; };
+		9DB7582B26D39CF3006D2246 /* BaseDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDateFormatter.swift; sourceTree = "<group>"; };
+		9DB7582D26D3A371006D2246 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		B642AE47EABCDE40DBF357F2 /* Pods-cabinet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cabinet.debug.xcconfig"; path = "Target Support Files/Pods-cabinet/Pods-cabinet.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,7 +98,7 @@
 				9DB7580A26D3831D006D2246 /* Base */,
 				9DB757F626D37B24006D2246 /* AppDelegate.swift */,
 				9DB757FC26D37B24006D2246 /* Main.storyboard */,
-				9DB7582326D399AC006D2246 /* Colors.xcassets */,
+				9DB7582D26D3A371006D2246 /* Colors.xcassets */,
 				9DB757FF26D37B25006D2246 /* Assets.xcassets */,
 				9DB7580126D37B25006D2246 /* LaunchScreen.storyboard */,
 				9DB7580426D37B25006D2246 /* Info.plist */,
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				9DB7582626D399E6006D2246 /* BaseColor.swift */,
+				9DB7582B26D39CF3006D2246 /* BaseDateFormatter.swift */,
 			);
 			name = Style;
 			sourceTree = "<group>";
@@ -234,7 +237,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DB7582426D399AC006D2246 /* Colors.xcassets in Resources */,
+				9DB7582E26D3A371006D2246 /* Colors.xcassets in Resources */,
 				9DB7581A26D38D90006D2246 /* CurrentDateVC.xib in Resources */,
 				9DB7580326D37B25006D2246 /* LaunchScreen.storyboard in Resources */,
 				9DB7580026D37B25006D2246 /* Assets.xcassets in Resources */,
@@ -293,6 +296,7 @@
 			files = (
 				9DB7581926D38D90006D2246 /* CurrentDateVC.swift in Sources */,
 				9DB7582026D3961D006D2246 /* TargetActionHandler.swift in Sources */,
+				9DB7582C26D39CF3006D2246 /* BaseDateFormatter.swift in Sources */,
 				9DB7581626D38D43006D2246 /* HomePageVC.swift in Sources */,
 				9DB7582226D39656006D2246 /* NSObject+Helper.swift in Sources */,
 				9DB7580E26D3837A006D2246 /* BaseViewController.swift in Sources */,

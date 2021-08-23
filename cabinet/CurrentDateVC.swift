@@ -7,6 +7,8 @@ class CurrentDateVC : BaseViewController {
     @IBOutlet private var dateLabel: UILabel!
     @IBOutlet private var closeButton: UIButton!
     
+    private var timer: Timer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .cabinetWhite
@@ -15,6 +17,17 @@ class CurrentDateVC : BaseViewController {
         let value = UIInterfaceOrientation.landscapeLeft.rawValue
         UIDevice.current.setValue(value, forKey: "orientation")
         closeButton.addTapHandler { [unowned self] in self.navigationController?.popViewController(animated: true) }
+        getCurrentDateFormatter()
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
+            self?.getCurrentDateFormatter()
+        }
+        RunLoop.current.add(timer!, forMode: .common)
+    }
+    
+    private func getCurrentDateFormatter() {
+        let date = Date()
+        timeLabel.text = date.cabinetTimeDateFormatted()
+        dateLabel.text = date.cabinetShortTimelessDateFormatted()
     }
     
     override func viewWillAppear(_ animated: Bool) {
