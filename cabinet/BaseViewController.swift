@@ -9,4 +9,8 @@ class BaseViewController : UIViewController {
         title = "Cabinet"
         view.backgroundColor = .cabinetWhite
     }
+    
+    deinit {
+        print("\(Self.self) deinit")
+    }
 }

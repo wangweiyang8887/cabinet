@@ -28,6 +28,11 @@
 		9DE5E74626D4A48500FF8B0A /* cabinet_widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE5E74526D4A48500FF8B0A /* cabinet_widget.swift */; };
 		9DE5E74826D4A48600FF8B0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DE5E74726D4A48600FF8B0A /* Assets.xcassets */; };
 		9DE5E74C26D4A48600FF8B0A /* cabinet widgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9DE5E74126D4A48500FF8B0A /* cabinet widgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9DE5E75126D4BF3F00FF8B0A /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE5E75026D4BF3F00FF8B0A /* CalendarView.swift */; };
+		9DE5E75326D4C12E00FF8B0A /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE5E75226D4C12E00FF8B0A /* Calendar.swift */; };
+		9DE5E75426D4C22100FF8B0A /* BaseDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB7582B26D39CF3006D2246 /* BaseDateFormatter.swift */; };
+		9DE5E75526D4E3AD00FF8B0A /* BaseColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB7582626D399E6006D2246 /* BaseColor.swift */; };
+		9DE5E75626D4E45300FF8B0A /* BaseBuddle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB7582926D39A50006D2246 /* BaseBuddle.swift */; };
 		AFA6AA210B9F1F644AFC9D94 /* Pods_cabinet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4970BD821DAEA3849FC9D057 /* Pods_cabinet.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +87,8 @@
 		9DE5E74526D4A48500FF8B0A /* cabinet_widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cabinet_widget.swift; sourceTree = "<group>"; };
 		9DE5E74726D4A48600FF8B0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9DE5E74926D4A48600FF8B0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DE5E75026D4BF3F00FF8B0A /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		9DE5E75226D4C12E00FF8B0A /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
 		B642AE47EABCDE40DBF357F2 /* Pods-cabinet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cabinet.debug.xcconfig"; path = "Target Support Files/Pods-cabinet/Pods-cabinet.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -221,6 +228,8 @@
 				9DE5E74526D4A48500FF8B0A /* cabinet_widget.swift */,
 				9DE5E74726D4A48600FF8B0A /* Assets.xcassets */,
 				9DE5E74926D4A48600FF8B0A /* Info.plist */,
+				9DE5E75026D4BF3F00FF8B0A /* CalendarView.swift */,
+				9DE5E75226D4C12E00FF8B0A /* Calendar.swift */,
 			);
 			path = "cabinet widget";
 			sourceTree = "<group>";
@@ -401,7 +410,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DE5E75126D4BF3F00FF8B0A /* CalendarView.swift in Sources */,
+				9DE5E75526D4E3AD00FF8B0A /* BaseColor.swift in Sources */,
+				9DE5E75326D4C12E00FF8B0A /* Calendar.swift in Sources */,
 				9DE5E74626D4A48500FF8B0A /* cabinet_widget.swift in Sources */,
+				9DE5E75626D4E45300FF8B0A /* BaseBuddle.swift in Sources */,
+				9DE5E75426D4C22100FF8B0A /* BaseDateFormatter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

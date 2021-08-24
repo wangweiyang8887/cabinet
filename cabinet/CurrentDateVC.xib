@@ -26,29 +26,26 @@
                     <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="piN-bo-iMw">
-                            <rect key="frame" x="0.0" y="143" width="158" height="128"/>
+                            <rect key="frame" x="0.0" y="143" width="175" height="128"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qbf-mB-7mR">
-                            <rect key="frame" x="158" y="124.5" width="580" height="165.5"/>
+                            <rect key="frame" x="175" y="124.5" width="546" height="165.5"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="07 : 23 : 32" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nxb-3b-hoE">
-                                    <rect key="frame" x="0.0" y="0.0" width="580" height="136.5"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="07 : 23 : 32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nxb-3b-hoE">
+                                    <rect key="frame" x="0.0" y="0.0" width="546" height="136.5"/>
                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="114"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021 08 23" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecF-Xm-1EG">
-                                    <rect key="frame" x="0.0" y="136.5" width="580" height="29"/>
+                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021 08 23" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecF-Xm-1EG">
+                                    <rect key="frame" x="0.0" y="136.5" width="546" height="29"/>
                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="580" id="ZRc-Et-7Th"/>
-                            </constraints>
                         </stackView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lnk-0Q-36I">
-                            <rect key="frame" x="738" y="143" width="158" height="128"/>
+                            <rect key="frame" x="721" y="143" width="175" height="128"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                     </subviews>

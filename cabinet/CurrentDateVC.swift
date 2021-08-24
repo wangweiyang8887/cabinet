@@ -27,7 +27,7 @@ class CurrentDateVC : BaseViewController {
     private func getCurrentDateFormatter() {
         let date = Date()
         timeLabel.text = date.cabinetTimeDateFormatted()
-        dateLabel.text = date.cabinetShortTimelessDateFormatted()
+        dateLabel.text = date.cabinetWeedayFomatted() + date.cabinetShortTimelessDateFormatted()
     }
     
     override func viewWillAppear(_ animated: Bool) {
