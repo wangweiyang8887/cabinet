@@ -4,10 +4,32 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>cabinet widgetExtension.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>cabinet.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
 			<integer>2</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>9DB757F226D37B24006D2246</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9DE5E74026D4A48500FF8B0A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
