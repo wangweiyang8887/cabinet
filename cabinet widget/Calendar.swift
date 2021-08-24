@@ -5,8 +5,8 @@ import WidgetKit
 
 struct CalendarModel : TimelineEntry {
     var date: Date
-    var goodThings: String
-    var badThings: String
+    var goodThings: String = "结婚 搬家"
+    var badThings: String = "开光 针灸"
 }
 
 extension CalendarModel {

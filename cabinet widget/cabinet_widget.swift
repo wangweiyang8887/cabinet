@@ -4,23 +4,23 @@ import WidgetKit
 import SwiftUI
 
 struct Provider: TimelineProvider {
-    func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date())
+    func placeholder(in context: Context) -> CalendarModel {
+        CalendarModel(date: Date())
     }
 
-    func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date())
+    func getSnapshot(in context: Context, completion: @escaping (CalendarModel) -> ()) {
+        let entry = CalendarModel(date: Date())
         completion(entry)
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        var entries: [SimpleEntry] = []
+        var entries: [CalendarModel] = []
 
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
-        for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate)
+        for hourOffset in 0 ..< 60 {
+            let entryDate = Calendar.current.date(byAdding: .second, value: hourOffset, to: currentDate)!
+            let entry = CalendarModel(date: entryDate)
             entries.append(entry)
         }
 
@@ -29,16 +29,12 @@ struct Provider: TimelineProvider {
     }
 }
 
-struct SimpleEntry: TimelineEntry {
-    let date: Date
-}
-
 struct cabinet_widgetEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
         ZStack {
-            CalendarView(calendar: CalendarModel.currentDate)
+            CalendarView(calendar: entry)
         }
     }
 }
@@ -58,7 +54,7 @@ struct cabinet_widget: Widget {
 
 struct cabinet_widget_Previews: PreviewProvider {
     static var previews: some View {
-        cabinet_widgetEntryView(entry: SimpleEntry(date: Date()))
+        cabinet_widgetEntryView(entry: CalendarModel(date: Date()))
             .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }
