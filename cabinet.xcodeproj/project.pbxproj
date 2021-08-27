@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D70891826D8F76500716054 /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D70891726D8F76500716054 /* Blur.swift */; };
 		9D82636D26D8D26900981A3E /* UIView+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D82636C26D8D26900981A3E /* UIView+Utilities.swift */; };
 		9D82636F26D8D2A900981A3E /* Sequence+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D82636E26D8D2A900981A3E /* Sequence+Utilities.swift */; };
 		9D82637126D8D30500981A3E /* NSLayoutConstraint+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D82637026D8D30500981A3E /* NSLayoutConstraint+Utilities.swift */; };
@@ -67,6 +68,7 @@
 /* Begin PBXFileReference section */
 		2084E720CBB70812F8CEADA7 /* Pods-cabinet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cabinet.release.xcconfig"; path = "Target Support Files/Pods-cabinet/Pods-cabinet.release.xcconfig"; sourceTree = "<group>"; };
 		4970BD821DAEA3849FC9D057 /* Pods_cabinet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cabinet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D70891726D8F76500716054 /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
 		9D82636C26D8D26900981A3E /* UIView+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utilities.swift"; sourceTree = "<group>"; };
 		9D82636E26D8D2A900981A3E /* Sequence+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+Utilities.swift"; sourceTree = "<group>"; };
 		9D82637026D8D30500981A3E /* NSLayoutConstraint+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Utilities.swift"; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 				9DE5E74926D4A48600FF8B0A /* Info.plist */,
 				9DE5E75026D4BF3F00FF8B0A /* CalendarView.swift */,
 				9DE5E75226D4C12E00FF8B0A /* Calendar.swift */,
+				9D70891726D8F76500716054 /* Blur.swift */,
 			);
 			path = "cabinet widget";
 			sourceTree = "<group>";
@@ -438,6 +441,7 @@
 				9DE5E75526D4E3AD00FF8B0A /* BaseColor.swift in Sources */,
 				9DE5E75326D4C12E00FF8B0A /* Calendar.swift in Sources */,
 				9DE5E74626D4A48500FF8B0A /* cabinet_widget.swift in Sources */,
+				9D70891826D8F76500716054 /* Blur.swift in Sources */,
 				9DE5E75626D4E45300FF8B0A /* BaseBuddle.swift in Sources */,
 				9DE5E75426D4C22100FF8B0A /* BaseDateFormatter.swift in Sources */,
 			);
