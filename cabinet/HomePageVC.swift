@@ -77,6 +77,11 @@ extension HomePageVC : UICollectionViewDataSource, UICollectionViewDelegateFlowL
             let cell = collectionView.dequeueReusableCell(with: MyCell.self, for: indexPath)
             cell.title = items[indexPath.row]
             cell.backgroundColor = .orange
+            if indexPath.row == 0 {
+                TimerManager.shared.fire { [weak cell] in
+                    cell?.title = Date().cabinetTimeDateFormatted()
+                }
+            }
             return cell
         }
     }

@@ -8,20 +8,15 @@ class CurrentDateVC : BaseViewController {
     @IBOutlet private var closeButton: UIButton!
     
     override class var isLandscape: Bool { return true }
-    
-    private var timer: Timer?
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .cabinetWhite
         timeLabel.textColor = .cabinetBlack
         dateLabel.textColor = .cabinetBlack
-        closeButton.addTapHandler { [unowned self] in self.navigationController?.popViewController(animated: true) }
+        closeButton.addTapHandler { [unowned self] in self.dismiss(animated: true, completion: nil) }
         getCurrentDateFormatter()
-        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
-            self?.getCurrentDateFormatter()
-        }
-        RunLoop.current.add(timer!, forMode: .common)
+        TimerManager.shared.fire { [weak self] in self?.getCurrentDateFormatter() }
     }
     
     private func getCurrentDateFormatter() {

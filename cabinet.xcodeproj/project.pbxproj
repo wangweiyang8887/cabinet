@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9D70891826D8F76500716054 /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D70891726D8F76500716054 /* Blur.swift */; };
+		9D7B91B026E0E914001C11AD /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91AF26E0E914001C11AD /* TimerManager.swift */; };
 		9D82636D26D8D26900981A3E /* UIView+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D82636C26D8D26900981A3E /* UIView+Utilities.swift */; };
 		9D82636F26D8D2A900981A3E /* Sequence+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D82636E26D8D2A900981A3E /* Sequence+Utilities.swift */; };
 		9D82637126D8D30500981A3E /* NSLayoutConstraint+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D82637026D8D30500981A3E /* NSLayoutConstraint+Utilities.swift */; };
@@ -69,6 +70,7 @@
 		2084E720CBB70812F8CEADA7 /* Pods-cabinet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cabinet.release.xcconfig"; path = "Target Support Files/Pods-cabinet/Pods-cabinet.release.xcconfig"; sourceTree = "<group>"; };
 		4970BD821DAEA3849FC9D057 /* Pods_cabinet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cabinet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D70891726D8F76500716054 /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
+		9D7B91AF26E0E914001C11AD /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		9D82636C26D8D26900981A3E /* UIView+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utilities.swift"; sourceTree = "<group>"; };
 		9D82636E26D8D2A900981A3E /* Sequence+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+Utilities.swift"; sourceTree = "<group>"; };
 		9D82637026D8D30500981A3E /* NSLayoutConstraint+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Utilities.swift"; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 			children = (
 				9DB7581F26D3961D006D2246 /* TargetActionHandler.swift */,
 				9DB7582126D39656006D2246 /* NSObject+Helper.swift */,
+				9D7B91AF26E0E914001C11AD /* TimerManager.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 				9DB7582226D39656006D2246 /* NSObject+Helper.swift in Sources */,
 				9D82636F26D8D2A900981A3E /* Sequence+Utilities.swift in Sources */,
 				9D82636D26D8D26900981A3E /* UIView+Utilities.swift in Sources */,
+				9D7B91B026E0E914001C11AD /* TimerManager.swift in Sources */,
 				9DB7580E26D3837A006D2246 /* BaseViewController.swift in Sources */,
 				9DB757F726D37B24006D2246 /* AppDelegate.swift in Sources */,
 				9DB7582A26D39A50006D2246 /* BaseBuddle.swift in Sources */,
