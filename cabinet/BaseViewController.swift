@@ -3,6 +3,8 @@
 import UIKit
 
 class BaseViewController : UIViewController {
+    
+    class var isLandscape: Bool { return false }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -13,4 +15,22 @@ class BaseViewController : UIViewController {
     deinit {
         print("\(Self.self) deinit")
     }
+        
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        if Self.isLandscape {
+            return .landscape
+        } else {
+            return .portrait
+        }
+    }
+    
+    override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
+        if Self.isLandscape {
+            return .landscapeRight
+        } else {
+            return .portrait
+        }
+    }
+    
+    override var shouldAutorotate: Bool { return true }
 }

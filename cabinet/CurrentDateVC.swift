@@ -7,6 +7,8 @@ class CurrentDateVC : BaseViewController {
     @IBOutlet private var dateLabel: UILabel!
     @IBOutlet private var closeButton: UIButton!
     
+    override class var isLandscape: Bool { return true }
+    
     private var timer: Timer?
     
     override func viewDidLoad() {
@@ -14,8 +16,6 @@ class CurrentDateVC : BaseViewController {
         view.backgroundColor = .cabinetWhite
         timeLabel.textColor = .cabinetBlack
         dateLabel.textColor = .cabinetBlack
-        let value = UIInterfaceOrientation.landscapeLeft.rawValue
-        UIDevice.current.setValue(value, forKey: "orientation")
         closeButton.addTapHandler { [unowned self] in self.navigationController?.popViewController(animated: true) }
         getCurrentDateFormatter()
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
@@ -37,14 +37,6 @@ class CurrentDateVC : BaseViewController {
         
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        let value = UIInterfaceOrientation.portrait.rawValue
-        UIDevice.current.setValue(value, forKey: "orientation")
         navigationController?.navigationBar.isHidden = false
-    }
-    
-    override var shouldAutorotate: Bool { return false }
-    
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        return .landscapeLeft
     }
 }

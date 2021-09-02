@@ -90,6 +90,12 @@ extension HomePageVC : UICollectionViewDataSource, UICollectionViewDelegateFlowL
         items.remove(at: sourceIndexPath.item)
         items.insert(selectModel, at: destinationIndexPath.item)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = CurrentDateVC()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
+    }
 }
 
 final class MyCell : UICollectionViewCell {
