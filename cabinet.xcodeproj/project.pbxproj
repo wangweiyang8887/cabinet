@@ -45,6 +45,7 @@
 		9D7B920426E22302001C11AD /* TTGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B920326E22302001C11AD /* TTGradientView.swift */; };
 		9D7B920626E22339001C11AD /* TTGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B920526E22339001C11AD /* TTGradient.swift */; };
 		9D7B920826E22581001C11AD /* UIViewController+PresentationStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B920726E22581001C11AD /* UIViewController+PresentationStyle.swift */; };
+		9D7B920A26E2285A001C11AD /* UILabel+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B920926E2285A001C11AD /* UILabel+Utilities.swift */; };
 		9D82636D26D8D26900981A3E /* UIView+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D82636C26D8D26900981A3E /* UIView+Utilities.swift */; };
 		9D82636F26D8D2A900981A3E /* Sequence+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D82636E26D8D2A900981A3E /* Sequence+Utilities.swift */; };
 		9D82637126D8D30500981A3E /* NSLayoutConstraint+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D82637026D8D30500981A3E /* NSLayoutConstraint+Utilities.swift */; };
@@ -149,6 +150,7 @@
 		9D7B920326E22302001C11AD /* TTGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTGradientView.swift; sourceTree = "<group>"; };
 		9D7B920526E22339001C11AD /* TTGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTGradient.swift; sourceTree = "<group>"; };
 		9D7B920726E22581001C11AD /* UIViewController+PresentationStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+PresentationStyle.swift"; sourceTree = "<group>"; };
+		9D7B920926E2285A001C11AD /* UILabel+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Utilities.swift"; sourceTree = "<group>"; };
 		9D82636C26D8D26900981A3E /* UIView+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utilities.swift"; sourceTree = "<group>"; };
 		9D82636E26D8D2A900981A3E /* Sequence+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+Utilities.swift"; sourceTree = "<group>"; };
 		9D82637026D8D30500981A3E /* NSLayoutConstraint+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Utilities.swift"; sourceTree = "<group>"; };
@@ -286,6 +288,7 @@
 				9D7B91FE26E21951001C11AD /* UIView+Helper.m */,
 				9D7B91ED26E2148F001C11AD /* UIWindow+Utilities.swift */,
 				9D7B920726E22581001C11AD /* UIViewController+PresentationStyle.swift */,
+				9D7B920926E2285A001C11AD /* UILabel+Utilities.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -614,6 +617,7 @@
 				9D7B920826E22581001C11AD /* UIViewController+PresentationStyle.swift in Sources */,
 				9D82636D26D8D26900981A3E /* UIView+Utilities.swift in Sources */,
 				9D7B91B026E0E914001C11AD /* TimerManager.swift in Sources */,
+				9D7B920A26E2285A001C11AD /* UILabel+Utilities.swift in Sources */,
 				9D7B91E126E2102B001C11AD /* Comparable+Utilities.swift in Sources */,
 				9D7B91EE26E2148F001C11AD /* UIWindow+Utilities.swift in Sources */,
 				9D7B91BF26E20B4D001C11AD /* BaseCollectionViewLayout.swift in Sources */,

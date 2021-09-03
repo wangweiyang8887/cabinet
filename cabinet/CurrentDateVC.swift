@@ -14,6 +14,8 @@ class CurrentDateVC : BaseViewController {
         view.backgroundColor = .cabinetWhite
         timeLabel.textColor = .cabinetBlack
         dateLabel.textColor = .cabinetBlack
+        timeLabel.defaultTextShadow()
+        dateLabel.defaultTextShadow()
         closeButton.addTapHandler { [unowned self] in self.dismiss(animated: true, completion: nil) }
         getCurrentDateFormatter()
         TimerManager.shared.fire { [weak self] in self?.getCurrentDateFormatter() }
