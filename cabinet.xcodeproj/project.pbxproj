@@ -46,6 +46,8 @@
 		9D7B920626E22339001C11AD /* TTGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B920526E22339001C11AD /* TTGradient.swift */; };
 		9D7B920826E22581001C11AD /* UIViewController+PresentationStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B920726E22581001C11AD /* UIViewController+PresentationStyle.swift */; };
 		9D7B920A26E2285A001C11AD /* UILabel+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B920926E2285A001C11AD /* UILabel+Utilities.swift */; };
+		9D7B920C26E23339001C11AD /* CurrentWeatherRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B920B26E23339001C11AD /* CurrentWeatherRow.swift */; };
+		9D7B920E26E2339B001C11AD /* CurrentWeatherRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D7B920D26E2339B001C11AD /* CurrentWeatherRow.xib */; };
 		9D82636D26D8D26900981A3E /* UIView+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D82636C26D8D26900981A3E /* UIView+Utilities.swift */; };
 		9D82636F26D8D2A900981A3E /* Sequence+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D82636E26D8D2A900981A3E /* Sequence+Utilities.swift */; };
 		9D82637126D8D30500981A3E /* NSLayoutConstraint+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D82637026D8D30500981A3E /* NSLayoutConstraint+Utilities.swift */; };
@@ -151,6 +153,8 @@
 		9D7B920526E22339001C11AD /* TTGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTGradient.swift; sourceTree = "<group>"; };
 		9D7B920726E22581001C11AD /* UIViewController+PresentationStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+PresentationStyle.swift"; sourceTree = "<group>"; };
 		9D7B920926E2285A001C11AD /* UILabel+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Utilities.swift"; sourceTree = "<group>"; };
+		9D7B920B26E23339001C11AD /* CurrentWeatherRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherRow.swift; sourceTree = "<group>"; };
+		9D7B920D26E2339B001C11AD /* CurrentWeatherRow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentWeatherRow.xib; sourceTree = "<group>"; };
 		9D82636C26D8D26900981A3E /* UIView+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utilities.swift"; sourceTree = "<group>"; };
 		9D82636E26D8D2A900981A3E /* Sequence+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+Utilities.swift"; sourceTree = "<group>"; };
 		9D82637026D8D30500981A3E /* NSLayoutConstraint+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Utilities.swift"; sourceTree = "<group>"; };
@@ -348,6 +352,8 @@
 				9DB7581726D38D90006D2246 /* CurrentDateVC.swift */,
 				9DB7581826D38D90006D2246 /* CurrentDateVC.xib */,
 				9D7B920126E22140001C11AD /* CurrentDateRow.swift */,
+				9D7B920B26E23339001C11AD /* CurrentWeatherRow.swift */,
+				9D7B920D26E2339B001C11AD /* CurrentWeatherRow.xib */,
 			);
 			name = CurrentDate;
 			sourceTree = "<group>";
@@ -520,6 +526,7 @@
 				9DB7582E26D3A371006D2246 /* Colors.xcassets in Resources */,
 				9DB7581A26D38D90006D2246 /* CurrentDateVC.xib in Resources */,
 				9DB7580326D37B25006D2246 /* LaunchScreen.storyboard in Resources */,
+				9D7B920E26E2339B001C11AD /* CurrentWeatherRow.xib in Resources */,
 				9DB7580026D37B25006D2246 /* Assets.xcassets in Resources */,
 				9DB757FE26D37B24006D2246 /* Main.storyboard in Resources */,
 			);
@@ -625,6 +632,7 @@
 				9D7B91FA26E21894001C11AD /* Observers.swift in Sources */,
 				9DB757F726D37B24006D2246 /* AppDelegate.swift in Sources */,
 				9D7B91B226E1EC7B001C11AD /* PushTransitionDelegate.swift in Sources */,
+				9D7B920C26E23339001C11AD /* CurrentWeatherRow.swift in Sources */,
 				9D7B91CD26E20D06001C11AD /* CornerRadius.swift in Sources */,
 				9DB7582A26D39A50006D2246 /* BaseBuddle.swift in Sources */,
 				9D7B91DD26E20FDB001C11AD /* Geometry.swift in Sources */,

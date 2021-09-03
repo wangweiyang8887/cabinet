@@ -24,8 +24,6 @@ class BaseCollectionViewController : BaseViewController {
     // MARK: Initialization
     public override func viewDidLoad() {
         super.viewDidLoad()
-        // View
-        view.backgroundColor = .white
         // Collection view
         collectionView.keyboardDismissMode = .interactive
         view.addSubview(collectionView, pinningEdgesToSafeArea: [ .left, .top, .right ])
