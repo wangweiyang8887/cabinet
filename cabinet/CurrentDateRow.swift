@@ -15,6 +15,14 @@ final class CurrentDateRow : BaseRow {
         }
     }
     
+    override func handleDidSelect() {
+        super.handleDidSelect()
+        let delegate = PushTransitionDelegate()
+        let vc = CurrentDateVC()
+        vc.transitioningDelegate = delegate
+        UIViewController.current().present(vc, animated: true, completion: nil)
+    }
+    
     private lazy var titleLabel: UILabel = {
         let result = UILabel()
         result.numberOfLines = 0

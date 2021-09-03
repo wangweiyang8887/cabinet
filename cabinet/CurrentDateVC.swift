@@ -24,14 +24,4 @@ class CurrentDateVC : BaseViewController {
         timeLabel.text = date.cabinetTimeDateFormatted()
         dateLabel.text = date.cabinetWeedayFomatted() + date.cabinetShortTimelessDateFormatted()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.navigationBar.isHidden = true
-    }
-        
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        navigationController?.navigationBar.isHidden = false
-    }
 }
