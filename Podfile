@@ -5,4 +5,6 @@ target 'cabinet' do
  
  use_frameworks!
  pod 'PanModal'
+ pod 'MJRefresh'
+ pod 'BlocksKit', :git => "git@github.com:wangweiyang8887/BlocksKit.git"
 end

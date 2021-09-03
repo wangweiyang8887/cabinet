@@ -10,6 +10,40 @@
 		9D70891826D8F76500716054 /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D70891726D8F76500716054 /* Blur.swift */; };
 		9D7B91B026E0E914001C11AD /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91AF26E0E914001C11AD /* TimerManager.swift */; };
 		9D7B91B226E1EC7B001C11AD /* PushTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91B126E1EC7B001C11AD /* PushTransitionDelegate.swift */; };
+		9D7B91B426E200FB001C11AD /* UICollectionView+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91B326E200FB001C11AD /* UICollectionView+Utilities.swift */; };
+		9D7B91B726E20AA9001C11AD /* ItemRows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91B626E20AA9001C11AD /* ItemRows.swift */; };
+		9D7B91B926E20AD0001C11AD /* BaseCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91B826E20AD0001C11AD /* BaseCollectionView.swift */; };
+		9D7B91BB26E20AFB001C11AD /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91BA26E20AFB001C11AD /* BaseCollectionViewCell.swift */; };
+		9D7B91BD26E20B2B001C11AD /* BaseCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91BC26E20B2B001C11AD /* BaseCollectionViewController.swift */; };
+		9D7B91BF26E20B4D001C11AD /* BaseCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91BE26E20B4D001C11AD /* BaseCollectionViewLayout.swift */; };
+		9D7B91C126E20B82001C11AD /* GroupedSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91C026E20B82001C11AD /* GroupedSection.swift */; };
+		9D7B91C426E20BAD001C11AD /* BaseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91C326E20BAD001C11AD /* BaseRow.swift */; };
+		9D7B91C626E20BE1001C11AD /* UIStackView+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91C526E20BE1001C11AD /* UIStackView+Utilities.swift */; };
+		9D7B91CB26E20C51001C11AD /* TTButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91CA26E20C51001C11AD /* TTButton.swift */; };
+		9D7B91CD26E20D06001C11AD /* CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91CC26E20D06001C11AD /* CornerRadius.swift */; };
+		9D7B91D026E20D75001C11AD /* General+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91CF26E20D75001C11AD /* General+Utilities.swift */; };
+		9D7B91D226E20DA6001C11AD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91D126E20DA6001C11AD /* Constants.swift */; };
+		9D7B91D526E20E11001C11AD /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91D426E20E11001C11AD /* Operation.swift */; };
+		9D7B91D726E20E44001C11AD /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91D626E20E44001C11AD /* Result.swift */; };
+		9D7B91D926E20E7A001C11AD /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91D826E20E7A001C11AD /* Groups.swift */; };
+		9D7B91DB26E20F9A001C11AD /* TTButtonAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91DA26E20F9A001C11AD /* TTButtonAction.swift */; };
+		9D7B91DD26E20FDB001C11AD /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91DC26E20FDB001C11AD /* Geometry.swift */; };
+		9D7B91DF26E21001001C11AD /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91DE26E21001001C11AD /* Math.swift */; };
+		9D7B91E126E2102B001C11AD /* Comparable+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91E026E2102B001C11AD /* Comparable+Utilities.swift */; };
+		9D7B91E326E2115D001C11AD /* UIView+Constrains.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91E226E2115D001C11AD /* UIView+Constrains.swift */; };
+		9D7B91E526E211A6001C11AD /* UIDevice+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91E426E211A6001C11AD /* UIDevice+Utilities.swift */; };
+		9D7B91EC26E213B5001C11AD /* UIViewController+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91EB26E213B5001C11AD /* UIViewController+Helper.m */; };
+		9D7B91EE26E2148F001C11AD /* UIWindow+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91ED26E2148F001C11AD /* UIWindow+Utilities.swift */; };
+		9D7B91F126E2158B001C11AD /* Navigation+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91F026E2158B001C11AD /* Navigation+Utilities.m */; };
+		9D7B91F426E217BB001C11AD /* NSObject+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91F326E217BB001C11AD /* NSObject+Helper.m */; };
+		9D7B91F626E21815001C11AD /* ObserverCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91F526E21815001C11AD /* ObserverCollection.swift */; };
+		9D7B91F826E21871001C11AD /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91F726E21871001C11AD /* KeyboardObserver.swift */; };
+		9D7B91FA26E21894001C11AD /* Observers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91F926E21894001C11AD /* Observers.swift */; };
+		9D7B91FC26E218ED001C11AD /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91FB26E218ED001C11AD /* Event.swift */; };
+		9D7B91FF26E21951001C11AD /* UIView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91FE26E21951001C11AD /* UIView+Helper.m */; };
+		9D7B920226E22140001C11AD /* CurrentDateRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B920126E22140001C11AD /* CurrentDateRow.swift */; };
+		9D7B920426E22302001C11AD /* TTGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B920326E22302001C11AD /* TTGradientView.swift */; };
+		9D7B920626E22339001C11AD /* TTGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B920526E22339001C11AD /* TTGradient.swift */; };
 		9D82636D26D8D26900981A3E /* UIView+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D82636C26D8D26900981A3E /* UIView+Utilities.swift */; };
 		9D82636F26D8D2A900981A3E /* Sequence+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D82636E26D8D2A900981A3E /* Sequence+Utilities.swift */; };
 		9D82637126D8D30500981A3E /* NSLayoutConstraint+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D82637026D8D30500981A3E /* NSLayoutConstraint+Utilities.swift */; };
@@ -73,6 +107,46 @@
 		9D70891726D8F76500716054 /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
 		9D7B91AF26E0E914001C11AD /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		9D7B91B126E1EC7B001C11AD /* PushTransitionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushTransitionDelegate.swift; sourceTree = "<group>"; };
+		9D7B91B326E200FB001C11AD /* UICollectionView+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Utilities.swift"; sourceTree = "<group>"; };
+		9D7B91B626E20AA9001C11AD /* ItemRows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRows.swift; sourceTree = "<group>"; };
+		9D7B91B826E20AD0001C11AD /* BaseCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionView.swift; sourceTree = "<group>"; };
+		9D7B91BA26E20AFB001C11AD /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		9D7B91BC26E20B2B001C11AD /* BaseCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewController.swift; sourceTree = "<group>"; };
+		9D7B91BE26E20B4D001C11AD /* BaseCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewLayout.swift; sourceTree = "<group>"; };
+		9D7B91C026E20B82001C11AD /* GroupedSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupedSection.swift; sourceTree = "<group>"; };
+		9D7B91C326E20BAD001C11AD /* BaseRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRow.swift; sourceTree = "<group>"; };
+		9D7B91C526E20BE1001C11AD /* UIStackView+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Utilities.swift"; sourceTree = "<group>"; };
+		9D7B91CA26E20C51001C11AD /* TTButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTButton.swift; sourceTree = "<group>"; };
+		9D7B91CC26E20D06001C11AD /* CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadius.swift; sourceTree = "<group>"; };
+		9D7B91CF26E20D75001C11AD /* General+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "General+Utilities.swift"; sourceTree = "<group>"; };
+		9D7B91D126E20DA6001C11AD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9D7B91D426E20E11001C11AD /* Operation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
+		9D7B91D626E20E44001C11AD /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		9D7B91D826E20E7A001C11AD /* Groups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
+		9D7B91DA26E20F9A001C11AD /* TTButtonAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTButtonAction.swift; sourceTree = "<group>"; };
+		9D7B91DC26E20FDB001C11AD /* Geometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
+		9D7B91DE26E21001001C11AD /* Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
+		9D7B91E026E2102B001C11AD /* Comparable+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Comparable+Utilities.swift"; sourceTree = "<group>"; };
+		9D7B91E226E2115D001C11AD /* UIView+Constrains.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constrains.swift"; sourceTree = "<group>"; };
+		9D7B91E426E211A6001C11AD /* UIDevice+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Utilities.swift"; sourceTree = "<group>"; };
+		9D7B91E626E2138A001C11AD /* cabinet-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "cabinet-Bridging-Header.h"; sourceTree = "<group>"; };
+		9D7B91EA26E213B5001C11AD /* UIViewController+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Helper.h"; sourceTree = "<group>"; };
+		9D7B91EB26E213B5001C11AD /* UIViewController+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Helper.m"; sourceTree = "<group>"; };
+		9D7B91ED26E2148F001C11AD /* UIWindow+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Utilities.swift"; sourceTree = "<group>"; };
+		9D7B91EF26E2158B001C11AD /* Navigation+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Navigation+Utilities.h"; sourceTree = "<group>"; };
+		9D7B91F026E2158B001C11AD /* Navigation+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Navigation+Utilities.m"; sourceTree = "<group>"; };
+		9D7B91F226E217BB001C11AD /* NSObject+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Helper.h"; sourceTree = "<group>"; };
+		9D7B91F326E217BB001C11AD /* NSObject+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Helper.m"; sourceTree = "<group>"; };
+		9D7B91F526E21815001C11AD /* ObserverCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserverCollection.swift; sourceTree = "<group>"; };
+		9D7B91F726E21871001C11AD /* KeyboardObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObserver.swift; sourceTree = "<group>"; };
+		9D7B91F926E21894001C11AD /* Observers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observers.swift; sourceTree = "<group>"; };
+		9D7B91FB26E218ED001C11AD /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		9D7B91FD26E21951001C11AD /* UIView+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Helper.h"; sourceTree = "<group>"; };
+		9D7B91FE26E21951001C11AD /* UIView+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Helper.m"; sourceTree = "<group>"; };
+		9D7B920026E21B1E001C11AD /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		9D7B920126E22140001C11AD /* CurrentDateRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentDateRow.swift; sourceTree = "<group>"; };
+		9D7B920326E22302001C11AD /* TTGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTGradientView.swift; sourceTree = "<group>"; };
+		9D7B920526E22339001C11AD /* TTGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTGradient.swift; sourceTree = "<group>"; };
 		9D82636C26D8D26900981A3E /* UIView+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utilities.swift"; sourceTree = "<group>"; };
 		9D82636E26D8D2A900981A3E /* Sequence+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+Utilities.swift"; sourceTree = "<group>"; };
 		9D82637026D8D30500981A3E /* NSLayoutConstraint+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Utilities.swift"; sourceTree = "<group>"; };
@@ -136,6 +210,59 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		9D7B91B526E20A9D001C11AD /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				9D7B91B626E20AA9001C11AD /* ItemRows.swift */,
+				9D7B91B826E20AD0001C11AD /* BaseCollectionView.swift */,
+				9D7B91BA26E20AFB001C11AD /* BaseCollectionViewCell.swift */,
+				9D7B91BC26E20B2B001C11AD /* BaseCollectionViewController.swift */,
+				9D7B91BE26E20B4D001C11AD /* BaseCollectionViewLayout.swift */,
+				9D7B91C026E20B82001C11AD /* GroupedSection.swift */,
+			);
+			name = CollectionView;
+			sourceTree = "<group>";
+		};
+		9D7B91C226E20BA5001C11AD /* Rows */ = {
+			isa = PBXGroup;
+			children = (
+				9D7B91C326E20BAD001C11AD /* BaseRow.swift */,
+			);
+			name = Rows;
+			sourceTree = "<group>";
+		};
+		9D7B91C926E20C2F001C11AD /* UI Elements */ = {
+			isa = PBXGroup;
+			children = (
+				9D7B91CA26E20C51001C11AD /* TTButton.swift */,
+				9D7B91DA26E20F9A001C11AD /* TTButtonAction.swift */,
+				9D7B920326E22302001C11AD /* TTGradientView.swift */,
+			);
+			name = "UI Elements";
+			sourceTree = "<group>";
+		};
+		9D7B91CE26E20D5D001C11AD /* Globals */ = {
+			isa = PBXGroup;
+			children = (
+				9D7B91CF26E20D75001C11AD /* General+Utilities.swift */,
+				9D7B91D126E20DA6001C11AD /* Constants.swift */,
+			);
+			name = Globals;
+			sourceTree = "<group>";
+		};
+		9D7B91D326E20DEE001C11AD /* Observers */ = {
+			isa = PBXGroup;
+			children = (
+				9D7B91D426E20E11001C11AD /* Operation.swift */,
+				9D7B91D626E20E44001C11AD /* Result.swift */,
+				9D7B91F526E21815001C11AD /* ObserverCollection.swift */,
+				9D7B91F726E21871001C11AD /* KeyboardObserver.swift */,
+				9D7B91F926E21894001C11AD /* Observers.swift */,
+				9D7B91FB26E218ED001C11AD /* Event.swift */,
+			);
+			name = Observers;
+			sourceTree = "<group>";
+		};
 		9D82636B26D8D25900981A3E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +270,19 @@
 				9D82636E26D8D2A900981A3E /* Sequence+Utilities.swift */,
 				9D82637026D8D30500981A3E /* NSLayoutConstraint+Utilities.swift */,
 				9D82637226D8D33A00981A3E /* UIView+IBInspectables.swift */,
+				9D7B91B326E200FB001C11AD /* UICollectionView+Utilities.swift */,
+				9D7B91C526E20BE1001C11AD /* UIStackView+Utilities.swift */,
+				9D7B91E226E2115D001C11AD /* UIView+Constrains.swift */,
+				9D7B91E426E211A6001C11AD /* UIDevice+Utilities.swift */,
+				9D7B91EA26E213B5001C11AD /* UIViewController+Helper.h */,
+				9D7B91EB26E213B5001C11AD /* UIViewController+Helper.m */,
+				9D7B91EF26E2158B001C11AD /* Navigation+Utilities.h */,
+				9D7B91F026E2158B001C11AD /* Navigation+Utilities.m */,
+				9D7B91F226E217BB001C11AD /* NSObject+Helper.h */,
+				9D7B91F326E217BB001C11AD /* NSObject+Helper.m */,
+				9D7B91FD26E21951001C11AD /* UIView+Helper.h */,
+				9D7B91FE26E21951001C11AD /* UIView+Helper.m */,
+				9D7B91ED26E2148F001C11AD /* UIWindow+Utilities.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -175,6 +315,8 @@
 				9DB7581B26D38D98006D2246 /* CurrentDate */,
 				9DB7580A26D3831D006D2246 /* Base */,
 				9DB757F626D37B24006D2246 /* AppDelegate.swift */,
+				9D7B91E626E2138A001C11AD /* cabinet-Bridging-Header.h */,
+				9D7B920026E21B1E001C11AD /* Header.h */,
 				9DB757FC26D37B24006D2246 /* Main.storyboard */,
 				9DB7582D26D3A371006D2246 /* Colors.xcassets */,
 				9DB757FF26D37B25006D2246 /* Assets.xcassets */,
@@ -199,6 +341,7 @@
 			children = (
 				9DB7581726D38D90006D2246 /* CurrentDateVC.swift */,
 				9DB7581826D38D90006D2246 /* CurrentDateVC.xib */,
+				9D7B920126E22140001C11AD /* CurrentDateRow.swift */,
 			);
 			name = CurrentDate;
 			sourceTree = "<group>";
@@ -214,6 +357,11 @@
 		9DB7581D26D39605006D2246 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				9D7B91D326E20DEE001C11AD /* Observers */,
+				9D7B91CE26E20D5D001C11AD /* Globals */,
+				9D7B91C926E20C2F001C11AD /* UI Elements */,
+				9D7B91C226E20BA5001C11AD /* Rows */,
+				9D7B91B526E20A9D001C11AD /* CollectionView */,
 				9D82636B26D8D25900981A3E /* Extension */,
 				9DB7582826D39A40006D2246 /* Global */,
 				9DB7582526D399DC006D2246 /* Style */,
@@ -229,6 +377,11 @@
 				9DB7582126D39656006D2246 /* NSObject+Helper.swift */,
 				9D7B91AF26E0E914001C11AD /* TimerManager.swift */,
 				9D7B91B126E1EC7B001C11AD /* PushTransitionDelegate.swift */,
+				9D7B91CC26E20D06001C11AD /* CornerRadius.swift */,
+				9D7B91D826E20E7A001C11AD /* Groups.swift */,
+				9D7B91DC26E20FDB001C11AD /* Geometry.swift */,
+				9D7B91DE26E21001001C11AD /* Math.swift */,
+				9D7B91E026E2102B001C11AD /* Comparable+Utilities.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -238,6 +391,7 @@
 			children = (
 				9DB7582626D399E6006D2246 /* BaseColor.swift */,
 				9DB7582B26D39CF3006D2246 /* BaseDateFormatter.swift */,
+				9D7B920526E22339001C11AD /* TTGradient.swift */,
 			);
 			name = Style;
 			sourceTree = "<group>";
@@ -326,6 +480,7 @@
 				TargetAttributes = {
 					9DB757F226D37B24006D2246 = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 					};
 					9DE5E74026D4A48500FF8B0A = {
 						CreatedOnToolsVersion = 12.5.1;
@@ -421,23 +576,57 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D7B91E326E2115D001C11AD /* UIView+Constrains.swift in Sources */,
+				9D7B91B726E20AA9001C11AD /* ItemRows.swift in Sources */,
 				9DB7581926D38D90006D2246 /* CurrentDateVC.swift in Sources */,
+				9D7B91D926E20E7A001C11AD /* Groups.swift in Sources */,
 				9D82637326D8D33A00981A3E /* UIView+IBInspectables.swift in Sources */,
+				9D7B91B426E200FB001C11AD /* UICollectionView+Utilities.swift in Sources */,
+				9D7B91F126E2158B001C11AD /* Navigation+Utilities.m in Sources */,
 				9DB7582026D3961D006D2246 /* TargetActionHandler.swift in Sources */,
+				9D7B91D226E20DA6001C11AD /* Constants.swift in Sources */,
+				9D7B91D726E20E44001C11AD /* Result.swift in Sources */,
+				9D7B91F826E21871001C11AD /* KeyboardObserver.swift in Sources */,
+				9D7B91C426E20BAD001C11AD /* BaseRow.swift in Sources */,
 				9D82637126D8D30500981A3E /* NSLayoutConstraint+Utilities.swift in Sources */,
 				9DB7582C26D39CF3006D2246 /* BaseDateFormatter.swift in Sources */,
+				9D7B91FF26E21951001C11AD /* UIView+Helper.m in Sources */,
+				9D7B91DF26E21001001C11AD /* Math.swift in Sources */,
 				9DB7581626D38D43006D2246 /* HomePageVC.swift in Sources */,
+				9D7B91BB26E20AFB001C11AD /* BaseCollectionViewCell.swift in Sources */,
 				9DB7582226D39656006D2246 /* NSObject+Helper.swift in Sources */,
+				9D7B91E526E211A6001C11AD /* UIDevice+Utilities.swift in Sources */,
+				9D7B91C126E20B82001C11AD /* GroupedSection.swift in Sources */,
+				9D7B91B926E20AD0001C11AD /* BaseCollectionView.swift in Sources */,
+				9D7B91D526E20E11001C11AD /* Operation.swift in Sources */,
+				9D7B91EC26E213B5001C11AD /* UIViewController+Helper.m in Sources */,
+				9D7B920426E22302001C11AD /* TTGradientView.swift in Sources */,
+				9D7B920626E22339001C11AD /* TTGradient.swift in Sources */,
+				9D7B920226E22140001C11AD /* CurrentDateRow.swift in Sources */,
+				9D7B91CB26E20C51001C11AD /* TTButton.swift in Sources */,
 				9D82636F26D8D2A900981A3E /* Sequence+Utilities.swift in Sources */,
+				9D7B91D026E20D75001C11AD /* General+Utilities.swift in Sources */,
+				9D7B91FC26E218ED001C11AD /* Event.swift in Sources */,
+				9D7B91C626E20BE1001C11AD /* UIStackView+Utilities.swift in Sources */,
 				9D82636D26D8D26900981A3E /* UIView+Utilities.swift in Sources */,
 				9D7B91B026E0E914001C11AD /* TimerManager.swift in Sources */,
+				9D7B91E126E2102B001C11AD /* Comparable+Utilities.swift in Sources */,
+				9D7B91EE26E2148F001C11AD /* UIWindow+Utilities.swift in Sources */,
+				9D7B91BF26E20B4D001C11AD /* BaseCollectionViewLayout.swift in Sources */,
 				9DB7580E26D3837A006D2246 /* BaseViewController.swift in Sources */,
+				9D7B91FA26E21894001C11AD /* Observers.swift in Sources */,
 				9DB757F726D37B24006D2246 /* AppDelegate.swift in Sources */,
 				9D7B91B226E1EC7B001C11AD /* PushTransitionDelegate.swift in Sources */,
+				9D7B91CD26E20D06001C11AD /* CornerRadius.swift in Sources */,
 				9DB7582A26D39A50006D2246 /* BaseBuddle.swift in Sources */,
+				9D7B91DD26E20FDB001C11AD /* Geometry.swift in Sources */,
+				9D7B91DB26E20F9A001C11AD /* TTButtonAction.swift in Sources */,
 				9DB7581226D383D5006D2246 /* BaseView.swift in Sources */,
+				9D7B91F626E21815001C11AD /* ObserverCollection.swift in Sources */,
+				9D7B91BD26E20B2B001C11AD /* BaseCollectionViewController.swift in Sources */,
 				9DB7582726D399E6006D2246 /* BaseColor.swift in Sources */,
 				9DB7581026D383A7006D2246 /* BaseNavigationController.swift in Sources */,
+				9D7B91F426E217BB001C11AD /* NSObject+Helper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,7 +725,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -591,7 +780,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -608,8 +797,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G2QQ7NM673;
+				GCC_PREFIX_HEADER = $SRCROOT/cabinet/Header.h;
 				INFOPLIST_FILE = cabinet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -617,6 +808,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.evan.cabinet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "cabinet/cabinet-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -629,8 +822,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G2QQ7NM673;
+				GCC_PREFIX_HEADER = $SRCROOT/cabinet/Header.h;
 				INFOPLIST_FILE = cabinet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -638,6 +833,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.evan.cabinet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "cabinet/cabinet-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

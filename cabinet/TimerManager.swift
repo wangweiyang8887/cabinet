@@ -2,8 +2,6 @@
 
 import Foundation
 
-public typealias ActionClosure = () -> Void
-
 final class TimerManager : NSObject {
     static let shared = TimerManager()
     

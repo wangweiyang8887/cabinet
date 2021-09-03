@@ -1,16 +1,50 @@
 PODS:
+  - BlocksKit (2.2.6):
+    - BlocksKit/All (= 2.2.6)
+  - BlocksKit/All (2.2.6):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+    - BlocksKit/MessageUI
+    - BlocksKit/QuickLook
+    - BlocksKit/UIKit
+  - BlocksKit/Core (2.2.6)
+  - BlocksKit/DynamicDelegate (2.2.6)
+  - BlocksKit/MessageUI (2.2.6):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+  - BlocksKit/QuickLook (2.2.6):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+  - BlocksKit/UIKit (2.2.6):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+  - MJRefresh (3.7.2)
   - PanModal (1.2.7)
 
 DEPENDENCIES:
+  - "BlocksKit (from `git@github.com:wangweiyang8887/BlocksKit.git`)"
+  - MJRefresh
   - PanModal
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - MJRefresh
     - PanModal
 
+EXTERNAL SOURCES:
+  BlocksKit:
+    :git: "git@github.com:wangweiyang8887/BlocksKit.git"
+
+CHECKOUT OPTIONS:
+  BlocksKit:
+    :commit: c1bf68eb368ddbc79cd2ac7c194e1dc18eb46145
+    :git: "git@github.com:wangweiyang8887/BlocksKit.git"
+
 SPEC CHECKSUMS:
+  BlocksKit: 5fae06c13638d9fdb0bbddca3dabfe8f5aa735c5
+  MJRefresh: 30997d30b347c8e9508a4db11e3a690da0c9b85a
   PanModal: 3e16ead1a907fb06f4df3f13492fd00149fa4974
 
-PODFILE CHECKSUM: e2b8bda3983fc9dec61da3e7acc60bdac6ce7a3b
+PODFILE CHECKSUM: 9bf25e58209948d5e03ed443934ccbff27612efe
 
 COCOAPODS: 1.10.1

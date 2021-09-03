@@ -24,6 +24,11 @@ extension UIView {
         if clipToCircle { layer.masksToBounds = true }
         layer.cornerRadius = clipToCircle ? min(frame.width, frame.height) / 2 : 0
     }
+    /// Sets the corner radius to this view.
+    /// - Note: if you call this method multiple times, only the last call will prevail, discarding the changes made by any previous call.
+    public func setCornerRadius(_ cornerRadius: CornerRadius) {
+        setCorner(cornerRadius.corners, radius: cornerRadius.radius)
+    }
 
     /// Sets the corner radius to the given corners.
     /// - Parameters:
