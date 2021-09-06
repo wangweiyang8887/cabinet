@@ -4,6 +4,6 @@
 #define Header_h
 
 // Swift
-#import "Cabinet-Swift.h"
+#import "cabinet-Swift.h"
 
 #endif /* Header_h */

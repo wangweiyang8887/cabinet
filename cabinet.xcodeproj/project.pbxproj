@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D66D1B826E5FA0E00411D75 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66D1B726E5FA0E00411D75 /* Server.swift */; };
+		9D66D1BB26E5FB3E00411D75 /* KeyedDecodingContainer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66D1BA26E5FB3E00411D75 /* KeyedDecodingContainer+Extension.swift */; };
+		9D66D1BD26E5FBDF00411D75 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66D1BC26E5FBDF00411D75 /* API.swift */; };
+		9D66D1BF26E5FEDC00411D75 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66D1BE26E5FEDC00411D75 /* CurrentWeather.swift */; };
+		9D66D1C226E608DC00411D75 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66D1C126E608DC00411D75 /* LocationManager.swift */; };
 		9D70891826D8F76500716054 /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D70891726D8F76500716054 /* Blur.swift */; };
 		9D7B91B026E0E914001C11AD /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91AF26E0E914001C11AD /* TimerManager.swift */; };
 		9D7B91B226E1EC7B001C11AD /* PushTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91B126E1EC7B001C11AD /* PushTransitionDelegate.swift */; };
@@ -108,6 +113,11 @@
 /* Begin PBXFileReference section */
 		2084E720CBB70812F8CEADA7 /* Pods-cabinet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cabinet.release.xcconfig"; path = "Target Support Files/Pods-cabinet/Pods-cabinet.release.xcconfig"; sourceTree = "<group>"; };
 		4970BD821DAEA3849FC9D057 /* Pods_cabinet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cabinet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D66D1B726E5FA0E00411D75 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		9D66D1BA26E5FB3E00411D75 /* KeyedDecodingContainer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyedDecodingContainer+Extension.swift"; sourceTree = "<group>"; };
+		9D66D1BC26E5FBDF00411D75 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		9D66D1BE26E5FEDC00411D75 /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
+		9D66D1C126E608DC00411D75 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		9D70891726D8F76500716054 /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
 		9D7B91AF26E0E914001C11AD /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		9D7B91B126E1EC7B001C11AD /* PushTransitionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushTransitionDelegate.swift; sourceTree = "<group>"; };
@@ -216,6 +226,24 @@
 				2084E720CBB70812F8CEADA7 /* Pods-cabinet.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		9D66D1B626E5F9A500411D75 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				9D66D1B726E5FA0E00411D75 /* Server.swift */,
+				9D66D1BA26E5FB3E00411D75 /* KeyedDecodingContainer+Extension.swift */,
+				9D66D1BC26E5FBDF00411D75 /* API.swift */,
+			);
+			name = Server;
+			sourceTree = "<group>";
+		};
+		9D66D1C026E608CE00411D75 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				9D66D1C126E608DC00411D75 /* LocationManager.swift */,
+			);
+			name = Location;
 			sourceTree = "<group>";
 		};
 		9D7B91B526E20A9D001C11AD /* CollectionView */ = {
@@ -354,6 +382,7 @@
 				9D7B920126E22140001C11AD /* CurrentDateRow.swift */,
 				9D7B920B26E23339001C11AD /* CurrentWeatherRow.swift */,
 				9D7B920D26E2339B001C11AD /* CurrentWeatherRow.xib */,
+				9D66D1BE26E5FEDC00411D75 /* CurrentWeather.swift */,
 			);
 			name = CurrentDate;
 			sourceTree = "<group>";
@@ -369,6 +398,8 @@
 		9DB7581D26D39605006D2246 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				9D66D1C026E608CE00411D75 /* Location */,
+				9D66D1B626E5F9A500411D75 /* Server */,
 				9D7B91D326E20DEE001C11AD /* Observers */,
 				9D7B91CE26E20D5D001C11AD /* Globals */,
 				9D7B91C926E20C2F001C11AD /* UI Elements */,
@@ -590,6 +621,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D7B91E326E2115D001C11AD /* UIView+Constrains.swift in Sources */,
+				9D66D1BD26E5FBDF00411D75 /* API.swift in Sources */,
 				9D7B91B726E20AA9001C11AD /* ItemRows.swift in Sources */,
 				9DB7581926D38D90006D2246 /* CurrentDateVC.swift in Sources */,
 				9D7B91D926E20E7A001C11AD /* Groups.swift in Sources */,
@@ -600,6 +632,7 @@
 				9D7B91D226E20DA6001C11AD /* Constants.swift in Sources */,
 				9D7B91D726E20E44001C11AD /* Result.swift in Sources */,
 				9D7B91F826E21871001C11AD /* KeyboardObserver.swift in Sources */,
+				9D66D1BB26E5FB3E00411D75 /* KeyedDecodingContainer+Extension.swift in Sources */,
 				9D7B91C426E20BAD001C11AD /* BaseRow.swift in Sources */,
 				9D82637126D8D30500981A3E /* NSLayoutConstraint+Utilities.swift in Sources */,
 				9DB7582C26D39CF3006D2246 /* BaseDateFormatter.swift in Sources */,
@@ -639,9 +672,12 @@
 				9D7B91DB26E20F9A001C11AD /* TTButtonAction.swift in Sources */,
 				9DB7581226D383D5006D2246 /* BaseView.swift in Sources */,
 				9D7B91F626E21815001C11AD /* ObserverCollection.swift in Sources */,
+				9D66D1B826E5FA0E00411D75 /* Server.swift in Sources */,
 				9D7B91BD26E20B2B001C11AD /* BaseCollectionViewController.swift in Sources */,
+				9D66D1C226E608DC00411D75 /* LocationManager.swift in Sources */,
 				9DB7582726D399E6006D2246 /* BaseColor.swift in Sources */,
 				9DB7581026D383A7006D2246 /* BaseNavigationController.swift in Sources */,
+				9D66D1BF26E5FEDC00411D75 /* CurrentWeather.swift in Sources */,
 				9D7B91F426E217BB001C11AD /* NSObject+Helper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -810,7 +846,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B642AE47EABCDE40DBF357F2 /* Pods-cabinet.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
@@ -835,7 +871,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2084E720CBB70812F8CEADA7 /* Pods-cabinet.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;

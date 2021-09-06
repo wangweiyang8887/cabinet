@@ -27,7 +27,7 @@ final class CurrentDateRow : BaseRow {
         let result = UILabel()
         result.numberOfLines = 0
         result.textAlignment = .center
-        result.font = .systemFont(ofSize: 32, weight: .medium)
+        result.font = UIFont(name: "Helvetica Neue", size: 32)
         result.textColor = .nonStandardColor(withRGBHex: 0x333333)
         result.defaultTextShadow()
         return result

@@ -9,14 +9,15 @@ final class CurrentWeatherRow : BaseRow {
     @IBOutlet weak var weatherStateLabel: UILabel!
     @IBOutlet weak var stateImageView: UIImageView!
     @IBOutlet weak var temperatureLabel: UILabel!
-    @IBOutlet weak var maximumLabel: UILabel!
-    @IBOutlet weak var minimumLabel: UILabel!
+    @IBOutlet weak var windLabel: UILabel!
     
     private static let calculatedHeight: CGFloat = (UIScreen.main.bounds.width - 32 - 16) / 2
     
     override class var nibName: String? { return "CurrentWeatherRow" }
     override class var height: RowHeight { return .fixed(calculatedHeight) }
     override class var margins: UIEdgeInsets { return UIEdgeInsets(horizontal: 16) }
+    
+    var weather: CurrentWeather? { didSet { handleWeatherChanged() } }
     
     override func initialize() {
         super.initialize()
@@ -26,4 +27,16 @@ final class CurrentWeatherRow : BaseRow {
         weatherContainerView.cornerRadius = 16
     }
     
+    private func handleWeatherChanged() {
+        guard let weather = weather else { return }
+        weatherStateLabel.text = weather.list.first?.weather
+        temperatureLabel.text = weather.list.first?.temp
+        windLabel.text = weather.list.first?.wind
+    }
+    
+    // MARK: Components
+    var city: String? {
+        get { return locationLabel.text }
+        set { locationLabel.text = newValue }
+    }
 }

@@ -11,12 +11,11 @@
             <connections>
                 <outlet property="locationImageView" destination="HJO-re-iVI" id="hfJ-Gj-WEb"/>
                 <outlet property="locationLabel" destination="Bb3-e3-LpT" id="8rW-u0-39z"/>
-                <outlet property="maximumLabel" destination="W71-Vz-IR5" id="IhN-ej-89E"/>
-                <outlet property="minimumLabel" destination="tfU-Vh-Xdz" id="aLR-y7-gow"/>
                 <outlet property="stateImageView" destination="Pde-Dd-j9A" id="q4a-L9-ikp"/>
                 <outlet property="temperatureLabel" destination="YTz-GM-z91" id="Zpw-ss-phB"/>
                 <outlet property="weatherContainerView" destination="9FH-J4-CVO" id="Zzb-dA-3Pm"/>
                 <outlet property="weatherStateLabel" destination="ZVc-hu-ikq" id="5ZU-IT-7wQ"/>
+                <outlet property="windLabel" destination="W71-Vz-IR5" id="FWf-ye-PjU"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -40,14 +39,14 @@
                                                     <rect key="frame" x="0.0" y="1" width="20" height="19.5"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="北京" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bb3-e3-LpT">
-                                                    <rect key="frame" x="28" y="0.0" width="137.5" height="20.5"/>
+                                                    <rect key="frame" x="28" y="0.0" width="145.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="多云" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZVc-hu-ikq">
-                                                    <rect key="frame" x="173.5" y="0.0" width="35" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="181.5" y="0.0" width="27" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -86,13 +85,7 @@
                                             <rect key="frame" x="0.0" y="191.5" width="208.5" height="20.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最高27" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W71-Vz-IR5">
-                                                    <rect key="frame" x="0.0" y="0.0" width="104.5" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最低23" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfU-Vh-Xdz">
-                                                    <rect key="frame" x="104.5" y="0.0" width="104" height="20.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="208.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>

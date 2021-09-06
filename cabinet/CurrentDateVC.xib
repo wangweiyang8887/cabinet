@@ -26,15 +26,15 @@
                     <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qbf-mB-7mR">
-                            <rect key="frame" x="0.0" y="124.5" width="896" height="165.5"/>
+                            <rect key="frame" x="0.0" y="126" width="896" height="162"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="99:99:99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nxb-3b-hoE">
-                                    <rect key="frame" x="0.0" y="0.0" width="896" height="136.5"/>
-                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="114"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="896" height="133"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="114"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021 08 23" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecF-Xm-1EG">
-                                    <rect key="frame" x="0.0" y="136.5" width="896" height="29"/>
+                                    <rect key="frame" x="0.0" y="133" width="896" height="29"/>
                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                                     <nil key="highlightedColor"/>
                                 </label>

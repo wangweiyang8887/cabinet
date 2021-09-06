@@ -8,3 +8,4 @@
 #import "UIView+Helper.h"
 #import "Navigation+Utilities.h"
 #import "BlocksKit.h"
+#import <Alamofire/Alamofire-Swift.h>
