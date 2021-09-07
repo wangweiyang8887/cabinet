@@ -21,17 +21,30 @@ final class CurrentWeatherRow : BaseRow {
     
     override func initialize() {
         super.initialize()
+        let gradientView = TTGradientView(gradient: [ .nonStandardColor(withRGBHex: 0xABDCFF), .nonStandardColor(withRGBHex: 0x0396FF) ], direction: .leftToRight)
+        weatherContainerView.addSubview(gradientView, pinningEdges: .all)
+        weatherContainerView.sendSubviewToBack(gradientView)
         backgroundColor = .clear
         contentView.backgroundColor = .clear
-        weatherContainerView.backgroundColor = .orange
         weatherContainerView.cornerRadius = 16
+        stateImageView.tintColor = .cabinetBlack
     }
     
     private func handleWeatherChanged() {
-        guard let weather = weather else { return }
-        weatherStateLabel.text = weather.list.first?.weather
-        temperatureLabel.text = weather.list.first?.temp
-        windLabel.text = weather.list.first?.wind
+        guard let now = weather?.now else { return }
+        weatherStateLabel.text = now.text
+        temperatureLabel.text = now.temp + "°C"
+        windLabel.text = now.windDir + " " + now.windScale + "级"
+        stateImageView.image = UIImage(named: now.icon)?.withRenderingMode(.alwaysTemplate)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.startAnimation()
+        }
+    }
+    
+    private func startAnimation() {
+        UIView.animate(withDuration: 1.0, delay: 0, options: [ .autoreverse, .repeat, .allowUserInteraction ], animations: {
+            self.stateImageView.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+        }, completion: nil)
     }
     
     // MARK: Components

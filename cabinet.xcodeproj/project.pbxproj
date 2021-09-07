@@ -12,6 +12,7 @@
 		9D66D1BD26E5FBDF00411D75 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66D1BC26E5FBDF00411D75 /* API.swift */; };
 		9D66D1BF26E5FEDC00411D75 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66D1BE26E5FEDC00411D75 /* CurrentWeather.swift */; };
 		9D66D1C226E608DC00411D75 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66D1C126E608DC00411D75 /* LocationManager.swift */; };
+		9D66D1C426E7349600411D75 /* UIImage+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66D1C326E7349600411D75 /* UIImage+Utilities.swift */; };
 		9D70891826D8F76500716054 /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D70891726D8F76500716054 /* Blur.swift */; };
 		9D7B91B026E0E914001C11AD /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91AF26E0E914001C11AD /* TimerManager.swift */; };
 		9D7B91B226E1EC7B001C11AD /* PushTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91B126E1EC7B001C11AD /* PushTransitionDelegate.swift */; };
@@ -118,6 +119,7 @@
 		9D66D1BC26E5FBDF00411D75 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		9D66D1BE26E5FEDC00411D75 /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		9D66D1C126E608DC00411D75 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		9D66D1C326E7349600411D75 /* UIImage+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Utilities.swift"; sourceTree = "<group>"; };
 		9D70891726D8F76500716054 /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
 		9D7B91AF26E0E914001C11AD /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		9D7B91B126E1EC7B001C11AD /* PushTransitionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushTransitionDelegate.swift; sourceTree = "<group>"; };
@@ -321,6 +323,7 @@
 				9D7B91ED26E2148F001C11AD /* UIWindow+Utilities.swift */,
 				9D7B920726E22581001C11AD /* UIViewController+PresentationStyle.swift */,
 				9D7B920926E2285A001C11AD /* UILabel+Utilities.swift */,
+				9D66D1C326E7349600411D75 /* UIImage+Utilities.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -658,6 +661,7 @@
 				9D82636D26D8D26900981A3E /* UIView+Utilities.swift in Sources */,
 				9D7B91B026E0E914001C11AD /* TimerManager.swift in Sources */,
 				9D7B920A26E2285A001C11AD /* UILabel+Utilities.swift in Sources */,
+				9D66D1C426E7349600411D75 /* UIImage+Utilities.swift in Sources */,
 				9D7B91E126E2102B001C11AD /* Comparable+Utilities.swift in Sources */,
 				9D7B91EE26E2148F001C11AD /* UIWindow+Utilities.swift in Sources */,
 				9D7B91BF26E20B4D001C11AD /* BaseCollectionViewLayout.swift in Sources */,
