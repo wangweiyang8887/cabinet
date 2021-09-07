@@ -27,7 +27,7 @@ final class CurrentWeatherRow : BaseRow {
         backgroundColor = .clear
         contentView.backgroundColor = .clear
         weatherContainerView.cornerRadius = 16
-        stateImageView.tintColor = .cabinetBlack
+        stateImageView.tintColor = .cabinetWhite
     }
     
     private func handleWeatherChanged() {

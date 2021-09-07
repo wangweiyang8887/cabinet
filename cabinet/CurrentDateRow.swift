@@ -28,7 +28,7 @@ final class CurrentDateRow : BaseRow {
         result.numberOfLines = 0
         result.textAlignment = .center
         result.font = UIFont(name: "Helvetica Neue", size: 48)
-        result.textColor = .cabinetBlack
+        result.textColor = .cabinetWhite
         result.defaultTextShadow()
         return result
     }()
