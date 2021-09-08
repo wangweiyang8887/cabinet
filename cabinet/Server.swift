@@ -70,12 +70,23 @@ class Server : NSObject {
             prepare(method, api, parameters).responseJSON { response in
                 switch response.result {
                 case .success(let value):
-                    guard let json = value as? [String:Any], let code = json["code"] as? Int else { return }
-                    if code == 0 {
-                        operation.complete(with: json)
-                    } else {
-                        operation.complete(with: NSError())
-                    }
+                    guard let json = value as? [String:Any] else { return }
+                    operation.complete(with: json)
+                case .failure(let error):
+                    operation.complete(with: error as NSError)
+                }
+            }
+        })
+    }
+    
+    public static func fire<T: Decodable>(_ api: API) -> Operation<T> {
+        return OwnedOperation<T>(startOperation: { operation in
+            AF.request(api.rawValue).responseString { response in
+                switch response.result {
+                case .success(let value):
+                    guard let data = value.data(using: .utf8) else { return }
+                    guard let result = T.decode(from: data) else { return }
+                    operation.complete(with: result)
                 case .failure(let error):
                     operation.complete(with: error as NSError)
                 }

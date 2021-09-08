@@ -13,6 +13,9 @@
 		9D66D1BF26E5FEDC00411D75 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66D1BE26E5FEDC00411D75 /* CurrentWeather.swift */; };
 		9D66D1C226E608DC00411D75 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66D1C126E608DC00411D75 /* LocationManager.swift */; };
 		9D66D1C426E7349600411D75 /* UIImage+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66D1C326E7349600411D75 /* UIImage+Utilities.swift */; };
+		9D66D1C626E7542500411D75 /* DailyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66D1C526E7542500411D75 /* DailyRow.swift */; };
+		9D66D1C826E7544400411D75 /* DailyRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D66D1C726E7544400411D75 /* DailyRow.xib */; };
+		9D66D1CB26E7617E00411D75 /* DailyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66D1CA26E7617E00411D75 /* DailyModel.swift */; };
 		9D70891826D8F76500716054 /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D70891726D8F76500716054 /* Blur.swift */; };
 		9D7B91B026E0E914001C11AD /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91AF26E0E914001C11AD /* TimerManager.swift */; };
 		9D7B91B226E1EC7B001C11AD /* PushTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91B126E1EC7B001C11AD /* PushTransitionDelegate.swift */; };
@@ -120,6 +123,9 @@
 		9D66D1BE26E5FEDC00411D75 /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		9D66D1C126E608DC00411D75 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		9D66D1C326E7349600411D75 /* UIImage+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Utilities.swift"; sourceTree = "<group>"; };
+		9D66D1C526E7542500411D75 /* DailyRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyRow.swift; sourceTree = "<group>"; };
+		9D66D1C726E7544400411D75 /* DailyRow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyRow.xib; sourceTree = "<group>"; };
+		9D66D1CA26E7617E00411D75 /* DailyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyModel.swift; sourceTree = "<group>"; };
 		9D70891726D8F76500716054 /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
 		9D7B91AF26E0E914001C11AD /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		9D7B91B126E1EC7B001C11AD /* PushTransitionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushTransitionDelegate.swift; sourceTree = "<group>"; };
@@ -386,6 +392,9 @@
 				9D7B920B26E23339001C11AD /* CurrentWeatherRow.swift */,
 				9D7B920D26E2339B001C11AD /* CurrentWeatherRow.xib */,
 				9D66D1BE26E5FEDC00411D75 /* CurrentWeather.swift */,
+				9D66D1C526E7542500411D75 /* DailyRow.swift */,
+				9D66D1C726E7544400411D75 /* DailyRow.xib */,
+				9D66D1CA26E7617E00411D75 /* DailyModel.swift */,
 			);
 			name = CurrentDate;
 			sourceTree = "<group>";
@@ -559,6 +568,7 @@
 			files = (
 				9DB7582E26D3A371006D2246 /* Colors.xcassets in Resources */,
 				9DB7581A26D38D90006D2246 /* CurrentDateVC.xib in Resources */,
+				9D66D1C826E7544400411D75 /* DailyRow.xib in Resources */,
 				9DB7580326D37B25006D2246 /* LaunchScreen.storyboard in Resources */,
 				9D7B920E26E2339B001C11AD /* CurrentWeatherRow.xib in Resources */,
 				9DB7580026D37B25006D2246 /* Assets.xcassets in Resources */,
@@ -626,6 +636,7 @@
 				9D7B91E326E2115D001C11AD /* UIView+Constrains.swift in Sources */,
 				9D66D1BD26E5FBDF00411D75 /* API.swift in Sources */,
 				9D7B91B726E20AA9001C11AD /* ItemRows.swift in Sources */,
+				9D66D1CB26E7617E00411D75 /* DailyModel.swift in Sources */,
 				9DB7581926D38D90006D2246 /* CurrentDateVC.swift in Sources */,
 				9D7B91D926E20E7A001C11AD /* Groups.swift in Sources */,
 				9D82637326D8D33A00981A3E /* UIView+IBInspectables.swift in Sources */,
@@ -657,6 +668,7 @@
 				9D7B91D026E20D75001C11AD /* General+Utilities.swift in Sources */,
 				9D7B91FC26E218ED001C11AD /* Event.swift in Sources */,
 				9D7B91C626E20BE1001C11AD /* UIStackView+Utilities.swift in Sources */,
+				9D66D1C626E7542500411D75 /* DailyRow.swift in Sources */,
 				9D7B920826E22581001C11AD /* UIViewController+PresentationStyle.swift in Sources */,
 				9D82636D26D8D26900981A3E /* UIView+Utilities.swift in Sources */,
 				9D7B91B026E0E914001C11AD /* TimerManager.swift in Sources */,

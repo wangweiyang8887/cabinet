@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CurrentWeatherRow" customModule="cabinet" customModuleProvider="target">
             <connections>
+                <outlet property="countDownContainerView" destination="Dxh-ex-uI5" id="vE7-rc-b4J"/>
                 <outlet property="locationImageView" destination="HJO-re-iVI" id="hfJ-Gj-WEb"/>
                 <outlet property="locationLabel" destination="Bb3-e3-LpT" id="8rW-u0-39z"/>
                 <outlet property="stateImageView" destination="Pde-Dd-j9A" id="q4a-L9-ikp"/>
@@ -108,7 +109,72 @@
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dxh-ex-uI5">
                             <rect key="frame" x="256.5" y="0.0" width="240.5" height="244"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ICe-AQ-yP1">
+                                    <rect key="frame" x="16" y="16" width="208.5" height="212"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="OXh-Sd-biO">
+                                            <rect key="frame" x="0.0" y="0.0" width="208.5" height="21.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="春节" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51o-lo-XNt">
+                                                    <rect key="frame" x="0.0" y="0.0" width="208.5" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                    <color key="textColor" name="White AF"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nfc-vR-vuT">
+                                            <rect key="frame" x="0.0" y="37.5" width="208.5" height="140.5"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yG0-h0-jxq">
+                                                    <rect key="frame" x="74.5" y="48.5" width="60" height="44"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxS-4K-vpE">
+                                                            <rect key="frame" x="0.0" y="0.0" width="60" height="44"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
+                                                            <color key="textColor" name="White AF"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="LAm-a3-Wsd"/>
+                                                    </constraints>
+                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="天" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gia-Cf-1Gv">
+                                                    <rect key="frame" x="137" y="48.5" width="13.5" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="22" id="G65-r1-zhd"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                                    <color key="textColor" name="White AF"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="gia-Cf-1Gv" firstAttribute="trailing" secondItem="yG0-h0-jxq" secondAttribute="trailing" constant="16" id="1VA-nX-Q2g"/>
+                                                <constraint firstItem="yG0-h0-jxq" firstAttribute="centerY" secondItem="Nfc-vR-vuT" secondAttribute="centerY" id="E8T-kB-C48"/>
+                                                <constraint firstItem="gia-Cf-1Gv" firstAttribute="top" secondItem="yG0-h0-jxq" secondAttribute="top" id="Ntg-hv-663"/>
+                                                <constraint firstItem="yG0-h0-jxq" firstAttribute="centerX" secondItem="Nfc-vR-vuT" secondAttribute="centerX" id="z8s-ka-PKN"/>
+                                            </constraints>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022.02.01" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HB7-ae-3xC">
+                                            <rect key="frame" x="0.0" y="194" width="208.5" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                            <color key="textColor" name="White AF"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="ICe-AQ-yP1" secondAttribute="trailing" constant="16" id="5L2-qG-S3h"/>
+                                <constraint firstItem="ICe-AQ-yP1" firstAttribute="leading" secondItem="Dxh-ex-uI5" secondAttribute="leading" constant="16" id="RFm-ul-CCs"/>
+                                <constraint firstAttribute="bottom" secondItem="ICe-AQ-yP1" secondAttribute="bottom" constant="16" id="dZN-SV-6Wm"/>
+                                <constraint firstItem="ICe-AQ-yP1" firstAttribute="top" secondItem="Dxh-ex-uI5" secondAttribute="top" constant="16" id="uVD-c3-YTD"/>
+                            </constraints>
                         </view>
                     </subviews>
                 </stackView>

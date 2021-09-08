@@ -4,4 +4,5 @@ import Foundation
 
 enum API : String {
     case weather = "https://devapi.qweather.com/v7/weather/now"
+    case daily = "https://wangweiyang8887.github.io/cabinets/cabinets.json"
 }

@@ -10,6 +10,7 @@ final class CurrentWeatherRow : BaseRow {
     @IBOutlet weak var stateImageView: UIImageView!
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var windLabel: UILabel!
+    @IBOutlet weak var countDownContainerView: UIView!
     
     private static let calculatedHeight: CGFloat = (UIScreen.main.bounds.width - 32 - 16) / 2
     
@@ -28,6 +29,10 @@ final class CurrentWeatherRow : BaseRow {
         contentView.backgroundColor = .clear
         weatherContainerView.cornerRadius = 16
         stateImageView.tintColor = .cabinetWhite
+        countDownContainerView.cornerRadius = 16
+        let gradientViewV2 = TTGradientView(gradient: [ .nonStandardColor(withRGBHex: 0xABDCFF), .nonStandardColor(withRGBHex: 0x0396FF) ], direction: .leftToRight)
+        countDownContainerView.addSubview(gradientViewV2, pinningEdges: .all)
+        countDownContainerView.sendSubviewToBack(gradientViewV2)
     }
     
     private func handleWeatherChanged() {
