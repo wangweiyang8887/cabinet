@@ -45,9 +45,10 @@ class BaseCollectionViewController : BaseViewController {
 
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        collectionView.deselectSelectedRows(animated: animated)
         // Prevent animation on push
-        collectionView.layoutIfNeeded()
+        UIView.performWithoutAnimation {
+            collectionView.deselectSelectedRows(animated: animated)
+        }
     }
 
     public override func viewDidLayoutSubviews() {

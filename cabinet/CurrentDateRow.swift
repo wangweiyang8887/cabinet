@@ -6,7 +6,7 @@ final class CurrentDateRow : BaseRow {
     
     override func initialize() {
         super.initialize()
-        let gradientView = TTGradientView(gradient: [ .nonStandardColor(withRGBHex: 0xABDCFF), .nonStandardColor(withRGBHex: 0x0396FF) ], direction: .leftToRight)
+        let gradientView = TTGradientView(gradient: [ .nonStandardColor(withRGBHex: 0xABDCFF), .nonStandardColor(withRGBHex: 0x0396FF) ], direction: .bottomToTop)
         contentView.addSubview(gradientView, pinningEdges: .all)
         cornerRadius = 16
         contentView.addSubview(titleLabel, pinningEdges: .all)

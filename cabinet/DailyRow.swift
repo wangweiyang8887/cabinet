@@ -13,16 +13,22 @@ final class DailyRow : BaseRow {
     override func initialize() {
         super.initialize()
         backgroundColor = .clear
-        let gradientView = TTGradientView(gradient: [ .nonStandardColor(withRGBHex: 0xABDCFF), .nonStandardColor(withRGBHex: 0x0396FF) ], direction: .leftToRight)
+        let gradientView = TTGradientView(gradient: [ .nonStandardColor(withRGBHex: 0xABDCFF), .nonStandardColor(withRGBHex: 0x0396FF) ], direction: .topToBottom)
         contentView.addSubview(gradientView, pinningEdges: .all)
         contentView.sendSubviewToBack(gradientView)
         contentView.cornerRadius = 16
-        redLabel.borderColor = .red
+        redLabel.borderColor = .cabinetWhite
         redLabel.borderWidth = 2
         redLabel.cornerRadius = 22
         
-        greenLabel.borderColor = .green
+        greenLabel.borderColor = .cabinetWhite
         greenLabel.borderWidth = 2
         greenLabel.cornerRadius = 22
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        redLabel.borderColor = .cabinetWhite
+        greenLabel.borderColor = .cabinetWhite
     }
 }

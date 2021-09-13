@@ -18,17 +18,14 @@ class HomePageVC : BaseCollectionViewController {
                 self?.currentWeather = weather
             }
         }
-        Server.fetchDailyReport().onSuccess { result in
-            print(result)
+        Server.fetchDailyReport().onSuccess { [weak self] result in
+            self?.daily = result
         }
     }
     
     private func updateContent() {
         if let weather = currentWeather {
             weatherRow.weather = weather
-        }
-        if let daily = daily {
-            
         }
         collectionView.reloadData()
     }

@@ -22,60 +22,109 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="168"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xOi-lN-wiE">
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="7ta-Ae-AdR">
                     <rect key="frame" x="16" y="16" width="382" height="136"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9Rd-5g-GJ5">
-                            <rect key="frame" x="0.0" y="0.0" width="382" height="64"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="wmE-gW-Km6">
+                            <rect key="frame" x="0.0" y="0.0" width="150.5" height="136"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="宜" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGG-Ub-1rk">
-                                    <rect key="frame" x="0.0" y="10" width="44" height="44"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="44" id="Ecg-i7-l9Y"/>
-                                        <constraint firstAttribute="width" constant="44" id="O6x-uB-mhf"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
-                                    <color key="textColor" red="0.76470588235294112" green="0.16862745098039217" blue="0.67450980392156867" alpha="1" colorSpace="calibratedRGB"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="狮子座" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsA-8L-gjx">
+                                    <rect key="frame" x="0.0" y="0.0" width="150.5" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                    <color key="textColor" name="White AF"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AB DC ER PT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZV-YJ-Xxl">
-                                    <rect key="frame" x="52" y="23" width="330" height="18"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XKR-fN-Lwj">
+                                    <rect key="frame" x="0.0" y="20" width="150.5" height="80"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="9" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cB1-qr-g1z">
+                                            <rect key="frame" x="0.0" y="0.0" width="150.5" height="80"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="42"/>
+                                            <color key="textColor" name="White AF"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="cB1-qr-g1z" secondAttribute="trailing" id="K8c-ty-nNU"/>
+                                        <constraint firstItem="cB1-qr-g1z" firstAttribute="top" secondItem="XKR-fN-Lwj" secondAttribute="top" id="UJb-9N-HJ4"/>
+                                        <constraint firstItem="cB1-qr-g1z" firstAttribute="leading" secondItem="XKR-fN-Lwj" secondAttribute="leading" id="dGs-gi-EIv"/>
+                                        <constraint firstAttribute="bottom" secondItem="cB1-qr-g1z" secondAttribute="bottom" id="h4B-LQ-dFy"/>
+                                    </constraints>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="九月 星期二" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gr2-BC-adb">
+                                    <rect key="frame" x="0.0" y="102" width="150.5" height="16"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <color key="textColor" name="White AF"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="辛丑年八月初三" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tY2-GA-0mR">
+                                    <rect key="frame" x="0.0" y="120" width="150.5" height="16"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                     <color key="textColor" name="White AF"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
                         </stackView>
-                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rTS-RH-Vap">
-                            <rect key="frame" x="0.0" y="72" width="382" height="64"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xOi-lN-wiE">
+                            <rect key="frame" x="166.5" y="0.0" width="215.5" height="136"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="忌" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bbq-e5-2T4">
-                                    <rect key="frame" x="0.0" y="10" width="44" height="44"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="44" id="ReX-xn-hrW"/>
-                                        <constraint firstAttribute="width" constant="44" id="kK6-VX-hos"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
-                                    <color key="textColor" red="0.28627450980392155" green="0.77647058823529413" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1122 3344 5566" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2TV-0d-KBo">
-                                    <rect key="frame" x="52" y="23" width="330" height="18"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                    <color key="textColor" name="White AF"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9Rd-5g-GJ5">
+                                    <rect key="frame" x="0.0" y="0.0" width="215.5" height="64"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="宜" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGG-Ub-1rk">
+                                            <rect key="frame" x="0.0" y="10" width="44" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="Ecg-i7-l9Y"/>
+                                                <constraint firstAttribute="width" constant="44" id="O6x-uB-mhf"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                            <color key="textColor" name="White AF"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AB DC ER PT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZV-YJ-Xxl">
+                                            <rect key="frame" x="52" y="23" width="163.5" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" name="White AF"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rTS-RH-Vap">
+                                    <rect key="frame" x="0.0" y="72" width="215.5" height="64"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="忌" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bbq-e5-2T4">
+                                            <rect key="frame" x="0.0" y="10" width="44" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="ReX-xn-hrW"/>
+                                                <constraint firstAttribute="width" constant="44" id="kK6-VX-hos"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                            <color key="textColor" name="White AF"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1122 3344 5566" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2TV-0d-KBo">
+                                            <rect key="frame" x="52" y="23" width="163.5" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" name="White AF"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
                             </subviews>
                         </stackView>
                     </subviews>
+                    <constraints>
+                        <constraint firstItem="wmE-gW-Km6" firstAttribute="width" secondItem="xOi-lN-wiE" secondAttribute="width" multiplier="0.7" id="2zT-D1-fg8"/>
+                    </constraints>
                 </stackView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="xOi-lN-wiE" secondAttribute="trailing" constant="16" id="h0a-MD-OCl"/>
-                <constraint firstItem="xOi-lN-wiE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="vHa-bf-AUV"/>
-                <constraint firstAttribute="bottom" secondItem="xOi-lN-wiE" secondAttribute="bottom" constant="16" id="ydZ-WN-d1x"/>
-                <constraint firstItem="xOi-lN-wiE" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="z5e-0R-6Z8"/>
+                <constraint firstAttribute="trailing" secondItem="7ta-Ae-AdR" secondAttribute="trailing" constant="16" id="e1g-nI-PoC"/>
+                <constraint firstAttribute="bottom" secondItem="7ta-Ae-AdR" secondAttribute="bottom" constant="16" id="k9O-yv-Qxh"/>
+                <constraint firstItem="7ta-Ae-AdR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="lwt-oJ-eyG"/>
+                <constraint firstItem="7ta-Ae-AdR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="zSL-Mv-XPU"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="28" y="93"/>

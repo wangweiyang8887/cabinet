@@ -22,7 +22,7 @@ final class CurrentWeatherRow : BaseRow {
     
     override func initialize() {
         super.initialize()
-        let gradientView = TTGradientView(gradient: [ .nonStandardColor(withRGBHex: 0xABDCFF), .nonStandardColor(withRGBHex: 0x0396FF) ], direction: .leftToRight)
+        let gradientView = TTGradientView(gradient: [ .nonStandardColor(withRGBHex: 0xABDCFF), .nonStandardColor(withRGBHex: 0x0396FF) ], direction: .topLeftToBottomRight)
         weatherContainerView.addSubview(gradientView, pinningEdges: .all)
         weatherContainerView.sendSubviewToBack(gradientView)
         backgroundColor = .clear
@@ -30,7 +30,7 @@ final class CurrentWeatherRow : BaseRow {
         weatherContainerView.cornerRadius = 16
         stateImageView.tintColor = .cabinetWhite
         countDownContainerView.cornerRadius = 16
-        let gradientViewV2 = TTGradientView(gradient: [ .nonStandardColor(withRGBHex: 0xABDCFF), .nonStandardColor(withRGBHex: 0x0396FF) ], direction: .leftToRight)
+        let gradientViewV2 = TTGradientView(gradient: [ .nonStandardColor(withRGBHex: 0xABDCFF), .nonStandardColor(withRGBHex: 0x0396FF) ], direction: .topRightToBottomLeft)
         countDownContainerView.addSubview(gradientViewV2, pinningEdges: .all)
         countDownContainerView.sendSubviewToBack(gradientViewV2)
     }
