@@ -4,13 +4,9 @@ class ModalEditorRow<Value> : EditorRow<Value> {
     @IBOutlet private var titleLabel: UILabel!
     @IBOutlet private var valueLabel: UILabel!
     @IBOutlet fileprivate var imageView: UIImageView!
-    @IBOutlet private var topConstraint: NSLayoutConstraint!
-    @IBOutlet private var bottomConstraint: NSLayoutConstraint!
-    @IBOutlet private var leadingConstraint: NSLayoutConstraint!
-    @IBOutlet private var trailingConstraint: NSLayoutConstraint!
     @IBOutlet fileprivate var containerView: UIView!
-    override class var height: RowHeight { return .auto(estimate: 54) }
-    override class var nibName: String { return "PGModalEditorRow" }
+    override class var height: RowHeight { return .fixed(64) }
+    override class var nibName: String { return "ModalEditorRow" }
     override var isEnabled: Bool { didSet { handleIsEnabledSet() } }
 
     var _formatter: Formatter?
@@ -22,7 +18,6 @@ class ModalEditorRow<Value> : EditorRow<Value> {
     var editingColor: UIColor = .nonStandardColor(withRGBHex: 0x999999) { didSet { updateValueLabel() } }
     var valueTextColor: UIColor! { didSet { updateValueLabel() } }
     var isChangeTitleLabel: ChangeTitleLabel?
-    var edgeInsets: UIEdgeInsets = UIEdgeInsets(horizontal: 16, vertical: 24) { didSet { hanldeEdgeInsetsChanged() } }
     
     typealias Formatter = (Value) -> String
     typealias AttributedFormatter = (Value) -> NSAttributedString
@@ -107,13 +102,6 @@ class ModalEditorRow<Value> : EditorRow<Value> {
     private func handleAttributedFormatterSet() {
         _formatter = nil
         updateValueLabel()
-    }
-    
-    private func hanldeEdgeInsetsChanged() {
-        leadingConstraint.constant = edgeInsets.left
-        trailingConstraint.constant = edgeInsets.right
-        topConstraint.constant = edgeInsets.top
-        bottomConstraint.constant = edgeInsets.bottom
     }
     
     func reloadTitle() {

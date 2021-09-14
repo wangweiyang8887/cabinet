@@ -6,7 +6,7 @@ class StringEditorRow<Value> : EditorRow<Value> {
     @IBOutlet private(set) var rightStackView: UIStackView!
     
     override class var nibName: String? { return "StringEditorRow" }
-    override class var height: RowHeight { .fixed(56) }
+    override class var height: RowHeight { .fixed(64) }
     
     var editor: StringEditor<Value>? { didSet { if editor != oldValue { handleEditorChanged() } } }
     var validatedValue: Value { return editor!.validatedValue }

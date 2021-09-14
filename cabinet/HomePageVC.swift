@@ -24,6 +24,11 @@ class HomePageVC : BaseCollectionViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        collectionView.reloadData()
+    }
+    
     private func updateContent() {
         if let weather = currentWeather {
             weatherRow.weather = weather
@@ -47,12 +52,25 @@ class HomePageVC : BaseCollectionViewController {
     
     private lazy var weatherRow: CurrentWeatherRow = {
         let result = CurrentWeatherRow()
-        result.reminderHandler = { [unowned self] in self.navigationController?.pushViewController(ReminderVC(), animated: true) }
+        result.eventModel = self.currentEvent
+        result.reminderHandler = { [unowned self] in
+            let vc = ReminderVC()
+            vc.completion = { [unowned self] in self.weatherRow.eventModel = self.currentEvent }
+            self.navigationController?.pushViewController(vc, animated: true) }
         return result
     }()
     
     private lazy var dateRow = CurrentDateRow()
     private lazy var dailyRow = DailyRow()
+}
+
+extension HomePageVC {
+    var currentEvent: EventModel {
+        let result = EventModel()
+        result.name = UserDefaults.shared[.eventName]
+        result.date = UserDefaults.shared[.eventDate]
+        return result
+    }
 }
 
 extension Server {

@@ -23,6 +23,7 @@ final class CurrentWeatherRow : BaseRow {
     
     var weather: CurrentWeather? { didSet { handleWeatherChanged() } }
     var reminderHandler: ActionClosure?
+    var eventModel: EventModel? { didSet { handleEventModelChanged() } }
     
     override func initialize() {
         super.initialize()
@@ -39,14 +40,6 @@ final class CurrentWeatherRow : BaseRow {
         countDownContainerView.sendSubviewToBack(gradientViewV2)
         let tap = UITapGestureRecognizer { [unowned self] in self.reminderHandler?() }
         countDownContainerView.addGestureRecognizer(tap)
-        eventNameLabel.text = UserDefaults.shared[.eventName]
-        eventDateLabel.text = UserDefaults.shared[.eventDate]
-        guard let dateString = UserDefaults.shared[.eventDate] else { return }
-        guard let date = DateFormatter(dateFormat: "YYYY.MM.dd").date(from: dateString) else { return }
-        let date1 = CalendarDate.today(in: .current)
-        let date2 = CalendarDate(date: date, timeZone: .current)
-        let distant = CalendarDate.component(.day, from: date1, to: date2)
-        eventDayLabel.text = "\(abs(distant))"
     }
     
     private func handleWeatherChanged() {
@@ -58,6 +51,18 @@ final class CurrentWeatherRow : BaseRow {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.startAnimation()
         }
+    }
+    
+    private func handleEventModelChanged() {
+        guard let model = eventModel else { return }
+        eventNameLabel.text = model.name
+        eventDateLabel.text = model.date
+        guard let dateString = model.date else { return }
+        guard let date = DateFormatter(dateFormat: "YYYY.MM.dd").date(from: dateString) else { return }
+        let date1 = CalendarDate.today(in: .current)
+        let date2 = CalendarDate(date: date, timeZone: .current)
+        let distant = CalendarDate.component(.day, from: date1, to: date2)
+        eventDayLabel.text = "\(abs(distant))"
     }
     
     private func startAnimation() {

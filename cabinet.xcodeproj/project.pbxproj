@@ -46,6 +46,7 @@
 		9D6BC28926F0A2FA00F000C9 /* Navigation+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC28826F0A2FA00F000C9 /* Navigation+Utilities.swift */; };
 		9D6BC28B26F0A37C00F000C9 /* DatePickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC28A26F0A37C00F000C9 /* DatePickerVC.swift */; };
 		9D6BC28D26F0A39800F000C9 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC28C26F0A39800F000C9 /* DatePickerView.swift */; };
+		9D6BC28F26F0A55000F000C9 /* SpacerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC28E26F0A55000F000C9 /* SpacerRow.swift */; };
 		9D70891826D8F76500716054 /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D70891726D8F76500716054 /* Blur.swift */; };
 		9D7B91B026E0E914001C11AD /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91AF26E0E914001C11AD /* TimerManager.swift */; };
 		9D7B91B226E1EC7B001C11AD /* PushTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91B126E1EC7B001C11AD /* PushTransitionDelegate.swift */; };
@@ -186,6 +187,7 @@
 		9D6BC28826F0A2FA00F000C9 /* Navigation+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Navigation+Utilities.swift"; sourceTree = "<group>"; };
 		9D6BC28A26F0A37C00F000C9 /* DatePickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerVC.swift; sourceTree = "<group>"; };
 		9D6BC28C26F0A39800F000C9 /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
+		9D6BC28E26F0A55000F000C9 /* SpacerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacerRow.swift; sourceTree = "<group>"; };
 		9D70891726D8F76500716054 /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
 		9D7B91AF26E0E914001C11AD /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		9D7B91B126E1EC7B001C11AD /* PushTransitionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushTransitionDelegate.swift; sourceTree = "<group>"; };
@@ -349,6 +351,7 @@
 				9D6BC26726F07CA800F000C9 /* ModalEditorRow.swift */,
 				9D6BC26626F07CA800F000C9 /* ModalEditorRow.xib */,
 				9D6BC28226F0A0E100F000C9 /* CancelAndDoneRow.swift */,
+				9D6BC28E26F0A55000F000C9 /* SpacerRow.swift */,
 			);
 			name = Rows;
 			sourceTree = "<group>";
@@ -754,6 +757,7 @@
 				9D7B91D226E20DA6001C11AD /* Constants.swift in Sources */,
 				9D6BC27726F0832600F000C9 /* String+Helper.swift in Sources */,
 				9D7B91D726E20E44001C11AD /* Result.swift in Sources */,
+				9D6BC28F26F0A55000F000C9 /* SpacerRow.swift in Sources */,
 				9D7B91F826E21871001C11AD /* KeyboardObserver.swift in Sources */,
 				9D66D1BB26E5FB3E00411D75 /* KeyedDecodingContainer+Extension.swift in Sources */,
 				9D7B91C426E20BAD001C11AD /* BaseRow.swift in Sources */,

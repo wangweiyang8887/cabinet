@@ -3,21 +3,33 @@
 import UIKit
 
 final class ReminderVC : BaseCollectionViewController {
+    var completion: ActionClosure?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "倒数日"
-        collectionView.sections += BaseSection([ reminderRow, eventNameRow, eventEditorRow ])
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: saveButton)
+        collectionView.sections += BaseSection([ reminderRow, SpacerRow(height: 32), eventEditorRow, dateRow ])
     }
-    
-    private lazy var eventNameRow: TextRow = {
-        let result = TextRow()
-        result.text = "名称"
-        result.textColor = .cabinetBlack
-        result.edgeInsets = UIEdgeInsets(top: 32, left: 16, bottom: 0, right: 16)
+
+    // MARK: Components
+    private lazy var saveButton: TTButton = {
+        let result = TTButton()
+        result.setTitle("保存", for: .normal)
+        result.setTitleColor(.cabinetBlack, for: .normal)
+        result.addTapHandler { [unowned self] in
+            if let name = self.eventEditorRow.value {
+                UserDefaults.shared[.eventName] = name
+            }
+            if let date = self.dateRow.value {
+                UserDefaults.shared[.eventDate] = date
+            }
+            self.completion?()
+            self.popOrDismissSelf()
+        }
         return result
     }()
-
+    
     private lazy var reminderRow: ReminderRow = {
         let result = ReminderRow()
         result.title = UserDefaults.shared[.eventName]
@@ -39,6 +51,22 @@ final class ReminderVC : BaseCollectionViewController {
     
     private lazy var dateRow: ModalEditorRow<String?> = {
         let result = ModalEditorRow<String?>()
+        result.title = "目标日期"
+        result.valueTextColor = .cabinetBlack
+        result.isPlaceholder = { $0 == nil }
+        result.formatter = { $0 ?? "请选择" }
+        result.selectionHandler = { [unowned self] in self.pickerVC.show() }
+        return result
+    }()
+    
+    private lazy var pickerVC: DatePickerVC = {
+        let result = DatePickerVC(title: "请选择日期", dateType: .yearMonthDay, timeZone: .current)
+        result.valueEditedHandler = { date in
+            let value = date.formatted(using: DateFormatter(dateFormat: "yyyy.MM.dd"))
+            self.dateRow.value = value
+            self.dateRow.updateValueLabel()
+            self.reminderRow.date = value
+        }
         return result
     }()
 }

@@ -34,7 +34,14 @@ final class ReminderRow : BaseRow {
 
     var date: String? {
         get { return dateLabel.text }
-        set { dateLabel.text = newValue }
+        set { dateLabel.text = newValue
+            guard let dateString = newValue else { return }
+            guard let date = DateFormatter(dateFormat: "YYYY.MM.dd").date(from: dateString) else { return }
+            let date1 = CalendarDate.today(in: .current)
+            let date2 = CalendarDate(date: date, timeZone: .current)
+            let distant = CalendarDate.component(.day, from: date1, to: date2)
+            numberLabel.text = "\(abs(distant))"
+        }
     }
     
 }
