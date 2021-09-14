@@ -28,6 +28,7 @@ public struct TTGradient : Equatable {
         self.locations = locations
     }
 
+    public static let topic = TTGradient(components: [ .nonStandardColor(withRGBHex: 0xABDCFF), .nonStandardColor(withRGBHex: 0x0396FF) ])
     /// Converts a single color to a gradient
     public static func color(_ color: UIColor) -> TTGradient { return TTGradient(components: [ color ]) }
 

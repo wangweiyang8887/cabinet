@@ -15,37 +15,18 @@ extension Sequence {
         return result
     }
 
-    /// Check value any match predicate
-    ///
-    ///      let array: [Int] = [1, 2, 3, 4]
-    ///      array.anyMatch { $0 == 1  } -> true
-    ///
     public func anyMatch(_ predicate: (Element) throws -> Bool) rethrows -> Bool {
         return try contains(where: predicate)
     }
 
-    /// Check value all match predicate
-    ///
-    ///      let array: [Int] = [1, 1, 1, 1]
-    ///      array.allMatch { $0 == 1  } -> true
-    ///
     public func allMatch(_ predicate: (Element) throws -> Bool) rethrows -> Bool {
         return try !contains { try !predicate($0) }
     }
 
-    /// Check value none match predicate
-    ///
-    ///      let array: [Int] = [1, 2, 3, 4]
-    ///      array.noneMatch { $0 == 5  } -> true
-    ///
     public func noneMatch(_ predicate: (Element) throws -> Bool) rethrows -> Bool {
         return try !contains(where: predicate)
     }
-    /// Count predicate works time
-    ///
-    ///     let a: [Int] = [1, 2, 3, 4, 1]
-    ///     let b = a.count { $0 == 1 }
-    ///
+
     public func count(_ predicate: (Element) throws -> Bool) rethrows -> Int {
         var count = 0
         for element in self {
@@ -54,7 +35,6 @@ extension Sequence {
         return count
     }
 
-    /// Returns the first generic that satisfies the condition
     public func first<T>(with transform: (Element) throws -> T?) rethrows -> T? {
         for element in self {
             if let transformedElement = try transform(element) { return transformedElement }
@@ -64,7 +44,6 @@ extension Sequence {
 }
 
 extension Sequence where Element : Equatable {
-    /// Simplify the function `func count(_ predicate: (Element) throws -> Bool) rethrows -> Int `
     public func count(_ element: Element) -> Int {
         return count { $0 == element }
     }
@@ -85,7 +64,10 @@ extension Sequence where Element : Equatable {
 }
 
 extension BidirectionalCollection {
-    /// Return the last index by predicate closure
+//    public func last(where predicate: (Element) throws -> Bool) rethrows -> Element? {
+//        return try reversed().first(where: predicate)
+//    }
+
     public func lastIndex(where predicate: (Element) throws -> Bool) rethrows -> Index? {
         var index = endIndex
         while index != startIndex {

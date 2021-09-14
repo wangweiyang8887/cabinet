@@ -11,10 +11,12 @@ class BaseViewController : UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .cabinetWhite
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
+        edgesForExtendedLayout = .all
+        extendedLayoutIncludesOpaqueBars = true
     }
     
     deinit {
-        print("\(Self.self) deinit")
+        print("\(classForCoder) deinit")
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -45,4 +45,7 @@ extension UIColor {
     public static func nonStandardColor(withRGBHex value: UInt) -> UIColor {
         return .init(rgbHex: value)
     }
+    
+    static var lightestBlue: UIColor { return .nonStandardColor(withRGBHex: 0xABDCFF) }
+    static var darkBlue: UIColor { return .nonStandardColor(withRGBHex: 0x0396FF) }
 }

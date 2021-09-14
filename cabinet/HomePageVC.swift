@@ -6,10 +6,11 @@ import CoreLocation
 class HomePageVC : BaseCollectionViewController {
     var currentWeather: CurrentWeather? { didSet { updateContent() } }
     var daily: DailyModel? { didSet { updateContent() } }
+    override var navigationBarStyle: NavigationBarStyle { return .transparent }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.sections += BaseSection([ weatherRow, dailyRow ], margins: UIEdgeInsets(top: 16, left: 0, bottom: 0, right: 0))
+        collectionView.sections += BaseSection([ titleRow, weatherRow, dailyRow ], margins: UIEdgeInsets(top: 16, left: 0, bottom: 0, right: 0))
         LocationManager.shared.start { [weak self] location, address in
             guard let self = self else { return }
             self.weatherRow.city = address
@@ -31,6 +32,15 @@ class HomePageVC : BaseCollectionViewController {
     }
     
     // MARK: Components
+    private lazy var titleRow: TextRow = {
+        let result = TextRow()
+        result.text = "Caibinet"
+        result.font = .systemFont(ofSize: 32, weight: .bold)
+        result.textColor = .cabinetBlack
+        result.edgeInsets = UIEdgeInsets(top: 0, left: 16, bottom: 16, right: 16)
+        return result
+    }()
+    
     private lazy var weatherRow: CurrentWeatherRow = {
         let result = CurrentWeatherRow()
         result.reminderHandler = { [unowned self] in self.navigationController?.pushViewController(ReminderVC(), animated: true) }

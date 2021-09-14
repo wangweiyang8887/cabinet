@@ -7,5 +7,6 @@ final class ReminderVC : BaseCollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "倒数日"
+        collectionView.sections += BaseSection([ ReminderRow() ])
     }
 }

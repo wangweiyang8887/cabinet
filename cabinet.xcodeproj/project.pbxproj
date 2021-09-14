@@ -18,6 +18,11 @@
 		9D66D1CB26E7617E00411D75 /* DailyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66D1CA26E7617E00411D75 /* DailyModel.swift */; };
 		9D6BC24F26EF692B00F000C9 /* ReminderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC24E26EF692B00F000C9 /* ReminderVC.swift */; };
 		9D6BC25226F0480400F000C9 /* NavigationBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC25126F0480400F000C9 /* NavigationBarStyle.swift */; };
+		9D6BC25426F04C9A00F000C9 /* ReminderRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC25326F04C9A00F000C9 /* ReminderRow.swift */; };
+		9D6BC25826F04CD300F000C9 /* ReminderRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D6BC25726F04CD300F000C9 /* ReminderRow.xib */; };
+		9D6BC25A26F06E0800F000C9 /* TextRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC25926F06E0800F000C9 /* TextRow.swift */; };
+		9D6BC25C26F06E3E00F000C9 /* TTHyperlinkTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC25B26F06E3E00F000C9 /* TTHyperlinkTextView.swift */; };
+		9D6BC25E26F06F0600F000C9 /* Array+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC25D26F06F0600F000C9 /* Array+Utilities.swift */; };
 		9D70891826D8F76500716054 /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D70891726D8F76500716054 /* Blur.swift */; };
 		9D7B91B026E0E914001C11AD /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91AF26E0E914001C11AD /* TimerManager.swift */; };
 		9D7B91B226E1EC7B001C11AD /* PushTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91B126E1EC7B001C11AD /* PushTransitionDelegate.swift */; };
@@ -130,6 +135,11 @@
 		9D66D1CA26E7617E00411D75 /* DailyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyModel.swift; sourceTree = "<group>"; };
 		9D6BC24E26EF692B00F000C9 /* ReminderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderVC.swift; sourceTree = "<group>"; };
 		9D6BC25126F0480400F000C9 /* NavigationBarStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarStyle.swift; sourceTree = "<group>"; };
+		9D6BC25326F04C9A00F000C9 /* ReminderRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderRow.swift; sourceTree = "<group>"; };
+		9D6BC25726F04CD300F000C9 /* ReminderRow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReminderRow.xib; sourceTree = "<group>"; };
+		9D6BC25926F06E0800F000C9 /* TextRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRow.swift; sourceTree = "<group>"; };
+		9D6BC25B26F06E3E00F000C9 /* TTHyperlinkTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTHyperlinkTextView.swift; sourceTree = "<group>"; };
+		9D6BC25D26F06F0600F000C9 /* Array+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Utilities.swift"; sourceTree = "<group>"; };
 		9D70891726D8F76500716054 /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
 		9D7B91AF26E0E914001C11AD /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		9D7B91B126E1EC7B001C11AD /* PushTransitionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushTransitionDelegate.swift; sourceTree = "<group>"; };
@@ -262,6 +272,8 @@
 			isa = PBXGroup;
 			children = (
 				9D6BC24E26EF692B00F000C9 /* ReminderVC.swift */,
+				9D6BC25326F04C9A00F000C9 /* ReminderRow.swift */,
+				9D6BC25726F04CD300F000C9 /* ReminderRow.xib */,
 			);
 			name = Reminder;
 			sourceTree = "<group>";
@@ -283,6 +295,7 @@
 			isa = PBXGroup;
 			children = (
 				9D7B91C326E20BAD001C11AD /* BaseRow.swift */,
+				9D6BC25926F06E0800F000C9 /* TextRow.swift */,
 			);
 			name = Rows;
 			sourceTree = "<group>";
@@ -293,6 +306,7 @@
 				9D7B91CA26E20C51001C11AD /* TTButton.swift */,
 				9D7B91DA26E20F9A001C11AD /* TTButtonAction.swift */,
 				9D7B920326E22302001C11AD /* TTGradientView.swift */,
+				9D6BC25B26F06E3E00F000C9 /* TTHyperlinkTextView.swift */,
 			);
 			name = "UI Elements";
 			sourceTree = "<group>";
@@ -450,6 +464,7 @@
 				9D7B91DC26E20FDB001C11AD /* Geometry.swift */,
 				9D7B91DE26E21001001C11AD /* Math.swift */,
 				9D7B91E026E2102B001C11AD /* Comparable+Utilities.swift */,
+				9D6BC25D26F06F0600F000C9 /* Array+Utilities.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -586,6 +601,7 @@
 				9DB7580326D37B25006D2246 /* LaunchScreen.storyboard in Resources */,
 				9D7B920E26E2339B001C11AD /* CurrentWeatherRow.xib in Resources */,
 				9DB7580026D37B25006D2246 /* Assets.xcassets in Resources */,
+				9D6BC25826F04CD300F000C9 /* ReminderRow.xib in Resources */,
 				9DB757FE26D37B24006D2246 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -677,6 +693,7 @@
 				9D7B91EC26E213B5001C11AD /* UIViewController+Helper.m in Sources */,
 				9D7B920426E22302001C11AD /* TTGradientView.swift in Sources */,
 				9D7B920626E22339001C11AD /* TTGradient.swift in Sources */,
+				9D6BC25E26F06F0600F000C9 /* Array+Utilities.swift in Sources */,
 				9D7B920226E22140001C11AD /* CurrentDateRow.swift in Sources */,
 				9D7B91CB26E20C51001C11AD /* TTButton.swift in Sources */,
 				9D82636F26D8D2A900981A3E /* Sequence+Utilities.swift in Sources */,
@@ -693,6 +710,8 @@
 				9D7B91E126E2102B001C11AD /* Comparable+Utilities.swift in Sources */,
 				9D7B91EE26E2148F001C11AD /* UIWindow+Utilities.swift in Sources */,
 				9D7B91BF26E20B4D001C11AD /* BaseCollectionViewLayout.swift in Sources */,
+				9D6BC25426F04C9A00F000C9 /* ReminderRow.swift in Sources */,
+				9D6BC25A26F06E0800F000C9 /* TextRow.swift in Sources */,
 				9DB7580E26D3837A006D2246 /* BaseViewController.swift in Sources */,
 				9D7B91FA26E21894001C11AD /* Observers.swift in Sources */,
 				9DB757F726D37B24006D2246 /* AppDelegate.swift in Sources */,
@@ -711,6 +730,7 @@
 				9DB7581026D383A7006D2246 /* BaseNavigationController.swift in Sources */,
 				9D66D1BF26E5FEDC00411D75 /* CurrentWeather.swift in Sources */,
 				9D7B91F426E217BB001C11AD /* NSObject+Helper.m in Sources */,
+				9D6BC25C26F06E3E00F000C9 /* TTHyperlinkTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -30,6 +30,7 @@ class BaseCollectionViewController : BaseViewController {
         view.pinToBottom(collectionView, useSafeAnchor: false)
         // Observers
         observers.addKeyboardObserver(handler: { [unowned self] in self.handleKeyboardFrameChanged($0) })
+        collectionView.contentInsetAdjustmentBehavior = .never
     }
 
     deinit {
