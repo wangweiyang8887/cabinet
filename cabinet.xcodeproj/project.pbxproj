@@ -23,6 +23,16 @@
 		9D6BC25A26F06E0800F000C9 /* TextRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC25926F06E0800F000C9 /* TextRow.swift */; };
 		9D6BC25C26F06E3E00F000C9 /* TTHyperlinkTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC25B26F06E3E00F000C9 /* TTHyperlinkTextView.swift */; };
 		9D6BC25E26F06F0600F000C9 /* Array+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC25D26F06F0600F000C9 /* Array+Utilities.swift */; };
+		9D6BC26126F07BE500F000C9 /* EditorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC26026F07BE500F000C9 /* EditorRow.swift */; };
+		9D6BC26426F07C9D00F000C9 /* StringEditorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC26226F07C9C00F000C9 /* StringEditorRow.swift */; };
+		9D6BC26526F07C9D00F000C9 /* StringEditorRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D6BC26326F07C9D00F000C9 /* StringEditorRow.xib */; };
+		9D6BC26826F07CA800F000C9 /* ModalEditorRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D6BC26626F07CA800F000C9 /* ModalEditorRow.xib */; };
+		9D6BC26926F07CA800F000C9 /* ModalEditorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC26726F07CA800F000C9 /* ModalEditorRow.swift */; };
+		9D6BC26B26F07D2C00F000C9 /* StringEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC26A26F07D2C00F000C9 /* StringEditor.swift */; };
+		9D6BC26D26F07E7500F000C9 /* TTTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC26C26F07E7500F000C9 /* TTTextField.swift */; };
+		9D6BC26F26F07ED300F000C9 /* TTTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC26E26F07ED300F000C9 /* TTTextView.swift */; };
+		9D6BC27126F07EF800F000C9 /* TextViewObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC27026F07EF800F000C9 /* TextViewObserver.swift */; };
+		9D6BC27326F07FB100F000C9 /* UIResponder+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC27226F07FB100F000C9 /* UIResponder+Utilities.swift */; };
 		9D70891826D8F76500716054 /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D70891726D8F76500716054 /* Blur.swift */; };
 		9D7B91B026E0E914001C11AD /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91AF26E0E914001C11AD /* TimerManager.swift */; };
 		9D7B91B226E1EC7B001C11AD /* PushTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91B126E1EC7B001C11AD /* PushTransitionDelegate.swift */; };
@@ -140,6 +150,16 @@
 		9D6BC25926F06E0800F000C9 /* TextRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRow.swift; sourceTree = "<group>"; };
 		9D6BC25B26F06E3E00F000C9 /* TTHyperlinkTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTHyperlinkTextView.swift; sourceTree = "<group>"; };
 		9D6BC25D26F06F0600F000C9 /* Array+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Utilities.swift"; sourceTree = "<group>"; };
+		9D6BC26026F07BE500F000C9 /* EditorRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorRow.swift; sourceTree = "<group>"; };
+		9D6BC26226F07C9C00F000C9 /* StringEditorRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringEditorRow.swift; sourceTree = "<group>"; };
+		9D6BC26326F07C9D00F000C9 /* StringEditorRow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StringEditorRow.xib; sourceTree = "<group>"; };
+		9D6BC26626F07CA800F000C9 /* ModalEditorRow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModalEditorRow.xib; sourceTree = "<group>"; };
+		9D6BC26726F07CA800F000C9 /* ModalEditorRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalEditorRow.swift; sourceTree = "<group>"; };
+		9D6BC26A26F07D2C00F000C9 /* StringEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringEditor.swift; sourceTree = "<group>"; };
+		9D6BC26C26F07E7500F000C9 /* TTTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTTextField.swift; sourceTree = "<group>"; };
+		9D6BC26E26F07ED300F000C9 /* TTTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTTextView.swift; sourceTree = "<group>"; };
+		9D6BC27026F07EF800F000C9 /* TextViewObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewObserver.swift; sourceTree = "<group>"; };
+		9D6BC27226F07FB100F000C9 /* UIResponder+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIResponder+Utilities.swift"; sourceTree = "<group>"; };
 		9D70891726D8F76500716054 /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
 		9D7B91AF26E0E914001C11AD /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		9D7B91B126E1EC7B001C11AD /* PushTransitionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushTransitionDelegate.swift; sourceTree = "<group>"; };
@@ -295,7 +315,12 @@
 			isa = PBXGroup;
 			children = (
 				9D7B91C326E20BAD001C11AD /* BaseRow.swift */,
+				9D6BC26026F07BE500F000C9 /* EditorRow.swift */,
 				9D6BC25926F06E0800F000C9 /* TextRow.swift */,
+				9D6BC26226F07C9C00F000C9 /* StringEditorRow.swift */,
+				9D6BC26326F07C9D00F000C9 /* StringEditorRow.xib */,
+				9D6BC26726F07CA800F000C9 /* ModalEditorRow.swift */,
+				9D6BC26626F07CA800F000C9 /* ModalEditorRow.xib */,
 			);
 			name = Rows;
 			sourceTree = "<group>";
@@ -307,6 +332,9 @@
 				9D7B91DA26E20F9A001C11AD /* TTButtonAction.swift */,
 				9D7B920326E22302001C11AD /* TTGradientView.swift */,
 				9D6BC25B26F06E3E00F000C9 /* TTHyperlinkTextView.swift */,
+				9D6BC26A26F07D2C00F000C9 /* StringEditor.swift */,
+				9D6BC26C26F07E7500F000C9 /* TTTextField.swift */,
+				9D6BC26E26F07ED300F000C9 /* TTTextView.swift */,
 			);
 			name = "UI Elements";
 			sourceTree = "<group>";
@@ -329,6 +357,7 @@
 				9D7B91F726E21871001C11AD /* KeyboardObserver.swift */,
 				9D7B91F926E21894001C11AD /* Observers.swift */,
 				9D7B91FB26E218ED001C11AD /* Event.swift */,
+				9D6BC27026F07EF800F000C9 /* TextViewObserver.swift */,
 			);
 			name = Observers;
 			sourceTree = "<group>";
@@ -337,6 +366,7 @@
 			isa = PBXGroup;
 			children = (
 				9D82636C26D8D26900981A3E /* UIView+Utilities.swift */,
+				9D6BC27226F07FB100F000C9 /* UIResponder+Utilities.swift */,
 				9D82636E26D8D2A900981A3E /* Sequence+Utilities.swift */,
 				9D82637026D8D30500981A3E /* NSLayoutConstraint+Utilities.swift */,
 				9D82637226D8D33A00981A3E /* UIView+IBInspectables.swift */,
@@ -599,7 +629,9 @@
 				9DB7581A26D38D90006D2246 /* CurrentDateVC.xib in Resources */,
 				9D66D1C826E7544400411D75 /* DailyRow.xib in Resources */,
 				9DB7580326D37B25006D2246 /* LaunchScreen.storyboard in Resources */,
+				9D6BC26826F07CA800F000C9 /* ModalEditorRow.xib in Resources */,
 				9D7B920E26E2339B001C11AD /* CurrentWeatherRow.xib in Resources */,
+				9D6BC26526F07C9D00F000C9 /* StringEditorRow.xib in Resources */,
 				9DB7580026D37B25006D2246 /* Assets.xcassets in Resources */,
 				9D6BC25826F04CD300F000C9 /* ReminderRow.xib in Resources */,
 				9DB757FE26D37B24006D2246 /* Main.storyboard in Resources */,
@@ -663,7 +695,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D6BC26D26F07E7500F000C9 /* TTTextField.swift in Sources */,
 				9D7B91E326E2115D001C11AD /* UIView+Constrains.swift in Sources */,
+				9D6BC26126F07BE500F000C9 /* EditorRow.swift in Sources */,
 				9D66D1BD26E5FBDF00411D75 /* API.swift in Sources */,
 				9D7B91B726E20AA9001C11AD /* ItemRows.swift in Sources */,
 				9D6BC24F26EF692B00F000C9 /* ReminderVC.swift in Sources */,
@@ -674,6 +708,8 @@
 				9D7B91B426E200FB001C11AD /* UICollectionView+Utilities.swift in Sources */,
 				9D7B91F126E2158B001C11AD /* Navigation+Utilities.m in Sources */,
 				9DB7582026D3961D006D2246 /* TargetActionHandler.swift in Sources */,
+				9D6BC27326F07FB100F000C9 /* UIResponder+Utilities.swift in Sources */,
+				9D6BC26F26F07ED300F000C9 /* TTTextView.swift in Sources */,
 				9D7B91D226E20DA6001C11AD /* Constants.swift in Sources */,
 				9D7B91D726E20E44001C11AD /* Result.swift in Sources */,
 				9D7B91F826E21871001C11AD /* KeyboardObserver.swift in Sources */,
@@ -691,6 +727,7 @@
 				9D7B91B926E20AD0001C11AD /* BaseCollectionView.swift in Sources */,
 				9D7B91D526E20E11001C11AD /* Operation.swift in Sources */,
 				9D7B91EC26E213B5001C11AD /* UIViewController+Helper.m in Sources */,
+				9D6BC26426F07C9D00F000C9 /* StringEditorRow.swift in Sources */,
 				9D7B920426E22302001C11AD /* TTGradientView.swift in Sources */,
 				9D7B920626E22339001C11AD /* TTGradient.swift in Sources */,
 				9D6BC25E26F06F0600F000C9 /* Array+Utilities.swift in Sources */,
@@ -712,6 +749,7 @@
 				9D7B91BF26E20B4D001C11AD /* BaseCollectionViewLayout.swift in Sources */,
 				9D6BC25426F04C9A00F000C9 /* ReminderRow.swift in Sources */,
 				9D6BC25A26F06E0800F000C9 /* TextRow.swift in Sources */,
+				9D6BC26926F07CA800F000C9 /* ModalEditorRow.swift in Sources */,
 				9DB7580E26D3837A006D2246 /* BaseViewController.swift in Sources */,
 				9D7B91FA26E21894001C11AD /* Observers.swift in Sources */,
 				9DB757F726D37B24006D2246 /* AppDelegate.swift in Sources */,
@@ -719,6 +757,7 @@
 				9D7B920C26E23339001C11AD /* CurrentWeatherRow.swift in Sources */,
 				9D7B91CD26E20D06001C11AD /* CornerRadius.swift in Sources */,
 				9DB7582A26D39A50006D2246 /* BaseBuddle.swift in Sources */,
+				9D6BC26B26F07D2C00F000C9 /* StringEditor.swift in Sources */,
 				9D7B91DD26E20FDB001C11AD /* Geometry.swift in Sources */,
 				9D7B91DB26E20F9A001C11AD /* TTButtonAction.swift in Sources */,
 				9DB7581226D383D5006D2246 /* BaseView.swift in Sources */,
@@ -726,6 +765,7 @@
 				9D66D1B826E5FA0E00411D75 /* Server.swift in Sources */,
 				9D7B91BD26E20B2B001C11AD /* BaseCollectionViewController.swift in Sources */,
 				9D66D1C226E608DC00411D75 /* LocationManager.swift in Sources */,
+				9D6BC27126F07EF800F000C9 /* TextViewObserver.swift in Sources */,
 				9DB7582726D399E6006D2246 /* BaseColor.swift in Sources */,
 				9DB7581026D383A7006D2246 /* BaseNavigationController.swift in Sources */,
 				9D66D1BF26E5FEDC00411D75 /* CurrentWeather.swift in Sources */,
