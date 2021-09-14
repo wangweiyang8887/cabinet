@@ -13,6 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        updateEventIfNeeded()
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = BaseNavigationController(rootViewController: HomePageVC())
         window?.makeKeyAndVisible()
@@ -21,6 +22,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
         return .all
+    }
+    
+    private func updateEventIfNeeded() {
+        if UserDefaults.shared[.eventName] == nil {
+            UserDefaults.shared[.eventName] = "春节"
+        }
+        if UserDefaults.shared[.eventDate] == nil {
+            UserDefaults.shared[.eventDate] = "2021.02.01"
+        }
     }
 }
 

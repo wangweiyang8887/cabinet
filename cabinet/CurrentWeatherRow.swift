@@ -11,6 +11,9 @@ final class CurrentWeatherRow : BaseRow {
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var windLabel: UILabel!
     @IBOutlet weak var countDownContainerView: UIView!
+    @IBOutlet weak var eventNameLabel: UILabel!
+    @IBOutlet weak var eventDateLabel: UILabel!
+    @IBOutlet weak var eventDayLabel: UILabel!
     
     private static let calculatedHeight: CGFloat = (UIScreen.main.bounds.width - 32 - 16) / 2
     
@@ -36,6 +39,14 @@ final class CurrentWeatherRow : BaseRow {
         countDownContainerView.sendSubviewToBack(gradientViewV2)
         let tap = UITapGestureRecognizer { [unowned self] in self.reminderHandler?() }
         countDownContainerView.addGestureRecognizer(tap)
+        eventNameLabel.text = UserDefaults.shared[.eventName]
+        eventDateLabel.text = UserDefaults.shared[.eventDate]
+        guard let dateString = UserDefaults.shared[.eventDate] else { return }
+        guard let date = DateFormatter(dateFormat: "YYYY.MM.dd").date(from: dateString) else { return }
+        let date1 = CalendarDate.today(in: .current)
+        let date2 = CalendarDate(date: date, timeZone: .current)
+        let distant = CalendarDate.component(.day, from: date1, to: date2)
+        eventDayLabel.text = "\(abs(distant))"
     }
     
     private func handleWeatherChanged() {

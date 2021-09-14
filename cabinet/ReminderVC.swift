@@ -20,6 +20,8 @@ final class ReminderVC : BaseCollectionViewController {
 
     private lazy var reminderRow: ReminderRow = {
         let result = ReminderRow()
+        result.title = UserDefaults.shared[.eventName]
+        result.date = UserDefaults.shared[.eventDate]
         return result
     }()
     

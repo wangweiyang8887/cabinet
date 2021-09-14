@@ -12,6 +12,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CurrentWeatherRow" customModule="cabinet" customModuleProvider="target">
             <connections>
                 <outlet property="countDownContainerView" destination="Dxh-ex-uI5" id="vE7-rc-b4J"/>
+                <outlet property="eventDateLabel" destination="HB7-ae-3xC" id="7Sk-LY-80T"/>
+                <outlet property="eventDayLabel" destination="gxS-4K-vpE" id="NQ9-UF-E12"/>
+                <outlet property="eventNameLabel" destination="51o-lo-XNt" id="uRg-fn-AkE"/>
                 <outlet property="locationImageView" destination="HJO-re-iVI" id="hfJ-Gj-WEb"/>
                 <outlet property="locationLabel" destination="Bb3-e3-LpT" id="8rW-u0-39z"/>
                 <outlet property="stateImageView" destination="Pde-Dd-j9A" id="q4a-L9-ikp"/>

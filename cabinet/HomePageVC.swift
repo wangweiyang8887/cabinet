@@ -37,6 +37,7 @@ class HomePageVC : BaseCollectionViewController {
     // MARK: Components
     private lazy var titleRow: TextRow = {
         let result = TextRow()
+        result.backgroundColor = .clear
         result.text = "Caibinet"
         result.font = .systemFont(ofSize: 32, weight: .bold)
         result.textColor = .cabinetBlack

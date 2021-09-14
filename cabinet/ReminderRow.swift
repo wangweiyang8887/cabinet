@@ -27,4 +27,14 @@ final class ReminderRow : BaseRow {
         set { titleLabel.text = newValue }
     }
     
+    var day: String? {
+        get { return numberLabel.text }
+        set { numberLabel.text = newValue }
+    }
+
+    var date: String? {
+        get { return dateLabel.text }
+        set { dateLabel.text = newValue }
+    }
+    
 }
