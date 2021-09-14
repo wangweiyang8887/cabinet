@@ -11,8 +11,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DailyRow" customModule="cabinet" customModuleProvider="target">
             <connections>
+                <outlet property="constellationLabel" destination="hsA-8L-gjx" id="kzC-ir-wfk"/>
+                <outlet property="dayLabel" destination="cB1-qr-g1z" id="2Dx-DV-gZG"/>
                 <outlet property="greenContentLabel" destination="2TV-0d-KBo" id="gF6-1D-wZj"/>
                 <outlet property="greenLabel" destination="Bbq-e5-2T4" id="GMj-uS-gEl"/>
+                <outlet property="lunarLabel" destination="tY2-GA-0mR" id="Tg9-Za-nia"/>
+                <outlet property="monthWeekLabel" destination="Gr2-BC-adb" id="geR-e1-09I"/>
                 <outlet property="redContentLabel" destination="CZV-YJ-Xxl" id="ViV-d9-fkv"/>
                 <outlet property="redLabel" destination="PGG-Ub-1rk" id="d8Q-1g-bLh"/>
             </connections>

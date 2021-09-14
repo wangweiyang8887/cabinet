@@ -28,6 +28,9 @@ class HomePageVC : BaseCollectionViewController {
         if let weather = currentWeather {
             weatherRow.weather = weather
         }
+        if let daily = daily {
+            dailyRow.daily = daily
+        }
         collectionView.reloadData()
     }
     

@@ -20,4 +20,11 @@ final class ReminderRow : BaseRow {
         containerView.cornerRadius = 16
         containerView.constrainWidth(to: Self.calculatedHeight)
     }
+    
+    // MARK: Accessors
+    var title: String? {
+        get { return titleLabel.text }
+        set { titleLabel.text = newValue }
+    }
+    
 }

@@ -33,6 +33,10 @@
 		9D6BC26F26F07ED300F000C9 /* TTTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC26E26F07ED300F000C9 /* TTTextView.swift */; };
 		9D6BC27126F07EF800F000C9 /* TextViewObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC27026F07EF800F000C9 /* TextViewObserver.swift */; };
 		9D6BC27326F07FB100F000C9 /* UIResponder+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC27226F07FB100F000C9 /* UIResponder+Utilities.swift */; };
+		9D6BC27526F082F800F000C9 /* TrimmedStringEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC27426F082F800F000C9 /* TrimmedStringEditor.swift */; };
+		9D6BC27726F0832600F000C9 /* String+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC27626F0832600F000C9 /* String+Helper.swift */; };
+		9D6BC27926F08BAC00F000C9 /* CalendarDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC27826F08BAC00F000C9 /* CalendarDate.swift */; };
+		9D6BC27B26F08C2F00F000C9 /* TimeZone+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC27A26F08C2F00F000C9 /* TimeZone+Helper.swift */; };
 		9D70891826D8F76500716054 /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D70891726D8F76500716054 /* Blur.swift */; };
 		9D7B91B026E0E914001C11AD /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91AF26E0E914001C11AD /* TimerManager.swift */; };
 		9D7B91B226E1EC7B001C11AD /* PushTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91B126E1EC7B001C11AD /* PushTransitionDelegate.swift */; };
@@ -160,6 +164,10 @@
 		9D6BC26E26F07ED300F000C9 /* TTTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTTextView.swift; sourceTree = "<group>"; };
 		9D6BC27026F07EF800F000C9 /* TextViewObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewObserver.swift; sourceTree = "<group>"; };
 		9D6BC27226F07FB100F000C9 /* UIResponder+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIResponder+Utilities.swift"; sourceTree = "<group>"; };
+		9D6BC27426F082F800F000C9 /* TrimmedStringEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrimmedStringEditor.swift; sourceTree = "<group>"; };
+		9D6BC27626F0832600F000C9 /* String+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Helper.swift"; sourceTree = "<group>"; };
+		9D6BC27826F08BAC00F000C9 /* CalendarDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDate.swift; sourceTree = "<group>"; };
+		9D6BC27A26F08C2F00F000C9 /* TimeZone+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeZone+Helper.swift"; sourceTree = "<group>"; };
 		9D70891726D8F76500716054 /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
 		9D7B91AF26E0E914001C11AD /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		9D7B91B126E1EC7B001C11AD /* PushTransitionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushTransitionDelegate.swift; sourceTree = "<group>"; };
@@ -335,6 +343,8 @@
 				9D6BC26A26F07D2C00F000C9 /* StringEditor.swift */,
 				9D6BC26C26F07E7500F000C9 /* TTTextField.swift */,
 				9D6BC26E26F07ED300F000C9 /* TTTextView.swift */,
+				9D6BC27426F082F800F000C9 /* TrimmedStringEditor.swift */,
+				9D6BC27826F08BAC00F000C9 /* CalendarDate.swift */,
 			);
 			name = "UI Elements";
 			sourceTree = "<group>";
@@ -386,6 +396,7 @@
 				9D7B920726E22581001C11AD /* UIViewController+PresentationStyle.swift */,
 				9D7B920926E2285A001C11AD /* UILabel+Utilities.swift */,
 				9D66D1C326E7349600411D75 /* UIImage+Utilities.swift */,
+				9D6BC27A26F08C2F00F000C9 /* TimeZone+Helper.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -485,6 +496,7 @@
 		9DB7581E26D3960C006D2246 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				9D6BC27626F0832600F000C9 /* String+Helper.swift */,
 				9DB7581F26D3961D006D2246 /* TargetActionHandler.swift */,
 				9DB7582126D39656006D2246 /* NSObject+Helper.swift */,
 				9D7B91AF26E0E914001C11AD /* TimerManager.swift */,
@@ -711,6 +723,7 @@
 				9D6BC27326F07FB100F000C9 /* UIResponder+Utilities.swift in Sources */,
 				9D6BC26F26F07ED300F000C9 /* TTTextView.swift in Sources */,
 				9D7B91D226E20DA6001C11AD /* Constants.swift in Sources */,
+				9D6BC27726F0832600F000C9 /* String+Helper.swift in Sources */,
 				9D7B91D726E20E44001C11AD /* Result.swift in Sources */,
 				9D7B91F826E21871001C11AD /* KeyboardObserver.swift in Sources */,
 				9D66D1BB26E5FB3E00411D75 /* KeyedDecodingContainer+Extension.swift in Sources */,
@@ -721,7 +734,9 @@
 				9D7B91DF26E21001001C11AD /* Math.swift in Sources */,
 				9DB7581626D38D43006D2246 /* HomePageVC.swift in Sources */,
 				9D7B91BB26E20AFB001C11AD /* BaseCollectionViewCell.swift in Sources */,
+				9D6BC27526F082F800F000C9 /* TrimmedStringEditor.swift in Sources */,
 				9DB7582226D39656006D2246 /* NSObject+Helper.swift in Sources */,
+				9D6BC27926F08BAC00F000C9 /* CalendarDate.swift in Sources */,
 				9D7B91E526E211A6001C11AD /* UIDevice+Utilities.swift in Sources */,
 				9D7B91C126E20B82001C11AD /* GroupedSection.swift in Sources */,
 				9D7B91B926E20AD0001C11AD /* BaseCollectionView.swift in Sources */,
@@ -730,6 +745,7 @@
 				9D6BC26426F07C9D00F000C9 /* StringEditorRow.swift in Sources */,
 				9D7B920426E22302001C11AD /* TTGradientView.swift in Sources */,
 				9D7B920626E22339001C11AD /* TTGradient.swift in Sources */,
+				9D6BC27B26F08C2F00F000C9 /* TimeZone+Helper.swift in Sources */,
 				9D6BC25E26F06F0600F000C9 /* Array+Utilities.swift in Sources */,
 				9D7B920226E22140001C11AD /* CurrentDateRow.swift in Sources */,
 				9D7B91CB26E20C51001C11AD /* TTButton.swift in Sources */,
