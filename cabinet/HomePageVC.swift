@@ -9,7 +9,7 @@ class HomePageVC : BaseCollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.sections += BaseSection([ weatherRow, dateRow, dailyRow ])
+        collectionView.sections += BaseSection([ weatherRow, dailyRow ], margins: UIEdgeInsets(top: 16, left: 0, bottom: 0, right: 0))
         LocationManager.shared.start { [weak self] location, address in
             guard let self = self else { return }
             self.weatherRow.city = address
@@ -31,7 +31,12 @@ class HomePageVC : BaseCollectionViewController {
     }
     
     // MARK: Components
-    private lazy var weatherRow = CurrentWeatherRow()
+    private lazy var weatherRow: CurrentWeatherRow = {
+        let result = CurrentWeatherRow()
+        result.reminderHandler = { [unowned self] in self.navigationController?.pushViewController(ReminderVC(), animated: true) }
+        return result
+    }()
+    
     private lazy var dateRow = CurrentDateRow()
     private lazy var dailyRow = DailyRow()
 }

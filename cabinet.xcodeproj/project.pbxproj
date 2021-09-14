@@ -16,6 +16,8 @@
 		9D66D1C626E7542500411D75 /* DailyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66D1C526E7542500411D75 /* DailyRow.swift */; };
 		9D66D1C826E7544400411D75 /* DailyRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D66D1C726E7544400411D75 /* DailyRow.xib */; };
 		9D66D1CB26E7617E00411D75 /* DailyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66D1CA26E7617E00411D75 /* DailyModel.swift */; };
+		9D6BC24F26EF692B00F000C9 /* ReminderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC24E26EF692B00F000C9 /* ReminderVC.swift */; };
+		9D6BC25226F0480400F000C9 /* NavigationBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC25126F0480400F000C9 /* NavigationBarStyle.swift */; };
 		9D70891826D8F76500716054 /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D70891726D8F76500716054 /* Blur.swift */; };
 		9D7B91B026E0E914001C11AD /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91AF26E0E914001C11AD /* TimerManager.swift */; };
 		9D7B91B226E1EC7B001C11AD /* PushTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91B126E1EC7B001C11AD /* PushTransitionDelegate.swift */; };
@@ -126,6 +128,8 @@
 		9D66D1C526E7542500411D75 /* DailyRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyRow.swift; sourceTree = "<group>"; };
 		9D66D1C726E7544400411D75 /* DailyRow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyRow.xib; sourceTree = "<group>"; };
 		9D66D1CA26E7617E00411D75 /* DailyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyModel.swift; sourceTree = "<group>"; };
+		9D6BC24E26EF692B00F000C9 /* ReminderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderVC.swift; sourceTree = "<group>"; };
+		9D6BC25126F0480400F000C9 /* NavigationBarStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarStyle.swift; sourceTree = "<group>"; };
 		9D70891726D8F76500716054 /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
 		9D7B91AF26E0E914001C11AD /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		9D7B91B126E1EC7B001C11AD /* PushTransitionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushTransitionDelegate.swift; sourceTree = "<group>"; };
@@ -254,6 +258,14 @@
 			name = Location;
 			sourceTree = "<group>";
 		};
+		9D6BC24D26EF68F700F000C9 /* Reminder */ = {
+			isa = PBXGroup;
+			children = (
+				9D6BC24E26EF692B00F000C9 /* ReminderVC.swift */,
+			);
+			name = Reminder;
+			sourceTree = "<group>";
+		};
 		9D7B91B526E20A9D001C11AD /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -359,6 +371,7 @@
 			children = (
 				9DB7581D26D39605006D2246 /* Helper */,
 				9DB7581C26D38DAC006D2246 /* HomePage */,
+				9D6BC24D26EF68F700F000C9 /* Reminder */,
 				9DB7581B26D38D98006D2246 /* CurrentDate */,
 				9DB7580A26D3831D006D2246 /* Base */,
 				9DB757F626D37B24006D2246 /* AppDelegate.swift */,
@@ -447,6 +460,7 @@
 				9DB7582626D399E6006D2246 /* BaseColor.swift */,
 				9DB7582B26D39CF3006D2246 /* BaseDateFormatter.swift */,
 				9D7B920526E22339001C11AD /* TTGradient.swift */,
+				9D6BC25126F0480400F000C9 /* NavigationBarStyle.swift */,
 			);
 			name = Style;
 			sourceTree = "<group>";
@@ -636,6 +650,7 @@
 				9D7B91E326E2115D001C11AD /* UIView+Constrains.swift in Sources */,
 				9D66D1BD26E5FBDF00411D75 /* API.swift in Sources */,
 				9D7B91B726E20AA9001C11AD /* ItemRows.swift in Sources */,
+				9D6BC24F26EF692B00F000C9 /* ReminderVC.swift in Sources */,
 				9D66D1CB26E7617E00411D75 /* DailyModel.swift in Sources */,
 				9DB7581926D38D90006D2246 /* CurrentDateVC.swift in Sources */,
 				9D7B91D926E20E7A001C11AD /* Groups.swift in Sources */,
@@ -673,6 +688,7 @@
 				9D82636D26D8D26900981A3E /* UIView+Utilities.swift in Sources */,
 				9D7B91B026E0E914001C11AD /* TimerManager.swift in Sources */,
 				9D7B920A26E2285A001C11AD /* UILabel+Utilities.swift in Sources */,
+				9D6BC25226F0480400F000C9 /* NavigationBarStyle.swift in Sources */,
 				9D66D1C426E7349600411D75 /* UIImage+Utilities.swift in Sources */,
 				9D7B91E126E2102B001C11AD /* Comparable+Utilities.swift in Sources */,
 				9D7B91EE26E2148F001C11AD /* UIWindow+Utilities.swift in Sources */,
@@ -866,7 +882,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = EVG8QY6QFT;
@@ -878,7 +894,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.evan.cabinet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "cabinet-adhoc-dis";
+				PROVISIONING_PROFILE_SPECIFIER = "cabinet-dev";
 				SWIFT_OBJC_BRIDGING_HEADER = "cabinet/cabinet-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -894,7 +910,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = EVG8QY6QFT;
@@ -906,7 +922,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.evan.cabinet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "cabinet-adhoc-dis";
+				PROVISIONING_PROFILE_SPECIFIER = "cabinet-dev";
 				SWIFT_OBJC_BRIDGING_HEADER = "cabinet/cabinet-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -918,7 +934,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = EVG8QY6QFT;
 				INFOPLIST_FILE = "cabinet widget/Info.plist";
@@ -930,7 +946,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.evan.cabinet.Cabinet-Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "cabinet-widget-adhoc-dis";
+				PROVISIONING_PROFILE_SPECIFIER = "cabinet-widget-dev";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -942,7 +958,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = EVG8QY6QFT;
 				INFOPLIST_FILE = "cabinet widget/Info.plist";
@@ -954,7 +970,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.evan.cabinet.Cabinet-Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "cabinet-widget-adhoc-dis";
+				PROVISIONING_PROFILE_SPECIFIER = "cabinet-widget-dev";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

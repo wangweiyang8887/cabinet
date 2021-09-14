@@ -19,6 +19,7 @@ final class CurrentWeatherRow : BaseRow {
     override class var margins: UIEdgeInsets { return UIEdgeInsets(horizontal: 16) }
     
     var weather: CurrentWeather? { didSet { handleWeatherChanged() } }
+    var reminderHandler: ActionClosure?
     
     override func initialize() {
         super.initialize()
@@ -33,6 +34,8 @@ final class CurrentWeatherRow : BaseRow {
         let gradientViewV2 = TTGradientView(gradient: [ .nonStandardColor(withRGBHex: 0xABDCFF), .nonStandardColor(withRGBHex: 0x0396FF) ], direction: .topRightToBottomLeft)
         countDownContainerView.addSubview(gradientViewV2, pinningEdges: .all)
         countDownContainerView.sendSubviewToBack(gradientViewV2)
+        let tap = UITapGestureRecognizer { [unowned self] in self.reminderHandler?() }
+        countDownContainerView.addGestureRecognizer(tap)
     }
     
     private func handleWeatherChanged() {

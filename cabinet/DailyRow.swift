@@ -8,7 +8,7 @@ final class DailyRow : BaseRow {
     
     override class var height: RowHeight { return .fixed(168) }
     override class var nibName: String? { return "DailyRow" }
-    override class var margins: UIEdgeInsets { return UIEdgeInsets(horizontal: 16) }
+    override class var margins: UIEdgeInsets { return UIEdgeInsets(uniform: 16) }
     
     override func initialize() {
         super.initialize()
