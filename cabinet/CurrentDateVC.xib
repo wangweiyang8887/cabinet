@@ -48,8 +48,9 @@
                         <constraint firstAttribute="width" constant="44" id="dhy-RU-ViQ"/>
                         <constraint firstAttribute="height" constant="44" id="eGf-AV-Euz"/>
                     </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal">
-                        <imageReference key="image" image="xmark" catalog="system" renderingMode="original"/>
+                        <imageReference key="image" image="xmark" catalog="system" renderingMode="template"/>
                     </state>
                 </button>
             </subviews>
