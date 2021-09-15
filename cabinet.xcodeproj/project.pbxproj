@@ -48,6 +48,7 @@
 		9D6BC28D26F0A39800F000C9 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC28C26F0A39800F000C9 /* DatePickerView.swift */; };
 		9D6BC28F26F0A55000F000C9 /* SpacerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC28E26F0A55000F000C9 /* SpacerRow.swift */; };
 		9D6BC29126F0B76D00F000C9 /* EncourageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC29026F0B76D00F000C9 /* EncourageRow.swift */; };
+		9D6BC29326F1946300F000C9 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC29226F1946300F000C9 /* Environment.swift */; };
 		9D70891826D8F76500716054 /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D70891726D8F76500716054 /* Blur.swift */; };
 		9D7B91B026E0E914001C11AD /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91AF26E0E914001C11AD /* TimerManager.swift */; };
 		9D7B91B226E1EC7B001C11AD /* PushTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91B126E1EC7B001C11AD /* PushTransitionDelegate.swift */; };
@@ -190,6 +191,7 @@
 		9D6BC28C26F0A39800F000C9 /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
 		9D6BC28E26F0A55000F000C9 /* SpacerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacerRow.swift; sourceTree = "<group>"; };
 		9D6BC29026F0B76D00F000C9 /* EncourageRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncourageRow.swift; sourceTree = "<group>"; };
+		9D6BC29226F1946300F000C9 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		9D70891726D8F76500716054 /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
 		9D7B91AF26E0E914001C11AD /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		9D7B91B126E1EC7B001C11AD /* PushTransitionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushTransitionDelegate.swift; sourceTree = "<group>"; };
@@ -383,6 +385,7 @@
 				9D7B91CF26E20D75001C11AD /* General+Utilities.swift */,
 				9D7B91D126E20DA6001C11AD /* Constants.swift */,
 				9D6BC27E26F0948C00F000C9 /* UserDefaults+Helper.swift */,
+				9D6BC29226F1946300F000C9 /* Environment.swift */,
 			);
 			name = Globals;
 			sourceTree = "<group>";
@@ -753,6 +756,7 @@
 				9D6BC27F26F0948C00F000C9 /* UserDefaults+Helper.swift in Sources */,
 				9D7B91B426E200FB001C11AD /* UICollectionView+Utilities.swift in Sources */,
 				9D7B91F126E2158B001C11AD /* Navigation+Utilities.m in Sources */,
+				9D6BC29326F1946300F000C9 /* Environment.swift in Sources */,
 				9DB7582026D3961D006D2246 /* TargetActionHandler.swift in Sources */,
 				9D6BC28D26F0A39800F000C9 /* DatePickerView.swift in Sources */,
 				9D6BC27326F07FB100F000C9 /* UIResponder+Utilities.swift in Sources */,
