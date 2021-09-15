@@ -7,11 +7,12 @@ final class EncourageRow : BaseRow {
     override func initialize() {
         super.initialize()
         backgroundColor = .clear
-        let gradientView = TTGradientView(gradient: .topic, direction: .topToBottom)
+        let gradientView = TTGradientView(gradient: .curiousBlueToVividViolet)
         contentView.addSubview(gradientView, pinningEdges: .all)
         contentView.sendSubviewToBack(gradientView)
         contentView.cornerRadius = 16
         contentView.addSubview(titleLabel, pinningEdges: .all, withInsets: UIEdgeInsets(uniform: 16))
+        titleLabel.defaultTextShadow()
     }
     
     private lazy var titleLabel: UILabel = UILabel(text: "", font: .systemFont(ofSize: 15), color: .cabinetWhite, alignment: .center, lines: 0)

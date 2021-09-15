@@ -49,6 +49,7 @@
 		9D6BC28F26F0A55000F000C9 /* SpacerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC28E26F0A55000F000C9 /* SpacerRow.swift */; };
 		9D6BC29126F0B76D00F000C9 /* EncourageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC29026F0B76D00F000C9 /* EncourageRow.swift */; };
 		9D6BC29326F1946300F000C9 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC29226F1946300F000C9 /* Environment.swift */; };
+		9D6BC29A26F1CDD800F000C9 /* NSAttributedString+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC29926F1CDD800F000C9 /* NSAttributedString+Utilities.swift */; };
 		9D70891826D8F76500716054 /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D70891726D8F76500716054 /* Blur.swift */; };
 		9D7B91B026E0E914001C11AD /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91AF26E0E914001C11AD /* TimerManager.swift */; };
 		9D7B91B226E1EC7B001C11AD /* PushTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91B126E1EC7B001C11AD /* PushTransitionDelegate.swift */; };
@@ -192,6 +193,7 @@
 		9D6BC28E26F0A55000F000C9 /* SpacerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacerRow.swift; sourceTree = "<group>"; };
 		9D6BC29026F0B76D00F000C9 /* EncourageRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncourageRow.swift; sourceTree = "<group>"; };
 		9D6BC29226F1946300F000C9 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		9D6BC29926F1CDD800F000C9 /* NSAttributedString+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Utilities.swift"; sourceTree = "<group>"; };
 		9D70891726D8F76500716054 /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
 		9D7B91AF26E0E914001C11AD /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		9D7B91B126E1EC7B001C11AD /* PushTransitionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushTransitionDelegate.swift; sourceTree = "<group>"; };
@@ -543,6 +545,7 @@
 				9D7B91DE26E21001001C11AD /* Math.swift */,
 				9D7B91E026E2102B001C11AD /* Comparable+Utilities.swift */,
 				9D6BC25D26F06F0600F000C9 /* Array+Utilities.swift */,
+				9D6BC29926F1CDD800F000C9 /* NSAttributedString+Utilities.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -800,6 +803,7 @@
 				9D6BC27D26F0930C00F000C9 /* EventModel.swift in Sources */,
 				9D66D1C626E7542500411D75 /* DailyRow.swift in Sources */,
 				9D7B920826E22581001C11AD /* UIViewController+PresentationStyle.swift in Sources */,
+				9D6BC29A26F1CDD800F000C9 /* NSAttributedString+Utilities.swift in Sources */,
 				9D82636D26D8D26900981A3E /* UIView+Utilities.swift in Sources */,
 				9D7B91B026E0E914001C11AD /* TimerManager.swift in Sources */,
 				9D7B920A26E2285A001C11AD /* UILabel+Utilities.swift in Sources */,

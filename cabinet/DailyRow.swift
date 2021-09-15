@@ -19,7 +19,7 @@ final class DailyRow : BaseRow {
     override func initialize() {
         super.initialize()
         backgroundColor = .clear
-        let gradientView = TTGradientView(gradient: .topic, direction: .topToBottom)
+        let gradientView = TTGradientView(gradient: .denimToJava)
         contentView.addSubview(gradientView, pinningEdges: .all)
         contentView.sendSubviewToBack(gradientView)
         contentView.cornerRadius = 16

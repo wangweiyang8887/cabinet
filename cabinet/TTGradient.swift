@@ -28,9 +28,19 @@ public struct TTGradient : Equatable {
         self.locations = locations
     }
 
-    public static let topic = TTGradient(components: [ .nonStandardColor(withRGBHex: 0x2D46B9), .nonStandardColor(withRGBHex: 0x1E3163) ])
+    public static let topic = TTGradient(components: [ .nonStandardColor(withRGBHex: 0xFD915B) ])
     /// Converts a single color to a gradient
     public static func color(_ color: UIColor) -> TTGradient { return TTGradient(components: [ color ]) }
+    
+    // Presets
+    public static let curiousBlueToVividViolet = TTGradient(components: [ .cabinetBlue, .cabinetPurple ])
+    public static let curiousBlueToBrinkPink = TTGradient(components: [ .cabinetBlue, .cabinetBrinkPink ])
+    public static let shockingPinkToChalky = TTGradient(components: [ .cabinetShockingPink, .cabinetChalky ])
+    public static let goldenrodToMandyToVividViolet = TTGradient(components: [ .cabinetYellow, .cabinetRed, .cabinetPurple ])
+    public static let heliotropeToCerulean = TTGradient(components: [ .cabinetHeliotrope, .cabinetCerulean ])
+    public static let denimToJava = TTGradient(components: [ .cabinetDarkBlue, .cabinetJava ])
+    public static let goldenrodToJava = TTGradient(components: [ .cabinetYellow, .cabinetJava ])
+    public static let tacaoToDallas = TTGradient(components: [ .cabinetTacao, .cabinetDallas ])
 
     /// Applies self to a given layer.
     ///
@@ -121,5 +131,16 @@ extension TTGradient : ExpressibleByArrayLiteral {
     public init(arrayLiteral elements: UIColor...) {
         self.init(components: elements)
     }
+}
+
+private extension UIColor {
+    static var cabinetBrinkPink: UIColor { return UIColor(named: "Brink Pink", in: BaseBundle.bundle, compatibleWith: nil)! }
+    static var cabinetShockingPink: UIColor { return UIColor(named: "Shocking Pink", in: BaseBundle.bundle, compatibleWith: nil)! }
+    static var cabinetChalky: UIColor { return UIColor(named: "Chalky", in: BaseBundle.bundle, compatibleWith: nil)! }
+    static var cabinetHeliotrope: UIColor { return UIColor(named: "Heliotrope", in: BaseBundle.bundle, compatibleWith: nil)! }
+    static var cabinetCerulean: UIColor { return UIColor(named: "Cerulean", in: BaseBundle.bundle, compatibleWith: nil)! }
+    static var cabinetJava: UIColor { return UIColor(named: "Java", in: BaseBundle.bundle, compatibleWith: nil)! }
+    static var cabinetTacao: UIColor { return UIColor(named: "Tacao", in: BaseBundle.bundle, compatibleWith: nil)! }
+    static var cabinetDallas: UIColor { return UIColor(named: "Dallas", in: BaseBundle.bundle, compatibleWith: nil)! }
 }
 
