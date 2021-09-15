@@ -20,9 +20,11 @@ final class DailyRow : BaseRow {
         super.initialize()
         backgroundColor = .clear
         let gradientView = TTGradientView(gradient: .denimToJava)
+        gradientView.cornerRadius = 16
         contentView.addSubview(gradientView, pinningEdges: .all)
         contentView.sendSubviewToBack(gradientView)
         contentView.cornerRadius = 16
+        contentView.addShadow(radius: 16, yOffset: -1)
         redLabel.borderColor = .cabinetWhite
         redLabel.borderWidth = 2
         redLabel.cornerRadius = 22

@@ -7,8 +7,10 @@ final class CurrentDateRow : BaseRow {
     override func initialize() {
         super.initialize()
         let gradientView = TTGradientView(gradient: .shockingPinkToChalky)
+        gradientView.cornerRadius = 16
         contentView.addSubview(gradientView, pinningEdges: .all)
-        cornerRadius = 16
+        contentView.cornerRadius = 16
+        contentView.addShadow(radius: 16, yOffset: -1)
         contentView.addSubview(titleLabel, pinningEdges: .all)
         TimerManager.shared.fire { [weak self] in
             self?.titleLabel.text = Date().cabinetTimeDateFormatted()

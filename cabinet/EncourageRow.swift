@@ -8,9 +8,11 @@ final class EncourageRow : BaseRow {
         super.initialize()
         backgroundColor = .clear
         let gradientView = TTGradientView(gradient: .curiousBlueToVividViolet)
+        gradientView.cornerRadius = 16
         contentView.addSubview(gradientView, pinningEdges: .all)
         contentView.sendSubviewToBack(gradientView)
         contentView.cornerRadius = 16
+        contentView.addShadow(radius: 16, yOffset: -1)
         contentView.addSubview(titleLabel, pinningEdges: .all, withInsets: UIEdgeInsets(uniform: 16))
         titleLabel.defaultTextShadow()
     }

@@ -28,18 +28,22 @@ final class CurrentWeatherRow : BaseRow {
     override func initialize() {
         super.initialize()
         let gradientView = TTGradientView(gradient: .goldenrodToMandyToVividViolet)
+        gradientView.cornerRadius = 16
         weatherContainerView.addSubview(gradientView, pinningEdges: .all)
         weatherContainerView.sendSubviewToBack(gradientView)
         backgroundColor = .clear
         contentView.backgroundColor = .clear
-        weatherContainerView.cornerRadius = 16
         stateImageView.tintColor = .cabinetWhite
-        countDownContainerView.cornerRadius = 16
         let gradientViewV2 = TTGradientView(gradient: .heliotropeToCerulean)
         countDownContainerView.addSubview(gradientViewV2, pinningEdges: .all)
         countDownContainerView.sendSubviewToBack(gradientViewV2)
+        gradientViewV2.cornerRadius = 16
         let tap = UITapGestureRecognizer { [unowned self] in self.reminderHandler?() }
         countDownContainerView.addGestureRecognizer(tap)
+        weatherContainerView.cornerRadius = 16
+        weatherContainerView.addShadow(radius: 16, yOffset: -1)
+        countDownContainerView.cornerRadius = 16
+        countDownContainerView.addShadow(radius: 16, yOffset: -1)
     }
     
     private func handleWeatherChanged() {

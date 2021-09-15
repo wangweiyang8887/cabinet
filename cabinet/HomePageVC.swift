@@ -68,9 +68,9 @@ class HomePageVC : BaseCollectionViewController {
         return result
     }()
     
-    private lazy var dateRow = CurrentDateRow()
     private lazy var dailyRow = DailyRow()
     private lazy var encourageRow = EncourageRow()
+    private lazy var dateRow = CurrentDateRow()
 }
 
 extension HomePageVC {
