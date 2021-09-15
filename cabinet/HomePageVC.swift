@@ -6,10 +6,11 @@ import CoreLocation
 class HomePageVC : BaseCollectionViewController {
     var currentWeather: CurrentWeather? { didSet { updateContent() } }
     var daily: DailyModel? { didSet { updateContent() } }
-    override var navigationBarStyle: NavigationBarStyle { return .transparent }
+    override var navigationBarStyle: NavigationBarStyle { return .whiteWithoutShadow }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        collectionView.ttDelegate = self
         collectionView.sections += BaseSection([ titleRow, weatherRow, dailyRow, encourageRow, dateRow ], margins: UIEdgeInsets(top: 16, left: 0, bottom: 0, right: 0))
         LocationManager.shared.start { [weak self] location, address in
             guard let self = self else { return }
@@ -42,7 +43,8 @@ class HomePageVC : BaseCollectionViewController {
         }
         if let daily = daily {
             dailyRow.daily = daily
-            encourageRow.title = daily.daily.first
+            let random = Int.random(in: 0..<daily.sentence.count)
+            encourageRow.title = daily.sentence[ifPresent: random]
         }
         collectionView.reloadData()
     }
@@ -71,6 +73,13 @@ class HomePageVC : BaseCollectionViewController {
     private lazy var dailyRow = DailyRow()
     private lazy var encourageRow = EncourageRow()
     private lazy var dateRow = CurrentDateRow()
+}
+
+extension HomePageVC : BaseCollectionViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let y = scrollView.contentOffset.y
+        title = y >= 50 ? "Cabinet" : ""
+    }
 }
 
 extension HomePageVC {
