@@ -15,6 +15,7 @@ final class ReminderVC : BaseCollectionViewController {
     // MARK: Components
     private lazy var saveButton: TTButton = {
         let result = TTButton()
+        result.titleLabel?.font = .systemFont(ofSize: 13, weight: .medium)
         result.setTitle("保存", for: .normal)
         result.setTitleColor(.cabinetBlack, for: .normal)
         result.addTapHandler { [unowned self] in
@@ -34,6 +35,7 @@ final class ReminderVC : BaseCollectionViewController {
         let result = ReminderRow()
         result.title = UserDefaults.shared[.eventName]
         result.date = UserDefaults.shared[.eventDate]
+        result.selectionHandler = { [unowned self] in self.view.endEditing(true) }
         return result
     }()
     
@@ -42,6 +44,7 @@ final class ReminderVC : BaseCollectionViewController {
         result.title = "事件名称"
         let editor = TrimmedStringEditor()
         editor.placeholder = "请输入事件名称"
+        editor.placeholderAttributer = { $0.withColor(.nonStandardColor(withRGBHex: 0xC8C8C8)) }
         editor.charLimit = 14
         result.editor = editor
         result.bottomSeparatorMode = .show

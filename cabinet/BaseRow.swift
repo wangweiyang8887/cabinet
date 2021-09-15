@@ -154,7 +154,7 @@ open class BaseRow : UIView, SectionContentItem {
     /// Overriding implementation should always first call the superclass implementation.
     open func initialize() {
         translatesAutoresizingMaskIntoConstraints = false
-        backgroundColor = (type(of: self).style != .backgroundless) ? .white : nil
+        backgroundColor = (type(of: self).style != .backgroundless) ? .cabinetWhite : nil
         contentView = loadContentView()
         contentView.backgroundColor = nil // Should generally not be set, because of highlighting
         contentView.translatesAutoresizingMaskIntoConstraints = false

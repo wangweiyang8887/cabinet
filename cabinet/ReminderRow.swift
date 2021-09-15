@@ -14,7 +14,8 @@ final class ReminderRow : BaseRow {
     
     override func initialize() {
         super.initialize()
-        let gradientViewV2 = TTGradientView(gradient: .curiousBlueToBrinkPink)
+        backgroundColor = .clear
+        let gradientViewV2 = TTGradientView(gradient: .heliotropeToCerulean)
         containerView.addSubview(gradientViewV2, pinningEdges: .all)
         containerView.sendSubviewToBack(gradientViewV2)
         containerView.cornerRadius = 16
