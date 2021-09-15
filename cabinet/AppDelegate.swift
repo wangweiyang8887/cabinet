@@ -13,7 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        updateEventIfNeeded()
+        updateUserDefaultsIfNeeded()
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = BaseNavigationController(rootViewController: HomePageVC())
         window?.makeKeyAndVisible()
@@ -24,12 +24,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return .all
     }
     
-    private func updateEventIfNeeded() {
+    private func updateUserDefaultsIfNeeded() {
         if UserDefaults.shared[.eventName] == nil {
             UserDefaults.shared[.eventName] = "春节"
         }
         if UserDefaults.shared[.eventDate] == nil {
             UserDefaults.shared[.eventDate] = "2021.02.01"
+        }
+        if UserDefaults.shared[.shuffledDay] == nil {
+            UserDefaults.shared[.shuffledDay] = CalendarDate.today(in: .current).day - 1
         }
     }
 }

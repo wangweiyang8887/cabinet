@@ -61,4 +61,5 @@ extension UserDefaults.Property {
     
     public static var eventName: UserDefaults.Property<String> { return .init(keyName: "eventName", isUserSpecific: false) }
     public static var eventDate: UserDefaults.Property<String> { return .init(keyName: "eventDate", isUserSpecific: false) }
+    public static var shuffledDay: UserDefaults.Property<Int> { return .init(keyName: "shuffledDay", isUserSpecific: false) }
 }

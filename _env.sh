@@ -75,7 +75,11 @@ if [[ $1 = "" ]]; then
     echo "Uploading"
     xcrun altool --upload-app -f ./ipas/appstore/cabinet.ipa -t ios --apiKey 53668R5QZD --apiIssuer 53bf89c6-b9dd-43b5-906e-dbd0ed71648a --verbose
     echo ""
-
+    
+elif [[ $1 = "upload" ]]; then
+    echo "Uploading......."
+    python3 ./autobuild.py -w cabinet.xcworkspace -o ipas -c adhoc
+    echo ""
 else
     echo " * Invalid command."
     exit 1

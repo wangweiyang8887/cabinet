@@ -10,7 +10,7 @@ class HomePageVC : BaseCollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.sections += BaseSection([ titleRow, weatherRow, dailyRow ], margins: UIEdgeInsets(top: 16, left: 0, bottom: 0, right: 0))
+        collectionView.sections += BaseSection([ titleRow, weatherRow, dailyRow, encourageRow, dateRow ], margins: UIEdgeInsets(top: 16, left: 0, bottom: 0, right: 0))
         LocationManager.shared.start { [weak self] location, address in
             guard let self = self else { return }
             self.weatherRow.city = address
@@ -20,6 +20,13 @@ class HomePageVC : BaseCollectionViewController {
             }
         }
         Server.fetchDailyReport().onSuccess { [weak self] result in
+            if let shuffledDay = UserDefaults.shared[.shuffledDay], shuffledDay != CalendarDate.today(in: .current).day {
+                result.sentence.shuffle()
+                result.daily.shuffle()
+                result.red.shuffle()
+                result.green.shuffle()
+                UserDefaults.shared[.shuffledDay] = CalendarDate.today(in: .current).day
+            }
             self?.daily = result
         }
     }
@@ -35,6 +42,7 @@ class HomePageVC : BaseCollectionViewController {
         }
         if let daily = daily {
             dailyRow.daily = daily
+            encourageRow.title = daily.daily.first
         }
         collectionView.reloadData()
     }
@@ -62,6 +70,7 @@ class HomePageVC : BaseCollectionViewController {
     
     private lazy var dateRow = CurrentDateRow()
     private lazy var dailyRow = DailyRow()
+    private lazy var encourageRow = EncourageRow()
 }
 
 extension HomePageVC {

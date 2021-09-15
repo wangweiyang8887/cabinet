@@ -47,6 +47,7 @@
 		9D6BC28B26F0A37C00F000C9 /* DatePickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC28A26F0A37C00F000C9 /* DatePickerVC.swift */; };
 		9D6BC28D26F0A39800F000C9 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC28C26F0A39800F000C9 /* DatePickerView.swift */; };
 		9D6BC28F26F0A55000F000C9 /* SpacerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC28E26F0A55000F000C9 /* SpacerRow.swift */; };
+		9D6BC29126F0B76D00F000C9 /* EncourageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC29026F0B76D00F000C9 /* EncourageRow.swift */; };
 		9D70891826D8F76500716054 /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D70891726D8F76500716054 /* Blur.swift */; };
 		9D7B91B026E0E914001C11AD /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91AF26E0E914001C11AD /* TimerManager.swift */; };
 		9D7B91B226E1EC7B001C11AD /* PushTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91B126E1EC7B001C11AD /* PushTransitionDelegate.swift */; };
@@ -188,6 +189,7 @@
 		9D6BC28A26F0A37C00F000C9 /* DatePickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerVC.swift; sourceTree = "<group>"; };
 		9D6BC28C26F0A39800F000C9 /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
 		9D6BC28E26F0A55000F000C9 /* SpacerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacerRow.swift; sourceTree = "<group>"; };
+		9D6BC29026F0B76D00F000C9 /* EncourageRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncourageRow.swift; sourceTree = "<group>"; };
 		9D70891726D8F76500716054 /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
 		9D7B91AF26E0E914001C11AD /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		9D7B91B126E1EC7B001C11AD /* PushTransitionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushTransitionDelegate.swift; sourceTree = "<group>"; };
@@ -501,6 +503,7 @@
 			isa = PBXGroup;
 			children = (
 				9DB7581526D38D43006D2246 /* HomePageVC.swift */,
+				9D6BC29026F0B76D00F000C9 /* EncourageRow.swift */,
 			);
 			name = HomePage;
 			sourceTree = "<group>";
@@ -815,6 +818,7 @@
 				9D7B91DD26E20FDB001C11AD /* Geometry.swift in Sources */,
 				9D7B91DB26E20F9A001C11AD /* TTButtonAction.swift in Sources */,
 				9D6BC28526F0A20500F000C9 /* UIButton+Utilities.swift in Sources */,
+				9D6BC29126F0B76D00F000C9 /* EncourageRow.swift in Sources */,
 				9DB7581226D383D5006D2246 /* BaseView.swift in Sources */,
 				9D7B91F626E21815001C11AD /* ObserverCollection.swift in Sources */,
 				9D66D1B826E5FA0E00411D75 /* Server.swift in Sources */,
@@ -1000,7 +1004,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = EVG8QY6QFT;
 				GCC_PREFIX_HEADER = $SRCROOT/cabinet/Header.h;
 				INFOPLIST_FILE = cabinet/Info.plist;
@@ -1028,7 +1032,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = EVG8QY6QFT;
 				GCC_PREFIX_HEADER = $SRCROOT/cabinet/Header.h;
 				INFOPLIST_FILE = cabinet/Info.plist;
