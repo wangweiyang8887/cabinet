@@ -213,7 +213,7 @@ extension UIView {
         layer.rasterizationScale = UIScreen.main.scale
     }
 
-    public func addShadow(opacity: Float = 0.25, radius: CGFloat, yOffset: CGFloat, color: UIColor = .black) {
+    public func addShadow(opacity: Float = 0.25, radius: CGFloat, yOffset: CGFloat, color: UIColor = .nonStandardColor(withRGBHex: 0xBBBBBB)) {
         layer.masksToBounds = false
         layer.shadowRadius = radius
         layer.shadowOpacity = opacity

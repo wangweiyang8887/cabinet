@@ -70,7 +70,7 @@ final class CurrentWeatherRow : BaseRow {
     }
     
     private func startAnimation() {
-        UIView.animate(withDuration: 1.0, delay: 0, options: [ .autoreverse, .repeat, .allowUserInteraction ], animations: {
+        UIView.animate(withDuration: 1.0, delay: 0, options: [ .beginFromCurrentState, .autoreverse, .repeat ], animations: {
             self.stateImageView.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
         }, completion: nil)
     }

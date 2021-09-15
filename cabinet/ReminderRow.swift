@@ -16,9 +16,11 @@ final class ReminderRow : BaseRow {
         super.initialize()
         backgroundColor = .clear
         let gradientViewV2 = TTGradientView(gradient: .heliotropeToCerulean)
+        gradientViewV2.cornerRadius = 16
         containerView.addSubview(gradientViewV2, pinningEdges: .all)
         containerView.sendSubviewToBack(gradientViewV2)
         containerView.cornerRadius = 16
+        containerView.addShadow(radius: 16, yOffset: -1, color: .nonStandardColor(withRGBHex: 0xBBBBBB))
         containerView.constrainWidth(to: Self.calculatedHeight)
     }
     
