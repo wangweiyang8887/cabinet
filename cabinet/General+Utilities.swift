@@ -48,8 +48,8 @@ extension UILabel {
 public typealias SortingClosure<T> = (T, T) -> Bool
 public typealias ActionClosure = () -> Void
 public typealias ObjectClosure<Value> = (Value) -> Void
-public typealias AsyncActionClosure = () -> Operation<Void>
-public typealias FetchClosure<Value> = () -> Operation<Value>
+typealias AsyncActionClosure = () -> Operation<Void>
+typealias FetchClosure<Value> = () -> Operation<Value>
 public typealias ValueChangedHandler<Value> = (Value) -> Void
 public typealias FormatterClosure<Value> = (Value) -> String
 public typealias PredicateClosure<Value> = (Value) -> Bool
@@ -186,18 +186,6 @@ extension Collection {
     public var onlyElement: Element? { return count == 1 ? first : nil }
 
     public var nilIfEmpty: Self? { return isEmpty ? nil : self }
-}
-
-/// Returns `f(x)` if `x` is non-`nil`; otherwise returns `nil`.
-@discardableResult public func given<T, U>(_ x: T?, _ f: (T) throws -> U?) rethrows -> U? {
-    guard let x = x else { return nil }
-    return try f(x)
-}
-
-/// Returns `f(x!, y!)` if `x != nil && y != nil`; otherwise returns `nil`.
-@discardableResult public func given<T, U, V>(_ x: T?, _ y: U?, _ f: (T, U) throws -> V?) rethrows -> V? {
-    guard let x = x, let y = y else { return nil }
-    return try f(x, y)
 }
 
 public func lazy<T>(_ variable: inout T?, construction: () throws -> T) rethrows -> T {

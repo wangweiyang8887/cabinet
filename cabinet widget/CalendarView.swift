@@ -7,57 +7,57 @@ struct CalendarView: View {
     
     var body: some View {
         ZStack {
-            DateView(calendar: calendar)
-                .background(LinearGradient(gradient: Gradient(colors: [ Color(UIColor.nonStandardColor(withRGBHex: 0xABDCFF)), Color(UIColor.nonStandardColor(withRGBHex: 0x0396FF)) ]), startPoint: .topLeading, endPoint: .bottomTrailing))
+            WeatherView(weather: calendar.currentWeather)
+                .background(LinearGradient(gradient: Gradient(colors: [ Color(UIColor.cabinetYellow), Color(UIColor.cabinetRed) ]), startPoint: .topLeading, endPoint: .bottomTrailing))
         }
     }
 }
 
-private struct DateView : View {
-    var calendar: CalendarModel
+private struct WeatherView : View {
+    var weather: CurrentWeather?
     var body: some View {
-        VStack {
-            HStack(alignment: .top) {
-                VStack {
-                    Text(calendar.date.cabinetWeedayFomatted())
-                        .foregroundColor(Color(UIColor.nonStandardColor(withRGBHex: 0x623AA2)))
-                        .font(.system(size: 17, weight: .medium))
-                    Text(calendar.date.cabinetShortTimelessDateFormatted())
-                        .foregroundColor(Color(UIColor.nonStandardColor(withRGBHex: 0xF8F8F8)))
-                        .font(.system(size: 17, weight: .medium))
-                }
+        VStack(spacing: 16) {
+            HStack(spacing: 8) {
+                Image(systemName: "location.fill")
+                    .renderingMode(.template)
+                Text(weather?.address ?? "北京")
+                    .font(.system(size: 15, weight: .medium))
                 Spacer()
-                Text("🌞")
-            }
-            Spacer(minLength: 8)
-            HStack {
-                Text("宜")
-                    .foregroundColor(Color(UIColor.nonStandardColor(withRGBHex: 0xFF2442)))
-                Text(calendar.goodThings)
-                    .foregroundColor(Color(UIColor.nonStandardColor(withRGBHex: 0xF8F8F8)))
-                    .font(.system(size: 17, weight: .medium))
-                Spacer()
+                Text(weather?.now.text ?? "晴")
+                    .font(.system(size: 15, weight: .medium))
             }
             HStack {
-                Text("忌")
-                    .foregroundColor(Color(UIColor.nonStandardColor(withRGBHex: 0x368B85)))
-                Text(calendar.badThings)
-                    .foregroundColor(Color(UIColor.nonStandardColor(withRGBHex: 0xF8F8F8)))
-                    .font(.system(size: 17, weight: .medium))
+                WeatherIconView(icon: weather?.now.icon)
                 Spacer()
+                Text(given(weather?.now.temp) { $0 + "°C"} ?? "27°C")
+                    .font(.system(size: 24, weight: .bold))
             }
             Spacer()
             HStack {
-                Text("幸运数字 ")
-                    .font(.subheadline)
-                    .foregroundColor(Color(UIColor.nonStandardColor(withRGBHex: 0x333333)))
-                Text("七")
-                    .font(.subheadline)
-                    .foregroundColor(.yellow)
+                Text(given(weather?.now.windDir, weather?.now.windScale) { $0 + " " + $1 + "级" } ?? "东南风3级" )
+                    .font(.system(size: 15, weight: .medium))
                 Spacer()
             }
-            Spacer()
         }
-        .padding()
+        .foregroundColor(.white)
+        .padding(16)
+    }
+}
+
+private struct WeatherIconView : View {
+    var icon: String?
+    
+    var body: some View {
+        if let icon = icon, !icon.isEmpty {
+            Image(uiImage: UIImage(named: icon)!)
+                .renderingMode(.template)
+                .resizable()
+                .frame(width: 36, height: 36, alignment: .center)
+        } else {
+            Image(systemName: "cloud.sun.fill")
+                .renderingMode(.template)
+                .resizable()
+                .frame(width: 36, height: 36, alignment: .center)
+        }
     }
 }

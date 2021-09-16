@@ -15,26 +15,43 @@ struct Provider: TimelineProvider {
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         var entries: [CalendarModel] = []
-
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
-        for hourOffset in 0 ..< 60 {
-            let entryDate = Calendar.current.date(byAdding: .second, value: hourOffset, to: currentDate)!
-            let entry = CalendarModel(date: entryDate)
+        
+        /// widget will be refresh every minute
+        
+        let refreshTime = Calendar.current.date(byAdding: .minute, value: 1, to: currentDate)!
+        
+        for hoursOffset in 0..<24 {
+            
+            guard let entryDate = Calendar.current.date(byAdding: .hour, value: hoursOffset, to: currentDate) else {
+                return
+            }
+            let entry = CalendarModel(date: entryDate, currentWeather: nil)
             entries.append(entry)
         }
-
-        let timeline = Timeline(entries: entries, policy: .atEnd)
-        completion(timeline)
+        WidgetServer.getWeather { result in
+            var currentWeather: CurrentWeather?
+            if case .success(let value) = result {
+                currentWeather = value
+                currentWeather?.address = UserDefaults.shared[.userAddress] ?? ""
+            } else {
+                currentWeather = nil
+            }
+            let entry = CalendarModel(date: Date(), currentWeather: currentWeather)
+            let timeline = Timeline(entries: [entry], policy: .after(refreshTime))
+            completion(timeline)
+        }
     }
 }
 
 struct cabinet_widgetEntryView : View {
     var entry: Provider.Entry
+    @Environment(\.widgetFamily) var family
 
     var body: some View {
-        ZStack {
-            CalendarView(calendar: entry)
+        switch family {
+        case .systemSmall: CalendarView(calendar: entry)
+        default: Text("")
         }
     }
 }
@@ -47,8 +64,8 @@ struct cabinet_widget: Widget {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             cabinet_widgetEntryView(entry: entry)
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("Cabinet Widget")
+        .description("This is your widget.")
     }
 }
 

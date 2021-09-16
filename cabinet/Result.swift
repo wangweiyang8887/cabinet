@@ -1,7 +1,7 @@
 // Copyright © 2021 evan. All rights reserved.
 
 /// Adapted from https://github.com/apple/swift/blob/master/test/Prototypes/Result.swift
-public enum Result<Value> {
+enum Result<Value> {
     case success(Value)
     case error(Error)
 
@@ -63,7 +63,7 @@ public enum Result<Value> {
 }
 
 /// Translates the execution of a throwing closure into a `Result`.
-public func catchResult<Value>(invoking body: () throws -> Value) -> Result<Value> {
+func catchResult<Value>(invoking body: () throws -> Value) -> Result<Value> {
     do {
         return .success(try body())
     } catch {

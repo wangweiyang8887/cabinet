@@ -1,7 +1,21 @@
 // Copyright © 2021 evan. All rights reserved.
 
+import UIKit
+
+/// Returns `f(x)` if `x` is non-`nil`; otherwise returns `nil`.
+@discardableResult public func given<T, U>(_ x: T?, _ f: (T) throws -> U?) rethrows -> U? {
+    guard let x = x else { return nil }
+    return try f(x)
+}
+
+/// Returns `f(x!, y!)` if `x != nil && y != nil`; otherwise returns `nil`.
+@discardableResult public func given<T, U, V>(_ x: T?, _ y: U?, _ f: (T, U) throws -> V?) rethrows -> V? {
+    guard let x = x, let y = y else { return nil }
+    return try f(x, y)
+}
+
 extension UserDefaults {
-    public static let shared: UserDefaults = { return UserDefaults.standard }()
+    public static let shared: UserDefaults = { UserDefaults(suiteName: "group.com.evan.cabinet")! }()
     
     public struct Property<Value> {
         public let keyName: String
@@ -62,4 +76,6 @@ extension UserDefaults.Property {
     public static var eventName: UserDefaults.Property<String> { return .init(keyName: "eventName", isUserSpecific: false) }
     public static var eventDate: UserDefaults.Property<String> { return .init(keyName: "eventDate", isUserSpecific: false) }
     public static var shuffledDay: UserDefaults.Property<Int> { return .init(keyName: "shuffledDay", isUserSpecific: false) }
+    public static var userCoordinate: UserDefaults.Property<String> { return .init(keyName: "userCoordinate", isUserSpecific: false) }
+    public static var userAddress: UserDefaults.Property<String> { return .init(keyName: "userAddress", isUserSpecific: false) }
 }

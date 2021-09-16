@@ -50,6 +50,12 @@
 		9D6BC29126F0B76D00F000C9 /* EncourageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC29026F0B76D00F000C9 /* EncourageRow.swift */; };
 		9D6BC29326F1946300F000C9 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC29226F1946300F000C9 /* Environment.swift */; };
 		9D6BC29A26F1CDD800F000C9 /* NSAttributedString+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC29926F1CDD800F000C9 /* NSAttributedString+Utilities.swift */; };
+		9D6BC29B26F1EB4900F000C9 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DB7582D26D3A371006D2246 /* Colors.xcassets */; };
+		9D6BC29D26F1EBEF00F000C9 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66D1BE26E5FEDC00411D75 /* CurrentWeather.swift */; };
+		9D6BC2A026F1F19400F000C9 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66D1BC26E5FBDF00411D75 /* API.swift */; };
+		9D6BC2A626F1F53D00F000C9 /* WidgetServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC2A426F1F2B000F000C9 /* WidgetServer.swift */; };
+		9D6BC2A826F1F57400F000C9 /* Codable+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC2A726F1F57400F000C9 /* Codable+Helper.swift */; };
+		9D6BC2A926F1F58800F000C9 /* Codable+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC2A726F1F57400F000C9 /* Codable+Helper.swift */; };
 		9D70891826D8F76500716054 /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D70891726D8F76500716054 /* Blur.swift */; };
 		9D7B91B026E0E914001C11AD /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91AF26E0E914001C11AD /* TimerManager.swift */; };
 		9D7B91B226E1EC7B001C11AD /* PushTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91B126E1EC7B001C11AD /* PushTransitionDelegate.swift */; };
@@ -111,6 +117,15 @@
 		9DB7582A26D39A50006D2246 /* BaseBuddle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB7582926D39A50006D2246 /* BaseBuddle.swift */; };
 		9DB7582C26D39CF3006D2246 /* BaseDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB7582B26D39CF3006D2246 /* BaseDateFormatter.swift */; };
 		9DB7582E26D3A371006D2246 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DB7582D26D3A371006D2246 /* Colors.xcassets */; };
+		9DCD1E5726F2F4C7004A4E98 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCD1E5626F2F4C7004A4E98 /* AppGroup.swift */; };
+		9DCD1E5826F2F666004A4E98 /* UserDefaults+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC27E26F0948C00F000C9 /* UserDefaults+Helper.swift */; };
+		9DCD1E5926F316D2004A4E98 /* KeyedDecodingContainer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66D1BA26E5FB3E00411D75 /* KeyedDecodingContainer+Extension.swift */; };
+		9DCD1E5A26F31D4B004A4E98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DB757FF26D37B25006D2246 /* Assets.xcassets */; };
+		9DCD1E6026F32330004A4E98 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DB7583426D3A7C0006D2246 /* WidgetKit.framework */; };
+		9DCD1E6126F32330004A4E98 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DB7583626D3A7C0006D2246 /* SwiftUI.framework */; };
+		9DCD1E6426F32330004A4E98 /* CountDownWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCD1E6326F32330004A4E98 /* CountDownWidget.swift */; };
+		9DCD1E6626F32331004A4E98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DCD1E6526F32331004A4E98 /* Assets.xcassets */; };
+		9DCD1E6A26F32331004A4E98 /* CountDownWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9DCD1E5F26F32330004A4E98 /* CountDownWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9DE5E74226D4A48500FF8B0A /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DB7583426D3A7C0006D2246 /* WidgetKit.framework */; };
 		9DE5E74326D4A48500FF8B0A /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DB7583626D3A7C0006D2246 /* SwiftUI.framework */; };
 		9DE5E74626D4A48500FF8B0A /* cabinet_widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE5E74526D4A48500FF8B0A /* cabinet_widget.swift */; };
@@ -125,6 +140,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		9DCD1E6826F32331004A4E98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9DB757EB26D37B24006D2246 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9DCD1E5E26F32330004A4E98;
+			remoteInfo = CountDownWidgetExtension;
+		};
 		9DE5E74A26D4A48600FF8B0A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9DB757EB26D37B24006D2246 /* Project object */;
@@ -141,6 +163,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				9DCD1E6A26F32331004A4E98 /* CountDownWidgetExtension.appex in Embed App Extensions */,
 				9DE5E74C26D4A48600FF8B0A /* cabinet widgetExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -194,6 +217,8 @@
 		9D6BC29026F0B76D00F000C9 /* EncourageRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncourageRow.swift; sourceTree = "<group>"; };
 		9D6BC29226F1946300F000C9 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		9D6BC29926F1CDD800F000C9 /* NSAttributedString+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Utilities.swift"; sourceTree = "<group>"; };
+		9D6BC2A426F1F2B000F000C9 /* WidgetServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetServer.swift; sourceTree = "<group>"; };
+		9D6BC2A726F1F57400F000C9 /* Codable+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+Helper.swift"; sourceTree = "<group>"; };
 		9D70891726D8F76500716054 /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
 		9D7B91AF26E0E914001C11AD /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		9D7B91B126E1EC7B001C11AD /* PushTransitionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushTransitionDelegate.swift; sourceTree = "<group>"; };
@@ -265,6 +290,13 @@
 		9DB7582D26D3A371006D2246 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		9DB7583426D3A7C0006D2246 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		9DB7583626D3A7C0006D2246 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		9DCD1E5426F2F0FE004A4E98 /* cabinet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = cabinet.entitlements; sourceTree = "<group>"; };
+		9DCD1E5626F2F4C7004A4E98 /* AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroup.swift; sourceTree = "<group>"; };
+		9DCD1E5F26F32330004A4E98 /* CountDownWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CountDownWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DCD1E6326F32330004A4E98 /* CountDownWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownWidget.swift; sourceTree = "<group>"; };
+		9DCD1E6526F32331004A4E98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9DCD1E6726F32331004A4E98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DCD1E6E26F3234C004A4E98 /* CountDownWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CountDownWidgetExtension.entitlements; sourceTree = "<group>"; };
 		9DE5E74126D4A48500FF8B0A /* cabinet widgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "cabinet widgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DE5E74526D4A48500FF8B0A /* cabinet_widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cabinet_widget.swift; sourceTree = "<group>"; };
 		9DE5E74726D4A48600FF8B0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -280,6 +312,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFA6AA210B9F1F644AFC9D94 /* Pods_cabinet.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DCD1E5C26F32330004A4E98 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DCD1E6126F32330004A4E98 /* SwiftUI.framework in Frameworks */,
+				9DCD1E6026F32330004A4E98 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +429,7 @@
 				9D7B91D126E20DA6001C11AD /* Constants.swift */,
 				9D6BC27E26F0948C00F000C9 /* UserDefaults+Helper.swift */,
 				9D6BC29226F1946300F000C9 /* Environment.swift */,
+				9DCD1E5626F2F4C7004A4E98 /* AppGroup.swift */,
 			);
 			name = Globals;
 			sourceTree = "<group>";
@@ -434,6 +476,7 @@
 				9D6BC28426F0A20500F000C9 /* UIButton+Utilities.swift */,
 				9D6BC28626F0A2B100F000C9 /* UIViewController+Utilities.swift */,
 				9D6BC28826F0A2FA00F000C9 /* Navigation+Utilities.swift */,
+				9D6BC2A726F1F57400F000C9 /* Codable+Helper.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -441,8 +484,10 @@
 		9DB757EA26D37B24006D2246 = {
 			isa = PBXGroup;
 			children = (
+				9DCD1E6E26F3234C004A4E98 /* CountDownWidgetExtension.entitlements */,
 				9DB757F526D37B24006D2246 /* cabinet */,
 				9DE5E74426D4A48500FF8B0A /* cabinet widget */,
+				9DCD1E6226F32330004A4E98 /* CountDownWidget */,
 				9DB757F426D37B24006D2246 /* Products */,
 				32CEA01F4C72B7C0875F9C21 /* Pods */,
 				E3701FF25E82A516F9A5F9A4 /* Frameworks */,
@@ -454,6 +499,7 @@
 			children = (
 				9DB757F326D37B24006D2246 /* cabinet.app */,
 				9DE5E74126D4A48500FF8B0A /* cabinet widgetExtension.appex */,
+				9DCD1E5F26F32330004A4E98 /* CountDownWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -461,6 +507,7 @@
 		9DB757F526D37B24006D2246 /* cabinet */ = {
 			isa = PBXGroup;
 			children = (
+				9DCD1E5426F2F0FE004A4E98 /* cabinet.entitlements */,
 				9DB7581D26D39605006D2246 /* Helper */,
 				9DB7581C26D38DAC006D2246 /* HomePage */,
 				9D6BC24D26EF68F700F000C9 /* Reminder */,
@@ -569,6 +616,16 @@
 			name = Global;
 			sourceTree = "<group>";
 		};
+		9DCD1E6226F32330004A4E98 /* CountDownWidget */ = {
+			isa = PBXGroup;
+			children = (
+				9DCD1E6326F32330004A4E98 /* CountDownWidget.swift */,
+				9DCD1E6526F32331004A4E98 /* Assets.xcassets */,
+				9DCD1E6726F32331004A4E98 /* Info.plist */,
+			);
+			path = CountDownWidget;
+			sourceTree = "<group>";
+		};
 		9DE5E74426D4A48500FF8B0A /* cabinet widget */ = {
 			isa = PBXGroup;
 			children = (
@@ -578,6 +635,7 @@
 				9DE5E75026D4BF3F00FF8B0A /* CalendarView.swift */,
 				9DE5E75226D4C12E00FF8B0A /* Calendar.swift */,
 				9D70891726D8F76500716054 /* Blur.swift */,
+				9D6BC2A426F1F2B000F000C9 /* WidgetServer.swift */,
 			);
 			path = "cabinet widget";
 			sourceTree = "<group>";
@@ -610,11 +668,29 @@
 			);
 			dependencies = (
 				9DE5E74B26D4A48600FF8B0A /* PBXTargetDependency */,
+				9DCD1E6926F32331004A4E98 /* PBXTargetDependency */,
 			);
 			name = cabinet;
 			productName = cabinet;
 			productReference = 9DB757F326D37B24006D2246 /* cabinet.app */;
 			productType = "com.apple.product-type.application";
+		};
+		9DCD1E5E26F32330004A4E98 /* CountDownWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9DCD1E6B26F32331004A4E98 /* Build configuration list for PBXNativeTarget "CountDownWidgetExtension" */;
+			buildPhases = (
+				9DCD1E5B26F32330004A4E98 /* Sources */,
+				9DCD1E5C26F32330004A4E98 /* Frameworks */,
+				9DCD1E5D26F32330004A4E98 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CountDownWidgetExtension;
+			productName = CountDownWidgetExtension;
+			productReference = 9DCD1E5F26F32330004A4E98 /* CountDownWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 		9DE5E74026D4A48500FF8B0A /* cabinet widgetExtension */ = {
 			isa = PBXNativeTarget;
@@ -647,6 +723,9 @@
 						CreatedOnToolsVersion = 12.5.1;
 						LastSwiftMigration = 1250;
 					};
+					9DCD1E5E26F32330004A4E98 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
 					9DE5E74026D4A48500FF8B0A = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
@@ -667,6 +746,7 @@
 			targets = (
 				9DB757F226D37B24006D2246 /* cabinet */,
 				9DE5E74026D4A48500FF8B0A /* cabinet widgetExtension */,
+				9DCD1E5E26F32330004A4E98 /* CountDownWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -689,11 +769,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9DCD1E5D26F32330004A4E98 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DCD1E6626F32331004A4E98 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9DE5E73F26D4A48500FF8B0A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9DE5E74826D4A48600FF8B0A /* Assets.xcassets in Resources */,
+				9DCD1E5A26F31D4B004A4E98 /* Assets.xcassets in Resources */,
+				9D6BC29B26F1EB4900F000C9 /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -806,6 +896,7 @@
 				9D6BC29A26F1CDD800F000C9 /* NSAttributedString+Utilities.swift in Sources */,
 				9D82636D26D8D26900981A3E /* UIView+Utilities.swift in Sources */,
 				9D7B91B026E0E914001C11AD /* TimerManager.swift in Sources */,
+				9DCD1E5726F2F4C7004A4E98 /* AppGroup.swift in Sources */,
 				9D7B920A26E2285A001C11AD /* UILabel+Utilities.swift in Sources */,
 				9D6BC25226F0480400F000C9 /* NavigationBarStyle.swift in Sources */,
 				9D66D1C426E7349600411D75 /* UIImage+Utilities.swift in Sources */,
@@ -836,9 +927,18 @@
 				9DB7582726D399E6006D2246 /* BaseColor.swift in Sources */,
 				9DB7581026D383A7006D2246 /* BaseNavigationController.swift in Sources */,
 				9D6BC28126F0A07500F000C9 /* BaseBottomSheetVC.swift in Sources */,
+				9D6BC2A826F1F57400F000C9 /* Codable+Helper.swift in Sources */,
 				9D66D1BF26E5FEDC00411D75 /* CurrentWeather.swift in Sources */,
 				9D7B91F426E217BB001C11AD /* NSObject+Helper.m in Sources */,
 				9D6BC25C26F06E3E00F000C9 /* TTHyperlinkTextView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DCD1E5B26F32330004A4E98 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DCD1E6426F32330004A4E98 /* CountDownWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -846,8 +946,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D6BC2A626F1F53D00F000C9 /* WidgetServer.swift in Sources */,
+				9D6BC2A926F1F58800F000C9 /* Codable+Helper.swift in Sources */,
+				9D6BC2A026F1F19400F000C9 /* API.swift in Sources */,
 				9DE5E75126D4BF3F00FF8B0A /* CalendarView.swift in Sources */,
 				9DE5E75526D4E3AD00FF8B0A /* BaseColor.swift in Sources */,
+				9D6BC29D26F1EBEF00F000C9 /* CurrentWeather.swift in Sources */,
+				9DCD1E5826F2F666004A4E98 /* UserDefaults+Helper.swift in Sources */,
+				9DCD1E5926F316D2004A4E98 /* KeyedDecodingContainer+Extension.swift in Sources */,
 				9DE5E75326D4C12E00FF8B0A /* Calendar.swift in Sources */,
 				9DE5E74626D4A48500FF8B0A /* cabinet_widget.swift in Sources */,
 				9D70891826D8F76500716054 /* Blur.swift in Sources */,
@@ -859,6 +965,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		9DCD1E6926F32331004A4E98 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9DCD1E5E26F32330004A4E98 /* CountDownWidgetExtension */;
+			targetProxy = 9DCD1E6826F32331004A4E98 /* PBXContainerItemProxy */;
+		};
 		9DE5E74B26D4A48600FF8B0A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9DE5E74026D4A48500FF8B0A /* cabinet widgetExtension */;
@@ -1010,6 +1121,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = cabinet/cabinet.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 7;
@@ -1038,6 +1150,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = cabinet/cabinet.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 7;
@@ -1057,13 +1170,62 @@
 			};
 			name = Release;
 		};
+		9DCD1E6C26F32331004A4E98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = CountDownWidgetExtension.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EVG8QY6QFT;
+				INFOPLIST_FILE = CountDownWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.evan.cabinet.CountDownWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9DCD1E6D26F32331004A4E98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = CountDownWidgetExtension.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EVG8QY6QFT;
+				INFOPLIST_FILE = CountDownWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.evan.cabinet.CountDownWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		9DE5E74E26D4A48600FF8B0A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_ENTITLEMENTS = "cabinet widgetExtension.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EVG8QY6QFT;
 				INFOPLIST_FILE = "cabinet widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
@@ -1074,7 +1236,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.evan.cabinet.Cabinet-Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "cabinet-widget-dev";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1086,8 +1248,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_ENTITLEMENTS = "cabinet widgetExtension.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EVG8QY6QFT;
 				INFOPLIST_FILE = "cabinet widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
@@ -1098,7 +1261,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.evan.cabinet.Cabinet-Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "cabinet-widget-dev";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1122,6 +1285,15 @@
 			buildConfigurations = (
 				9DB7580826D37B25006D2246 /* Debug */,
 				9DB7580926D37B25006D2246 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9DCD1E6B26F32331004A4E98 /* Build configuration list for PBXNativeTarget "CountDownWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DCD1E6C26F32331004A4E98 /* Debug */,
+				9DCD1E6D26F32331004A4E98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -9,8 +9,8 @@ import UIKit
 /// Represents an asynchronous operation that will produce a result (either a value or an error) upon completion.
 ///
 /// Using completion callbacks, an operation allows adding actions and mappings on the result before the operation actually completes.
-/// This class is thread-safe, i.e. it's safe to access its public properties and methods from any queue at any time.
-public class Operation<Value> : Equatable {
+/// This class is thread-safe, i.e. it's safe to access its  properties and methods from any queue at any time.
+class Operation<Value> : Equatable {
     /// A serial queue for exclusive access to the private stored properties.
     private let serialQueue = DispatchQueue(label: "Operation<\(Value.self)>.serialQueue")
     /// The result with which the operation was completed, or `nil` if it has not been completed yet.
@@ -21,14 +21,14 @@ public class Operation<Value> : Equatable {
     /// Returns the result with which the operation was completed, or `nil` if it has not been completed yet.
     ///
     /// Once the operation completes this result is guaranteed to stay the same.
-    public var result: Result<Value>? { return serialQueue.sync { _result } }
+    var result: Result<Value>? { return serialQueue.sync { _result } }
 
-    public typealias Callback = (Result<Value>) -> Void
+    typealias Callback = (Result<Value>) -> Void
 
     fileprivate init() {}
 
     // MARK: General
-    fileprivate func complete(with result: Result<Value>) { // OwnedOperation overrides this to be public
+    fileprivate func complete(with result: Result<Value>) { // OwnedOperation overrides this to be
         serialQueue.async {
             // Check the operation hasn't been completed already.
             guard self._result == nil else { return }
@@ -48,7 +48,7 @@ public class Operation<Value> : Equatable {
     /// The callback will be strongly referenced until it has been invoked, and is guaranteed to be called only once.
     /// If the operation has already been completed, the callback will be invoked immediately (asynchronously).
     /// - Parameter queue: The queue on which the callback will be performed. Defaults to the main queue.
-    @discardableResult public func onCompletion(queue: DispatchQueue = .main, callback: @escaping (Result<Value>) -> Void) -> Operation<Value> {
+    @discardableResult  func onCompletion(queue: DispatchQueue = .main, callback: @escaping (Result<Value>) -> Void) -> Operation<Value> {
         serialQueue.async {
             if let result = self._result { // Call callback now if already complete
                 queue.async { callback(result) }
@@ -59,28 +59,28 @@ public class Operation<Value> : Equatable {
         return self
     }
 
-    public static func == <T>(lhs: Operation<T>, rhs: Operation<T>) -> Bool { return lhs === rhs }
+     static func == <T>(lhs: Operation<T>, rhs: Operation<T>) -> Bool { return lhs === rhs }
 }
 
 // MARK: - Owned Operation
 
-public class OwnedOperation<Value> : Operation<Value> {
-    public override init() {}
+class OwnedOperation<Value> : Operation<Value> {
+     override init() {}
 
     /// Completes the operation with the given result, calling all registered callbacks.
     ///
     /// If the operation was already completed, has no effect.
-    public override func complete(with result: Result<Value>) { super.complete(with: result) }
+     override func complete(with result: Result<Value>) { super.complete(with: result) }
 }
 
 // MARK: - Operation Group
 
 /// An operation that is successful when all operations in a group of operations are successful.
-public class OperationGroup : Operation<[Any]> {
+ class OperationGroup : Operation<[Any]> {
     private let operations: [AnyOperation]
 
     // MARK: Initialization
-    public init(_ operations: [AnyOperation]) {
+     init(_ operations: [AnyOperation]) {
         self.operations = operations
         super.init()
         // Handle empty case
@@ -112,17 +112,17 @@ public class OperationGroup : Operation<[Any]> {
 
 // MARK: - Any Operation
 
-public protocol AnyOperation : AnyObject {
+ protocol AnyOperation : AnyObject {
     var any_result: Result<Any>? { get }
     @discardableResult func any_onCompletion(queue: DispatchQueue, callback: @escaping (Result<Any>) -> Void) -> AnyOperation
 }
 
 extension Operation : AnyOperation {
     /// Type-erased version of `result` for `AnyOperation`.
-    public var any_result: Result<Any>? { return result?.map { $0 as Any } }
+     var any_result: Result<Any>? { return result?.map { $0 as Any } }
 
     /// Type-erased version of `onCompletion(_:)` for `AnyOperation`.
-    @discardableResult public func any_onCompletion(queue: DispatchQueue = .main, callback: @escaping (Result<Any>) -> Void) -> AnyOperation {
+    @discardableResult  func any_onCompletion(queue: DispatchQueue = .main, callback: @escaping (Result<Any>) -> Void) -> AnyOperation {
         return onCompletion(queue: queue) { result in
             callback(result.map { $0 as Any })
         }
@@ -133,12 +133,12 @@ extension Operation : AnyOperation {
 
 extension Operation {
     /// Returns whether the operation has completed.
-    public var isCompleted: Bool { return result != nil }
+     var isCompleted: Bool { return result != nil }
 
     /// Creates an operation that asynchronously performs work on a given queue.
     ///
     /// - Parameter queue: The queue to perform the work on. Defaults to a default priority global concurrent queue.
-    public convenience init(queue: DispatchQueue = .global(), work: @escaping () throws -> Value) {
+     convenience init(queue: DispatchQueue = .global(), work: @escaping () throws -> Value) {
         self.init()
         queue.async {
             let result = catchResult(invoking: work)
@@ -147,18 +147,18 @@ extension Operation {
     }
 
     /// Creates an already completed operation with the given result.
-    public convenience init(result: Result<Value>) {
+     convenience init(result: Result<Value>) {
         self.init()
         complete(with: result)
     }
 
     /// Creates an already successfully completed operation with the given value as its result.
-    public convenience init(value: Value) {
+     convenience init(value: Value) {
         self.init(result: .success(value))
     }
 
     /// Creates an already failed operation with the given error as its result.
-    public convenience init(error: Error) {
+     convenience init(error: Error) {
         self.init(result: .error(error))
     }
 
@@ -166,7 +166,7 @@ extension Operation {
     ///
     /// - Parameter startOperation: A closure that starts asynchronous work, which in turn should call the completion handler when done.
     ///   This closure is called synchronously from within this initializer and therefore generally should not block.
-    public convenience init(objc_startOperation: (@escaping (Value?, Error?) -> Void) -> Void) {
+     convenience init(objc_startOperation: (@escaping (Value?, Error?) -> Void) -> Void) {
         self.init()
         let completionHandler: ObjCCompletionHandler<Value> = { value, error in
             let result = Result(value, error ?? GenericError())
@@ -179,7 +179,7 @@ extension Operation {
     ///
     /// See `onCompletion(perform:)` for details.
     /// - Parameter queue: The queue on which the callback will be performed. Defaults to the main queue.
-    @discardableResult public func onSuccess(queue: DispatchQueue = .main, callback: @escaping (Value) -> Void) -> Operation<Value> {
+    @discardableResult  func onSuccess(queue: DispatchQueue = .main, callback: @escaping (Value) -> Void) -> Operation<Value> {
         return onCompletion(queue: queue) { result in
             if let value = result.value { callback(value) }
         }
@@ -189,7 +189,7 @@ extension Operation {
     ///
     /// See `onCompletion(perform:)` for details.
     /// - Parameter queue: The queue on which the callback will be performed. Defaults to the main queue.
-    @discardableResult public func onError(queue: DispatchQueue = .main, callback: @escaping (Error) -> Void) -> Operation<Value> {
+    @discardableResult  func onError(queue: DispatchQueue = .main, callback: @escaping (Error) -> Void) -> Operation<Value> {
         return onCompletion(queue: queue) { result in
             if let error = result.error { callback(error) }
         }
@@ -200,7 +200,7 @@ extension Operation {
     /// See `onCompletion(perform:)` for details.
     /// - Parameter queue: The queue on which the callback will be performed. Defaults to the main queue.
     /// - Parameter callback: The Objective-C style callback, made optional for caller convenience.
-    @discardableResult public func objc_onCompletion(queue: DispatchQueue = .main, _ callback: ObjCCompletionHandler<Value>?) -> Operation<Value> {
+    @discardableResult  func objc_onCompletion(queue: DispatchQueue = .main, _ callback: ObjCCompletionHandler<Value>?) -> Operation<Value> {
         guard let callback = callback else { return self }
         return onCompletion { result in
             callback(result.value, result.error)
@@ -208,7 +208,7 @@ extension Operation {
     }
 
     /// Blocks until the operation completes and returns its result.
-    @discardableResult public func waitUntilFinished() -> Result<Value> {
+    @discardableResult  func waitUntilFinished() -> Result<Value> {
         let semaphore = DispatchSemaphore(value: 0)
         // Increment on completion
         onCompletion(queue: .global()) { _ in semaphore.signal() } // On a concurrent queue to avoid a potential deadlock
@@ -217,7 +217,7 @@ extension Operation {
         return result!
     }
 
-    @discardableResult public func ignoreResult() -> Operation<Void> {
+    @discardableResult  func ignoreResult() -> Operation<Void> {
         return map { _ in }
     }
 }
@@ -227,7 +227,7 @@ extension OwnedOperation {
     ///
     /// - Parameter startOperation: A closure that starts asynchronous work, which in turn should complete the operation when done.
     ///   This closure is called synchronously from within this initializer and therefore generally should not block.
-    public convenience init(startOperation: (OwnedOperation<Value>) -> Void) {
+     convenience init(startOperation: (OwnedOperation<Value>) -> Void) {
         self.init()
         startOperation(self)
     }
@@ -236,7 +236,7 @@ extension OwnedOperation {
     ///
     /// This can be useful to e.g. be able to cancel or otherwise complete the operation independently.
     /// If the given operation was already completed the owned operation is completed immediately, synchronously.
-    public convenience init(_ operation: Operation<Value>) {
+     convenience init(_ operation: Operation<Value>) {
         self.init()
         if let result = operation.result {
             complete(with: result)
@@ -248,21 +248,21 @@ extension OwnedOperation {
     /// Successfully completes the operation with the given value as its result, calling all registered callbacks.
     ///
     /// If the operation was already completed, has no effect.
-    public func complete(with value: Value) { complete(with: .success(value)) }
+     func complete(with value: Value) { complete(with: .success(value)) }
 
     /// Fails the operation with the given error as its result, calling all registered callbacks.
     ///
     /// If the operation was already completed, has no effect.
-    public func complete(with error: Error) { complete(with: .error(error)) }
+     func complete(with error: Error) { complete(with: .error(error)) }
 }
 
 extension OperationGroup {
-    public convenience init(_ operations: AnyOperation...) {
+     convenience init(_ operations: AnyOperation...) {
         self.init(operations)
     }
 
     /// Splits the given items in batches, starts an operation for each batch (in parallel), and joins the results.
-    public static func batching<T, U>(_ items: [T], per batchSize: Int, startBatch: ([T]) -> Operation<[U]>) -> Operation<[U]> {
+     static func batching<T, U>(_ items: [T], per batchSize: Int, startBatch: ([T]) -> Operation<[U]>) -> Operation<[U]> {
         let operations = items.grouped(per: batchSize).map { startBatch(Array($0)) }
         if operations.isEmpty { return Operation(value: []) }
         if let operation = operations.onlyElement { return operation }
@@ -280,7 +280,7 @@ extension Operation {
     ///
     /// If the operation results in an error, the derived operation will directly propagate that error and the mapping will not be invoked.
     /// - Parameter queue: The queue on which the mapping will be performed. Defaults to the main queue.
-    public func map<U>(queue: DispatchQueue = .main, mapping: @escaping (Value) throws -> U) -> Operation<U> {
+     func map<U>(queue: DispatchQueue = .main, mapping: @escaping (Value) throws -> U) -> Operation<U> {
         let operation = OwnedOperation<U>()
         onCompletion(queue: queue) { result in
             operation.complete(with: result.map(mapping))
@@ -293,7 +293,7 @@ extension Operation {
     ///
     /// If the operation results in an error, the derived operation will directly propagate that error and the mapping will not be invoked.
     /// - Parameter queue: The queue on which the mapping will be performed. Defaults to the main queue.
-    public func flatMap<U>(queue: DispatchQueue = .main, mapping: @escaping (Value) throws -> Operation<U>) -> Operation<U> {
+     func flatMap<U>(queue: DispatchQueue = .main, mapping: @escaping (Value) throws -> Operation<U>) -> Operation<U> {
         return OwnedOperation<U>(startOperation: { operation in
             onCompletion(queue: queue) { result in
                 let mappingResult = result.map(mapping)
@@ -309,7 +309,7 @@ extension Operation {
     /// and completes itself with the result of that mapping.
     ///
     /// - Parameter queue: The queue on which the mapping will be performed. Defaults to the main queue.
-    public func mapResult<U>(queue: DispatchQueue = .main, mapping: @escaping (Result<Value>) throws -> U) -> Operation<U> {
+     func mapResult<U>(queue: DispatchQueue = .main, mapping: @escaping (Result<Value>) throws -> U) -> Operation<U> {
         let operation = OwnedOperation<U>()
         onCompletion(queue: queue) { result in
             operation.complete(with: catchResult { try mapping(result) })
@@ -321,7 +321,7 @@ extension Operation {
     /// and completes itself with the eventual result of that second operation.
     ///
     /// - Parameter queue: The queue on which the mapping will be performed. Defaults to the main queue.
-    public func flatMapResult<U>(queue: DispatchQueue = .main, mapping: @escaping (Result<Value>) throws -> Operation<U>) -> Operation<U> {
+     func flatMapResult<U>(queue: DispatchQueue = .main, mapping: @escaping (Result<Value>) throws -> Operation<U>) -> Operation<U> {
         return OwnedOperation<U>(startOperation: { operation in
             onCompletion(queue: queue) { result in
                 let mappingResult = catchResult { try mapping(result) }
@@ -336,7 +336,7 @@ extension Operation {
 
 extension Operation {
     /// Wraps an operation to enable retrying it.
-    public convenience init(_ performOperation: @escaping () -> Operation<Value>, shouldRetry: @escaping (Result<Value>) -> Bool, maximumNumberOfRetries: Int) {
+     convenience init(_ performOperation: @escaping () -> Operation<Value>, shouldRetry: @escaping (Result<Value>) -> Bool, maximumNumberOfRetries: Int) {
         self.init()
         assert(maximumNumberOfRetries >= 0)
         var numberOfRetriesLeft = maximumNumberOfRetries

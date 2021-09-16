@@ -16,6 +16,8 @@ class HomePageVC : BaseCollectionViewController {
             guard let self = self else { return }
             self.weatherRow.city = address
             guard let coordinate = location?.coordinate else { return }
+            UserDefaults.shared[.userCoordinate] = "\(coordinate.longitude),\(coordinate.latitude)"
+            UserDefaults.shared[.userAddress] = address
             Server.fetchCurrentWeather(with: coordinate).onSuccess { [weak self] weather in
                 self?.currentWeather = weather
             }

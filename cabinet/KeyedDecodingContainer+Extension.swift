@@ -1,5 +1,8 @@
 // Copyright © 2021 evan. All rights reserved.
 
+import Foundation
+import UIKit
+
 protocol defaultKeyedDecodingEnable {}
 
 /// Set default value when the data from json was `null` or `nil`

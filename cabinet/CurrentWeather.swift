@@ -1,8 +1,11 @@
 // Copyright © 2021 evan. All rights reserved.
 
-struct CurrentWeather : Decodable {
+struct CurrentWeather : Codable, Identifiable {
+    let id: Int
     let now: Now
-    struct Now : Decodable {
+    var address: String
+    struct Now : Codable, Identifiable {
+        let id: Int
         let obsTime: String // 数据观测时间
         let temp: String // 温度，默认单位：摄氏度
         let feelsLike: String // 体感温度，默认单位：摄氏度
