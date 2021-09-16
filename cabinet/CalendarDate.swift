@@ -1,5 +1,18 @@
 // Copyright © 2021 evan. All rights reserved.
 
+import UIKit
+import Foundation
+
+public func lazy<T>(_ variable: inout T?, construction: () throws -> T) rethrows -> T {
+    if let value = variable {
+        return value
+    } else {
+        let value = try construction()
+        variable = value
+        return value
+    }
+}
+
 public class CalendarDate : NSObject {
     var year: Int!
     var month: Int!

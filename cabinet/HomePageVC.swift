@@ -49,6 +49,7 @@ class HomePageVC : BaseCollectionViewController {
             encourageRow.title = daily.sentence[ifPresent: random]
         }
         collectionView.reloadData()
+        let a = "227".withColor(.black).appending("7".withColor(.white))
     }
     
     // MARK: Components

@@ -64,8 +64,9 @@ struct cabinet_widget: Widget {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             cabinet_widgetEntryView(entry: entry)
         }
-        .configurationDisplayName("Cabinet Widget")
-        .description("This is your widget.")
+        .configurationDisplayName("每日天气")
+        .description("希望每天都是好天气.")
+        .supportedFamilies([ .systemSmall ])
     }
 }
 

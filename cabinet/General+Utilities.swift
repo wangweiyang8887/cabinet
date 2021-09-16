@@ -188,16 +188,6 @@ extension Collection {
     public var nilIfEmpty: Self? { return isEmpty ? nil : self }
 }
 
-public func lazy<T>(_ variable: inout T?, construction: () throws -> T) rethrows -> T {
-    if let value = variable {
-        return value
-    } else {
-        let value = try construction()
-        variable = value
-        return value
-    }
-}
-
 /// A no-op that prevents the passed argument from being optimized away by the compiler.
 @inline(never)
 public func touch(_ x: Any?) {}

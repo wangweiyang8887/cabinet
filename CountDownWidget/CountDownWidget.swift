@@ -4,23 +4,26 @@ import WidgetKit
 import SwiftUI
 
 struct Provider: TimelineProvider {
-    func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date())
+    func placeholder(in context: Context) -> CountDownEntry {
+        CountDownEntry(date: Date(), model: EventModel())
     }
 
-    func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date())
+    func getSnapshot(in context: Context, completion: @escaping (CountDownEntry) -> ()) {
+        let entry = CountDownEntry(date: Date(), model: EventModel())
         completion(entry)
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        var entries: [SimpleEntry] = []
+        var entries: [CountDownEntry] = []
 
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
         for hourOffset in 0 ..< 5 {
             let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate)
+            let name = UserDefaults.shared[.eventName]
+            let eventDate = UserDefaults.shared[.eventDate]
+            let model = EventModel(name: name, date: eventDate)
+            let entry = CountDownEntry(date: entryDate, model: model)
             entries.append(entry)
         }
 
@@ -29,15 +32,11 @@ struct Provider: TimelineProvider {
     }
 }
 
-struct SimpleEntry: TimelineEntry {
-    let date: Date
-}
-
 struct CountDownWidgetEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        Text(entry.date, style: .time)
+        CountDownView(entry: entry)
     }
 }
 
@@ -49,14 +48,8 @@ struct CountDownWidget: Widget {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             CountDownWidgetEntryView(entry: entry)
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
-    }
-}
-
-struct CountDownWidget_Previews: PreviewProvider {
-    static var previews: some View {
-        CountDownWidgetEntryView(entry: SimpleEntry(date: Date()))
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
+        .configurationDisplayName("倒数日")
+        .description("选择一个过去或者现在的日期 - -")
+        .supportedFamilies([ .systemSmall ])
     }
 }

@@ -78,3 +78,14 @@ extension UIColor {
     static var lightestBlue: UIColor { return .nonStandardColor(withRGBHex: 0xABDCFF) }
     static var darkBlue: UIColor { return .nonStandardColor(withRGBHex: 0x0396FF) }
 }
+
+extension UIColor {
+    static var cabinetBrinkPink: UIColor { return UIColor(named: "Brink Pink", in: BaseBundle.bundle, compatibleWith: nil)! }
+    static var cabinetShockingPink: UIColor { return UIColor(named: "Shocking Pink", in: BaseBundle.bundle, compatibleWith: nil)! }
+    static var cabinetChalky: UIColor { return UIColor(named: "Chalky", in: BaseBundle.bundle, compatibleWith: nil)! }
+    static var cabinetHeliotrope: UIColor { return UIColor(named: "Heliotrope", in: BaseBundle.bundle, compatibleWith: nil)! }
+    static var cabinetCerulean: UIColor { return UIColor(named: "Cerulean", in: BaseBundle.bundle, compatibleWith: nil)! }
+    static var cabinetJava: UIColor { return UIColor(named: "Java", in: BaseBundle.bundle, compatibleWith: nil)! }
+    static var cabinetTacao: UIColor { return UIColor(named: "Tacao", in: BaseBundle.bundle, compatibleWith: nil)! }
+    static var cabinetDallas: UIColor { return UIColor(named: "Dallas", in: BaseBundle.bundle, compatibleWith: nil)! }
+}
