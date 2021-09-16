@@ -42,7 +42,7 @@ private struct ContentView : View {
                 }
             }
             Spacer()
-            Text(model.date ?? "2022.07.23")
+            Text(model.date ?? "2022.02.01")
                 .font(.system(size: 15, weight: .medium))
         }
         .foregroundColor(.white)
@@ -50,8 +50,8 @@ private struct ContentView : View {
     }
     
     private func getDay() -> String {
-        guard let dateString = model.date else { return "0" }
-        guard let date = DateFormatter(dateFormat: "YYYY.MM.dd").date(from: dateString) else { return "0" }
+        guard let dateString = model.date else { return "1" }
+        guard let date = DateFormatter(dateFormat: "YYYY.MM.dd").date(from: dateString) else { return "1" }
         let date1 = CalendarDate.today(in: .current)
         let date2 = CalendarDate(date: date, timeZone: .current)
         let distant = CalendarDate.component(.day, from: date1, to: date2)
