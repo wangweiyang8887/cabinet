@@ -80,6 +80,8 @@ extension UIColor {
 }
 
 extension UIColor {
+    static var cabinetPureBlue: UIColor { return UIColor(named: "Pure Blue", in: BaseBundle.bundle, compatibleWith: nil)! }
+    static var cabinetRoseRed: UIColor { return UIColor(named: "Rose Red", in: BaseBundle.bundle, compatibleWith: nil)! }
     static var cabinetBrinkPink: UIColor { return UIColor(named: "Brink Pink", in: BaseBundle.bundle, compatibleWith: nil)! }
     static var cabinetShockingPink: UIColor { return UIColor(named: "Shocking Pink", in: BaseBundle.bundle, compatibleWith: nil)! }
     static var cabinetChalky: UIColor { return UIColor(named: "Chalky", in: BaseBundle.bundle, compatibleWith: nil)! }

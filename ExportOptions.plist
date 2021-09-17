@@ -11,9 +11,15 @@
 	<key>provisioningProfiles</key>
 	<dict>
 		<key>com.evan.cabinet</key>
-		<string>cabinet-adhoc-dis</string>
+		<string>adhoc</string>
 		<key>com.evan.cabinet.Cabinet-Widget</key>
-		<string>cabinet-widget-adhoc-dis</string>
+		<string>weather-adhoc</string>
+		<key>com.evan.cabinet.CountDownWidget</key>
+		<string>countDown-adhoc</string>
+		<key>com.evan.cabinet.DailyWidget</key>
+		<string>daily-adhoc</string>
+		<key>com.evan.cabinet.InspireWidget</key>
+		<string>inspire-adhoc</string>
 	</dict>
 	<key>signingCertificate</key>
 	<string>Apple Distribution</string>

@@ -8,8 +8,8 @@ import requests
 #configuration for iOS build setting
 SCHEME = "cabinet"
 CODE_SIGN_IDENTITY = "Apple Distribution: Weiyang Wang (EVG8QY6QFT)"
-ADHOC_PROVISIONING_PROFILE = "cabinetadhocdis"
-APPSTORE_PROVISIONING_PROFILE = "cabinetdis"
+ADHOC_PROVISIONING_PROFILE = "adhoc"
+APPSTORE_PROVISIONING_PROFILE = "appstore"
 CODE_SIGNING_ALLOWED = "NO"
 CONFIGURATION = "Release"
 SDK = "iphoneos"

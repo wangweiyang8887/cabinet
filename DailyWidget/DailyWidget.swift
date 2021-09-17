@@ -49,8 +49,8 @@ struct DailyWidget: Widget {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             DailyWidgetEntryView(entry: entry)
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("")
+        .description("一个简单的日历组建")
         .supportedFamilies([ .systemMedium ])
     }
 }

@@ -7,16 +7,20 @@ struct InspireView: View {
     var entry: InspireEntry
     
     var body: some View {
-        VStack {
-            Text(getText())
-                .font(.system(size: 15, weight: .medium))
-                .padding(24)
-                .multilineTextAlignment(.center)
-                .shadow(color: Color(UIColor.black.withAlphaComponent(0.7)), radius: 2, x: 1, y: 2)
+        ZStack {
+            VStack {
+                Text(getText())
+                    .font(.system(size: 15, weight: .medium))
+                    .padding(24)
+                    .multilineTextAlignment(.center)
+                    .shadow(color: Color(UIColor.black.withAlphaComponent(0.7)), radius: 2, x: 1, y: 2)
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .foregroundColor(.white)
+            .background(LinearGradient(gradient: Gradient(colors: [ Color(UIColor.cabinetRoseRed.withAlphaComponent(0.3)), Color(UIColor.cabinetPureBlue.withAlphaComponent(0.4)) ]), startPoint: .topLeading, endPoint: .bottomTrailing))
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .foregroundColor(.white)
-        .background(LinearGradient(gradient: Gradient(colors: [ Color(UIColor.nonStandardColor(withRGBHex: 0xFF0000).withAlphaComponent(0.4)), Color(UIColor.nonStandardColor(withRGBHex: 0x0000FF).withAlphaComponent(0.4)) ]), startPoint: .topLeading, endPoint: .bottomTrailing))
+        .background(Color.white)
+
     }
     
     private func getText() -> String {

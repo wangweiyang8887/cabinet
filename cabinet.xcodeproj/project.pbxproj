@@ -1384,9 +1384,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = cabinet/cabinet.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = EVG8QY6QFT;
 				GCC_PREFIX_HEADER = $SRCROOT/cabinet/Header.h;
 				INFOPLIST_FILE = cabinet/Info.plist;
@@ -1396,7 +1396,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.evan.cabinet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "cabinet-dev";
+				PROVISIONING_PROFILE_SPECIFIER = adhoc;
 				SWIFT_OBJC_BRIDGING_HEADER = "cabinet/cabinet-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -1413,9 +1413,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = cabinet/cabinet.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = EVG8QY6QFT;
 				GCC_PREFIX_HEADER = $SRCROOT/cabinet/Header.h;
 				INFOPLIST_FILE = cabinet/Info.plist;
@@ -1425,7 +1425,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.evan.cabinet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "cabinet-dev";
+				PROVISIONING_PROFILE_SPECIFIER = adhoc;
 				SWIFT_OBJC_BRIDGING_HEADER = "cabinet/cabinet-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1438,8 +1438,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = CountDownWidgetExtension.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = EVG8QY6QFT;
 				INFOPLIST_FILE = CountDownWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
@@ -1450,6 +1450,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.evan.cabinet.CountDownWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "countDown-adhoc";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1462,8 +1463,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = CountDownWidgetExtension.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = EVG8QY6QFT;
 				INFOPLIST_FILE = CountDownWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
@@ -1474,6 +1475,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.evan.cabinet.CountDownWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "countDown-adhoc";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1485,8 +1487,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = EVG8QY6QFT;
 				INFOPLIST_FILE = DailyWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
@@ -1497,6 +1499,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.evan.cabinet.DailyWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "daily-adhoc";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1508,8 +1511,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = EVG8QY6QFT;
 				INFOPLIST_FILE = DailyWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
@@ -1520,6 +1523,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.evan.cabinet.DailyWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "daily-adhoc";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1531,8 +1535,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = EVG8QY6QFT;
 				INFOPLIST_FILE = InspireWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
@@ -1543,6 +1547,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.evan.cabinet.InspireWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "inspire-adhoc";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1554,8 +1559,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = EVG8QY6QFT;
 				INFOPLIST_FILE = InspireWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
@@ -1566,6 +1571,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.evan.cabinet.InspireWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "inspire-adhoc";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1578,8 +1584,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = "cabinet widgetExtension.entitlements";
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = EVG8QY6QFT;
 				INFOPLIST_FILE = "cabinet widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
@@ -1590,7 +1596,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.evan.cabinet.Cabinet-Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "weather-adhoc";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1603,8 +1609,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = "cabinet widgetExtension.entitlements";
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = EVG8QY6QFT;
 				INFOPLIST_FILE = "cabinet widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
@@ -1615,7 +1621,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.evan.cabinet.Cabinet-Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "weather-adhoc";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

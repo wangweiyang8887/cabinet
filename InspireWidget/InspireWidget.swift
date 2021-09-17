@@ -49,8 +49,8 @@ struct InspireWidget: Widget {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             InspireWidgetEntryView(entry: entry)
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("Inspired")
+        .description("Hope it is nice where you are.")
         .supportedFamilies([ .systemMedium ])
     }
 }
