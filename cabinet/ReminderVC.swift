@@ -47,7 +47,7 @@ final class ReminderVC : BaseCollectionViewController {
         editor.placeholderAttributer = { $0.withColor(.nonStandardColor(withRGBHex: 0xC8C8C8)) }
         editor.charLimit = 14
         result.editor = editor
-        result.bottomSeparatorMode = .show
+        result.hideSeparators()
         result.valueEditedHandler = { [unowned self] in self.reminderRow.title = $0 }
         return result
     }()
@@ -55,6 +55,7 @@ final class ReminderVC : BaseCollectionViewController {
     private lazy var dateRow: ModalEditorRow<String?> = {
         let result = ModalEditorRow<String?>()
         result.title = "目标日期"
+        result.hideSeparators()
         result.valueTextColor = .cabinetBlack
         result.isPlaceholder = { $0 == nil }
         result.formatter = { $0 ?? "请选择" }

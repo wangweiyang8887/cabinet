@@ -7,7 +7,7 @@ final class EncourageRow : BaseRow {
     override func initialize() {
         super.initialize()
         backgroundColor = .clear
-        let gradientView = TTGradientView(gradient: .curiousBlueToVividViolet)
+        let gradientView = TTGradientView(gradient: [ UIColor.red.withAlphaComponent(0.4), UIColor.blue.withAlphaComponent(0.4) ])
         gradientView.cornerRadius = 16
         contentView.addSubview(gradientView, pinningEdges: .all)
         contentView.sendSubviewToBack(gradientView)
@@ -17,7 +17,7 @@ final class EncourageRow : BaseRow {
         titleLabel.defaultTextShadow()
     }
     
-    private lazy var titleLabel: UILabel = UILabel(text: "", font: .systemFont(ofSize: 15), color: .cabinetWhite, alignment: .center, lines: 0)
+    private lazy var titleLabel: UILabel = UILabel(text: "", font: .systemFont(ofSize: 15), color: .white, alignment: .center, lines: 0)
     
     var title: String? {
         get { return titleLabel.text }

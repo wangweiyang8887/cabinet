@@ -6,14 +6,15 @@ final class CurrentDateRow : BaseRow {
     
     override func initialize() {
         super.initialize()
-        let gradientView = TTGradientView(gradient: .shockingPinkToChalky)
+        let gradientView = TTGradientView(gradient: [ UIColor.red.withAlphaComponent(0.2), UIColor.purple.withAlphaComponent(0.2) ])
         gradientView.cornerRadius = 16
         contentView.addSubview(gradientView, pinningEdges: .all)
         contentView.cornerRadius = 16
         contentView.addShadow(radius: 16, yOffset: -1)
-        contentView.addSubview(titleLabel, pinningEdges: .all)
+        contentView.addSubview(dateLabel, pinningEdges: .all)
+        contentView.addSubview(titleLabel, pinningEdges: [ .left, .top, .right ], withInsets: UIEdgeInsets(uniform: 16))
         TimerManager.shared.fire { [weak self] in
-            self?.titleLabel.text = Date().cabinetTimeDateFormatted()
+            self?.dateLabel.text = Date().cabinetTimeDateFormatted()
         }
     }
     
@@ -27,10 +28,18 @@ final class CurrentDateRow : BaseRow {
     
     private lazy var titleLabel: UILabel = {
         let result = UILabel()
+        result.text = "Clock 时钟"
+        result.textColor = .white
+        result.font = .systemFont(ofSize: 17, weight: .medium)
+        return result
+    }()
+    
+    private lazy var dateLabel: UILabel = {
+        let result = UILabel()
         result.numberOfLines = 0
         result.textAlignment = .center
         result.font = UIFont(name: "Helvetica Neue", size: 48)
-        result.textColor = .cabinetWhite
+        result.textColor = .white
         result.defaultTextShadow()
         return result
     }()

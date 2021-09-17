@@ -33,7 +33,7 @@ final class CurrentWeatherRow : BaseRow {
         weatherContainerView.sendSubviewToBack(gradientView)
         backgroundColor = .clear
         contentView.backgroundColor = .clear
-        stateImageView.tintColor = .cabinetWhite
+        stateImageView.tintColor = .white
         let gradientViewV2 = TTGradientView(gradient: .heliotropeToCerulean)
         countDownContainerView.addSubview(gradientViewV2, pinningEdges: .all)
         countDownContainerView.sendSubviewToBack(gradientViewV2)

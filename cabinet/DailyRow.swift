@@ -25,19 +25,13 @@ final class DailyRow : BaseRow {
         contentView.sendSubviewToBack(gradientView)
         contentView.cornerRadius = 16
         contentView.addShadow(radius: 16, yOffset: -1)
-        redLabel.borderColor = .cabinetWhite
+        redLabel.borderColor = .white
         redLabel.borderWidth = 2
         redLabel.cornerRadius = 22
         
-        greenLabel.borderColor = .cabinetWhite
+        greenLabel.borderColor = .white
         greenLabel.borderWidth = 2
         greenLabel.cornerRadius = 22
-    }
-    
-    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        super.traitCollectionDidChange(previousTraitCollection)
-        redLabel.borderColor = .cabinetWhite
-        greenLabel.borderColor = .cabinetWhite
     }
     
     private func handleDailyChanged() {
