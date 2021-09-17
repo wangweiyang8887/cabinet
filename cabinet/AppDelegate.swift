@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UserDefaults.shared[.eventName] = "春节"
         }
         if UserDefaults.shared[.eventDate] == nil {
-            UserDefaults.shared[.eventDate] = "2021.02.01"
+            UserDefaults.shared[.eventDate] = "2022.02.01"
         }
         if UserDefaults.shared[.shuffledDay] == nil {
             UserDefaults.shared[.shuffledDay] = CalendarDate.today(in: .current).day - 1

@@ -14,20 +14,14 @@ struct Provider: TimelineProvider {
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        var entries: [CountDownEntry] = []
+        /// widget will be refresh every minute
+        let refreshTime = Calendar.current.date(byAdding: .minute, value: 1, to: Date())!
 
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
-        let currentDate = Date()
-        for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let name = UserDefaults.shared[.eventName]
-            let eventDate = UserDefaults.shared[.eventDate]
-            let model = EventModel(name: name, date: eventDate)
-            let entry = CountDownEntry(date: entryDate, model: model)
-            entries.append(entry)
-        }
-
-        let timeline = Timeline(entries: entries, policy: .atEnd)
+        let name = UserDefaults.shared[.eventName]
+        let eventDate = UserDefaults.shared[.eventDate]
+        let model = EventModel(name: name, date: eventDate)
+        let entry = CountDownEntry(date: Date(), model: model)
+        let timeline = Timeline(entries: [entry], policy: .after(refreshTime))
         completion(timeline)
     }
 }

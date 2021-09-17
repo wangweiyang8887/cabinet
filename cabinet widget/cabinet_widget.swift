@@ -14,21 +14,11 @@ struct Provider: TimelineProvider {
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        var entries: [CalendarModel] = []
         let currentDate = Date()
-        
         /// widget will be refresh every minute
         
         let refreshTime = Calendar.current.date(byAdding: .minute, value: 1, to: currentDate)!
         
-        for hoursOffset in 0..<24 {
-            
-            guard let entryDate = Calendar.current.date(byAdding: .hour, value: hoursOffset, to: currentDate) else {
-                return
-            }
-            let entry = CalendarModel(date: entryDate, currentWeather: nil)
-            entries.append(entry)
-        }
         WidgetServer.getWeather { result in
             var currentWeather: CurrentWeather?
             if case .success(let value) = result {

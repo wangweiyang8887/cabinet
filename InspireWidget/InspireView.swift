@@ -13,7 +13,7 @@ struct InspireView: View {
                     .font(.system(size: 15, weight: .medium))
                     .padding(24)
                     .multilineTextAlignment(.center)
-                    .shadow(color: Color(UIColor.black.withAlphaComponent(0.7)), radius: 2, x: 1, y: 2)
+                    .shadow(color: Color(UIColor.black.withAlphaComponent(0.5)), radius: 2, x: 1, y: 2)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .foregroundColor(.white)
