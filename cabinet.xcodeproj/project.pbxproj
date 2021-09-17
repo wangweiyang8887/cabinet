@@ -147,6 +147,15 @@
 		9DCD1E9626F34BE9004A4E98 /* BaseColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB7582626D399E6006D2246 /* BaseColor.swift */; };
 		9DCD1E9726F34BF0004A4E98 /* BaseBuddle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB7582926D39A50006D2246 /* BaseBuddle.swift */; };
 		9DCD1E9826F34BF3004A4E98 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DB7582D26D3A371006D2246 /* Colors.xcassets */; };
+		9DCD1E9E26F36383004A4E98 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DB7583426D3A7C0006D2246 /* WidgetKit.framework */; };
+		9DCD1E9F26F36383004A4E98 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DB7583626D3A7C0006D2246 /* SwiftUI.framework */; };
+		9DCD1EA226F36383004A4E98 /* InspireWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCD1EA126F36383004A4E98 /* InspireWidget.swift */; };
+		9DCD1EA426F36385004A4E98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DCD1EA326F36385004A4E98 /* Assets.xcassets */; };
+		9DCD1EA826F36385004A4E98 /* InspireWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9DCD1E9D26F36383004A4E98 /* InspireWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9DCD1EAD26F363A0004A4E98 /* InspireView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCD1EAC26F363A0004A4E98 /* InspireView.swift */; };
+		9DCD1EAE26F3640A004A4E98 /* BaseColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB7582626D399E6006D2246 /* BaseColor.swift */; };
+		9DCD1EAF26F3640E004A4E98 /* BaseBuddle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB7582926D39A50006D2246 /* BaseBuddle.swift */; };
+		9DCD1EB026F36449004A4E98 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DB7582D26D3A371006D2246 /* Colors.xcassets */; };
 		9DE5E74226D4A48500FF8B0A /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DB7583426D3A7C0006D2246 /* WidgetKit.framework */; };
 		9DE5E74326D4A48500FF8B0A /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DB7583626D3A7C0006D2246 /* SwiftUI.framework */; };
 		9DE5E74626D4A48500FF8B0A /* cabinet_widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE5E74526D4A48500FF8B0A /* cabinet_widget.swift */; };
@@ -175,6 +184,13 @@
 			remoteGlobalIDString = 9DCD1E8326F34A58004A4E98;
 			remoteInfo = DailyWidgetExtension;
 		};
+		9DCD1EA626F36385004A4E98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9DB757EB26D37B24006D2246 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9DCD1E9C26F36383004A4E98;
+			remoteInfo = InspireWidgetExtension;
+		};
 		9DE5E74A26D4A48600FF8B0A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9DB757EB26D37B24006D2246 /* Project object */;
@@ -194,6 +210,7 @@
 				9DCD1E8F26F34A59004A4E98 /* DailyWidgetExtension.appex in Embed App Extensions */,
 				9DCD1E6A26F32331004A4E98 /* CountDownWidgetExtension.appex in Embed App Extensions */,
 				9DE5E74C26D4A48600FF8B0A /* cabinet widgetExtension.appex in Embed App Extensions */,
+				9DCD1EA826F36385004A4E98 /* InspireWidgetExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,6 +350,11 @@
 		9DCD1E8A26F34A59004A4E98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9DCD1E8C26F34A59004A4E98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DCD1E9326F34AAB004A4E98 /* DailyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyView.swift; sourceTree = "<group>"; };
+		9DCD1E9D26F36383004A4E98 /* InspireWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = InspireWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DCD1EA126F36383004A4E98 /* InspireWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspireWidget.swift; sourceTree = "<group>"; };
+		9DCD1EA326F36385004A4E98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9DCD1EA526F36385004A4E98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DCD1EAC26F363A0004A4E98 /* InspireView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspireView.swift; sourceTree = "<group>"; };
 		9DE5E74126D4A48500FF8B0A /* cabinet widgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "cabinet widgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DE5E74526D4A48500FF8B0A /* cabinet_widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cabinet_widget.swift; sourceTree = "<group>"; };
 		9DE5E74726D4A48600FF8B0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -366,6 +388,15 @@
 			files = (
 				9DCD1E8626F34A58004A4E98 /* SwiftUI.framework in Frameworks */,
 				9DCD1E8526F34A58004A4E98 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DCD1E9A26F36383004A4E98 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DCD1E9F26F36383004A4E98 /* SwiftUI.framework in Frameworks */,
+				9DCD1E9E26F36383004A4E98 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,6 +565,7 @@
 				9DE5E74426D4A48500FF8B0A /* cabinet widget */,
 				9DCD1E6226F32330004A4E98 /* CountDownWidget */,
 				9DCD1E8726F34A58004A4E98 /* DailyWidget */,
+				9DCD1EA026F36383004A4E98 /* InspireWidget */,
 				9DB757F426D37B24006D2246 /* Products */,
 				32CEA01F4C72B7C0875F9C21 /* Pods */,
 				E3701FF25E82A516F9A5F9A4 /* Frameworks */,
@@ -547,6 +579,7 @@
 				9DE5E74126D4A48500FF8B0A /* cabinet widgetExtension.appex */,
 				9DCD1E5F26F32330004A4E98 /* CountDownWidgetExtension.appex */,
 				9DCD1E8426F34A58004A4E98 /* DailyWidgetExtension.appex */,
+				9DCD1E9D26F36383004A4E98 /* InspireWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -686,6 +719,17 @@
 			path = DailyWidget;
 			sourceTree = "<group>";
 		};
+		9DCD1EA026F36383004A4E98 /* InspireWidget */ = {
+			isa = PBXGroup;
+			children = (
+				9DCD1EAC26F363A0004A4E98 /* InspireView.swift */,
+				9DCD1EA126F36383004A4E98 /* InspireWidget.swift */,
+				9DCD1EA326F36385004A4E98 /* Assets.xcassets */,
+				9DCD1EA526F36385004A4E98 /* Info.plist */,
+			);
+			path = InspireWidget;
+			sourceTree = "<group>";
+		};
 		9DE5E74426D4A48500FF8B0A /* cabinet widget */ = {
 			isa = PBXGroup;
 			children = (
@@ -730,6 +774,7 @@
 				9DE5E74B26D4A48600FF8B0A /* PBXTargetDependency */,
 				9DCD1E6926F32331004A4E98 /* PBXTargetDependency */,
 				9DCD1E8E26F34A59004A4E98 /* PBXTargetDependency */,
+				9DCD1EA726F36385004A4E98 /* PBXTargetDependency */,
 			);
 			name = cabinet;
 			productName = cabinet;
@@ -770,6 +815,23 @@
 			productReference = 9DCD1E8426F34A58004A4E98 /* DailyWidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		9DCD1E9C26F36383004A4E98 /* InspireWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9DCD1EA926F36385004A4E98 /* Build configuration list for PBXNativeTarget "InspireWidgetExtension" */;
+			buildPhases = (
+				9DCD1E9926F36383004A4E98 /* Sources */,
+				9DCD1E9A26F36383004A4E98 /* Frameworks */,
+				9DCD1E9B26F36383004A4E98 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InspireWidgetExtension;
+			productName = InspireWidgetExtension;
+			productReference = 9DCD1E9D26F36383004A4E98 /* InspireWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		9DE5E74026D4A48500FF8B0A /* cabinet widgetExtension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9DE5E74D26D4A48600FF8B0A /* Build configuration list for PBXNativeTarget "cabinet widgetExtension" */;
@@ -807,6 +869,9 @@
 					9DCD1E8326F34A58004A4E98 = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
+					9DCD1E9C26F36383004A4E98 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
 					9DE5E74026D4A48500FF8B0A = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
@@ -829,6 +894,7 @@
 				9DE5E74026D4A48500FF8B0A /* cabinet widgetExtension */,
 				9DCD1E5E26F32330004A4E98 /* CountDownWidgetExtension */,
 				9DCD1E8326F34A58004A4E98 /* DailyWidgetExtension */,
+				9DCD1E9C26F36383004A4E98 /* InspireWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -866,6 +932,15 @@
 			files = (
 				9DCD1E8B26F34A59004A4E98 /* Assets.xcassets in Resources */,
 				9DCD1E9826F34BF3004A4E98 /* Colors.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DCD1E9B26F36383004A4E98 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DCD1EA426F36385004A4E98 /* Assets.xcassets in Resources */,
+				9DCD1EB026F36449004A4E98 /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1056,6 +1131,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9DCD1E9926F36383004A4E98 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DCD1EAE26F3640A004A4E98 /* BaseColor.swift in Sources */,
+				9DCD1EA226F36383004A4E98 /* InspireWidget.swift in Sources */,
+				9DCD1EAF26F3640E004A4E98 /* BaseBuddle.swift in Sources */,
+				9DCD1EAD26F363A0004A4E98 /* InspireView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9DE5E73D26D4A48500FF8B0A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1088,6 +1174,11 @@
 			isa = PBXTargetDependency;
 			target = 9DCD1E8326F34A58004A4E98 /* DailyWidgetExtension */;
 			targetProxy = 9DCD1E8D26F34A59004A4E98 /* PBXContainerItemProxy */;
+		};
+		9DCD1EA726F36385004A4E98 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9DCD1E9C26F36383004A4E98 /* InspireWidgetExtension */;
+			targetProxy = 9DCD1EA626F36385004A4E98 /* PBXContainerItemProxy */;
 		};
 		9DE5E74B26D4A48600FF8B0A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1346,7 +1437,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EVG8QY6QFT;
 				INFOPLIST_FILE = DailyWidget/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1356,7 +1447,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1369,7 +1460,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EVG8QY6QFT;
 				INFOPLIST_FILE = DailyWidget/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1379,7 +1470,53 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		9DCD1EAA26F36385004A4E98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EVG8QY6QFT;
+				INFOPLIST_FILE = InspireWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.evan.cabinet.InspireWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		9DCD1EAB26F36385004A4E98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EVG8QY6QFT;
+				INFOPLIST_FILE = InspireWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.evan.cabinet.InspireWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -1468,6 +1605,15 @@
 			buildConfigurations = (
 				9DCD1E9126F34A59004A4E98 /* Debug */,
 				9DCD1E9226F34A59004A4E98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9DCD1EA926F36385004A4E98 /* Build configuration list for PBXNativeTarget "InspireWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DCD1EAA26F36385004A4E98 /* Debug */,
+				9DCD1EAB26F36385004A4E98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
