@@ -23,6 +23,18 @@ struct WidgetServer {
     static func weatherFromJson(fromData data:Data) -> CurrentWeather? {
         return CurrentWeather.decode(from: data)
     }
+    
+    static func getDailyReport(completion: @escaping (Result<DailyModel?, Error>) -> Void) {
+        let url = URL(string: API.daily.rawValue)!
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            guard error == nil else {
+                completion(.failure(error!))
+                return
+            }
+            completion(.success(DailyModel.decode(from: data!)))
+        }
+        task.resume()
+    }
 }
 
 extension String {

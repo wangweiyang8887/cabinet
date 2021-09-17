@@ -2,10 +2,32 @@
 
 import Foundation
 
+extension Calendar {
+    static var chineseFormatter: DateFormatter {
+        let calendar: Calendar = Calendar(identifier: .chinese)
+        let formatter = DateFormatter(dateFormat: "")
+        formatter.calendar = calendar
+        formatter.dateStyle = .full
+        formatter.timeStyle = .none
+        return formatter
+    }
+    
+    static var lunarYear: String {
+        return String(chineseFormatter.string(from: Date()).filter { $0.isLetter }.prefix(3))
+    }
+    
+    static var lunarMonthAndDay: String {
+        return String(chineseFormatter.string(from: Date()).filter { $0.isLetter }.drop { lunarYear.contains($0) }).components(separatedBy: "星").first ?? ""
+    }
+    
+    static var currentWeek: String { return DateFormatter(dateFormat: "EEEE").string(from: Date()) }
+    static var currentMonth: String { return DateFormatter(dateFormat: "MMMM").string(from: Date()) }
+}
+
 extension DateFormatter {
-    @objc public convenience init(dateFormat: String) {
+    @objc public convenience init(dateFormat: String, identifier: String = "zh") {
         self.init()
-        self.locale = Locale(identifier: "zh")
+        self.locale = Locale(identifier: identifier)
         self.dateFormat = dateFormat
     }
 

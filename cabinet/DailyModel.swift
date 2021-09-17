@@ -1,6 +1,7 @@
 // Copyright © 2021 evan. All rights reserved.
 
-class DailyModel : Decodable {
+class DailyModel : Codable, Identifiable {
+    let id: Int
     let constellation: String // 星座
     let lunar: String // 农历
     var red: [String] // 宜

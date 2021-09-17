@@ -46,7 +46,7 @@ final class DailyRow : BaseRow {
         greenContentLabel.text = daily.todayGreen
         constellationLabel.text = daily.constellation
         dayLabel.text = String(format: "%ld", CalendarDate.today(in: .current).day)
-        monthWeekLabel.text = daily.monthAndWeek
-        lunarLabel.text = daily.lunarDate
+        monthWeekLabel.text = String(format: "%@ %@", Calendar.currentMonth, Calendar.currentWeek)
+        lunarLabel.text = String(format: "%@ %@", Calendar.lunarYear, Calendar.lunarMonthAndDay)
     }
 }

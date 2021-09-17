@@ -3,11 +3,13 @@
 import SwiftUI
 
 struct DailyView: View {
+    var entry: DailyEntry
+    
     var body: some View {
         ZStack {
             HStack {
-                DailyLeftView()
-                DailyRightView()
+                DailyLeftView(daily: entry.daily)
+                DailyRightView(daily: entry.daily)
                 Spacer()
             }
         }
@@ -17,16 +19,17 @@ struct DailyView: View {
 }
 
 private struct DailyLeftView : View {
+    var daily: DailyModel?
     var body: some View {
         VStack(spacing: 12) {
-            Text("狮子座")
+            Text(daily?.constellation ?? "-")
                 .font(.system(size: 15, weight: .medium))
-            Text("16")
+            Text("\(CalendarDate.today(in: .current).day)")
                 .font(.system(size: 42, weight: .semibold))
             VStack {
-                Text("九月 星期四")
+                Text("\(Calendar.currentMonth) \(Calendar.currentWeek)")
                     .font(.system(size: 13))
-                Text("辛丑年 八月初八")
+                Text("\(Calendar.lunarYear) \(Calendar.lunarMonthAndDay)")
                     .font(.system(size: 13))
             }
         }
@@ -35,9 +38,12 @@ private struct DailyLeftView : View {
         .padding(.trailing, 8)
         .padding(.bottom, 16)
     }
+
 }
 
 private struct DailyRightView : View {
+    var daily: DailyModel?
+
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
             HStack(alignment: .center, spacing: 8) {
@@ -48,7 +54,7 @@ private struct DailyRightView : View {
                         RoundedRectangle(cornerRadius: 22)
                             .stroke(Color.white, lineWidth: 1)
                     )
-                Text("结婚 会亲友")
+                Text(daily?.todayRed ?? "诸事不宜")
                     .font(.system(size: 15, weight: .medium))
             }
             HStack(alignment: .center, spacing: 8) {
@@ -59,16 +65,10 @@ private struct DailyRightView : View {
                         RoundedRectangle(cornerRadius: 22)
                             .stroke(Color.white, lineWidth: 1)
                     )
-                Text("-")
+                Text(daily?.todayGreen ?? "-")
                     .font(.system(size: 15, weight: .medium))
             }
         }
         .padding(8)
-    }
-}
-
-struct DailyView_Previews: PreviewProvider {
-    static var previews: some View {
-        DailyView()
     }
 }

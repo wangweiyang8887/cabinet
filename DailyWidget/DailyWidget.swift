@@ -4,40 +4,40 @@ import WidgetKit
 import SwiftUI
 
 struct Provider: TimelineProvider {
-    func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date())
+    func placeholder(in context: Context) -> DailyEntry {
+        DailyEntry(date: Date(), daily: nil)
     }
 
-    func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date())
+    func getSnapshot(in context: Context, completion: @escaping (DailyEntry) -> ()) {
+        let entry = DailyEntry(date: Date(), daily: nil)
         completion(entry)
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        var entries: [SimpleEntry] = []
-
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
-        for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate)
-            entries.append(entry)
+        
+        /// widget will be refresh every minute
+        let refreshTime = Calendar.current.date(byAdding: .minute, value: 1, to: currentDate)!
+
+        WidgetServer.getDailyReport { result in
+            var daily: DailyModel?
+            if case .success(let value) = result {
+                daily = value
+            } else {
+                daily = nil
+            }
+            let entry = DailyEntry(date: Date(), daily: daily)
+            let timeline = Timeline(entries: [entry], policy: .after(refreshTime))
+            completion(timeline)
         }
-
-        let timeline = Timeline(entries: entries, policy: .atEnd)
-        completion(timeline)
     }
-}
-
-struct SimpleEntry: TimelineEntry {
-    let date: Date
 }
 
 struct DailyWidgetEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        DailyView()
+        DailyView(entry: entry)
     }
 }
 
@@ -52,12 +52,5 @@ struct DailyWidget: Widget {
         .configurationDisplayName("My Widget")
         .description("This is an example widget.")
         .supportedFamilies([ .systemMedium ])
-    }
-}
-
-struct DailyWidget_Previews: PreviewProvider {
-    static var previews: some View {
-        DailyWidgetEntryView(entry: SimpleEntry(date: Date()))
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }
