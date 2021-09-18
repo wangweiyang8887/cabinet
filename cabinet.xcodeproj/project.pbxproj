@@ -1386,7 +1386,7 @@
 				CODE_SIGN_ENTITLEMENTS = cabinet/cabinet.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = EVG8QY6QFT;
 				GCC_PREFIX_HEADER = $SRCROOT/cabinet/Header.h;
 				INFOPLIST_FILE = cabinet/Info.plist;
@@ -1415,7 +1415,7 @@
 				CODE_SIGN_ENTITLEMENTS = cabinet/cabinet.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = EVG8QY6QFT;
 				GCC_PREFIX_HEADER = $SRCROOT/cabinet/Header.h;
 				INFOPLIST_FILE = cabinet/Info.plist;
@@ -1440,6 +1440,7 @@
 				CODE_SIGN_ENTITLEMENTS = CountDownWidgetExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = EVG8QY6QFT;
 				INFOPLIST_FILE = CountDownWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
@@ -1465,6 +1466,7 @@
 				CODE_SIGN_ENTITLEMENTS = CountDownWidgetExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = EVG8QY6QFT;
 				INFOPLIST_FILE = CountDownWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
@@ -1489,6 +1491,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = EVG8QY6QFT;
 				INFOPLIST_FILE = DailyWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
@@ -1513,6 +1516,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = EVG8QY6QFT;
 				INFOPLIST_FILE = DailyWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
@@ -1537,6 +1541,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = EVG8QY6QFT;
 				INFOPLIST_FILE = InspireWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
@@ -1561,6 +1566,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = EVG8QY6QFT;
 				INFOPLIST_FILE = InspireWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
@@ -1586,6 +1592,7 @@
 				CODE_SIGN_ENTITLEMENTS = "cabinet widgetExtension.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = EVG8QY6QFT;
 				INFOPLIST_FILE = "cabinet widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
@@ -1611,6 +1618,7 @@
 				CODE_SIGN_ENTITLEMENTS = "cabinet widgetExtension.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = EVG8QY6QFT;
 				INFOPLIST_FILE = "cabinet widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
