@@ -13,10 +13,15 @@ class HomePageVC : BaseCollectionViewController {
         super.viewDidLoad()
         collectionView.ttDelegate = self
         collectionView.sections += BaseSection(createSectionContentItem(), margins: UIEdgeInsets(top: 16, left: 0, bottom: 0, right: 0))
+        collectionView.refreshHeader = { [unowned self] in self.fetchData() }
         navigationItem.rightBarButtonItem = UIBarButtonItem.settingButtonItem { [unowned self] in
             self.collectionView.sections = [ BaseSection(self.createSectionContentItem(), margins: UIEdgeInsets(top: 16, left: 0, bottom: 0, right: 0)) ]
             self.collectionView.reloadData()
         }
+        fetchData()
+    }
+    
+    private func fetchData() {
         LocationManager.shared.start { [weak self] location, address in
             guard let self = self else { return }
             self.weatherRow.city = address
@@ -27,7 +32,8 @@ class HomePageVC : BaseCollectionViewController {
                 self?.currentWeather = weather
             }
         }
-        Server.fetchDailyReport().onSuccess { [weak self] result in
+        var operations: [AnyOperation] = []
+        operations += Server.fetchDailyReport().onSuccess { [weak self] result in
             if let shuffledDay = UserDefaults.shared[.shuffledDay], shuffledDay != CalendarDate.today(in: .current).day {
                 result.sentence.shuffle()
                 result.daily.shuffle()
@@ -37,8 +43,11 @@ class HomePageVC : BaseCollectionViewController {
             }
             self?.daily = result
         }
-        Server.fetchLottery(with: "ssq").onSuccess { result in
+        operations += Server.fetchLottery(with: "ssq").onSuccess { result in
             print(result)
+        }
+        OperationGroup(operations).onCompletion { [weak self] _ in
+            self?.collectionView.endRefresh()
         }
     }
     
