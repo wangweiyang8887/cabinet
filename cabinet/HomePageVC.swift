@@ -55,7 +55,7 @@ class HomePageVC : BaseCollectionViewController {
     private lazy var titleRow: TextRow = {
         let result = TextRow()
         result.backgroundColor = .clear
-        result.text = "Caibinet"
+        result.text = "Cabinet"
         result.font = .systemFont(ofSize: 32, weight: .bold)
         result.textColor = .cabinetBlack
         result.edgeInsets = UIEdgeInsets(top: 0, left: 16, bottom: 16, right: 16)
