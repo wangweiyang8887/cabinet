@@ -109,6 +109,7 @@
 		9DAC539726FB1314003F2D4C /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC539526FB1314003F2D4C /* SettingTableViewCell.swift */; };
 		9DAC539826FB1314003F2D4C /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DAC539626FB1314003F2D4C /* SettingTableViewCell.xib */; };
 		9DAC539A26FB1612003F2D4C /* FileManager+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC539926FB1612003F2D4C /* FileManager+Helper.swift */; };
+		9DAC539D26FB33C2003F2D4C /* LotteryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC539C26FB33C2003F2D4C /* LotteryView.swift */; };
 		9DB757F726D37B24006D2246 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB757F626D37B24006D2246 /* AppDelegate.swift */; };
 		9DB757FE26D37B24006D2246 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DB757FC26D37B24006D2246 /* Main.storyboard */; };
 		9DB7580026D37B25006D2246 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DB757FF26D37B25006D2246 /* Assets.xcassets */; };
@@ -356,6 +357,7 @@
 		9DAC539526FB1314003F2D4C /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		9DAC539626FB1314003F2D4C /* SettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingTableViewCell.xib; sourceTree = "<group>"; };
 		9DAC539926FB1612003F2D4C /* FileManager+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Helper.swift"; sourceTree = "<group>"; };
+		9DAC539C26FB33C2003F2D4C /* LotteryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryView.swift; sourceTree = "<group>"; };
 		9DB757F326D37B24006D2246 /* cabinet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cabinet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DB757F626D37B24006D2246 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DB757FD26D37B24006D2246 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -694,6 +696,7 @@
 			children = (
 				9DB7581526D38D43006D2246 /* HomePageVC.swift */,
 				9D6BC29026F0B76D00F000C9 /* DailyRow.swift */,
+				9DAC539C26FB33C2003F2D4C /* LotteryView.swift */,
 			);
 			name = HomePage;
 			sourceTree = "<group>";
@@ -1165,6 +1168,7 @@
 				9D66D1BF26E5FEDC00411D75 /* CurrentWeather.swift in Sources */,
 				9D7B91F426E217BB001C11AD /* NSObject+Helper.m in Sources */,
 				9D6BC25C26F06E3E00F000C9 /* TTHyperlinkTextView.swift in Sources */,
+				9DAC539D26FB33C2003F2D4C /* LotteryView.swift in Sources */,
 				9DAC538B26FAF75A003F2D4C /* UIBarButtonItem+Utilities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
