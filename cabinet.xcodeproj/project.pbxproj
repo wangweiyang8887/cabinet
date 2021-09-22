@@ -13,8 +13,8 @@
 		9D66D1BF26E5FEDC00411D75 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66D1BE26E5FEDC00411D75 /* CurrentWeather.swift */; };
 		9D66D1C226E608DC00411D75 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66D1C126E608DC00411D75 /* LocationManager.swift */; };
 		9D66D1C426E7349600411D75 /* UIImage+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66D1C326E7349600411D75 /* UIImage+Utilities.swift */; };
-		9D66D1C626E7542500411D75 /* DailyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66D1C526E7542500411D75 /* DailyRow.swift */; };
-		9D66D1C826E7544400411D75 /* DailyRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D66D1C726E7544400411D75 /* DailyRow.xib */; };
+		9D66D1C626E7542500411D75 /* CalendarRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66D1C526E7542500411D75 /* CalendarRow.swift */; };
+		9D66D1C826E7544400411D75 /* CalendarRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D66D1C726E7544400411D75 /* CalendarRow.xib */; };
 		9D66D1CB26E7617E00411D75 /* DailyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66D1CA26E7617E00411D75 /* DailyModel.swift */; };
 		9D6BC24F26EF692B00F000C9 /* ReminderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC24E26EF692B00F000C9 /* ReminderVC.swift */; };
 		9D6BC25226F0480400F000C9 /* NavigationBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC25126F0480400F000C9 /* NavigationBarStyle.swift */; };
@@ -47,7 +47,7 @@
 		9D6BC28B26F0A37C00F000C9 /* DatePickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC28A26F0A37C00F000C9 /* DatePickerVC.swift */; };
 		9D6BC28D26F0A39800F000C9 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC28C26F0A39800F000C9 /* DatePickerView.swift */; };
 		9D6BC28F26F0A55000F000C9 /* SpacerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC28E26F0A55000F000C9 /* SpacerRow.swift */; };
-		9D6BC29126F0B76D00F000C9 /* EncourageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC29026F0B76D00F000C9 /* EncourageRow.swift */; };
+		9D6BC29126F0B76D00F000C9 /* DailyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC29026F0B76D00F000C9 /* DailyRow.swift */; };
 		9D6BC29326F1946300F000C9 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC29226F1946300F000C9 /* Environment.swift */; };
 		9D6BC29A26F1CDD800F000C9 /* NSAttributedString+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC29926F1CDD800F000C9 /* NSAttributedString+Utilities.swift */; };
 		9D6BC29B26F1EB4900F000C9 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DB7582D26D3A371006D2246 /* Colors.xcassets */; };
@@ -90,7 +90,7 @@
 		9D7B91FA26E21894001C11AD /* Observers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91F926E21894001C11AD /* Observers.swift */; };
 		9D7B91FC26E218ED001C11AD /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91FB26E218ED001C11AD /* Event.swift */; };
 		9D7B91FF26E21951001C11AD /* UIView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91FE26E21951001C11AD /* UIView+Helper.m */; };
-		9D7B920226E22140001C11AD /* CurrentDateRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B920126E22140001C11AD /* CurrentDateRow.swift */; };
+		9D7B920226E22140001C11AD /* ClockRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B920126E22140001C11AD /* ClockRow.swift */; };
 		9D7B920426E22302001C11AD /* TTGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B920326E22302001C11AD /* TTGradientView.swift */; };
 		9D7B920626E22339001C11AD /* TTGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B920526E22339001C11AD /* TTGradient.swift */; };
 		9D7B920826E22581001C11AD /* UIViewController+PresentationStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B920726E22581001C11AD /* UIViewController+PresentationStyle.swift */; };
@@ -258,8 +258,8 @@
 		9D66D1BE26E5FEDC00411D75 /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		9D66D1C126E608DC00411D75 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		9D66D1C326E7349600411D75 /* UIImage+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Utilities.swift"; sourceTree = "<group>"; };
-		9D66D1C526E7542500411D75 /* DailyRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyRow.swift; sourceTree = "<group>"; };
-		9D66D1C726E7544400411D75 /* DailyRow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyRow.xib; sourceTree = "<group>"; };
+		9D66D1C526E7542500411D75 /* CalendarRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarRow.swift; sourceTree = "<group>"; };
+		9D66D1C726E7544400411D75 /* CalendarRow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarRow.xib; sourceTree = "<group>"; };
 		9D66D1CA26E7617E00411D75 /* DailyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyModel.swift; sourceTree = "<group>"; };
 		9D6BC24E26EF692B00F000C9 /* ReminderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderVC.swift; sourceTree = "<group>"; };
 		9D6BC25126F0480400F000C9 /* NavigationBarStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarStyle.swift; sourceTree = "<group>"; };
@@ -292,7 +292,7 @@
 		9D6BC28A26F0A37C00F000C9 /* DatePickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerVC.swift; sourceTree = "<group>"; };
 		9D6BC28C26F0A39800F000C9 /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
 		9D6BC28E26F0A55000F000C9 /* SpacerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacerRow.swift; sourceTree = "<group>"; };
-		9D6BC29026F0B76D00F000C9 /* EncourageRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncourageRow.swift; sourceTree = "<group>"; };
+		9D6BC29026F0B76D00F000C9 /* DailyRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyRow.swift; sourceTree = "<group>"; };
 		9D6BC29226F1946300F000C9 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		9D6BC29926F1CDD800F000C9 /* NSAttributedString+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Utilities.swift"; sourceTree = "<group>"; };
 		9D6BC2A426F1F2B000F000C9 /* WidgetServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetServer.swift; sourceTree = "<group>"; };
@@ -337,7 +337,7 @@
 		9D7B91FD26E21951001C11AD /* UIView+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Helper.h"; sourceTree = "<group>"; };
 		9D7B91FE26E21951001C11AD /* UIView+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Helper.m"; sourceTree = "<group>"; };
 		9D7B920026E21B1E001C11AD /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
-		9D7B920126E22140001C11AD /* CurrentDateRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentDateRow.swift; sourceTree = "<group>"; };
+		9D7B920126E22140001C11AD /* ClockRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockRow.swift; sourceTree = "<group>"; };
 		9D7B920326E22302001C11AD /* TTGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTGradientView.swift; sourceTree = "<group>"; };
 		9D7B920526E22339001C11AD /* TTGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTGradient.swift; sourceTree = "<group>"; };
 		9D7B920726E22581001C11AD /* UIViewController+PresentationStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+PresentationStyle.swift"; sourceTree = "<group>"; };
@@ -678,12 +678,12 @@
 			children = (
 				9DB7581726D38D90006D2246 /* CurrentDateVC.swift */,
 				9DB7581826D38D90006D2246 /* CurrentDateVC.xib */,
-				9D7B920126E22140001C11AD /* CurrentDateRow.swift */,
+				9D7B920126E22140001C11AD /* ClockRow.swift */,
 				9D7B920B26E23339001C11AD /* CurrentWeatherRow.swift */,
 				9D7B920D26E2339B001C11AD /* CurrentWeatherRow.xib */,
 				9D66D1BE26E5FEDC00411D75 /* CurrentWeather.swift */,
-				9D66D1C526E7542500411D75 /* DailyRow.swift */,
-				9D66D1C726E7544400411D75 /* DailyRow.xib */,
+				9D66D1C526E7542500411D75 /* CalendarRow.swift */,
+				9D66D1C726E7544400411D75 /* CalendarRow.xib */,
 				9D66D1CA26E7617E00411D75 /* DailyModel.swift */,
 			);
 			name = CurrentDate;
@@ -693,7 +693,7 @@
 			isa = PBXGroup;
 			children = (
 				9DB7581526D38D43006D2246 /* HomePageVC.swift */,
-				9D6BC29026F0B76D00F000C9 /* EncourageRow.swift */,
+				9D6BC29026F0B76D00F000C9 /* DailyRow.swift */,
 			);
 			name = HomePage;
 			sourceTree = "<group>";
@@ -968,7 +968,7 @@
 				9DB7581A26D38D90006D2246 /* CurrentDateVC.xib in Resources */,
 				9DAC539826FB1314003F2D4C /* SettingTableViewCell.xib in Resources */,
 				9DAC539226FB0233003F2D4C /* Setting.json in Resources */,
-				9D66D1C826E7544400411D75 /* DailyRow.xib in Resources */,
+				9D66D1C826E7544400411D75 /* CalendarRow.xib in Resources */,
 				9DB7580326D37B25006D2246 /* LaunchScreen.storyboard in Resources */,
 				9D6BC26826F07CA800F000C9 /* ModalEditorRow.xib in Resources */,
 				9D7B920E26E2339B001C11AD /* CurrentWeatherRow.xib in Resources */,
@@ -1116,7 +1116,7 @@
 				9D7B920626E22339001C11AD /* TTGradient.swift in Sources */,
 				9D6BC27B26F08C2F00F000C9 /* TimeZone+Helper.swift in Sources */,
 				9D6BC25E26F06F0600F000C9 /* Array+Utilities.swift in Sources */,
-				9D7B920226E22140001C11AD /* CurrentDateRow.swift in Sources */,
+				9D7B920226E22140001C11AD /* ClockRow.swift in Sources */,
 				9D7B91CB26E20C51001C11AD /* TTButton.swift in Sources */,
 				9D82636F26D8D2A900981A3E /* Sequence+Utilities.swift in Sources */,
 				9D7B91D026E20D75001C11AD /* General+Utilities.swift in Sources */,
@@ -1125,7 +1125,7 @@
 				9D6BC28726F0A2B100F000C9 /* UIViewController+Utilities.swift in Sources */,
 				9D6BC28B26F0A37C00F000C9 /* DatePickerVC.swift in Sources */,
 				9D6BC27D26F0930C00F000C9 /* EventModel.swift in Sources */,
-				9D66D1C626E7542500411D75 /* DailyRow.swift in Sources */,
+				9D66D1C626E7542500411D75 /* CalendarRow.swift in Sources */,
 				9D7B920826E22581001C11AD /* UIViewController+PresentationStyle.swift in Sources */,
 				9D6BC29A26F1CDD800F000C9 /* NSAttributedString+Utilities.swift in Sources */,
 				9D82636D26D8D26900981A3E /* UIView+Utilities.swift in Sources */,
@@ -1151,7 +1151,7 @@
 				9D7B91DD26E20FDB001C11AD /* Geometry.swift in Sources */,
 				9D7B91DB26E20F9A001C11AD /* TTButtonAction.swift in Sources */,
 				9D6BC28526F0A20500F000C9 /* UIButton+Utilities.swift in Sources */,
-				9D6BC29126F0B76D00F000C9 /* EncourageRow.swift in Sources */,
+				9D6BC29126F0B76D00F000C9 /* DailyRow.swift in Sources */,
 				9DB7581226D383D5006D2246 /* BaseView.swift in Sources */,
 				9D7B91F626E21815001C11AD /* ObserverCollection.swift in Sources */,
 				9D66D1B826E5FA0E00411D75 /* Server.swift in Sources */,

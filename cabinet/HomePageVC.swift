@@ -4,6 +4,7 @@ import UIKit
 import CoreLocation
 
 class HomePageVC : BaseCollectionViewController {
+    private var settings: [Setting] { return FileManager.getSettings() }
     var currentWeather: CurrentWeather? { didSet { updateContent() } }
     var daily: DailyModel? { didSet { updateContent() } }
     override var navigationBarStyle: NavigationBarStyle { return .whiteWithoutShadow }
@@ -11,8 +12,11 @@ class HomePageVC : BaseCollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.ttDelegate = self
-        collectionView.sections += BaseSection([ titleRow, weatherRow, dailyRow, encourageRow, dateRow ], margins: UIEdgeInsets(top: 16, left: 0, bottom: 0, right: 0))
-        navigationItem.rightBarButtonItem = UIBarButtonItem.settingButtonItem { [unowned self] in self.collectionView.reloadData() }
+        collectionView.sections += BaseSection(createSectionContentItem(), margins: UIEdgeInsets(top: 16, left: 0, bottom: 0, right: 0))
+        navigationItem.rightBarButtonItem = UIBarButtonItem.settingButtonItem { [unowned self] in
+            self.collectionView.sections = [ BaseSection(self.createSectionContentItem(), margins: UIEdgeInsets(top: 16, left: 0, bottom: 0, right: 0)) ]
+            self.collectionView.reloadData()
+        }
         LocationManager.shared.start { [weak self] location, address in
             guard let self = self else { return }
             self.weatherRow.city = address
@@ -40,14 +44,28 @@ class HomePageVC : BaseCollectionViewController {
         collectionView.reloadData()
     }
     
+    private func createSectionContentItem() -> [SectionContentItem] {
+        let items = settings.filter { $0.isEnabled }.map { itemByKind(with: $0.kind) }
+        return [ titleRow ] + items
+    }
+    
+    private func itemByKind(with kind: Setting.Kind) -> SectionContentItem {
+        switch kind {
+        case .weather: return weatherRow
+        case .calendar: return calendarRow
+        case .daily: return dailyRow
+        case .clock: return clockRow
+        }
+    }
+    
     private func updateContent() {
         if let weather = currentWeather {
             weatherRow.weather = weather
         }
         if let daily = daily {
-            dailyRow.daily = daily
+            calendarRow.daily = daily
             let random = Int.random(in: 0..<daily.sentence.count)
-            encourageRow.title = daily.sentence[ifPresent: random]
+            dailyRow.title = daily.sentence[ifPresent: random]
         }
         collectionView.reloadData()
     }
@@ -73,9 +91,9 @@ class HomePageVC : BaseCollectionViewController {
         return result
     }()
     
+    private lazy var calendarRow = CalendarRow()
     private lazy var dailyRow = DailyRow()
-    private lazy var encourageRow = EncourageRow()
-    private lazy var dateRow = CurrentDateRow()
+    private lazy var clockRow = ClockRow()
 }
 
 extension HomePageVC : BaseCollectionViewDelegate {
