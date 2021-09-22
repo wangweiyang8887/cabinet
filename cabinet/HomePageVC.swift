@@ -37,6 +37,9 @@ class HomePageVC : BaseCollectionViewController {
             }
             self?.daily = result
         }
+        Server.fetchLottery(with: "ssq").onSuccess { result in
+            print(result)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -110,6 +110,7 @@
 		9DAC539826FB1314003F2D4C /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DAC539626FB1314003F2D4C /* SettingTableViewCell.xib */; };
 		9DAC539A26FB1612003F2D4C /* FileManager+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC539926FB1612003F2D4C /* FileManager+Helper.swift */; };
 		9DAC539D26FB33C2003F2D4C /* LotteryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC539C26FB33C2003F2D4C /* LotteryView.swift */; };
+		9DAC539F26FB458C003F2D4C /* LotteryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC539E26FB458C003F2D4C /* LotteryModel.swift */; };
 		9DB757F726D37B24006D2246 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB757F626D37B24006D2246 /* AppDelegate.swift */; };
 		9DB757FE26D37B24006D2246 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DB757FC26D37B24006D2246 /* Main.storyboard */; };
 		9DB7580026D37B25006D2246 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DB757FF26D37B25006D2246 /* Assets.xcassets */; };
@@ -358,6 +359,7 @@
 		9DAC539626FB1314003F2D4C /* SettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingTableViewCell.xib; sourceTree = "<group>"; };
 		9DAC539926FB1612003F2D4C /* FileManager+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Helper.swift"; sourceTree = "<group>"; };
 		9DAC539C26FB33C2003F2D4C /* LotteryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryView.swift; sourceTree = "<group>"; };
+		9DAC539E26FB458C003F2D4C /* LotteryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryModel.swift; sourceTree = "<group>"; };
 		9DB757F326D37B24006D2246 /* cabinet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cabinet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DB757F626D37B24006D2246 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DB757FD26D37B24006D2246 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -697,6 +699,7 @@
 				9DB7581526D38D43006D2246 /* HomePageVC.swift */,
 				9D6BC29026F0B76D00F000C9 /* DailyRow.swift */,
 				9DAC539C26FB33C2003F2D4C /* LotteryView.swift */,
+				9DAC539E26FB458C003F2D4C /* LotteryModel.swift */,
 			);
 			name = HomePage;
 			sourceTree = "<group>";
@@ -1084,6 +1087,7 @@
 				9D7B91F126E2158B001C11AD /* Navigation+Utilities.m in Sources */,
 				9D6BC29326F1946300F000C9 /* Environment.swift in Sources */,
 				9DB7582026D3961D006D2246 /* TargetActionHandler.swift in Sources */,
+				9DAC539F26FB458C003F2D4C /* LotteryModel.swift in Sources */,
 				9D6BC28D26F0A39800F000C9 /* DatePickerView.swift in Sources */,
 				9D6BC27326F07FB100F000C9 /* UIResponder+Utilities.swift in Sources */,
 				9D6BC26F26F07ED300F000C9 /* TTTextView.swift in Sources */,
