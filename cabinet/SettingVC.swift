@@ -4,13 +4,16 @@ final class SettingVC : BaseViewController {
     private var appendingUrl: URL? = FileManager.getAppendingUrl()
     private var settings: [Setting] = [] { didSet { tableView.reloadData() } }
     private var mainUrl = Bundle.main.url(forResource: "Setting", withExtension: "json")
+    
+    override var navigationBarStyle: NavigationBarStyle { return .white }
+    
     var settingChangedHandler: ActionClosure?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Settings"
         view.addSubview(tableView, pinningEdges: .all)
-        tableView.backgroundColor = .cabinetOffWhite
+        tableView.backgroundColor = .cabinetWhite
         settings = FileManager.getSettings()
     }
     
@@ -19,12 +22,19 @@ final class SettingVC : BaseViewController {
         result.delegate = self
         result.dataSource = self
         result.showsVerticalScrollIndicator = false
+        result.separatorStyle = .none
         result.registerCell(withClass: SettingTableViewCell.self)
         return result
     }()
 }
 
 extension SettingVC : UITableViewDelegate, UITableViewDataSource {
+    /// Delete the header and footer view of section
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat { return 0.000001 }
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat { return 0.000001 }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? { return nil }
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? { return nil }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return settings.count
     }

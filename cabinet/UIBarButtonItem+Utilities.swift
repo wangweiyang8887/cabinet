@@ -22,7 +22,7 @@ public extension UIBarButtonItem {
     }
     
     static func settingButtonItem(_ completion: ActionClosure?) -> UIBarButtonItem {
-        let button = TTButton(type: .custom, icon: #imageLiteral(resourceName: "64-setting").tinted(with: .cabinetBlack)) { UIViewController.current().showSetting(completion) }
+        let button = TTButton(type: .custom, icon: #imageLiteral(resourceName: "64-setting").tinted(with: .cabinetBlack).withRenderingMode(.alwaysTemplate)) { UIViewController.current().showSetting(completion) }
         button.constrainSize(to: CGSize(uniform: 30))
         button.contentHorizontalAlignment = .right
         return UIBarButtonItem(customView: button)
