@@ -36,7 +36,11 @@ class SettingTableViewCell : UITableViewCell {
     private lazy var lineView: UIView = {
         let result = UIView()
         result.constrainHeight(to: 0.5)
-        result.backgroundColor = .nonStandardColor(withRGBHex: 0xEBEBEB)
+        if #available(iOS 13.0, *) {
+            result.backgroundColor = UITraitCollection.current.userInterfaceStyle == .light ?.cabinetDarkestGray : .nonStandardColor(withRGBHex: 0xEBEBEB)
+        } else {
+            result.backgroundColor = .nonStandardColor(withRGBHex: 0xEBEBEB)
+        }
         return result
     }()
 }
