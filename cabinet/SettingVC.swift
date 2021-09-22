@@ -4,6 +4,8 @@ final class SettingVC : BaseViewController {
     private var appendingUrl: URL? = FileManager.getAppendingUrl()
     private var settings: [Setting] = [] { didSet { tableView.reloadData() } }
     private var mainUrl = Bundle.main.url(forResource: "Setting", withExtension: "json")
+    private var isBeginMove: Bool = false
+    private var currentMoveCell: SettingTableViewCell?
     
     override var navigationBarStyle: NavigationBarStyle { return .white }
     
@@ -11,10 +13,11 @@ final class SettingVC : BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Settings"
+        title = "首页排版"
         view.addSubview(tableView, pinningEdges: .all)
         tableView.backgroundColor = .cabinetWhite
         settings = FileManager.getSettings()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: sortButton)
     }
     
     private lazy var tableView: UITableView = {
@@ -24,6 +27,18 @@ final class SettingVC : BaseViewController {
         result.showsVerticalScrollIndicator = false
         result.separatorStyle = .none
         result.registerCell(withClass: SettingTableViewCell.self)
+        return result
+    }()
+    
+    private lazy var sortButton: TTButton = {
+        let result = TTButton()
+        result.title = "排序"
+        result.titleLabel?.font = .systemFont(ofSize: 15, weight: .medium)
+        result.setTitleColor(.nonStandardColor(withRGBHex: 0x3DB2FF), for: .normal)
+        result.addTapHandler { [unowned self] in
+            self.tableView.isEditing.toggle()
+            self.sortButton.title = self.tableView.isEditing ? "完成" : "排序"
+        }
         return result
     }()
 }
@@ -49,6 +64,23 @@ extension SettingVC : UITableViewDelegate, UITableViewDataSource {
             self.settingChangedHandler?()
         }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .none
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let setting = settings[sourceIndexPath.row]
+        settings.remove(at: sourceIndexPath.row)
+        settings.insert(setting, at: destinationIndexPath.row)
+        guard let url = appendingUrl else { return }
+        self.writeToFile(location: url)
+        self.settingChangedHandler?()
     }
 }
 
