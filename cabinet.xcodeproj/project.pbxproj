@@ -111,6 +111,7 @@
 		9DAC539A26FB1612003F2D4C /* FileManager+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC539926FB1612003F2D4C /* FileManager+Helper.swift */; };
 		9DAC539D26FB33C2003F2D4C /* LotteryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC539C26FB33C2003F2D4C /* LotteryView.swift */; };
 		9DAC539F26FB458C003F2D4C /* LotteryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC539E26FB458C003F2D4C /* LotteryModel.swift */; };
+		9DAC53A126FB4A41003F2D4C /* LotteryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DAC53A026FB4A41003F2D4C /* LotteryView.xib */; };
 		9DB757F726D37B24006D2246 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB757F626D37B24006D2246 /* AppDelegate.swift */; };
 		9DB757FE26D37B24006D2246 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DB757FC26D37B24006D2246 /* Main.storyboard */; };
 		9DB7580026D37B25006D2246 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DB757FF26D37B25006D2246 /* Assets.xcassets */; };
@@ -360,6 +361,7 @@
 		9DAC539926FB1612003F2D4C /* FileManager+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Helper.swift"; sourceTree = "<group>"; };
 		9DAC539C26FB33C2003F2D4C /* LotteryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryView.swift; sourceTree = "<group>"; };
 		9DAC539E26FB458C003F2D4C /* LotteryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryModel.swift; sourceTree = "<group>"; };
+		9DAC53A026FB4A41003F2D4C /* LotteryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LotteryView.xib; sourceTree = "<group>"; };
 		9DB757F326D37B24006D2246 /* cabinet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cabinet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DB757F626D37B24006D2246 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DB757FD26D37B24006D2246 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -699,6 +701,7 @@
 				9DB7581526D38D43006D2246 /* HomePageVC.swift */,
 				9D6BC29026F0B76D00F000C9 /* DailyRow.swift */,
 				9DAC539C26FB33C2003F2D4C /* LotteryView.swift */,
+				9DAC53A026FB4A41003F2D4C /* LotteryView.xib */,
 				9DAC539E26FB458C003F2D4C /* LotteryModel.swift */,
 			);
 			name = HomePage;
@@ -978,6 +981,7 @@
 				9DB7580326D37B25006D2246 /* LaunchScreen.storyboard in Resources */,
 				9D6BC26826F07CA800F000C9 /* ModalEditorRow.xib in Resources */,
 				9D7B920E26E2339B001C11AD /* CurrentWeatherRow.xib in Resources */,
+				9DAC53A126FB4A41003F2D4C /* LotteryView.xib in Resources */,
 				9D6BC26526F07C9D00F000C9 /* StringEditorRow.xib in Resources */,
 				9DB7580026D37B25006D2246 /* Assets.xcassets in Resources */,
 				9D6BC25826F04CD300F000C9 /* ReminderRow.xib in Resources */,

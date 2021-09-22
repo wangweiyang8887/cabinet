@@ -67,6 +67,7 @@ class HomePageVC : BaseCollectionViewController {
         case .calendar: return calendarRow
         case .daily: return dailyRow
         case .clock: return clockRow
+        case .lottery: return lotteryRow
         }
     }
     
@@ -106,6 +107,7 @@ class HomePageVC : BaseCollectionViewController {
     private lazy var calendarRow = CalendarRow()
     private lazy var dailyRow = DailyRow()
     private lazy var clockRow = ClockRow()
+    private lazy var lotteryRow = LotteryRow()
 }
 
 extension HomePageVC : BaseCollectionViewDelegate {

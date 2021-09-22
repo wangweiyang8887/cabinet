@@ -18,5 +18,10 @@
         "title":"Clock时钟",
         "kind":4,
         "isEnabled": 1
+    },
+    {
+        "title":"彩票",
+        "kind":5,
+        "isEnabled":1
     }
 ]
