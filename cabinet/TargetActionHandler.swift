@@ -59,7 +59,7 @@ extension UIView {
         if !isUserInteractionEnabled {
             isUserInteractionEnabled = true
         }
-        let tap = UITapGestureRecognizer.init {
+        let tap = UITapGestureRecognizer {
             handler()
         }
         self.addGestureRecognizer(tap)

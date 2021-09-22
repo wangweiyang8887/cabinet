@@ -180,6 +180,12 @@
 		9DCD1ECD26F48023004A4E98 /* UserDefaults+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC27E26F0948C00F000C9 /* UserDefaults+Helper.swift */; };
 		9DCD1ECE26F4802F004A4E98 /* Codable+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC2A726F1F57400F000C9 /* Codable+Helper.swift */; };
 		9DCD1ECF26F48044004A4E98 /* DailyEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCD1EC026F46A4B004A4E98 /* DailyEntry.swift */; };
+		9DCD1ED326F596A2004A4E98 /* ColorPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCD1ED226F596A1004A4E98 /* ColorPickerVC.swift */; };
+		9DCD1ED526F596EF004A4E98 /* ColorSliderRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCD1ED426F596EF004A4E98 /* ColorSliderRow.swift */; };
+		9DCD1ED726F5BA32004A4E98 /* CurrentWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCD1ED626F5BA32004A4E98 /* CurrentWeatherView.swift */; };
+		9DCD1ED926F5BA59004A4E98 /* CurrentWeatherView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DCD1ED826F5BA59004A4E98 /* CurrentWeatherView.xib */; };
+		9DCD1EDB26F5C2CD004A4E98 /* PreviewColorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCD1EDA26F5C2CD004A4E98 /* PreviewColorRow.swift */; };
+		9DCD1EDD26F5C2EF004A4E98 /* PreviewColorRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DCD1EDC26F5C2EF004A4E98 /* PreviewColorRow.xib */; };
 		9DE5E74226D4A48500FF8B0A /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DB7583426D3A7C0006D2246 /* WidgetKit.framework */; };
 		9DE5E74326D4A48500FF8B0A /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DB7583626D3A7C0006D2246 /* SwiftUI.framework */; };
 		9DE5E74626D4A48500FF8B0A /* cabinet_widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE5E74526D4A48500FF8B0A /* cabinet_widget.swift */; };
@@ -381,6 +387,12 @@
 		9DCD1EAC26F363A0004A4E98 /* InspireView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspireView.swift; sourceTree = "<group>"; };
 		9DCD1EC026F46A4B004A4E98 /* DailyEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyEntry.swift; sourceTree = "<group>"; };
 		9DCD1EC626F47E6A004A4E98 /* InspireEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspireEntry.swift; sourceTree = "<group>"; };
+		9DCD1ED226F596A1004A4E98 /* ColorPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerVC.swift; sourceTree = "<group>"; };
+		9DCD1ED426F596EF004A4E98 /* ColorSliderRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSliderRow.swift; sourceTree = "<group>"; };
+		9DCD1ED626F5BA32004A4E98 /* CurrentWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherView.swift; sourceTree = "<group>"; };
+		9DCD1ED826F5BA59004A4E98 /* CurrentWeatherView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentWeatherView.xib; sourceTree = "<group>"; };
+		9DCD1EDA26F5C2CD004A4E98 /* PreviewColorRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewColorRow.swift; sourceTree = "<group>"; };
+		9DCD1EDC26F5C2EF004A4E98 /* PreviewColorRow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreviewColorRow.xib; sourceTree = "<group>"; };
 		9DE5E74126D4A48500FF8B0A /* cabinet widgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "cabinet widgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DE5E74526D4A48500FF8B0A /* cabinet_widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cabinet_widget.swift; sourceTree = "<group>"; };
 		9DE5E74726D4A48600FF8B0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -618,6 +630,7 @@
 				9DB7581C26D38DAC006D2246 /* HomePage */,
 				9D6BC24D26EF68F700F000C9 /* Reminder */,
 				9DB7581B26D38D98006D2246 /* CurrentDate */,
+				9DCD1ED126F59685004A4E98 /* ColorPicker */,
 				9DB7580A26D3831D006D2246 /* Base */,
 				9DB757F626D37B24006D2246 /* AppDelegate.swift */,
 				9D7B91E626E2138A001C11AD /* cabinet-Bridging-Header.h */,
@@ -653,6 +666,8 @@
 				9D66D1C526E7542500411D75 /* DailyRow.swift */,
 				9D66D1C726E7544400411D75 /* DailyRow.xib */,
 				9D66D1CA26E7617E00411D75 /* DailyModel.swift */,
+				9DCD1ED626F5BA32004A4E98 /* CurrentWeatherView.swift */,
+				9DCD1ED826F5BA59004A4E98 /* CurrentWeatherView.xib */,
 			);
 			name = CurrentDate;
 			sourceTree = "<group>";
@@ -756,6 +771,17 @@
 				9DCD1EA526F36385004A4E98 /* Info.plist */,
 			);
 			path = InspireWidget;
+			sourceTree = "<group>";
+		};
+		9DCD1ED126F59685004A4E98 /* ColorPicker */ = {
+			isa = PBXGroup;
+			children = (
+				9DCD1ED226F596A1004A4E98 /* ColorPickerVC.swift */,
+				9DCD1ED426F596EF004A4E98 /* ColorSliderRow.swift */,
+				9DCD1EDA26F5C2CD004A4E98 /* PreviewColorRow.swift */,
+				9DCD1EDC26F5C2EF004A4E98 /* PreviewColorRow.xib */,
+			);
+			name = ColorPicker;
 			sourceTree = "<group>";
 		};
 		9DE5E74426D4A48500FF8B0A /* cabinet widget */ = {
@@ -932,6 +958,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DCD1ED926F5BA59004A4E98 /* CurrentWeatherView.xib in Resources */,
+				9DCD1EDD26F5C2EF004A4E98 /* PreviewColorRow.xib in Resources */,
 				9DB7582E26D3A371006D2246 /* Colors.xcassets in Resources */,
 				9DB7581A26D38D90006D2246 /* CurrentDateVC.xib in Resources */,
 				9D66D1C826E7544400411D75 /* DailyRow.xib in Resources */,
@@ -1084,6 +1112,7 @@
 				9D7B91FC26E218ED001C11AD /* Event.swift in Sources */,
 				9D7B91C626E20BE1001C11AD /* UIStackView+Utilities.swift in Sources */,
 				9D6BC28726F0A2B100F000C9 /* UIViewController+Utilities.swift in Sources */,
+				9DCD1ED526F596EF004A4E98 /* ColorSliderRow.swift in Sources */,
 				9D6BC28B26F0A37C00F000C9 /* DatePickerVC.swift in Sources */,
 				9D6BC27D26F0930C00F000C9 /* EventModel.swift in Sources */,
 				9D66D1C626E7542500411D75 /* DailyRow.swift in Sources */,
@@ -1096,9 +1125,12 @@
 				9D6BC25226F0480400F000C9 /* NavigationBarStyle.swift in Sources */,
 				9D66D1C426E7349600411D75 /* UIImage+Utilities.swift in Sources */,
 				9D7B91E126E2102B001C11AD /* Comparable+Utilities.swift in Sources */,
+				9DCD1EDB26F5C2CD004A4E98 /* PreviewColorRow.swift in Sources */,
 				9D7B91EE26E2148F001C11AD /* UIWindow+Utilities.swift in Sources */,
+				9DCD1ED726F5BA32004A4E98 /* CurrentWeatherView.swift in Sources */,
 				9D7B91BF26E20B4D001C11AD /* BaseCollectionViewLayout.swift in Sources */,
 				9D6BC25426F04C9A00F000C9 /* ReminderRow.swift in Sources */,
+				9DCD1ED326F596A2004A4E98 /* ColorPickerVC.swift in Sources */,
 				9D6BC25A26F06E0800F000C9 /* TextRow.swift in Sources */,
 				9D6BC26926F07CA800F000C9 /* ModalEditorRow.swift in Sources */,
 				9DB7580E26D3837A006D2246 /* BaseViewController.swift in Sources */,
