@@ -1,0 +1,18 @@
+[
+    {
+        "title":"天气和事件",
+        "isEnabled": 1
+    },
+    {
+        "title":"日历",
+        "isEnabled": 1
+    },
+    {
+        "title":"每日一句",
+        "isEnabled": 1
+    },
+    {
+        "title":"Clock时钟",
+        "isEnabled": 1
+    }
+]

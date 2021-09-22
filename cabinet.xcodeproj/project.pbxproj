@@ -101,6 +101,14 @@
 		9D82636F26D8D2A900981A3E /* Sequence+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D82636E26D8D2A900981A3E /* Sequence+Utilities.swift */; };
 		9D82637126D8D30500981A3E /* NSLayoutConstraint+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D82637026D8D30500981A3E /* NSLayoutConstraint+Utilities.swift */; };
 		9D82637326D8D33A00981A3E /* UIView+IBInspectables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D82637226D8D33A00981A3E /* UIView+IBInspectables.swift */; };
+		9DAC538B26FAF75A003F2D4C /* UIBarButtonItem+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC538A26FAF75A003F2D4C /* UIBarButtonItem+Utilities.swift */; };
+		9DAC538E26FAF83B003F2D4C /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC538D26FAF83B003F2D4C /* SettingVC.swift */; };
+		9DAC539026FAF86B003F2D4C /* UIViewController+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC538F26FAF86B003F2D4C /* UIViewController+Helper.swift */; };
+		9DAC539226FB0233003F2D4C /* Setting.json in Resources */ = {isa = PBXBuildFile; fileRef = 9DAC539126FB0233003F2D4C /* Setting.json */; };
+		9DAC539426FB1173003F2D4C /* UITableView+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC539326FB1173003F2D4C /* UITableView+Helper.swift */; };
+		9DAC539726FB1314003F2D4C /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC539526FB1314003F2D4C /* SettingTableViewCell.swift */; };
+		9DAC539826FB1314003F2D4C /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DAC539626FB1314003F2D4C /* SettingTableViewCell.xib */; };
+		9DAC539A26FB1612003F2D4C /* FileManager+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC539926FB1612003F2D4C /* FileManager+Helper.swift */; };
 		9DB757F726D37B24006D2246 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB757F626D37B24006D2246 /* AppDelegate.swift */; };
 		9DB757FE26D37B24006D2246 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DB757FC26D37B24006D2246 /* Main.storyboard */; };
 		9DB7580026D37B25006D2246 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DB757FF26D37B25006D2246 /* Assets.xcassets */; };
@@ -340,6 +348,14 @@
 		9D82636E26D8D2A900981A3E /* Sequence+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+Utilities.swift"; sourceTree = "<group>"; };
 		9D82637026D8D30500981A3E /* NSLayoutConstraint+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Utilities.swift"; sourceTree = "<group>"; };
 		9D82637226D8D33A00981A3E /* UIView+IBInspectables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+IBInspectables.swift"; sourceTree = "<group>"; };
+		9DAC538A26FAF75A003F2D4C /* UIBarButtonItem+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Utilities.swift"; sourceTree = "<group>"; };
+		9DAC538D26FAF83B003F2D4C /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
+		9DAC538F26FAF86B003F2D4C /* UIViewController+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Helper.swift"; sourceTree = "<group>"; };
+		9DAC539126FB0233003F2D4C /* Setting.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Setting.json; sourceTree = "<group>"; };
+		9DAC539326FB1173003F2D4C /* UITableView+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Helper.swift"; sourceTree = "<group>"; };
+		9DAC539526FB1314003F2D4C /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		9DAC539626FB1314003F2D4C /* SettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingTableViewCell.xib; sourceTree = "<group>"; };
+		9DAC539926FB1612003F2D4C /* FileManager+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Helper.swift"; sourceTree = "<group>"; };
 		9DB757F326D37B24006D2246 /* cabinet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cabinet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DB757F626D37B24006D2246 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DB757FD26D37B24006D2246 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -577,16 +593,31 @@
 				9D6BC27A26F08C2F00F000C9 /* TimeZone+Helper.swift */,
 				9D6BC28426F0A20500F000C9 /* UIButton+Utilities.swift */,
 				9D6BC28626F0A2B100F000C9 /* UIViewController+Utilities.swift */,
+				9DAC538F26FAF86B003F2D4C /* UIViewController+Helper.swift */,
 				9D6BC28826F0A2FA00F000C9 /* Navigation+Utilities.swift */,
 				9D6BC2A726F1F57400F000C9 /* Codable+Helper.swift */,
+				9DAC538A26FAF75A003F2D4C /* UIBarButtonItem+Utilities.swift */,
+				9DAC539326FB1173003F2D4C /* UITableView+Helper.swift */,
+				9DAC539926FB1612003F2D4C /* FileManager+Helper.swift */,
 			);
 			name = Extension;
+			sourceTree = "<group>";
+		};
+		9DAC538C26FAF823003F2D4C /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				9DAC538D26FAF83B003F2D4C /* SettingVC.swift */,
+				9DAC539526FB1314003F2D4C /* SettingTableViewCell.swift */,
+				9DAC539626FB1314003F2D4C /* SettingTableViewCell.xib */,
+			);
+			name = Setting;
 			sourceTree = "<group>";
 		};
 		9DB757EA26D37B24006D2246 = {
 			isa = PBXGroup;
 			children = (
 				9DCD1E6E26F3234C004A4E98 /* CountDownWidgetExtension.entitlements */,
+				9DAC539126FB0233003F2D4C /* Setting.json */,
 				9DB757F526D37B24006D2246 /* cabinet */,
 				9DE5E74426D4A48500FF8B0A /* cabinet widget */,
 				9DCD1E6226F32330004A4E98 /* CountDownWidget */,
@@ -618,6 +649,7 @@
 				9DB7581C26D38DAC006D2246 /* HomePage */,
 				9D6BC24D26EF68F700F000C9 /* Reminder */,
 				9DB7581B26D38D98006D2246 /* CurrentDate */,
+				9DAC538C26FAF823003F2D4C /* Setting */,
 				9DB7580A26D3831D006D2246 /* Base */,
 				9DB757F626D37B24006D2246 /* AppDelegate.swift */,
 				9D7B91E626E2138A001C11AD /* cabinet-Bridging-Header.h */,
@@ -934,6 +966,8 @@
 			files = (
 				9DB7582E26D3A371006D2246 /* Colors.xcassets in Resources */,
 				9DB7581A26D38D90006D2246 /* CurrentDateVC.xib in Resources */,
+				9DAC539826FB1314003F2D4C /* SettingTableViewCell.xib in Resources */,
+				9DAC539226FB0233003F2D4C /* Setting.json in Resources */,
 				9D66D1C826E7544400411D75 /* DailyRow.xib in Resources */,
 				9DB7580326D37B25006D2246 /* LaunchScreen.storyboard in Resources */,
 				9D6BC26826F07CA800F000C9 /* ModalEditorRow.xib in Resources */,
@@ -1043,6 +1077,7 @@
 				9D82637326D8D33A00981A3E /* UIView+IBInspectables.swift in Sources */,
 				9D6BC27F26F0948C00F000C9 /* UserDefaults+Helper.swift in Sources */,
 				9D7B91B426E200FB001C11AD /* UICollectionView+Utilities.swift in Sources */,
+				9DAC539426FB1173003F2D4C /* UITableView+Helper.swift in Sources */,
 				9D7B91F126E2158B001C11AD /* Navigation+Utilities.m in Sources */,
 				9D6BC29326F1946300F000C9 /* Environment.swift in Sources */,
 				9DB7582026D3961D006D2246 /* TargetActionHandler.swift in Sources */,
@@ -1056,12 +1091,16 @@
 				9D7B91F826E21871001C11AD /* KeyboardObserver.swift in Sources */,
 				9D66D1BB26E5FB3E00411D75 /* KeyedDecodingContainer+Extension.swift in Sources */,
 				9D7B91C426E20BAD001C11AD /* BaseRow.swift in Sources */,
+				9DAC539726FB1314003F2D4C /* SettingTableViewCell.swift in Sources */,
 				9D82637126D8D30500981A3E /* NSLayoutConstraint+Utilities.swift in Sources */,
 				9DB7582C26D39CF3006D2246 /* BaseDateFormatter.swift in Sources */,
+				9DAC538E26FAF83B003F2D4C /* SettingVC.swift in Sources */,
 				9D7B91FF26E21951001C11AD /* UIView+Helper.m in Sources */,
+				9DAC539A26FB1612003F2D4C /* FileManager+Helper.swift in Sources */,
 				9D7B91DF26E21001001C11AD /* Math.swift in Sources */,
 				9DB7581626D38D43006D2246 /* HomePageVC.swift in Sources */,
 				9D6BC28926F0A2FA00F000C9 /* Navigation+Utilities.swift in Sources */,
+				9DAC539026FAF86B003F2D4C /* UIViewController+Helper.swift in Sources */,
 				9D7B91BB26E20AFB001C11AD /* BaseCollectionViewCell.swift in Sources */,
 				9D6BC27526F082F800F000C9 /* TrimmedStringEditor.swift in Sources */,
 				9DB7582226D39656006D2246 /* NSObject+Helper.swift in Sources */,
@@ -1126,6 +1165,7 @@
 				9D66D1BF26E5FEDC00411D75 /* CurrentWeather.swift in Sources */,
 				9D7B91F426E217BB001C11AD /* NSObject+Helper.m in Sources */,
 				9D6BC25C26F06E3E00F000C9 /* TTHyperlinkTextView.swift in Sources */,
+				9DAC538B26FAF75A003F2D4C /* UIBarButtonItem+Utilities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
