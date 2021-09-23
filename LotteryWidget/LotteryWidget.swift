@@ -17,25 +17,46 @@ struct Provider: TimelineProvider {
         let currentDate = Date()
         
         /// widget will be refresh every minute
-        let refreshTime = Calendar.current.date(byAdding: .second, value: 1, to: currentDate)!
-        let entry = LotteryEntry(date: Date(), models: [])
-        let timeline = Timeline(entries: [entry], policy: .after(refreshTime))
-        completion(timeline)
+        let refreshTime = Calendar.current.date(byAdding: .minute, value: 1, to: currentDate)!
 
         getLottery(with: "ssq") { result in
             var models: [LotteryModel] = []
             if case .success(let value) = result {
                 models.append(value)
-            }
-            getLottery(with: "dlt") { dlt in
-                if case .success(let value) = dlt {
-                    models.append(value)
+                getLottery(with: "dlt") { dlt in
+                    if case .success(let value) = dlt {
+                        models.append(value)
+                    }
+                    let entry = LotteryEntry(date: Date(), models: models)
+                    let timeline = Timeline(entries: [entry], policy: .after(refreshTime))
+                    completion(timeline)
                 }
-                let entry = LotteryEntry(date: Date(), models: models)
-                let timeline = Timeline(entries: [entry], policy: .after(refreshTime))
-                completion(timeline)
+            } else {
+                getDailyReport { result in
+                    var daily: DailyModel?
+                    if case .success(let value) = result {
+                        daily = value
+                    } else {
+                        daily = nil
+                    }
+                    let entry = LotteryEntry(date: Date(), models: daily?.lottery ?? [])
+                    let timeline = Timeline(entries: [entry], policy: .after(refreshTime))
+                    completion(timeline)
+                }
             }
         }
+    }
+    
+    func getDailyReport(completion: @escaping (Result<DailyModel?, Error>) -> Void) {
+        let url = URL(string: API.daily.rawValue)!
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            guard error == nil else {
+                completion(.failure(error!))
+                return
+            }
+            completion(.success(DailyModel.decode(from: data!)))
+        }
+        task.resume()
     }
     
     func getLottery(with id: String, completion: @escaping (Result<LotteryModel, Error>) -> Void) {
@@ -47,7 +68,11 @@ struct Provider: TimelineProvider {
                 completion(.failure(error!))
                 return
             }
-            completion(.success(LotteryResult.decode(from: data!)!.result))
+            if let result = LotteryResult.decode(from: data!)?.result, result.lottery_id.trimmedNilIfEmpty != nil {
+                completion(.success(result))
+            } else {
+                completion(.failure(NSError()))
+            }
         }
         task.resume()
     }
@@ -68,8 +93,8 @@ struct LotteryWidget: Widget {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             LotteryView(entry: entry)
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("彩票")
+        .description("祝你中大奖🎉🎉🎉")
         .supportedFamilies([ .systemMedium ])
     }
 }

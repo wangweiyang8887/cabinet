@@ -9,7 +9,7 @@ struct LotteryView: View {
     
     var body: some View {
         ZStack {
-            VStack(spacing: 8) {
+            VStack(spacing: 16) {
                 ResultView(kind: .ssq, model: entry.models.first)
                 ResultView(kind: .dlt, model: entry.models.last)
             }
