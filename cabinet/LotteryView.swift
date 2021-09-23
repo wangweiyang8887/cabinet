@@ -23,17 +23,19 @@ final class LotteryView : UIView {
         guard let model = ssqModel else { return }
         ssqNumberLabel.text = model.lottery_no
         ssqDateLabel.text = model.lottery_date
-        redBallLabel.text = model.lottery_res.components(separatedBy: ",").prefix(6).joined(separator: " ")
-        blueBallLabel.text = model.lottery_res.components(separatedBy: ",").last
+        guard let result = model.lottery_res.trimmedNilIfEmpty else { return }
+        redBallLabel.text = result.components(separatedBy: ",").prefix(6).joined(separator: " ")
+        blueBallLabel.text = result.components(separatedBy: ",").last
     }
     
     private func handleDLTModelChanged() {
         guard let model = dltModel else { return }
         dltNumberLabel.text = model.lottery_no
         dltDateLabel.text = model.lottery_date
-        dltRedBallLabel.text = model.lottery_res.components(separatedBy: ",").prefix(5).joined(separator: " ")
-        dltBlueBallOneLabel.text = model.lottery_res.components(separatedBy: ",").suffix(from: 5).first
-        dltBlueBallTwoLabel.text = model.lottery_res.components(separatedBy: ",").suffix(from: 5).last
+        guard let result = model.lottery_res.trimmedNilIfEmpty else { return }
+        dltRedBallLabel.text = result.components(separatedBy: ",").prefix(5).joined(separator: " ")
+        dltBlueBallOneLabel.text = result.components(separatedBy: ",").suffix(from: 5).first
+        dltBlueBallTwoLabel.text = result.components(separatedBy: ",").suffix(from: 5).last
     }
 }
 

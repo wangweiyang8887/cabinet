@@ -42,8 +42,8 @@ final class CalendarRow : BaseRow {
     
     private func handleChineseCalendarChanged() {
         guard let calendar = chineseCalendar else { return }
-        redContentLabel.text = calendar.todayYI
-        greenContentLabel.text = calendar.todayJI
+        redContentLabel.text = calendar.todayYI.trimmedNilIfEmpty ?? "-"
+        greenContentLabel.text = calendar.todayJI.trimmedNilIfEmpty ?? "-"
         dayLabel.text = String(format: "%ld", CalendarDate.today(in: .current).day)
         monthWeekLabel.text = String(format: "%@ %@", Calendar.currentMonth, Calendar.currentWeek)
         lunarLabel.text = String(format: "%@ %@", Calendar.lunarYear, Calendar.lunarMonthAndDay)
