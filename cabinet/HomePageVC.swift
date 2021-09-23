@@ -44,11 +44,11 @@ class HomePageVC : BaseCollectionViewController {
             }
             self?.daily = result
         }
-        operations += Server.fetchLottery(with: "ssq").onSuccess { result in
-            print(result)
+        operations += Server.fetchLottery(with: "ssq").onSuccess { [weak self] result in
+            self?.lotteryRow.ssqModel = result
         }
-        operations += Server.fetchLottery(with: "dlt").onSuccess { result in
-            print(result)
+        operations += Server.fetchLottery(with: "dlt").onSuccess { [weak self] result in
+            self?.lotteryRow.dltModel = result
         }
         operations += Server.fetchChieseCalendar(by: Date().cabinetDateFormatted()).onSuccess { [weak self] result in
             self?.calendarRow.chineseCalendar = result
