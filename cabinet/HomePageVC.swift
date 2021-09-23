@@ -46,8 +46,13 @@ class HomePageVC : BaseCollectionViewController {
         operations += Server.fetchLottery(with: "ssq").onSuccess { result in
             print(result)
         }
+        operations += Server.fetchChieseCalendar(by: Date().cabinetDateFormatted()).onSuccess { [weak self] result in
+            self?.calendarRow.chineseCalendar = result
+        }
         OperationGroup(operations).onCompletion { [weak self] _ in
-            self?.collectionView.endRefresh()
+            guard let self = self else { return }
+            self.collectionView.endRefresh()
+            self.collectionView.reloadData()
         }
     }
     
@@ -80,7 +85,6 @@ class HomePageVC : BaseCollectionViewController {
             let random = Int.random(in: 0..<daily.sentence.count)
             dailyRow.title = daily.sentence[ifPresent: random]
         }
-        collectionView.reloadData()
     }
     
     // MARK: Components

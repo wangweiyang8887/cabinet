@@ -15,6 +15,7 @@ final class CalendarRow : BaseRow {
     override class var margins: UIEdgeInsets { return UIEdgeInsets(uniform: 16) }
     
     var daily: DailyModel? { didSet { handleDailyChanged() } }
+    var chineseCalendar: ChineseCalendarModel? { didSet { handleChineseCalendarChanged() } }
     
     override func initialize() {
         super.initialize()
@@ -36,9 +37,13 @@ final class CalendarRow : BaseRow {
     
     private func handleDailyChanged() {
         guard let daily = daily else { return }
-        redContentLabel.text = daily.todayRed
-        greenContentLabel.text = daily.todayGreen
         constellationLabel.text = daily.constellation
+    }
+    
+    private func handleChineseCalendarChanged() {
+        guard let calendar = chineseCalendar else { return }
+        redContentLabel.text = calendar.todayYI
+        greenContentLabel.text = calendar.todayJI
         dayLabel.text = String(format: "%ld", CalendarDate.today(in: .current).day)
         monthWeekLabel.text = String(format: "%@ %@", Calendar.currentMonth, Calendar.currentWeek)
         lunarLabel.text = String(format: "%@ %@", Calendar.lunarYear, Calendar.lunarMonthAndDay)
