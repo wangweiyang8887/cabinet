@@ -6,4 +6,9 @@ extension UIViewController {
         vc.settingChangedHandler = completion
         show(vc, animated: true)
     }
+    
+    func showSupporting() {
+        let vc = SupportingVC()
+        show(vc, animated: true)
+    }
 }

@@ -13,7 +13,7 @@ class SettingTableViewCell : UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         selectionStyle = .none
-        toggleSwitch.onTintColor = .nonStandardColor(withRGBHex: 0x3DB2FF)
+        toggleSwitch.onTintColor = .nonStandardColor(withRGBHex: 0x1770f3)
         toggleSwitch.addTarget(self, action: #selector(valueChanged(_:)), for: .valueChanged)
         contentView.addSubview(lineView, pinningEdges: [ .left, .right, .bottom ], withInsets: UIEdgeInsets(horizontal: 16))
     }
@@ -37,7 +37,7 @@ class SettingTableViewCell : UITableViewCell {
         let result = UIView()
         result.constrainHeight(to: 0.5)
         if #available(iOS 13.0, *) {
-            result.backgroundColor = UITraitCollection.current.userInterfaceStyle == .light ?.cabinetDarkestGray : .nonStandardColor(withRGBHex: 0xEBEBEB)
+            result.backgroundColor = UITraitCollection.current.userInterfaceStyle == .dark ?.cabinetDarkestGray : .nonStandardColor(withRGBHex: 0xEBEBEB)
         } else {
             result.backgroundColor = .nonStandardColor(withRGBHex: 0xEBEBEB)
         }

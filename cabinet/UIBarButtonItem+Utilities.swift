@@ -27,4 +27,11 @@ public extension UIBarButtonItem {
         button.contentHorizontalAlignment = .right
         return UIBarButtonItem(customView: button)
     }
+    
+    static func supportButtonItem() -> UIBarButtonItem {
+        let button = TTButton(type: .custom, icon: #imageLiteral(resourceName: "handshake").tinted(with: .cabinetBlack).withRenderingMode(.alwaysTemplate)) { UIViewController.current().showSupporting() }
+        button.constrainSize(to: CGSize(uniform: 30))
+        button.contentHorizontalAlignment = .right
+        return UIBarButtonItem(customView: button)
+    }
 }

@@ -113,6 +113,9 @@
 		9DAC539F26FB458C003F2D4C /* LotteryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC539E26FB458C003F2D4C /* LotteryModel.swift */; };
 		9DAC53A126FB4A41003F2D4C /* LotteryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DAC53A026FB4A41003F2D4C /* LotteryView.xib */; };
 		9DAC53A326FC2CD4003F2D4C /* ChineseCalendarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC53A226FC2CD4003F2D4C /* ChineseCalendarModel.swift */; };
+		9DAC53A526FC4B28003F2D4C /* SupportingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC53A426FC4B28003F2D4C /* SupportingVC.swift */; };
+		9DAC53A726FC4D4D003F2D4C /* PlainRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC53A626FC4D4D003F2D4C /* PlainRow.swift */; };
+		9DAC53A926FC4D76003F2D4C /* PlainRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DAC53A826FC4D76003F2D4C /* PlainRow.xib */; };
 		9DB757F726D37B24006D2246 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB757F626D37B24006D2246 /* AppDelegate.swift */; };
 		9DB757FE26D37B24006D2246 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DB757FC26D37B24006D2246 /* Main.storyboard */; };
 		9DB7580026D37B25006D2246 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DB757FF26D37B25006D2246 /* Assets.xcassets */; };
@@ -364,6 +367,9 @@
 		9DAC539E26FB458C003F2D4C /* LotteryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryModel.swift; sourceTree = "<group>"; };
 		9DAC53A026FB4A41003F2D4C /* LotteryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LotteryView.xib; sourceTree = "<group>"; };
 		9DAC53A226FC2CD4003F2D4C /* ChineseCalendarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChineseCalendarModel.swift; sourceTree = "<group>"; };
+		9DAC53A426FC4B28003F2D4C /* SupportingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportingVC.swift; sourceTree = "<group>"; };
+		9DAC53A626FC4D4D003F2D4C /* PlainRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainRow.swift; sourceTree = "<group>"; };
+		9DAC53A826FC4D76003F2D4C /* PlainRow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlainRow.xib; sourceTree = "<group>"; };
 		9DB757F326D37B24006D2246 /* cabinet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cabinet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DB757F626D37B24006D2246 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DB757FD26D37B24006D2246 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -525,6 +531,8 @@
 				9D6BC26626F07CA800F000C9 /* ModalEditorRow.xib */,
 				9D6BC28226F0A0E100F000C9 /* CancelAndDoneRow.swift */,
 				9D6BC28E26F0A55000F000C9 /* SpacerRow.swift */,
+				9DAC53A626FC4D4D003F2D4C /* PlainRow.swift */,
+				9DAC53A826FC4D76003F2D4C /* PlainRow.xib */,
 			);
 			name = Rows;
 			sourceTree = "<group>";
@@ -706,6 +714,7 @@
 				9DAC539C26FB33C2003F2D4C /* LotteryView.swift */,
 				9DAC53A026FB4A41003F2D4C /* LotteryView.xib */,
 				9DAC539E26FB458C003F2D4C /* LotteryModel.swift */,
+				9DAC53A426FC4B28003F2D4C /* SupportingVC.swift */,
 			);
 			name = HomePage;
 			sourceTree = "<group>";
@@ -981,6 +990,7 @@
 				9DAC539826FB1314003F2D4C /* SettingTableViewCell.xib in Resources */,
 				9DAC539226FB0233003F2D4C /* Setting.json in Resources */,
 				9D66D1C826E7544400411D75 /* CalendarRow.xib in Resources */,
+				9DAC53A926FC4D76003F2D4C /* PlainRow.xib in Resources */,
 				9DB7580326D37B25006D2246 /* LaunchScreen.storyboard in Resources */,
 				9D6BC26826F07CA800F000C9 /* ModalEditorRow.xib in Resources */,
 				9D7B920E26E2339B001C11AD /* CurrentWeatherRow.xib in Resources */,
@@ -1107,6 +1117,7 @@
 				9D66D1BB26E5FB3E00411D75 /* KeyedDecodingContainer+Extension.swift in Sources */,
 				9D7B91C426E20BAD001C11AD /* BaseRow.swift in Sources */,
 				9DAC539726FB1314003F2D4C /* SettingTableViewCell.swift in Sources */,
+				9DAC53A726FC4D4D003F2D4C /* PlainRow.swift in Sources */,
 				9D82637126D8D30500981A3E /* NSLayoutConstraint+Utilities.swift in Sources */,
 				9DB7582C26D39CF3006D2246 /* BaseDateFormatter.swift in Sources */,
 				9DAC538E26FAF83B003F2D4C /* SettingVC.swift in Sources */,
@@ -1148,6 +1159,7 @@
 				9DCD1E5726F2F4C7004A4E98 /* AppGroup.swift in Sources */,
 				9D7B920A26E2285A001C11AD /* UILabel+Utilities.swift in Sources */,
 				9D6BC25226F0480400F000C9 /* NavigationBarStyle.swift in Sources */,
+				9DAC53A526FC4B28003F2D4C /* SupportingVC.swift in Sources */,
 				9D66D1C426E7349600411D75 /* UIImage+Utilities.swift in Sources */,
 				9D7B91E126E2102B001C11AD /* Comparable+Utilities.swift in Sources */,
 				9D7B91EE26E2148F001C11AD /* UIWindow+Utilities.swift in Sources */,
@@ -1450,6 +1462,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.evan.cabinet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1479,6 +1492,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.evan.cabinet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1657,7 +1671,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.evan.cabinet.Cabinet-Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1684,7 +1698,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.evan.cabinet.Cabinet-Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

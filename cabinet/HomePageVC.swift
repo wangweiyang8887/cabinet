@@ -14,6 +14,7 @@ class HomePageVC : BaseCollectionViewController {
         collectionView.ttDelegate = self
         collectionView.sections += BaseSection(createSectionContentItem(), margins: UIEdgeInsets(top: 16, left: 0, bottom: 0, right: 0))
         collectionView.refreshHeader = { [unowned self] in self.fetchData() }
+        navigationItem.leftBarButtonItem = UIBarButtonItem.supportButtonItem()
         navigationItem.rightBarButtonItem = UIBarButtonItem.settingButtonItem { [unowned self] in
             self.collectionView.sections = [ BaseSection(self.createSectionContentItem(), margins: UIEdgeInsets(top: 16, left: 0, bottom: 0, right: 0)) ]
             self.collectionView.reloadData()
@@ -44,6 +45,9 @@ class HomePageVC : BaseCollectionViewController {
             self?.daily = result
         }
         operations += Server.fetchLottery(with: "ssq").onSuccess { result in
+            print(result)
+        }
+        operations += Server.fetchLottery(with: "dlt").onSuccess { result in
             print(result)
         }
         operations += Server.fetchChieseCalendar(by: Date().cabinetDateFormatted()).onSuccess { [weak self] result in

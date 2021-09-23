@@ -34,7 +34,7 @@ final class SettingVC : BaseViewController {
         let result = TTButton()
         result.title = "排序"
         result.titleLabel?.font = .systemFont(ofSize: 15, weight: .medium)
-        result.setTitleColor(.nonStandardColor(withRGBHex: 0x3DB2FF), for: .normal)
+        result.setTitleColor(.cabinetBlack, for: .normal)
         result.addTapHandler { [unowned self] in
             self.tableView.isEditing.toggle()
             self.sortButton.title = self.tableView.isEditing ? "完成" : "排序"
