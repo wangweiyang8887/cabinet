@@ -1,13 +1,13 @@
 // Copyright © 2021 evan. All rights reserved.
 
-class DailyModel : Codable, Identifiable {
-    let id: Int
+class DailyModel : Codable {
     let constellation: String // 星座
     let lunar: String // 农历
     var red: [String] // 宜
     var green: [String] // 忌
     var daily: [String] // 每日一句 中文
     var sentence: [String] // 每日一句 英文
+    var lottery: [LotteryModel]
 }
 
 extension DailyModel {

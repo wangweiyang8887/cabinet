@@ -116,6 +116,35 @@
 		9DAC53A526FC4B28003F2D4C /* SupportingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC53A426FC4B28003F2D4C /* SupportingVC.swift */; };
 		9DAC53A726FC4D4D003F2D4C /* PlainRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC53A626FC4D4D003F2D4C /* PlainRow.swift */; };
 		9DAC53A926FC4D76003F2D4C /* PlainRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DAC53A826FC4D76003F2D4C /* PlainRow.xib */; };
+		9DAC53AF26FC671C003F2D4C /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DB7583426D3A7C0006D2246 /* WidgetKit.framework */; };
+		9DAC53B026FC671C003F2D4C /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DB7583626D3A7C0006D2246 /* SwiftUI.framework */; };
+		9DAC53B326FC671C003F2D4C /* LotteryWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC53B226FC671C003F2D4C /* LotteryWidget.swift */; };
+		9DAC53B526FC671F003F2D4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DAC53B426FC671F003F2D4C /* Assets.xcassets */; };
+		9DAC53B926FC671F003F2D4C /* LotteryWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9DAC53AE26FC671C003F2D4C /* LotteryWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9DAC53BE26FC6763003F2D4C /* LotteryEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC53BD26FC6763003F2D4C /* LotteryEntry.swift */; };
+		9DAC53C026FC67B9003F2D4C /* LotteryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC53BF26FC67B9003F2D4C /* LotteryView.swift */; };
+		9DAC53C126FC67EA003F2D4C /* BaseColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB7582626D399E6006D2246 /* BaseColor.swift */; };
+		9DAC53C226FC67F3003F2D4C /* BaseBuddle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB7582926D39A50006D2246 /* BaseBuddle.swift */; };
+		9DAC53C326FC67FB003F2D4C /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DB7582D26D3A371006D2246 /* Colors.xcassets */; };
+		9DAC53C426FC709C003F2D4C /* LotteryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC539E26FB458C003F2D4C /* LotteryModel.swift */; };
+		9DAC53C526FC70A5003F2D4C /* KeyedDecodingContainer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66D1BA26E5FB3E00411D75 /* KeyedDecodingContainer+Extension.swift */; };
+		9DAC53C626FC71AE003F2D4C /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66D1BC26E5FBDF00411D75 /* API.swift */; };
+		9DAC53C726FC71C0003F2D4C /* Codable+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC2A726F1F57400F000C9 /* Codable+Helper.swift */; };
+		9DAC53C826FC8335003F2D4C /* String+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC27626F0832600F000C9 /* String+Helper.swift */; };
+		9DAC53C926FC8347003F2D4C /* Sequence+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D82636E26D8D2A900981A3E /* Sequence+Utilities.swift */; };
+		9DAC53CE26FC9E32003F2D4C /* LotteryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC539E26FB458C003F2D4C /* LotteryModel.swift */; };
+		9DAC53CF26FC9E33003F2D4C /* LotteryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC539E26FB458C003F2D4C /* LotteryModel.swift */; };
+		9DAC53D026FC9E33003F2D4C /* LotteryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC539E26FB458C003F2D4C /* LotteryModel.swift */; };
+		9DAC53D126FC9E34003F2D4C /* LotteryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC539E26FB458C003F2D4C /* LotteryModel.swift */; };
+		9DAC53D226FC9E38003F2D4C /* String+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC27626F0832600F000C9 /* String+Helper.swift */; };
+		9DAC53D326FC9E38003F2D4C /* String+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC27626F0832600F000C9 /* String+Helper.swift */; };
+		9DAC53D426FC9E38003F2D4C /* String+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC27626F0832600F000C9 /* String+Helper.swift */; };
+		9DAC53D526FC9E39003F2D4C /* String+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC27626F0832600F000C9 /* String+Helper.swift */; };
+		9DAC53D626FC9E5C003F2D4C /* DailyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66D1CA26E7617E00411D75 /* DailyModel.swift */; };
+		9DAC53D726FC9E5D003F2D4C /* DailyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66D1CA26E7617E00411D75 /* DailyModel.swift */; };
+		9DAC53D826FC9E7D003F2D4C /* Sequence+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D82636E26D8D2A900981A3E /* Sequence+Utilities.swift */; };
+		9DAC53D926FC9E7D003F2D4C /* Sequence+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D82636E26D8D2A900981A3E /* Sequence+Utilities.swift */; };
+		9DAC53DA26FC9E7D003F2D4C /* Sequence+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D82636E26D8D2A900981A3E /* Sequence+Utilities.swift */; };
 		9DB757F726D37B24006D2246 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB757F626D37B24006D2246 /* AppDelegate.swift */; };
 		9DB757FE26D37B24006D2246 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DB757FC26D37B24006D2246 /* Main.storyboard */; };
 		9DB7580026D37B25006D2246 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DB757FF26D37B25006D2246 /* Assets.xcassets */; };
@@ -209,6 +238,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		9DAC53B726FC671F003F2D4C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9DB757EB26D37B24006D2246 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9DAC53AD26FC671C003F2D4C;
+			remoteInfo = LotteryWidgetExtension;
+		};
 		9DCD1E6826F32331004A4E98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9DB757EB26D37B24006D2246 /* Project object */;
@@ -248,6 +284,7 @@
 			files = (
 				9DCD1E8F26F34A59004A4E98 /* DailyWidgetExtension.appex in Embed App Extensions */,
 				9DCD1E6A26F32331004A4E98 /* CountDownWidgetExtension.appex in Embed App Extensions */,
+				9DAC53B926FC671F003F2D4C /* LotteryWidgetExtension.appex in Embed App Extensions */,
 				9DE5E74C26D4A48600FF8B0A /* cabinet widgetExtension.appex in Embed App Extensions */,
 				9DCD1EA826F36385004A4E98 /* InspireWidgetExtension.appex in Embed App Extensions */,
 			);
@@ -370,6 +407,12 @@
 		9DAC53A426FC4B28003F2D4C /* SupportingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportingVC.swift; sourceTree = "<group>"; };
 		9DAC53A626FC4D4D003F2D4C /* PlainRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainRow.swift; sourceTree = "<group>"; };
 		9DAC53A826FC4D76003F2D4C /* PlainRow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlainRow.xib; sourceTree = "<group>"; };
+		9DAC53AE26FC671C003F2D4C /* LotteryWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LotteryWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DAC53B226FC671C003F2D4C /* LotteryWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryWidget.swift; sourceTree = "<group>"; };
+		9DAC53B426FC671F003F2D4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9DAC53B626FC671F003F2D4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DAC53BD26FC6763003F2D4C /* LotteryEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryEntry.swift; sourceTree = "<group>"; };
+		9DAC53BF26FC67B9003F2D4C /* LotteryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryView.swift; sourceTree = "<group>"; };
 		9DB757F326D37B24006D2246 /* cabinet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cabinet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DB757F626D37B24006D2246 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DB757FD26D37B24006D2246 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -421,6 +464,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9DAC53AB26FC671C003F2D4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DAC53B026FC671C003F2D4C /* SwiftUI.framework in Frameworks */,
+				9DAC53AF26FC671C003F2D4C /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9DB757F026D37B24006D2246 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -629,6 +681,18 @@
 			name = Setting;
 			sourceTree = "<group>";
 		};
+		9DAC53B126FC671C003F2D4C /* LotteryWidget */ = {
+			isa = PBXGroup;
+			children = (
+				9DAC53B226FC671C003F2D4C /* LotteryWidget.swift */,
+				9DAC53BD26FC6763003F2D4C /* LotteryEntry.swift */,
+				9DAC53BF26FC67B9003F2D4C /* LotteryView.swift */,
+				9DAC53B426FC671F003F2D4C /* Assets.xcassets */,
+				9DAC53B626FC671F003F2D4C /* Info.plist */,
+			);
+			path = LotteryWidget;
+			sourceTree = "<group>";
+		};
 		9DB757EA26D37B24006D2246 = {
 			isa = PBXGroup;
 			children = (
@@ -639,6 +703,7 @@
 				9DCD1E6226F32330004A4E98 /* CountDownWidget */,
 				9DCD1E8726F34A58004A4E98 /* DailyWidget */,
 				9DCD1EA026F36383004A4E98 /* InspireWidget */,
+				9DAC53B126FC671C003F2D4C /* LotteryWidget */,
 				9DB757F426D37B24006D2246 /* Products */,
 				32CEA01F4C72B7C0875F9C21 /* Pods */,
 				E3701FF25E82A516F9A5F9A4 /* Frameworks */,
@@ -653,6 +718,7 @@
 				9DCD1E5F26F32330004A4E98 /* CountDownWidgetExtension.appex */,
 				9DCD1E8426F34A58004A4E98 /* DailyWidgetExtension.appex */,
 				9DCD1E9D26F36383004A4E98 /* InspireWidgetExtension.appex */,
+				9DAC53AE26FC671C003F2D4C /* LotteryWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -838,6 +904,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		9DAC53AD26FC671C003F2D4C /* LotteryWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9DAC53BA26FC671F003F2D4C /* Build configuration list for PBXNativeTarget "LotteryWidgetExtension" */;
+			buildPhases = (
+				9DAC53AA26FC671C003F2D4C /* Sources */,
+				9DAC53AB26FC671C003F2D4C /* Frameworks */,
+				9DAC53AC26FC671C003F2D4C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LotteryWidgetExtension;
+			productName = LotteryWidgetExtension;
+			productReference = 9DAC53AE26FC671C003F2D4C /* LotteryWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		9DB757F226D37B24006D2246 /* cabinet */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9DB7580726D37B25006D2246 /* Build configuration list for PBXNativeTarget "cabinet" */;
@@ -856,6 +939,7 @@
 				9DCD1E6926F32331004A4E98 /* PBXTargetDependency */,
 				9DCD1E8E26F34A59004A4E98 /* PBXTargetDependency */,
 				9DCD1EA726F36385004A4E98 /* PBXTargetDependency */,
+				9DAC53B826FC671F003F2D4C /* PBXTargetDependency */,
 			);
 			name = cabinet;
 			productName = cabinet;
@@ -940,6 +1024,9 @@
 				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = evan;
 				TargetAttributes = {
+					9DAC53AD26FC671C003F2D4C = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
 					9DB757F226D37B24006D2246 = {
 						CreatedOnToolsVersion = 12.5.1;
 						LastSwiftMigration = 1250;
@@ -976,11 +1063,21 @@
 				9DCD1E5E26F32330004A4E98 /* CountDownWidgetExtension */,
 				9DCD1E8326F34A58004A4E98 /* DailyWidgetExtension */,
 				9DCD1E9C26F36383004A4E98 /* InspireWidgetExtension */,
+				9DAC53AD26FC671C003F2D4C /* LotteryWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9DAC53AC26FC671C003F2D4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DAC53B526FC671F003F2D4C /* Assets.xcassets in Resources */,
+				9DAC53C326FC67FB003F2D4C /* Colors.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9DB757F126D37B24006D2246 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1084,6 +1181,25 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9DAC53AA26FC671C003F2D4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DAC53C726FC71C0003F2D4C /* Codable+Helper.swift in Sources */,
+				9DAC53C126FC67EA003F2D4C /* BaseColor.swift in Sources */,
+				9DAC53C426FC709C003F2D4C /* LotteryModel.swift in Sources */,
+				9DAC53C226FC67F3003F2D4C /* BaseBuddle.swift in Sources */,
+				9DAC53C826FC8335003F2D4C /* String+Helper.swift in Sources */,
+				9DAC53BE26FC6763003F2D4C /* LotteryEntry.swift in Sources */,
+				9DAC53C526FC70A5003F2D4C /* KeyedDecodingContainer+Extension.swift in Sources */,
+				9DAC53D726FC9E5D003F2D4C /* DailyModel.swift in Sources */,
+				9DAC53C026FC67B9003F2D4C /* LotteryView.swift in Sources */,
+				9DAC53C626FC71AE003F2D4C /* API.swift in Sources */,
+				9DAC53B326FC671C003F2D4C /* LotteryWidget.swift in Sources */,
+				9DAC53C926FC8347003F2D4C /* Sequence+Utilities.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9DB757EF26D37B24006D2246 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1202,7 +1318,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DCD1E7426F3249B004A4E98 /* CountDownEntry.swift in Sources */,
+				9DAC53D626FC9E5C003F2D4C /* DailyModel.swift in Sources */,
 				9DCD1E6F26F32441004A4E98 /* UserDefaults+Helper.swift in Sources */,
+				9DAC53D926FC9E7D003F2D4C /* Sequence+Utilities.swift in Sources */,
+				9DAC53D326FC9E38003F2D4C /* String+Helper.swift in Sources */,
 				9DCD1E7626F324C7004A4E98 /* CountDownView.swift in Sources */,
 				9DCD1E7F26F34623004A4E98 /* BaseDateFormatter.swift in Sources */,
 				9DCD1E7726F32618004A4E98 /* BaseColor.swift in Sources */,
@@ -1213,6 +1332,7 @@
 				9DCD1E7D26F3456E004A4E98 /* TimeZone+Helper.swift in Sources */,
 				9DCD1E6426F32330004A4E98 /* CountDownWidget.swift in Sources */,
 				9DCD1E7E26F3457E004A4E98 /* Comparable+Utilities.swift in Sources */,
+				9DAC53CF26FC9E33003F2D4C /* LotteryModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1224,6 +1344,8 @@
 				9DCD1E9626F34BE9004A4E98 /* BaseColor.swift in Sources */,
 				9DCD1EB726F4678D004A4E98 /* CalendarDate.swift in Sources */,
 				9DCD1EBA26F46931004A4E98 /* WidgetServer.swift in Sources */,
+				9DAC53D826FC9E7D003F2D4C /* Sequence+Utilities.swift in Sources */,
+				9DAC53D026FC9E33003F2D4C /* LotteryModel.swift in Sources */,
 				9DCD1EB926F467C8004A4E98 /* Comparable+Utilities.swift in Sources */,
 				9DCD1E9526F34BDC004A4E98 /* DailyView.swift in Sources */,
 				9DCD1EBE26F4696B004A4E98 /* Codable+Helper.swift in Sources */,
@@ -1235,6 +1357,7 @@
 				9DCD1E8926F34A58004A4E98 /* DailyWidget.swift in Sources */,
 				9DCD1EBF26F469B4004A4E98 /* DailyModel.swift in Sources */,
 				9DCD1EBD26F4694F004A4E98 /* API.swift in Sources */,
+				9DAC53D426FC9E38003F2D4C /* String+Helper.swift in Sources */,
 				9DCD1EB526F445E5004A4E98 /* BaseDateFormatter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1244,6 +1367,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DCD1ECF26F48044004A4E98 /* DailyEntry.swift in Sources */,
+				9DAC53D126FC9E34003F2D4C /* LotteryModel.swift in Sources */,
 				9DCD1ECE26F4802F004A4E98 /* Codable+Helper.swift in Sources */,
 				9DCD1ECA26F48001004A4E98 /* WidgetServer.swift in Sources */,
 				9DCD1ECB26F48008004A4E98 /* CurrentWeather.swift in Sources */,
@@ -1256,6 +1380,7 @@
 				9DCD1EAF26F3640E004A4E98 /* BaseBuddle.swift in Sources */,
 				9DCD1EAD26F363A0004A4E98 /* InspireView.swift in Sources */,
 				9DCD1EB626F445E5004A4E98 /* BaseDateFormatter.swift in Sources */,
+				9DAC53D526FC9E39003F2D4C /* String+Helper.swift in Sources */,
 				9DCD1ECC26F48011004A4E98 /* API.swift in Sources */,
 				9DCD1EC826F47E80004A4E98 /* DailyModel.swift in Sources */,
 			);
@@ -1265,13 +1390,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DAC53D226FC9E38003F2D4C /* String+Helper.swift in Sources */,
 				9D6BC2A626F1F53D00F000C9 /* WidgetServer.swift in Sources */,
+				9DAC53DA26FC9E7D003F2D4C /* Sequence+Utilities.swift in Sources */,
 				9D6BC2A926F1F58800F000C9 /* Codable+Helper.swift in Sources */,
 				9D6BC2A026F1F19400F000C9 /* API.swift in Sources */,
 				9DE5E75126D4BF3F00FF8B0A /* CalendarView.swift in Sources */,
 				9DE5E75526D4E3AD00FF8B0A /* BaseColor.swift in Sources */,
 				9D6BC29D26F1EBEF00F000C9 /* CurrentWeather.swift in Sources */,
 				9DCD1E5826F2F666004A4E98 /* UserDefaults+Helper.swift in Sources */,
+				9DAC53CE26FC9E32003F2D4C /* LotteryModel.swift in Sources */,
 				9DCD1E5926F316D2004A4E98 /* KeyedDecodingContainer+Extension.swift in Sources */,
 				9DE5E75326D4C12E00FF8B0A /* Calendar.swift in Sources */,
 				9DE5E74626D4A48500FF8B0A /* cabinet_widget.swift in Sources */,
@@ -1285,6 +1413,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		9DAC53B826FC671F003F2D4C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9DAC53AD26FC671C003F2D4C /* LotteryWidgetExtension */;
+			targetProxy = 9DAC53B726FC671F003F2D4C /* PBXContainerItemProxy */;
+		};
 		9DCD1E6926F32331004A4E98 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9DCD1E5E26F32330004A4E98 /* CountDownWidgetExtension */;
@@ -1327,6 +1460,52 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		9DAC53BB26FC671F003F2D4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EVG8QY6QFT;
+				INFOPLIST_FILE = LotteryWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.evan.cabinet.LotteryWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9DAC53BC26FC671F003F2D4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EVG8QY6QFT;
+				INFOPLIST_FILE = LotteryWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.evan.cabinet.LotteryWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		9DB7580526D37B25006D2246 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1711,6 +1890,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9DAC53BA26FC671F003F2D4C /* Build configuration list for PBXNativeTarget "LotteryWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DAC53BB26FC671F003F2D4C /* Debug */,
+				9DAC53BC26FC671F003F2D4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9DB757EE26D37B24006D2246 /* Build configuration list for PBXProject "cabinet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

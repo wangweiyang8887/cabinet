@@ -23,19 +23,17 @@ final class LotteryView : UIView {
         guard let model = ssqModel else { return }
         ssqNumberLabel.text = model.lottery_no
         ssqDateLabel.text = model.lottery_date
-        guard let result = model.lottery_res.trimmedNilIfEmpty else { return }
-        redBallLabel.text = result.components(separatedBy: ",").prefix(6).joined(separator: " ")
-        blueBallLabel.text = result.components(separatedBy: ",").last
+        redBallLabel.text = model.ssqRedBall
+        blueBallLabel.text = model.ssqBlueBall
     }
     
     private func handleDLTModelChanged() {
         guard let model = dltModel else { return }
         dltNumberLabel.text = model.lottery_no
         dltDateLabel.text = model.lottery_date
-        guard let result = model.lottery_res.trimmedNilIfEmpty else { return }
-        dltRedBallLabel.text = result.components(separatedBy: ",").prefix(5).joined(separator: " ")
-        dltBlueBallOneLabel.text = result.components(separatedBy: ",").suffix(from: 5).first
-        dltBlueBallTwoLabel.text = result.components(separatedBy: ",").suffix(from: 5).last
+        dltRedBallLabel.text = model.dltRedBall
+        dltBlueBallOneLabel.text = model.dltBlueBallOne
+        dltBlueBallTwoLabel.text = model.dltBlueBallTwo
     }
 }
 
@@ -43,8 +41,18 @@ final class LotteryRow : BaseRow {
     override class var height: RowHeight { return .fixed(168) }
     override class var margins: UIEdgeInsets { return UIEdgeInsets(uniform: 16) }
     
-    var ssqModel: LotteryModel? { didSet { lotteryView.ssqModel = ssqModel } }
-    var dltModel: LotteryModel? { didSet { lotteryView.dltModel = dltModel } }
+    var ssqModel: LotteryModel? {
+        didSet {
+            guard let oldDate = oldValue?.lottery_date.trimmedNilIfEmpty, let newDate = ssqModel?.lottery_date.trimmedNilIfEmpty, oldDate == newDate else { return }
+        lotteryView.ssqModel = ssqModel
+        }
+    }
+    var dltModel: LotteryModel? {
+        didSet {
+            guard let oldDate = oldValue?.lottery_date.trimmedNilIfEmpty, let newDate = dltModel?.lottery_date.trimmedNilIfEmpty, oldDate == newDate else { return }
+        lotteryView.dltModel = dltModel
+        }
+    }
     
     override func initialize() {
         super.initialize()
@@ -59,4 +67,10 @@ final class LotteryRow : BaseRow {
     }
     
     private lazy var lotteryView: LotteryView = LotteryView.loadFromNib()
+}
+
+extension Server {
+    static func fetchLottery(with id: String) -> Operation<LotteryModel> {
+        return Server.fire(.get, .lottery, parameters: [ "lottery_id":id, "lottery_no":"", "key":"f7359c92478f397e465867fc24a550a2" ])
+    }
 }

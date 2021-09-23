@@ -7,6 +7,8 @@ class HomePageVC : BaseCollectionViewController {
     private var settings: [Setting] { return FileManager.getSettings() }
     var currentWeather: CurrentWeather? { didSet { updateContent() } }
     var daily: DailyModel? { didSet { updateContent() } }
+    var ssqModel: LotteryModel?
+    var dltModel: LotteryModel?
     override var navigationBarStyle: NavigationBarStyle { return .whiteWithoutShadow }
     
     override func viewDidLoad() {
@@ -35,6 +37,7 @@ class HomePageVC : BaseCollectionViewController {
         }
         var operations: [AnyOperation] = []
         operations += Server.fetchDailyReport().onSuccess { [weak self] result in
+            guard let self = self else { return }
             if let shuffledDay = UserDefaults.shared[.shuffledDay], shuffledDay != CalendarDate.today(in: .current).day {
                 result.sentence.shuffle()
                 result.daily.shuffle()
@@ -42,7 +45,9 @@ class HomePageVC : BaseCollectionViewController {
                 result.green.shuffle()
                 UserDefaults.shared[.shuffledDay] = CalendarDate.today(in: .current).day
             }
-            self?.daily = result
+            self.daily = result
+            self.ssqModel = result.lottery.first
+            self.dltModel = result.lottery.last
         }
         operations += Server.fetchLottery(with: "ssq").onSuccess { [weak self] result in
             self?.lotteryRow.ssqModel = result
@@ -55,6 +60,12 @@ class HomePageVC : BaseCollectionViewController {
         }
         OperationGroup(operations).onCompletion { [weak self] _ in
             guard let self = self else { return }
+            if self.lotteryRow.ssqModel?.lottery_id.trimmedNilIfEmpty == nil {
+                self.lotteryRow.ssqModel = self.ssqModel
+            }
+            if self.lotteryRow.dltModel?.lottery_id.trimmedNilIfEmpty == nil {
+                self.lotteryRow.dltModel = self.dltModel
+            }
             self.collectionView.endRefresh()
             self.collectionView.reloadData()
         }
