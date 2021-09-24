@@ -69,6 +69,8 @@ extension UIColor {
     @objc public static var zillyLightestGray: UIColor { return UIColor(named: "Concrete", in: BaseBundle.bundle, compatibleWith: nil)! }
     /// Alabaster (#FAFAFA)
     @objc public static var cabinetOffWhite: UIColor { return UIColor(named: "Alabaster", in: BaseBundle.bundle, compatibleWith: nil)! }
+    /// Separator (#E9E9E9)
+    @objc public static var cabinetSeparator: UIColor { return UIColor(named: "Separator", in: BaseBundle.bundle, compatibleWith: nil)! }
     
     /// Initializes a color instance declared outside of the project's design guidelines using a custom RGB hex.
     public static func nonStandardColor(withRGBHex value: UInt) -> UIColor {
