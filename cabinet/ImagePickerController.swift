@@ -7,7 +7,7 @@ import Photos
 import CoreServices
 
 /// A UIImagePickerController wrapper. NOTE: This class isn't a subclass of UIImagePickerController because it shouldn't be subclasses.
-class ImagePickerController : NSObject, MediaPicking, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class TTImagePickerController : NSObject, MediaPicking, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     var didPickMediaURLs: MediaPickingURLsBlock?
     /// Returns the edited image by default. If it's nil, it returns the original image.
     var didPickImages: MediaPickingImagesBlock?
@@ -93,12 +93,12 @@ class ImagePickerController : NSObject, MediaPicking, UIImagePickerControllerDel
 var imagePickerAssociatedObjectHandler: UInt8 = 0
 
 private extension UIImagePickerController {
-    var pgImagePicker: ImagePickerController {
-        get { return objc_getAssociatedObject(self, &imagePickerAssociatedObjectHandler) as! ImagePickerController }
+    var pgImagePicker: TTImagePickerController {
+        get { return objc_getAssociatedObject(self, &imagePickerAssociatedObjectHandler) as! TTImagePickerController }
         set { objc_setAssociatedObject(self, &imagePickerAssociatedObjectHandler, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC) }
     }
 }
 
-final class CroppableImagePickerController : ImagePickerController {
+final class CroppableImagePickerController : TTImagePickerController {
     override class var isCroppable: Bool { return true }
 }

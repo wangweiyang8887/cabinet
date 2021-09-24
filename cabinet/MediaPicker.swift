@@ -63,7 +63,7 @@ extension UIViewController {
                 if mediaPicker.allowsCropping {
                     return CroppableImagePickerController(source: .camera, preferredCameraSource: mediaPicker.cameraSource == .rear ? .rear : .front, automaticImageCompression: mediaPicker.automaticImageCompression)
                 } else {
-                    return ImagePickerController(source: .camera, preferredCameraSource: mediaPicker.cameraSource == .rear ? .rear : .front, automaticImageCompression: mediaPicker.automaticImageCompression)
+                    return TTImagePickerController(source: .camera, preferredCameraSource: mediaPicker.cameraSource == .rear ? .rear : .front, automaticImageCompression: mediaPicker.automaticImageCompression)
                 }
             }()
             picker.didPickImages = mediaPicker.didPickImages
@@ -73,7 +73,7 @@ extension UIViewController {
         }
         let photoLibraryTitle = NSLocalizedString("从手机相册选择", comment: "")
         let photoLibrary = UIAlertAction(title: photoLibraryTitle, style: .default) { [unowned self] _ in
-            var picker: MediaPicking = ImagePickerController(source: .photoLibrary, preferredCameraSource: mediaPicker.cameraSource == .rear ? .rear : .front)
+            var picker: MediaPicking = TTImagePickerController(source: .photoLibrary, preferredCameraSource: mediaPicker.cameraSource == .rear ? .rear : .front)
             picker.didPickImages = mediaPicker.didPickImages
             picker.didPickMediaURLs = mediaPicker.didPickMediaURLs
             picker.didPickDocumentData = mediaPicker.didPickDocumentData
@@ -106,13 +106,13 @@ protocol MediaPicking {
 extension UIViewController {
     fileprivate func show(imagePicker: MediaPicking) {
         switch imagePicker {
-        case let picker as ImagePickerController: show(imagePicker: picker)
+        case let picker as TTImagePickerController: show(imagePicker: picker)
         case let picker as UIViewController: show(imagePicker: picker)
         default: 🔥
         }
     }
 
-    private func show(imagePicker: ImagePickerController) {
+    private func show(imagePicker: TTImagePickerController) {
         AuthorizationView.showAlert(with: (imagePicker.source == .camera) ? .camera : .photoLibrary) { [unowned self] in imagePicker.show(from: self) }
     }
 

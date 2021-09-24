@@ -8,4 +8,5 @@ target 'cabinet' do
  pod 'PanModal'
  pod 'MJRefresh'
  pod 'BlocksKit', :git => "git@github.com:wangweiyang8887/BlocksKit.git"
+ pod 'FMPhotoPicker'
 end
