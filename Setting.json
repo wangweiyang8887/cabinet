@@ -23,5 +23,10 @@
         "title":"彩票",
         "kind":5,
         "isEnabled":1
+    },
+    {
+        "title":"图片",
+        "kind":6,
+        "isEnabled":1
     }
 ]

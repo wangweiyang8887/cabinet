@@ -145,6 +145,17 @@
 		9DAC53D826FC9E7D003F2D4C /* Sequence+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D82636E26D8D2A900981A3E /* Sequence+Utilities.swift */; };
 		9DAC53D926FC9E7D003F2D4C /* Sequence+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D82636E26D8D2A900981A3E /* Sequence+Utilities.swift */; };
 		9DAC53DA26FC9E7D003F2D4C /* Sequence+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D82636E26D8D2A900981A3E /* Sequence+Utilities.swift */; };
+		9DAC53DE26FD797E003F2D4C /* ImageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC53DD26FD797E003F2D4C /* ImageRow.swift */; };
+		9DAC53E126FD7D4D003F2D4C /* AuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC53E026FD7D4D003F2D4C /* AuthorizationView.swift */; };
+		9DAC53E326FD7D81003F2D4C /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC53E226FD7D81003F2D4C /* Authorization.swift */; };
+		9DAC53E526FD7E0D003F2D4C /* UIAlertViewController+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC53E426FD7E0D003F2D4C /* UIAlertViewController+Utilities.swift */; };
+		9DAC53E726FD7EAF003F2D4C /* MediaPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC53E626FD7EAF003F2D4C /* MediaPicker.swift */; };
+		9DAC53E926FD7F64003F2D4C /* DocumentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC53E826FD7F64003F2D4C /* DocumentData.swift */; };
+		9DAC53EB26FD7F8E003F2D4C /* ImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC53EA26FD7F8E003F2D4C /* ImagePickerController.swift */; };
+		9DAC53ED26FD7FC5003F2D4C /* UIImage+Orientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC53EC26FD7FC5003F2D4C /* UIImage+Orientation.swift */; };
+		9DAC53EF26FD807F003F2D4C /* UIImage+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC53EE26FD807F003F2D4C /* UIImage+Helper.swift */; };
+		9DAC53F126FD80D1003F2D4C /* URL+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC53F026FD80D1003F2D4C /* URL+Helper.swift */; };
+		9DAC53F326FD810E003F2D4C /* PhotoConfirmationPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC53F226FD810E003F2D4C /* PhotoConfirmationPopUpVC.swift */; };
 		9DB757F726D37B24006D2246 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB757F626D37B24006D2246 /* AppDelegate.swift */; };
 		9DB757FE26D37B24006D2246 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DB757FC26D37B24006D2246 /* Main.storyboard */; };
 		9DB7580026D37B25006D2246 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DB757FF26D37B25006D2246 /* Assets.xcassets */; };
@@ -414,6 +425,17 @@
 		9DAC53BD26FC6763003F2D4C /* LotteryEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryEntry.swift; sourceTree = "<group>"; };
 		9DAC53BF26FC67B9003F2D4C /* LotteryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryView.swift; sourceTree = "<group>"; };
 		9DAC53DB26FD759D003F2D4C /* DailyWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DailyWidgetExtension.entitlements; sourceTree = "<group>"; };
+		9DAC53DD26FD797E003F2D4C /* ImageRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRow.swift; sourceTree = "<group>"; };
+		9DAC53E026FD7D4D003F2D4C /* AuthorizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationView.swift; sourceTree = "<group>"; };
+		9DAC53E226FD7D81003F2D4C /* Authorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authorization.swift; sourceTree = "<group>"; };
+		9DAC53E426FD7E0D003F2D4C /* UIAlertViewController+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertViewController+Utilities.swift"; sourceTree = "<group>"; };
+		9DAC53E626FD7EAF003F2D4C /* MediaPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPicker.swift; sourceTree = "<group>"; };
+		9DAC53E826FD7F64003F2D4C /* DocumentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentData.swift; sourceTree = "<group>"; };
+		9DAC53EA26FD7F8E003F2D4C /* ImagePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerController.swift; sourceTree = "<group>"; };
+		9DAC53EC26FD7FC5003F2D4C /* UIImage+Orientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Orientation.swift"; sourceTree = "<group>"; };
+		9DAC53EE26FD807F003F2D4C /* UIImage+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Helper.swift"; sourceTree = "<group>"; };
+		9DAC53F026FD80D1003F2D4C /* URL+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Helper.swift"; sourceTree = "<group>"; };
+		9DAC53F226FD810E003F2D4C /* PhotoConfirmationPopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoConfirmationPopUpVC.swift; sourceTree = "<group>"; };
 		9DB757F326D37B24006D2246 /* cabinet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cabinet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DB757F626D37B24006D2246 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DB757FD26D37B24006D2246 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -668,6 +690,10 @@
 				9DAC538A26FAF75A003F2D4C /* UIBarButtonItem+Utilities.swift */,
 				9DAC539326FB1173003F2D4C /* UITableView+Helper.swift */,
 				9DAC539926FB1612003F2D4C /* FileManager+Helper.swift */,
+				9DAC53E426FD7E0D003F2D4C /* UIAlertViewController+Utilities.swift */,
+				9DAC53EC26FD7FC5003F2D4C /* UIImage+Orientation.swift */,
+				9DAC53EE26FD807F003F2D4C /* UIImage+Helper.swift */,
+				9DAC53F026FD80D1003F2D4C /* URL+Helper.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -692,6 +718,28 @@
 				9DAC53B626FC671F003F2D4C /* Info.plist */,
 			);
 			path = LotteryWidget;
+			sourceTree = "<group>";
+		};
+		9DAC53DC26FD794D003F2D4C /* Photograph */ = {
+			isa = PBXGroup;
+			children = (
+				9DAC53DF26FD7D34003F2D4C /* MediaPicker */,
+				9DAC53DD26FD797E003F2D4C /* ImageRow.swift */,
+			);
+			name = Photograph;
+			sourceTree = "<group>";
+		};
+		9DAC53DF26FD7D34003F2D4C /* MediaPicker */ = {
+			isa = PBXGroup;
+			children = (
+				9DAC53E026FD7D4D003F2D4C /* AuthorizationView.swift */,
+				9DAC53E226FD7D81003F2D4C /* Authorization.swift */,
+				9DAC53E626FD7EAF003F2D4C /* MediaPicker.swift */,
+				9DAC53E826FD7F64003F2D4C /* DocumentData.swift */,
+				9DAC53EA26FD7F8E003F2D4C /* ImagePickerController.swift */,
+				9DAC53F226FD810E003F2D4C /* PhotoConfirmationPopUpVC.swift */,
+			);
+			name = MediaPicker;
 			sourceTree = "<group>";
 		};
 		9DB757EA26D37B24006D2246 = {
@@ -733,6 +781,7 @@
 				9DB7581C26D38DAC006D2246 /* HomePage */,
 				9D6BC24D26EF68F700F000C9 /* Reminder */,
 				9DB7581B26D38D98006D2246 /* CurrentDate */,
+				9DAC53DC26FD794D003F2D4C /* Photograph */,
 				9DAC538C26FAF823003F2D4C /* Setting */,
 				9DB7580A26D3831D006D2246 /* Base */,
 				9DB757F626D37B24006D2246 /* AppDelegate.swift */,
@@ -1209,12 +1258,14 @@
 				9D6BC26D26F07E7500F000C9 /* TTTextField.swift in Sources */,
 				9D7B91E326E2115D001C11AD /* UIView+Constrains.swift in Sources */,
 				9D6BC26126F07BE500F000C9 /* EditorRow.swift in Sources */,
+				9DAC53E326FD7D81003F2D4C /* Authorization.swift in Sources */,
 				9D66D1BD26E5FBDF00411D75 /* API.swift in Sources */,
 				9D7B91B726E20AA9001C11AD /* ItemRows.swift in Sources */,
 				9D6BC24F26EF692B00F000C9 /* ReminderVC.swift in Sources */,
 				9D66D1CB26E7617E00411D75 /* DailyModel.swift in Sources */,
 				9DB7581926D38D90006D2246 /* CurrentDateVC.swift in Sources */,
 				9D7B91D926E20E7A001C11AD /* Groups.swift in Sources */,
+				9DAC53E726FD7EAF003F2D4C /* MediaPicker.swift in Sources */,
 				9D82637326D8D33A00981A3E /* UIView+IBInspectables.swift in Sources */,
 				9D6BC27F26F0948C00F000C9 /* UserDefaults+Helper.swift in Sources */,
 				9D7B91B426E200FB001C11AD /* UICollectionView+Utilities.swift in Sources */,
@@ -1232,6 +1283,7 @@
 				9DAC53A326FC2CD4003F2D4C /* ChineseCalendarModel.swift in Sources */,
 				9D6BC28F26F0A55000F000C9 /* SpacerRow.swift in Sources */,
 				9D7B91F826E21871001C11AD /* KeyboardObserver.swift in Sources */,
+				9DAC53DE26FD797E003F2D4C /* ImageRow.swift in Sources */,
 				9D66D1BB26E5FB3E00411D75 /* KeyedDecodingContainer+Extension.swift in Sources */,
 				9D7B91C426E20BAD001C11AD /* BaseRow.swift in Sources */,
 				9DAC539726FB1314003F2D4C /* SettingTableViewCell.swift in Sources */,
@@ -1248,8 +1300,10 @@
 				9D7B91BB26E20AFB001C11AD /* BaseCollectionViewCell.swift in Sources */,
 				9D6BC27526F082F800F000C9 /* TrimmedStringEditor.swift in Sources */,
 				9DB7582226D39656006D2246 /* NSObject+Helper.swift in Sources */,
+				9DAC53EB26FD7F8E003F2D4C /* ImagePickerController.swift in Sources */,
 				9D6BC27926F08BAC00F000C9 /* CalendarDate.swift in Sources */,
 				9D7B91E526E211A6001C11AD /* UIDevice+Utilities.swift in Sources */,
+				9DAC53E526FD7E0D003F2D4C /* UIAlertViewController+Utilities.swift in Sources */,
 				9D7B91C126E20B82001C11AD /* GroupedSection.swift in Sources */,
 				9D7B91B926E20AD0001C11AD /* BaseCollectionView.swift in Sources */,
 				9D7B91D526E20E11001C11AD /* Operation.swift in Sources */,
@@ -1257,6 +1311,7 @@
 				9D6BC26426F07C9D00F000C9 /* StringEditorRow.swift in Sources */,
 				9D6BC28326F0A0E100F000C9 /* CancelAndDoneRow.swift in Sources */,
 				9D7B920426E22302001C11AD /* TTGradientView.swift in Sources */,
+				9DAC53ED26FD7FC5003F2D4C /* UIImage+Orientation.swift in Sources */,
 				9D7B920626E22339001C11AD /* TTGradient.swift in Sources */,
 				9D6BC27B26F08C2F00F000C9 /* TimeZone+Helper.swift in Sources */,
 				9D6BC25E26F06F0600F000C9 /* Array+Utilities.swift in Sources */,
@@ -1267,6 +1322,7 @@
 				9D7B91FC26E218ED001C11AD /* Event.swift in Sources */,
 				9D7B91C626E20BE1001C11AD /* UIStackView+Utilities.swift in Sources */,
 				9D6BC28726F0A2B100F000C9 /* UIViewController+Utilities.swift in Sources */,
+				9DAC53E126FD7D4D003F2D4C /* AuthorizationView.swift in Sources */,
 				9D6BC28B26F0A37C00F000C9 /* DatePickerVC.swift in Sources */,
 				9D6BC27D26F0930C00F000C9 /* EventModel.swift in Sources */,
 				9D66D1C626E7542500411D75 /* CalendarRow.swift in Sources */,
@@ -1276,6 +1332,7 @@
 				9D7B91B026E0E914001C11AD /* TimerManager.swift in Sources */,
 				9DCD1E5726F2F4C7004A4E98 /* AppGroup.swift in Sources */,
 				9D7B920A26E2285A001C11AD /* UILabel+Utilities.swift in Sources */,
+				9DAC53F326FD810E003F2D4C /* PhotoConfirmationPopUpVC.swift in Sources */,
 				9D6BC25226F0480400F000C9 /* NavigationBarStyle.swift in Sources */,
 				9DAC53A526FC4B28003F2D4C /* SupportingVC.swift in Sources */,
 				9D66D1C426E7349600411D75 /* UIImage+Utilities.swift in Sources */,
@@ -1284,6 +1341,7 @@
 				9D7B91BF26E20B4D001C11AD /* BaseCollectionViewLayout.swift in Sources */,
 				9D6BC25426F04C9A00F000C9 /* ReminderRow.swift in Sources */,
 				9D6BC25A26F06E0800F000C9 /* TextRow.swift in Sources */,
+				9DAC53F126FD80D1003F2D4C /* URL+Helper.swift in Sources */,
 				9D6BC26926F07CA800F000C9 /* ModalEditorRow.swift in Sources */,
 				9DB7580E26D3837A006D2246 /* BaseViewController.swift in Sources */,
 				9D7B91FA26E21894001C11AD /* Observers.swift in Sources */,
@@ -1303,8 +1361,10 @@
 				9D7B91BD26E20B2B001C11AD /* BaseCollectionViewController.swift in Sources */,
 				9D66D1C226E608DC00411D75 /* LocationManager.swift in Sources */,
 				9D6BC27126F07EF800F000C9 /* TextViewObserver.swift in Sources */,
+				9DAC53E926FD7F64003F2D4C /* DocumentData.swift in Sources */,
 				9DB7582726D399E6006D2246 /* BaseColor.swift in Sources */,
 				9DB7581026D383A7006D2246 /* BaseNavigationController.swift in Sources */,
+				9DAC53EF26FD807F003F2D4C /* UIImage+Helper.swift in Sources */,
 				9D6BC28126F0A07500F000C9 /* BaseBottomSheetVC.swift in Sources */,
 				9D6BC2A826F1F57400F000C9 /* Codable+Helper.swift in Sources */,
 				9D66D1BF26E5FEDC00411D75 /* CurrentWeather.swift in Sources */,

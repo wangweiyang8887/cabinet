@@ -40,13 +40,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func checkLocalJson() {
         var mainSetting: [Setting] = []
         var userSetting: [Setting] = []
-        if let mainUrl = Bundle.main.url(forResource: "Setting", withExtension: "json") {
-            let jsonData = try! Data(contentsOf: mainUrl)
+        if let mainUrl = Bundle.main.url(forResource: "Setting", withExtension: "json"), let jsonData = try? Data(contentsOf: mainUrl) {
             let decoder = JSONDecoder()
             mainSetting += (try? decoder.decode([Setting].self, from: jsonData)) ?? []
         }
-        if let appendingUrl = FileManager.getAppendingUrl() {
-            let jsonData = try! Data(contentsOf: appendingUrl)
+        if let appendingUrl = FileManager.getAppendingUrl(), let jsonData = try? Data(contentsOf: appendingUrl) {
             let decoder = JSONDecoder()
             userSetting += (try? decoder.decode([Setting].self, from: jsonData)) ?? []
         }
