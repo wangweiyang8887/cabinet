@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         updateUserDefaultsIfNeeded()
+        checkLocalJson()
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = BaseNavigationController(rootViewController: HomePageVC())
         window?.makeKeyAndVisible()
@@ -33,6 +34,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         if UserDefaults.shared[.shuffledDay] == nil {
             UserDefaults.shared[.shuffledDay] = CalendarDate.today(in: .current).day - 1
+        }
+    }
+    
+    private func checkLocalJson() {
+        var mainSetting: [Setting] = []
+        var userSetting: [Setting] = []
+        if let mainUrl = Bundle.main.url(forResource: "Setting", withExtension: "json") {
+            let jsonData = try! Data(contentsOf: mainUrl)
+            let decoder = JSONDecoder()
+            mainSetting += (try? decoder.decode([Setting].self, from: jsonData)) ?? []
+        }
+        if let appendingUrl = FileManager.getAppendingUrl() {
+            let jsonData = try! Data(contentsOf: appendingUrl)
+            let decoder = JSONDecoder()
+            userSetting += (try? decoder.decode([Setting].self, from: jsonData)) ?? []
+        }
+        if userSetting.count < mainSetting.count, let url = FileManager.getAppendingUrl() {
+            let item = mainSetting.suffix(from: userSetting.count)
+            userSetting += item
+            let encoder = JSONEncoder()
+            encoder.outputFormatting = .prettyPrinted
+            let JsonData = try? encoder.encode(userSetting)
+            try? JsonData?.write(to: url)
         }
     }
 }

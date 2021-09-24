@@ -71,17 +71,22 @@ class HomePageVC : BaseCollectionViewController {
         }
     }
     
+    override func updateContentInset() {
+        super.updateContentInset()
+        collectionView.contentInset.bottom = 16 
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         collectionView.reloadData()
     }
     
     private func createSectionContentItem() -> [SectionContentItem] {
-        let items = settings.filter { $0.isEnabled }.map { itemByKind(with: $0.kind) }
+        let items = settings.filter { $0.isEnabled }.compactMap { itemByKind(with: $0.kind) }
         return [ titleRow ] + items
     }
     
-    private func itemByKind(with kind: Setting.Kind) -> SectionContentItem {
+    private func itemByKind(with kind: Setting.Kind) -> SectionContentItem? {
         switch kind {
         case .weather: return weatherRow
         case .calendar: return calendarRow

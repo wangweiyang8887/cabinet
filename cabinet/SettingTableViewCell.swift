@@ -13,7 +13,6 @@ class SettingTableViewCell : UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         selectionStyle = .none
-        toggleSwitch.onTintColor = .nonStandardColor(withRGBHex: 0x1770f3)
         toggleSwitch.addTarget(self, action: #selector(valueChanged(_:)), for: .valueChanged)
         contentView.addSubview(lineView, pinningEdges: [ .left, .right, .bottom ], withInsets: UIEdgeInsets(horizontal: 16))
     }
