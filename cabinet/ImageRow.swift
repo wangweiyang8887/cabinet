@@ -1,6 +1,7 @@
 // Copyright © 2021 evan. All rights reserved.
 
 import FMPhotoPicker
+import WidgetKit
 
 final class ImageRow : BaseRow {
     override class var height: RowHeight { return .fixed(168) }
@@ -61,5 +62,8 @@ extension ImageRow : FMPhotoPickerViewControllerDelegate {
         UserDefaults.shared[.userImage] = photos.first?.jpegData(compressionQuality: 0.7)
         titleLabel.isHidden = true
         UIViewController.current().dismissSelf()
+        if #available(iOS 14.0, *) {
+            WidgetCenter.shared.reloadAllTimelines()
+        }
     }
 }

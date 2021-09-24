@@ -156,6 +156,13 @@
 		9DAC53EF26FD807F003F2D4C /* UIImage+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC53EE26FD807F003F2D4C /* UIImage+Helper.swift */; };
 		9DAC53F126FD80D1003F2D4C /* URL+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC53F026FD80D1003F2D4C /* URL+Helper.swift */; };
 		9DAC53F326FD810E003F2D4C /* PhotoConfirmationPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC53F226FD810E003F2D4C /* PhotoConfirmationPopUpVC.swift */; };
+		9DAC53F926FDB11F003F2D4C /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DB7583426D3A7C0006D2246 /* WidgetKit.framework */; };
+		9DAC53FA26FDB11F003F2D4C /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DB7583626D3A7C0006D2246 /* SwiftUI.framework */; };
+		9DAC53FD26FDB11F003F2D4C /* ImageWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC53FC26FDB11F003F2D4C /* ImageWidget.swift */; };
+		9DAC53FF26FDB122003F2D4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DAC53FE26FDB122003F2D4C /* Assets.xcassets */; };
+		9DAC540326FDB122003F2D4C /* ImageWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9DAC53F826FDB11F003F2D4C /* ImageWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9DAC540926FDB17A003F2D4C /* ImageEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC540826FDB17A003F2D4C /* ImageEntryView.swift */; };
+		9DAC540A26FDB283003F2D4C /* UserDefaults+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC27E26F0948C00F000C9 /* UserDefaults+Helper.swift */; };
 		9DB757F726D37B24006D2246 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB757F626D37B24006D2246 /* AppDelegate.swift */; };
 		9DB757FE26D37B24006D2246 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DB757FC26D37B24006D2246 /* Main.storyboard */; };
 		9DB7580026D37B25006D2246 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DB757FF26D37B25006D2246 /* Assets.xcassets */; };
@@ -256,6 +263,13 @@
 			remoteGlobalIDString = 9DAC53AD26FC671C003F2D4C;
 			remoteInfo = LotteryWidgetExtension;
 		};
+		9DAC540126FDB122003F2D4C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9DB757EB26D37B24006D2246 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9DAC53F726FDB11F003F2D4C;
+			remoteInfo = ImageWidgetExtension;
+		};
 		9DCD1E6826F32331004A4E98 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9DB757EB26D37B24006D2246 /* Project object */;
@@ -293,6 +307,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				9DAC540326FDB122003F2D4C /* ImageWidgetExtension.appex in Embed App Extensions */,
 				9DCD1E8F26F34A59004A4E98 /* DailyWidgetExtension.appex in Embed App Extensions */,
 				9DCD1E6A26F32331004A4E98 /* CountDownWidgetExtension.appex in Embed App Extensions */,
 				9DAC53B926FC671F003F2D4C /* LotteryWidgetExtension.appex in Embed App Extensions */,
@@ -436,6 +451,12 @@
 		9DAC53EE26FD807F003F2D4C /* UIImage+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Helper.swift"; sourceTree = "<group>"; };
 		9DAC53F026FD80D1003F2D4C /* URL+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Helper.swift"; sourceTree = "<group>"; };
 		9DAC53F226FD810E003F2D4C /* PhotoConfirmationPopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoConfirmationPopUpVC.swift; sourceTree = "<group>"; };
+		9DAC53F826FDB11F003F2D4C /* ImageWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ImageWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DAC53FC26FDB11F003F2D4C /* ImageWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageWidget.swift; sourceTree = "<group>"; };
+		9DAC53FE26FDB122003F2D4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9DAC540026FDB122003F2D4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DAC540726FDB127003F2D4C /* ImageWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ImageWidgetExtension.entitlements; sourceTree = "<group>"; };
+		9DAC540826FDB17A003F2D4C /* ImageEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEntryView.swift; sourceTree = "<group>"; };
 		9DB757F326D37B24006D2246 /* cabinet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cabinet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DB757F626D37B24006D2246 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DB757FD26D37B24006D2246 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -493,6 +514,15 @@
 			files = (
 				9DAC53B026FC671C003F2D4C /* SwiftUI.framework in Frameworks */,
 				9DAC53AF26FC671C003F2D4C /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DAC53F526FDB11F003F2D4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DAC53FA26FDB11F003F2D4C /* SwiftUI.framework in Frameworks */,
+				9DAC53F926FDB11F003F2D4C /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -742,9 +772,21 @@
 			name = MediaPicker;
 			sourceTree = "<group>";
 		};
+		9DAC53FB26FDB11F003F2D4C /* ImageWidget */ = {
+			isa = PBXGroup;
+			children = (
+				9DAC53FC26FDB11F003F2D4C /* ImageWidget.swift */,
+				9DAC53FE26FDB122003F2D4C /* Assets.xcassets */,
+				9DAC540026FDB122003F2D4C /* Info.plist */,
+				9DAC540826FDB17A003F2D4C /* ImageEntryView.swift */,
+			);
+			path = ImageWidget;
+			sourceTree = "<group>";
+		};
 		9DB757EA26D37B24006D2246 = {
 			isa = PBXGroup;
 			children = (
+				9DAC540726FDB127003F2D4C /* ImageWidgetExtension.entitlements */,
 				9DAC53DB26FD759D003F2D4C /* DailyWidgetExtension.entitlements */,
 				9DCD1E6E26F3234C004A4E98 /* CountDownWidgetExtension.entitlements */,
 				9DAC539126FB0233003F2D4C /* Setting.json */,
@@ -754,6 +796,7 @@
 				9DCD1E8726F34A58004A4E98 /* DailyWidget */,
 				9DCD1EA026F36383004A4E98 /* InspireWidget */,
 				9DAC53B126FC671C003F2D4C /* LotteryWidget */,
+				9DAC53FB26FDB11F003F2D4C /* ImageWidget */,
 				9DB757F426D37B24006D2246 /* Products */,
 				32CEA01F4C72B7C0875F9C21 /* Pods */,
 				E3701FF25E82A516F9A5F9A4 /* Frameworks */,
@@ -769,6 +812,7 @@
 				9DCD1E8426F34A58004A4E98 /* DailyWidgetExtension.appex */,
 				9DCD1E9D26F36383004A4E98 /* InspireWidgetExtension.appex */,
 				9DAC53AE26FC671C003F2D4C /* LotteryWidgetExtension.appex */,
+				9DAC53F826FDB11F003F2D4C /* ImageWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -972,6 +1016,23 @@
 			productReference = 9DAC53AE26FC671C003F2D4C /* LotteryWidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		9DAC53F726FDB11F003F2D4C /* ImageWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9DAC540626FDB122003F2D4C /* Build configuration list for PBXNativeTarget "ImageWidgetExtension" */;
+			buildPhases = (
+				9DAC53F426FDB11F003F2D4C /* Sources */,
+				9DAC53F526FDB11F003F2D4C /* Frameworks */,
+				9DAC53F626FDB11F003F2D4C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ImageWidgetExtension;
+			productName = ImageWidgetExtension;
+			productReference = 9DAC53F826FDB11F003F2D4C /* ImageWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		9DB757F226D37B24006D2246 /* cabinet */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9DB7580726D37B25006D2246 /* Build configuration list for PBXNativeTarget "cabinet" */;
@@ -991,6 +1052,7 @@
 				9DCD1E8E26F34A59004A4E98 /* PBXTargetDependency */,
 				9DCD1EA726F36385004A4E98 /* PBXTargetDependency */,
 				9DAC53B826FC671F003F2D4C /* PBXTargetDependency */,
+				9DAC540226FDB122003F2D4C /* PBXTargetDependency */,
 			);
 			name = cabinet;
 			productName = cabinet;
@@ -1078,6 +1140,9 @@
 					9DAC53AD26FC671C003F2D4C = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
+					9DAC53F726FDB11F003F2D4C = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
 					9DB757F226D37B24006D2246 = {
 						CreatedOnToolsVersion = 12.5.1;
 						LastSwiftMigration = 1250;
@@ -1115,6 +1180,7 @@
 				9DCD1E8326F34A58004A4E98 /* DailyWidgetExtension */,
 				9DCD1E9C26F36383004A4E98 /* InspireWidgetExtension */,
 				9DAC53AD26FC671C003F2D4C /* LotteryWidgetExtension */,
+				9DAC53F726FDB11F003F2D4C /* ImageWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -1126,6 +1192,14 @@
 			files = (
 				9DAC53B526FC671F003F2D4C /* Assets.xcassets in Resources */,
 				9DAC53C326FC67FB003F2D4C /* Colors.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DAC53F626FDB11F003F2D4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DAC53FF26FDB122003F2D4C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1248,6 +1322,16 @@
 				9DAC53C626FC71AE003F2D4C /* API.swift in Sources */,
 				9DAC53B326FC671C003F2D4C /* LotteryWidget.swift in Sources */,
 				9DAC53C926FC8347003F2D4C /* Sequence+Utilities.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DAC53F426FDB11F003F2D4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DAC540A26FDB283003F2D4C /* UserDefaults+Helper.swift in Sources */,
+				9DAC53FD26FDB11F003F2D4C /* ImageWidget.swift in Sources */,
+				9DAC540926FDB17A003F2D4C /* ImageEntryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1480,6 +1564,11 @@
 			target = 9DAC53AD26FC671C003F2D4C /* LotteryWidgetExtension */;
 			targetProxy = 9DAC53B726FC671F003F2D4C /* PBXContainerItemProxy */;
 		};
+		9DAC540226FDB122003F2D4C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9DAC53F726FDB11F003F2D4C /* ImageWidgetExtension */;
+			targetProxy = 9DAC540126FDB122003F2D4C /* PBXContainerItemProxy */;
+		};
 		9DCD1E6926F32331004A4E98 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9DCD1E5E26F32330004A4E98 /* CountDownWidgetExtension */;
@@ -1564,6 +1653,54 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.evan.cabinet.LotteryWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9DAC540426FDB122003F2D4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = ImageWidgetExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EVG8QY6QFT;
+				INFOPLIST_FILE = ImageWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.evan.cabinet.ImageWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9DAC540526FDB122003F2D4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = ImageWidgetExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EVG8QY6QFT;
+				INFOPLIST_FILE = ImageWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.evan.cabinet.ImageWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1961,6 +2098,15 @@
 			buildConfigurations = (
 				9DAC53BB26FC671F003F2D4C /* Debug */,
 				9DAC53BC26FC671F003F2D4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9DAC540626FDB122003F2D4C /* Build configuration list for PBXNativeTarget "ImageWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DAC540426FDB122003F2D4C /* Debug */,
+				9DAC540526FDB122003F2D4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,6 +1,7 @@
 // Copyright © 2021 evan. All rights reserved.
 
 import UIKit
+import WidgetKit
 
 final class ReminderVC : BaseCollectionViewController {
     var completion: ActionClosure?
@@ -27,6 +28,9 @@ final class ReminderVC : BaseCollectionViewController {
             }
             self.completion?()
             self.popOrDismissSelf()
+            if #available(iOS 14.0, *) {
+                WidgetCenter.shared.reloadAllTimelines()
+            }
         }
         return result
     }()

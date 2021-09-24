@@ -17,7 +17,7 @@ final class DailyRow : BaseRow {
         titleLabel.defaultTextShadow()
     }
     
-    private lazy var titleLabel: UILabel = UILabel(text: "", font: .systemFont(ofSize: 15), color: .white, alignment: .center, lines: 0)
+    private lazy var titleLabel: UILabel = UILabel(text: "", font: .systemFont(ofSize: 17, weight: .medium), color: .white, alignment: .center, lines: 0)
     
     var title: String? {
         get { return titleLabel.text }

@@ -49,17 +49,17 @@ class HomePageVC : BaseCollectionViewController {
             self.ssqModel = result.lottery.first
             self.dltModel = result.lottery.last
         }
-//        operations += Server.fetchLottery(with: "ssq").onSuccess { [weak self] result in
-//            self?.lotteryRow.ssqModel = result
-//        }
-//        operations += Server.fetchLottery(with: "dlt").onSuccess { [weak self] result in
-//            self?.lotteryRow.dltModel = result
-//        }
-//        operations += Server.fetchChieseCalendar(by: Date().cabinetDateFormatted()).onSuccess { [weak self] result in
-//            self?.calendarRow.chineseCalendar = result
-//            UserDefaults.shared[.todayYI] = result.todayYI
-//            UserDefaults.shared[.todayJI] = result.todayJI
-//        }
+        operations += Server.fetchLottery(with: "ssq").onSuccess { [weak self] result in
+            self?.lotteryRow.ssqModel = result
+        }
+        operations += Server.fetchLottery(with: "dlt").onSuccess { [weak self] result in
+            self?.lotteryRow.dltModel = result
+        }
+        operations += Server.fetchChieseCalendar(by: Date().cabinetDateFormatted()).onSuccess { [weak self] result in
+            self?.calendarRow.chineseCalendar = result
+            UserDefaults.shared[.todayYI] = result.todayYI
+            UserDefaults.shared[.todayJI] = result.todayJI
+        }
         OperationGroup(operations).onCompletion { [weak self] _ in
             guard let self = self else { return }
             if self.lotteryRow.ssqModel?.lottery_id.trimmedNilIfEmpty == nil {

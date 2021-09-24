@@ -17,7 +17,7 @@
     {
         "title":"Clock时钟",
         "kind":4,
-        "isEnabled": 1
+        "isEnabled": 0
     },
     {
         "title":"彩票",
@@ -27,6 +27,6 @@
     {
         "title":"图片",
         "kind":6,
-        "isEnabled":1
+        "isEnabled":0
     }
 ]
