@@ -78,4 +78,6 @@ extension UserDefaults.Property {
     public static var shuffledDay: UserDefaults.Property<Int> { return .init(keyName: "shuffledDay", isUserSpecific: false) }
     public static var userCoordinate: UserDefaults.Property<String> { return .init(keyName: "userCoordinate", isUserSpecific: false) }
     public static var userAddress: UserDefaults.Property<String> { return .init(keyName: "userAddress", isUserSpecific: false) }
+    public static var todayYI: UserDefaults.Property<String> { return .init(keyName: "todayYI", isUserSpecific: false) }
+    public static var todayJI: UserDefaults.Property<String> { return .init(keyName: "todayJI", isUserSpecific: false) }
 }

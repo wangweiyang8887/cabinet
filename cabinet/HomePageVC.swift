@@ -57,6 +57,8 @@ class HomePageVC : BaseCollectionViewController {
         }
         operations += Server.fetchChieseCalendar(by: Date().cabinetDateFormatted()).onSuccess { [weak self] result in
             self?.calendarRow.chineseCalendar = result
+            UserDefaults.shared[.todayYI] = result.todayYI
+            UserDefaults.shared[.todayJI] = result.todayJI
         }
         OperationGroup(operations).onCompletion { [weak self] _ in
             guard let self = self else { return }
