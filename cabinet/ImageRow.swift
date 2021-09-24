@@ -11,7 +11,7 @@ final class ImageRow : BaseRow {
         contentView.addSubview(titleLabel, pinningEdges: .all)
         contentView.cornerRadius = 16
         contentView.addShadow(radius: 16, yOffset: -1)
-        let gradientView = TTGradientView(gradient: [ UIColor.red.withAlphaComponent(0.4), UIColor.blue.withAlphaComponent(0.4) ])
+        let gradientView = TTGradientView(gradient: [ UIColor.purple.withAlphaComponent(0.4), UIColor.blue.withAlphaComponent(0.4) ])
         gradientView.cornerRadius = 16
         contentView.addSubview(gradientView, pinningEdges: .all)
         contentView.sendSubviewToBack(gradientView)
@@ -43,5 +43,5 @@ final class ImageRow : BaseRow {
         return result
     }()
     
-    private lazy var titleLabel: UILabel = UILabel(text: "选择图片", font: .systemFont(ofSize: 17, weight: .medium), color: .white, alignment: .center, lines: 1)
+    private lazy var titleLabel: UILabel = UILabel(text: "选择图片", font: .systemFont(ofSize: 24, weight: .medium), color: .white, alignment: .center, lines: 1)
 }
