@@ -41,18 +41,8 @@ final class LotteryRow : BaseRow {
     override class var height: RowHeight { return .fixed(168) }
     override class var margins: UIEdgeInsets { return UIEdgeInsets(uniform: 16) }
     
-    var ssqModel: LotteryModel? {
-        didSet {
-            guard let oldDate = oldValue?.lottery_date.trimmedNilIfEmpty, let newDate = ssqModel?.lottery_date.trimmedNilIfEmpty, oldDate == newDate else { return }
-        lotteryView.ssqModel = ssqModel
-        }
-    }
-    var dltModel: LotteryModel? {
-        didSet {
-            guard let oldDate = oldValue?.lottery_date.trimmedNilIfEmpty, let newDate = dltModel?.lottery_date.trimmedNilIfEmpty, oldDate == newDate else { return }
-        lotteryView.dltModel = dltModel
-        }
-    }
+    var ssqModel: LotteryModel? { didSet { lotteryView.ssqModel = ssqModel } }
+    var dltModel: LotteryModel? { didSet { lotteryView.dltModel = dltModel } }
     
     override func initialize() {
         super.initialize()
