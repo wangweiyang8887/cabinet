@@ -163,6 +163,8 @@
 		9DAC540326FDB122003F2D4C /* ImageWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9DAC53F826FDB11F003F2D4C /* ImageWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9DAC540926FDB17A003F2D4C /* ImageEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC540826FDB17A003F2D4C /* ImageEntryView.swift */; };
 		9DAC540A26FDB283003F2D4C /* UserDefaults+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC27E26F0948C00F000C9 /* UserDefaults+Helper.swift */; };
+		9DAC5427270178C8003F2D4C /* CountingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC5426270178C7003F2D4C /* CountingRow.swift */; };
+		9DAC542927019021003F2D4C /* CountingRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DAC542827019021003F2D4C /* CountingRow.xib */; };
 		9DB757F726D37B24006D2246 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB757F626D37B24006D2246 /* AppDelegate.swift */; };
 		9DB757FE26D37B24006D2246 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DB757FC26D37B24006D2246 /* Main.storyboard */; };
 		9DB7580026D37B25006D2246 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DB757FF26D37B25006D2246 /* Assets.xcassets */; };
@@ -457,6 +459,8 @@
 		9DAC540026FDB122003F2D4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DAC540726FDB127003F2D4C /* ImageWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ImageWidgetExtension.entitlements; sourceTree = "<group>"; };
 		9DAC540826FDB17A003F2D4C /* ImageEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEntryView.swift; sourceTree = "<group>"; };
+		9DAC5426270178C7003F2D4C /* CountingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountingRow.swift; sourceTree = "<group>"; };
+		9DAC542827019021003F2D4C /* CountingRow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountingRow.xib; sourceTree = "<group>"; };
 		9DB757F326D37B24006D2246 /* cabinet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cabinet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DB757F626D37B24006D2246 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DB757FD26D37B24006D2246 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -876,6 +880,8 @@
 				9DAC53A026FB4A41003F2D4C /* LotteryView.xib */,
 				9DAC539E26FB458C003F2D4C /* LotteryModel.swift */,
 				9DAC53A426FC4B28003F2D4C /* SupportingVC.swift */,
+				9DAC5426270178C7003F2D4C /* CountingRow.swift */,
+				9DAC542827019021003F2D4C /* CountingRow.xib */,
 			);
 			name = HomePage;
 			sourceTree = "<group>";
@@ -1219,6 +1225,7 @@
 				9DAC53A126FB4A41003F2D4C /* LotteryView.xib in Resources */,
 				9D6BC26526F07C9D00F000C9 /* StringEditorRow.xib in Resources */,
 				9DB7580026D37B25006D2246 /* Assets.xcassets in Resources */,
+				9DAC542927019021003F2D4C /* CountingRow.xib in Resources */,
 				9D6BC25826F04CD300F000C9 /* ReminderRow.xib in Resources */,
 				9DB757FE26D37B24006D2246 /* Main.storyboard in Resources */,
 			);
@@ -1408,6 +1415,7 @@
 				9D6BC28726F0A2B100F000C9 /* UIViewController+Utilities.swift in Sources */,
 				9DAC53E126FD7D4D003F2D4C /* AuthorizationView.swift in Sources */,
 				9D6BC28B26F0A37C00F000C9 /* DatePickerVC.swift in Sources */,
+				9DAC5427270178C8003F2D4C /* CountingRow.swift in Sources */,
 				9D6BC27D26F0930C00F000C9 /* EventModel.swift in Sources */,
 				9D66D1C626E7542500411D75 /* CalendarRow.swift in Sources */,
 				9D7B920826E22581001C11AD /* UIViewController+PresentationStyle.swift in Sources */,
