@@ -83,14 +83,9 @@ class HomePageVC : BaseCollectionViewController {
         collectionView.reloadData()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-//        countingRow.oneLabel.count(from: 1, to: 32, animated: true)
-    }
-    
     private func createSectionContentItem() -> [SectionContentItem] {
         let items = settings.filter { $0.isEnabled }.compactMap { itemByKind(with: $0.kind) }
-        return [ titleRow, countingRow ] + items
+        return [ titleRow ] + items
     }
     
     private func itemByKind(with kind: Setting.Kind) -> SectionContentItem? {
@@ -101,6 +96,7 @@ class HomePageVC : BaseCollectionViewController {
         case .clock: return clockRow
         case .lottery: return lotteryRow
         case .image: return imageRow
+        case .mockLottery: return countingRow
         }
     }
     

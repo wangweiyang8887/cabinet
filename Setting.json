@@ -28,5 +28,10 @@
         "title":"图片",
         "kind":6,
         "isEnabled":0
+    },
+    {
+        "title":"模拟机选",
+        "kind":7,
+        "isEnabled":0
     }
 ]

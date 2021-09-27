@@ -101,6 +101,6 @@ struct Setting : Codable {
     var kind: Kind
     
     enum Kind : Int, Codable {
-        case weather = 1, calendar, daily, clock, lottery, image
+        case weather = 1, calendar, daily, clock, lottery, image, mockLottery
     }
 }
