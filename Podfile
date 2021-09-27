@@ -9,4 +9,5 @@ target 'cabinet' do
  pod 'MJRefresh'
  pod 'BlocksKit', :git => "git@github.com:wangweiyang8887/BlocksKit.git"
  pod 'FMPhotoPicker'
+ pod 'EFCountingLabel'
 end
