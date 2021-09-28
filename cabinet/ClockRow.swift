@@ -1,6 +1,6 @@
 // Copyright © 2021 evan. All rights reserved.
 
-final class CurrentDateRow : BaseRow {
+final class ClockRow : BaseRow {
     override class var height: RowHeight { return .fixed(168) }
     override class var margins: UIEdgeInsets { return UIEdgeInsets(uniform: 16) }
     

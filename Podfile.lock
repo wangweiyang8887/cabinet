@@ -19,18 +19,24 @@ PODS:
   - BlocksKit/UIKit (2.2.6):
     - BlocksKit/Core
     - BlocksKit/DynamicDelegate
+  - EFCountingLabel (5.1.4)
+  - FMPhotoPicker (1.3.0)
   - MJRefresh (3.7.2)
   - PanModal (1.2.7)
 
 DEPENDENCIES:
   - Alamofire
   - "BlocksKit (from `git@github.com:wangweiyang8887/BlocksKit.git`)"
+  - EFCountingLabel
+  - FMPhotoPicker
   - MJRefresh
   - PanModal
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
+    - EFCountingLabel
+    - FMPhotoPicker
     - MJRefresh
     - PanModal
 
@@ -46,9 +52,11 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
   BlocksKit: 5fae06c13638d9fdb0bbddca3dabfe8f5aa735c5
+  EFCountingLabel: 210620994a2d54759f53034b5bda4642255969c7
+  FMPhotoPicker: 954d3c3e72521baffecdc23422ae149fdde3cd63
   MJRefresh: 30997d30b347c8e9508a4db11e3a690da0c9b85a
   PanModal: 3e16ead1a907fb06f4df3f13492fd00149fa4974
 
-PODFILE CHECKSUM: 96e50ec6be8ce00403dee7f2112459cce9bca0b2
+PODFILE CHECKSUM: 57cdbc0bacff6d3698d074e5ebe629c3b95050c5
 
 COCOAPODS: 1.10.1

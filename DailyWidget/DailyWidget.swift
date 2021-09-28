@@ -49,7 +49,7 @@ struct DailyWidget: Widget {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             DailyWidgetEntryView(entry: entry)
         }
-        .configurationDisplayName("")
+        .configurationDisplayName("老黄历")
         .description("一个简单的日历组建")
         .supportedFamilies([ .systemMedium ])
     }

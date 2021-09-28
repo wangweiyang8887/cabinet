@@ -184,40 +184,4 @@ extension String {
         let text = self as NSString
         return text.replacingCharacters(in: range, with: string)
     }
-    
-    public func generateQRImage() -> UIImage? {
-        return (self as NSString).generateQRImage()
-    }
-    
-    public static func combinedUrlIfNeeded(with parameters: [String:Any], path: String) -> String {
-        let result = parameters.map { return $0 + "=" + "\($1)" + "&" }.joined().dropLast()
-        return result.isEmpty ? path : path + "?" + result
-    }
-}
-
-extension NSString {
-    @objc public func generateQRImage() -> UIImage? {
-        let string = self as String
-        let data = string.data(using: .utf8)
-        guard let qrFilter = CIFilter(name: "CIQRCodeGenerator") else { return nil }
-        qrFilter.setValue(data, forKey: "inputMessage")
-        qrFilter.setValue("L", forKey: "inputCorrectionLevel")
-        guard let qrImage = qrFilter.outputImage else { return nil }
-        let transform = CGAffineTransform(scaleX: 40, y: 40)
-        let scaledQrImage = qrImage.transformed(by: transform)
-
-        // Invert the colors
-        guard let colorInvertFilter = CIFilter(name: "CIColorInvert") else { return nil }
-        colorInvertFilter.setValue(scaledQrImage, forKey: "inputImage")
-        guard let outputInvertedImage = colorInvertFilter.outputImage else { return nil }
-        // Replace the black with transparency
-        guard let maskToAlphaFilter = CIFilter(name: "CIMaskToAlpha") else { return nil }
-        maskToAlphaFilter.setValue(outputInvertedImage, forKey: "inputImage")
-        guard let outputCIImage = maskToAlphaFilter.outputImage else { return nil }
-
-        let context = CIContext()
-        guard let cgImage = context.createCGImage(outputCIImage, from: outputCIImage.extent) else { return nil }
-        let result = UIImage(cgImage: cgImage)
-        return result.withRenderingMode(.alwaysTemplate).tinted(with: .black)
-    }
 }

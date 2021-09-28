@@ -47,6 +47,11 @@ extension UserDefaults {
         get { return given(property.key) { bool(forKey: $0) } }
         set { set(newValue, forKey: property.key!) }
     }
+    
+    public subscript(property: Property<Data>) -> Data? {
+        get { return given(property.key) { data(forKey: $0) } }
+        set {set(newValue, forKey: property.key!) }
+    }
 
     public subscript(property: Property<Date>) -> Date? {
         get { return given(property.key) { object(forKey: $0) as? Date } }
@@ -78,4 +83,7 @@ extension UserDefaults.Property {
     public static var shuffledDay: UserDefaults.Property<Int> { return .init(keyName: "shuffledDay", isUserSpecific: false) }
     public static var userCoordinate: UserDefaults.Property<String> { return .init(keyName: "userCoordinate", isUserSpecific: false) }
     public static var userAddress: UserDefaults.Property<String> { return .init(keyName: "userAddress", isUserSpecific: false) }
+    public static var todayYI: UserDefaults.Property<String> { return .init(keyName: "todayYI", isUserSpecific: false) }
+    public static var todayJI: UserDefaults.Property<String> { return .init(keyName: "todayJI", isUserSpecific: false) }
+    public static var userImage: UserDefaults.Property<Data> { return .init(keyName: "userImage", isUserSpecific: false) }
 }

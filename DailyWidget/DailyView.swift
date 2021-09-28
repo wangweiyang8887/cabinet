@@ -10,9 +10,9 @@ struct DailyView: View {
             HStack {
                 DailyLeftView(daily: entry.daily)
                 DailyRightView(daily: entry.daily)
-                Spacer()
             }
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .foregroundColor(.white)
         .background(LinearGradient(gradient: Gradient(colors: [ Color(UIColor.darkBlue), Color(UIColor.cabinetJava) ]), startPoint: .topLeading, endPoint: .bottomTrailing))
     }
@@ -54,7 +54,7 @@ private struct DailyRightView : View {
                         RoundedRectangle(cornerRadius: 22)
                             .stroke(Color.white, lineWidth: 1)
                     )
-                Text(daily?.todayRed ?? "诸事不宜")
+                Text(UserDefaults.shared[.todayYI] ?? "诸事不宜")
                     .font(.system(size: 15, weight: .medium))
             }
             HStack(alignment: .center, spacing: 8) {
@@ -65,10 +65,11 @@ private struct DailyRightView : View {
                         RoundedRectangle(cornerRadius: 22)
                             .stroke(Color.white, lineWidth: 1)
                     )
-                Text(daily?.todayGreen ?? "-")
+                Text(UserDefaults.shared[.todayJI] ?? "-")
                     .font(.system(size: 15, weight: .medium))
             }
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding(8)
     }
 }

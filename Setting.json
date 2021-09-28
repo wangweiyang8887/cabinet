@@ -1,0 +1,37 @@
+[
+    {
+        "title":"天气和事件",
+        "kind":1,
+        "isEnabled": 1
+    },
+    {
+        "title":"日历",
+        "kind":2,
+        "isEnabled": 1
+    },
+    {
+        "title":"每日一句",
+        "kind":3,
+        "isEnabled": 1
+    },
+    {
+        "title":"Clock时钟",
+        "kind":4,
+        "isEnabled": 0
+    },
+    {
+        "title":"彩票",
+        "kind":5,
+        "isEnabled":1
+    },
+    {
+        "title":"图片",
+        "kind":6,
+        "isEnabled":0
+    },
+    {
+        "title":"模拟机选",
+        "kind":7,
+        "isEnabled":0
+    }
+]

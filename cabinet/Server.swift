@@ -52,8 +52,13 @@ class Server : NSObject {
                 switch response.result {
                 case .success(let value):
                     if let json = value as? [String:Any], let jsonData = try? JSONSerialization.data(withJSONObject: json, options: []) {
-                        guard let result = T.decode(from: jsonData) else { return }
-                        operation.complete(with: result)
+                        if let lotteryResult = json["result"] as? [String:Any], let lotteryData = try? JSONSerialization.data(withJSONObject: lotteryResult, options: []) {
+                            guard let result = T.decode(from: lotteryData) else { return }
+                            operation.complete(with: result)
+                        } else {
+                            guard let result = T.decode(from: jsonData) else { return }
+                            operation.complete(with: result)
+                        }
                     } else {
                         operation.complete(with: NSError())
                     }

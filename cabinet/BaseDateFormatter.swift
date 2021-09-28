@@ -31,6 +31,7 @@ extension DateFormatter {
         self.dateFormat = dateFormat
     }
 
+    public static let cabinetDateFormatter = DateFormatter(dateFormat: "yyyy-MM-dd")
     public static let cabinetTimeDateFormatter = DateFormatter(dateFormat: "HH:mm:ss")
     public static let cabinetTimeShortDateFormatter = DateFormatter(dateFormat: "HH:mm")
     public static let cabinetShortDateFormatter = DateFormatter(dateFormat: "MM dd")
@@ -41,6 +42,11 @@ extension DateFormatter {
 extension Date {
     public func formatted(using formatter: DateFormatter) -> String {
         return formatter.string(from: self)
+    }
+    
+    /// e.g. 2021-09-23
+    public func cabinetDateFormatted() -> String {
+        return formatted(using: .cabinetDateFormatter)
     }
     
     /// e.g. 07:23:23
@@ -63,6 +69,4 @@ extension Date {
     }
 
     public enum AutoFormatStyle { case dateOrTime, dateAndTime, timeExcludingDateIfImplicit, timelessDate }
-
-
 }

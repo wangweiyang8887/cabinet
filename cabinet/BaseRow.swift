@@ -108,7 +108,7 @@ open class BaseRow : UIView, SectionContentItem {
     // Analytics
     /// Which namespace should be used when tracking events for this row.
     /// - SeeAlso: tracksAnalytics
-    open var separatorsColor: UIColor = .nonStandardColor(withRGBHex: 0xE9E9E9) {
+    open var separatorsColor: UIColor = .cabinetSeparator {
         didSet {
             topSeparatorView?.backgroundColor = separatorsColor
             bottomSeparatorView?.backgroundColor = separatorsColor
