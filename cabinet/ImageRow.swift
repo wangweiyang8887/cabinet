@@ -23,19 +23,7 @@ final class ImageRow : BaseRow {
     override func handleDidSelect() {
         super.handleDidSelect()
         AuthorizationView.showAlert(with: .photoLibrary) { [unowned self] in
-            var config = FMPhotoPickerConfig()
-            config.maxImage = 1
-            config.strings["picker_button_cancel"] = "取消"
-            config.strings["picker_button_select_done"] = "确定"
-            config.strings["picker_warning_over_image_select_format"] = "只能选择 %d 张图片"
-            config.strings["present_button_back"] = "返回"
-            config.strings["present_button_edit_image"] = "编辑"
-            config.strings["editor_button_cancel"] = "取消"
-            config.strings["editor_button_done"] = "完成"
-            config.strings["editor_menu_filter"] = "滤镜"
-            config.strings["editor_menu_crop"] = "裁剪"
-            config.strings["present_title_photo_created_date_format"] = "yyyy.MM.dd"
-            let picker = FMPhotoPickerViewController(config: config)
+            let picker = FMPhotoPickerViewController(config: FMPhotoPickerConfig.defaultConfig)
             picker.delegate = self
             UIViewController.current().present(picker, animated: true)
         }
@@ -65,5 +53,23 @@ extension ImageRow : FMPhotoPickerViewControllerDelegate {
         if #available(iOS 14.0, *) {
             WidgetCenter.shared.reloadAllTimelines()
         }
+    }
+}
+
+extension FMPhotoPickerConfig {
+    static var defaultConfig: FMPhotoPickerConfig {
+        var config = FMPhotoPickerConfig()
+        config.maxImage = 1
+        config.strings["picker_button_cancel"] = "取消"
+        config.strings["picker_button_select_done"] = "确定"
+        config.strings["picker_warning_over_image_select_format"] = "只能选择 %d 张图片"
+        config.strings["present_button_back"] = "返回"
+        config.strings["present_button_edit_image"] = "编辑"
+        config.strings["editor_button_cancel"] = "取消"
+        config.strings["editor_button_done"] = "完成"
+        config.strings["editor_menu_filter"] = "滤镜"
+        config.strings["editor_menu_crop"] = "裁剪"
+        config.strings["present_title_photo_created_date_format"] = "yyyy.MM.dd"
+        return config
     }
 }

@@ -11,21 +11,21 @@ final class CancelAndDoneRow : BaseRow {
     override func initialize() {
         super.initialize()
         let stackView = UIStackView(axis: .horizontal, distribution: .fill, spacing: 8, arrangedSubviews: [ cancelButton, titleLabel, doneButton ])
-        contentView.addSubview(stackView, pinningEdges: .all, withInsets: UIEdgeInsets(uniform: 16))
+        contentView.addSubview(stackView, pinningEdges: .all, withInsets: UIEdgeInsets(horizontal: 0, vertical: 16))
         bottomSeparatorMode = .hide
     }
 
     private lazy var cancelButton: TTButton = {
-        let button = TTButton(type: .custom, title: "取消", titleColor: .nonStandardColor(withRGBHex: 0x2683FF)) { [unowned self] in self.cancelHandler?() }
-        button.titleLabel?.font = .systemFont(ofSize: 16)
+        let button = TTButton(type: .custom, title: "取消", titleColor: .cabinetBlack) { [unowned self] in self.cancelHandler?() }
+        button.titleLabel?.font = .systemFont(ofSize: 17, weight: .medium)
         button.contentHorizontalAlignment = .left
         button.constrainWidth(to: 56)
         return button
     }()
 
     private lazy var doneButton: TTButton = {
-        let button = TTButton(type: .custom, title: "确认", titleColor: .nonStandardColor(withRGBHex: 0x2683FF)) { [unowned self] in self.doneHandler?() }
-        button.titleLabel?.font = .systemFont(ofSize: 16)
+        let button = TTButton(type: .custom, title: "确认", titleColor: .cabinetBlack) { [unowned self] in self.doneHandler?() }
+        button.titleLabel?.font = .systemFont(ofSize: 17, weight: .medium)
         button.contentHorizontalAlignment = .right
         button.constrainWidth(to: 56) // Must same as cancel button, otherwise the title is not centered.
         return button

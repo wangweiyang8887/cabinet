@@ -12,13 +12,14 @@ final class ColorPickerVC : BaseBottomSheetVC {
     private var bottomRightPaller: Pallet?
     
     static func show(with viewController: UIViewController) {
-        let vc = ColorPickerVC(style: .explanation(title: ""))
+        let vc = ColorPickerVC(style: .action(cancelRowStyle: .default, title: ""))
+        vc.actionHandler = { print("aaaaaaa") }
         viewController.presentPanModal(vc)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.sections += BaseSection([ weatherRow, colorItemsRow, redSliderRow, greenSliderRow, blueSliderRow ])
+        collectionView.sections += BaseSection([ weatherRow, colorItemsRow, SpacerRow(height: 60) ])
     }
     
     private func updateColors() {
@@ -48,6 +49,7 @@ final class ColorPickerVC : BaseBottomSheetVC {
     private lazy var colorItemsRow: ColorItemsRow = {
         let result = ColorItemsRow()
         result.gradientHandler = { [unowned self] in self.weatherView.gradient = $0 }
+        result.imageHandler = { [unowned self] in self.weatherView.image = $0 }
         return result
     }()
     

@@ -10,6 +10,8 @@ final class CurrentWeatherView : UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        addSubview(imageView, pinningEdges: .all)
+        sendSubviewToBack(imageView)
         addSubview(gradientView, pinningEdges: .all)
         sendSubviewToBack(gradientView)
         cornerRadius = 16
@@ -21,9 +23,21 @@ final class CurrentWeatherView : UIView {
         return result
     }()
     
+    private lazy var imageView: UIImageView = {
+        let result = UIImageView()
+        result.contentMode = .scaleAspectFill
+        result.backgroundColor = .clear
+        return result
+    }()
+    
     // MARK: Accessors
     var gradient: TTGradient {
         get { return gradientView.gradient }
-        set { gradientView.gradient = newValue }
+        set { gradientView.gradient = newValue; imageView.image = nil }
+    }
+    
+    var image: UIImage? {
+        get { return imageView.image }
+        set { imageView.image = newValue }
     }
 }
