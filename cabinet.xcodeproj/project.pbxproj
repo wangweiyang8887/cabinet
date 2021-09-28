@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9D229B612702F4C3006DD1F8 /* ColorItemsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D229B602702F4C3006DD1F8 /* ColorItemsRow.swift */; };
+		9D556BD82703168400A8513A /* CurrentEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D556BD72703168400A8513A /* CurrentEventView.swift */; };
+		9D556BDA2703169D00A8513A /* CurrentEventView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D556BD92703169D00A8513A /* CurrentEventView.xib */; };
 		9D66D1B826E5FA0E00411D75 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66D1B726E5FA0E00411D75 /* Server.swift */; };
 		9D66D1BB26E5FB3E00411D75 /* KeyedDecodingContainer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66D1BA26E5FB3E00411D75 /* KeyedDecodingContainer+Extension.swift */; };
 		9D66D1BD26E5FBDF00411D75 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66D1BC26E5FBDF00411D75 /* API.swift */; };
@@ -97,7 +99,6 @@
 		9D7B920826E22581001C11AD /* UIViewController+PresentationStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B920726E22581001C11AD /* UIViewController+PresentationStyle.swift */; };
 		9D7B920A26E2285A001C11AD /* UILabel+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B920926E2285A001C11AD /* UILabel+Utilities.swift */; };
 		9D7B920C26E23339001C11AD /* CurrentWeatherRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B920B26E23339001C11AD /* CurrentWeatherRow.swift */; };
-		9D7B920E26E2339B001C11AD /* CurrentWeatherRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D7B920D26E2339B001C11AD /* CurrentWeatherRow.xib */; };
 		9D82636D26D8D26900981A3E /* UIView+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D82636C26D8D26900981A3E /* UIView+Utilities.swift */; };
 		9D82636F26D8D2A900981A3E /* Sequence+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D82636E26D8D2A900981A3E /* Sequence+Utilities.swift */; };
 		9D82637126D8D30500981A3E /* NSLayoutConstraint+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D82637026D8D30500981A3E /* NSLayoutConstraint+Utilities.swift */; };
@@ -332,6 +333,8 @@
 		2084E720CBB70812F8CEADA7 /* Pods-cabinet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cabinet.release.xcconfig"; path = "Target Support Files/Pods-cabinet/Pods-cabinet.release.xcconfig"; sourceTree = "<group>"; };
 		4970BD821DAEA3849FC9D057 /* Pods_cabinet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cabinet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D229B602702F4C3006DD1F8 /* ColorItemsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorItemsRow.swift; sourceTree = "<group>"; };
+		9D556BD72703168400A8513A /* CurrentEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentEventView.swift; sourceTree = "<group>"; };
+		9D556BD92703169D00A8513A /* CurrentEventView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentEventView.xib; sourceTree = "<group>"; };
 		9D66D1B726E5FA0E00411D75 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		9D66D1BA26E5FB3E00411D75 /* KeyedDecodingContainer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyedDecodingContainer+Extension.swift"; sourceTree = "<group>"; };
 		9D66D1BC26E5FBDF00411D75 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -423,7 +426,6 @@
 		9D7B920726E22581001C11AD /* UIViewController+PresentationStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+PresentationStyle.swift"; sourceTree = "<group>"; };
 		9D7B920926E2285A001C11AD /* UILabel+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Utilities.swift"; sourceTree = "<group>"; };
 		9D7B920B26E23339001C11AD /* CurrentWeatherRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherRow.swift; sourceTree = "<group>"; };
-		9D7B920D26E2339B001C11AD /* CurrentWeatherRow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentWeatherRow.xib; sourceTree = "<group>"; };
 		9D82636C26D8D26900981A3E /* UIView+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utilities.swift"; sourceTree = "<group>"; };
 		9D82636E26D8D2A900981A3E /* Sequence+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+Utilities.swift"; sourceTree = "<group>"; };
 		9D82637026D8D30500981A3E /* NSLayoutConstraint+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Utilities.swift"; sourceTree = "<group>"; };
@@ -876,11 +878,12 @@
 				9DB7581826D38D90006D2246 /* CurrentDateVC.xib */,
 				9D7B920126E22140001C11AD /* ClockRow.swift */,
 				9D7B920B26E23339001C11AD /* CurrentWeatherRow.swift */,
-				9D7B920D26E2339B001C11AD /* CurrentWeatherRow.xib */,
 				9D66D1BE26E5FEDC00411D75 /* CurrentWeather.swift */,
 				9D66D1C526E7542500411D75 /* CalendarRow.swift */,
 				9D66D1C726E7544400411D75 /* CalendarRow.xib */,
 				9D66D1CA26E7617E00411D75 /* DailyModel.swift */,
+				9D556BD72703168400A8513A /* CurrentEventView.swift */,
+				9D556BD92703169D00A8513A /* CurrentEventView.xib */,
 				9DCD1ED626F5BA32004A4E98 /* CurrentWeatherView.swift */,
 				9DCD1ED826F5BA59004A4E98 /* CurrentWeatherView.xib */,
 				9DAC53A226FC2CD4003F2D4C /* ChineseCalendarModel.swift */,
@@ -1251,8 +1254,8 @@
 				9D66D1C826E7544400411D75 /* CalendarRow.xib in Resources */,
 				9DAC53A926FC4D76003F2D4C /* PlainRow.xib in Resources */,
 				9DB7580326D37B25006D2246 /* LaunchScreen.storyboard in Resources */,
+				9D556BDA2703169D00A8513A /* CurrentEventView.xib in Resources */,
 				9D6BC26826F07CA800F000C9 /* ModalEditorRow.xib in Resources */,
-				9D7B920E26E2339B001C11AD /* CurrentWeatherRow.xib in Resources */,
 				9DAC53A126FB4A41003F2D4C /* LotteryView.xib in Resources */,
 				9D6BC26526F07C9D00F000C9 /* StringEditorRow.xib in Resources */,
 				9DB7580026D37B25006D2246 /* Assets.xcassets in Resources */,
@@ -1434,6 +1437,7 @@
 				9D6BC26426F07C9D00F000C9 /* StringEditorRow.swift in Sources */,
 				9D6BC28326F0A0E100F000C9 /* CancelAndDoneRow.swift in Sources */,
 				9D7B920426E22302001C11AD /* TTGradientView.swift in Sources */,
+				9D556BD82703168400A8513A /* CurrentEventView.swift in Sources */,
 				9DAC53ED26FD7FC5003F2D4C /* UIImage+Orientation.swift in Sources */,
 				9D7B920626E22339001C11AD /* TTGradient.swift in Sources */,
 				9D6BC27B26F08C2F00F000C9 /* TimeZone+Helper.swift in Sources */,

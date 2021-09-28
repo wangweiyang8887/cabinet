@@ -12,7 +12,6 @@ final class PreviewColorRow : BaseRow {
     override class var nibName: String? { return "PreviewColorRow" }
     override class var height: RowHeight { return .fixed(200) }
     
-    var position: ColorPickerVC.Position = .topLeft
     var topLeftColor: UIColor = .white { didSet { topLeftColorView.backgroundColor = topLeftColor } }
     var bottomRightColor: UIColor = .white { didSet { bottomRightColorView.backgroundColor = bottomRightColor } }
     var topLeftValue: String = "#000000" { didSet { topLeftLabel.text = topLeftValue } }
@@ -27,13 +26,11 @@ final class PreviewColorRow : BaseRow {
         topLeftContainerView.addTapGestureHandler { [unowned self] in
             self.topLeftContainerView.addMissingRequiredFieldStyle()
             self.bottomRightContainerView.removeMissingRequiredFieldStyle()
-            self.position = .topLeft
             self.tapHandler?()
         }
         bottomRightContainerView.addTapGestureHandler { [unowned self] in
             self.bottomRightContainerView.addMissingRequiredFieldStyle()
             self.topLeftContainerView.removeMissingRequiredFieldStyle()
-            self.position = .bottomRight
             self.tapHandler?()
         }
     }
