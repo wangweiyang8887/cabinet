@@ -20,7 +20,7 @@ final class CurrentWeatherView : UIView, Palletable {
         sendSubviewToBack(imageView)
         addSubview(gradientView, pinningEdges: .all)
         sendSubviewToBack(gradientView)
-        cornerRadius = 16
+        imageView.cornerRadius = 16
         gradientView.cornerRadius = 16
         cornerRadius = 16
         addShadow(radius: 16, yOffset: -1)

@@ -19,6 +19,26 @@ final class CurrentWeatherRow : BaseRow {
         let stackView = UIStackView(axis: .horizontal, distribution: .fillEqually, alignment: .fill, spacing: 16, arrangedSubviews: [ currentWeatherView, currentEventView ])
         contentView.addSubview(stackView, pinningEdges: .all)
         currentEventView.addTapGestureHandler { [unowned self] in self.reminderHandler?() }
+        let longPressWeather = UILongPressGestureRecognizer()
+        longPressWeather.addTarget(self, action: #selector(longPressWeather(_:)))
+        currentWeatherView.addGestureRecognizer(longPressWeather)
+        let longPressEvent = UILongPressGestureRecognizer()
+        longPressEvent.addTarget(self, action: #selector(longPressEvent(_:)))
+        currentEventView.addGestureRecognizer(longPressEvent)
+    }
+    
+    @objc private func longPressWeather(_ longPress: UILongPressGestureRecognizer) {
+        switch longPress.state {
+        case .began: WeatherColorPickerVC.show(with: UIViewController.current(), currentWeather: self.weather)
+        default: break
+        }
+    }
+    
+    @objc private func longPressEvent(_ longPress: UILongPressGestureRecognizer) {
+        switch longPress.state {
+        case .began: EventColorPickerVC.show(with: UIViewController.current(), event: self.eventModel)
+        default: break
+        }
     }
         
     private lazy var currentWeatherView = CurrentWeatherView.loadFromNib()

@@ -47,3 +47,24 @@ final class WeatherColorPickerVC : ColorPickerVC {
     
     private lazy var weatherView = CurrentWeatherView.loadFromNib()
 }
+
+final class EventColorPickerVC : ColorPickerVC {
+    private var event: EventModel?
+    
+    static func show(with viewController: UIViewController, event: EventModel?) {
+        let vc = EventColorPickerVC.self.init(style: .action(cancelRowStyle: .default, title: ""))
+        vc.actionHandler = { print("aaaaaaa") }
+        vc.event = event
+        viewController.presentPanModal(vc)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        eventView.constrainSize(to: CGSize(uniform: (UIScreen.main.bounds.width - 32 - 16) / 2))
+        containerRow.addSubview(eventView, constrainedToCenterWithOffset: .zero)
+        pallet = eventView
+        eventView.eventModel = event
+    }
+    
+    private lazy var eventView = CurrentEventView.loadFromNib()
+}

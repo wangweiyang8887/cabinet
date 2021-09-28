@@ -119,7 +119,6 @@ class HomePageVC : BaseCollectionViewController {
         result.font = .systemFont(ofSize: 32, weight: .bold)
         result.textColor = .cabinetBlack
         result.edgeInsets = UIEdgeInsets(top: 0, left: 16, bottom: 16, right: 16)
-        result.selectionHandler = { [unowned self] in WeatherColorPickerVC.show(with: self, currentWeather: self.currentWeather) }
         return result
     }()
     
