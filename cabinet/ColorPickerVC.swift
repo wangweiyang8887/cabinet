@@ -18,7 +18,7 @@ final class ColorPickerVC : BaseBottomSheetVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.sections += BaseSection([ weatherRow, previewRow, redSliderRow, greenSliderRow, blueSliderRow ])
+        collectionView.sections += BaseSection([ weatherRow, colorItemsRow, redSliderRow, greenSliderRow, blueSliderRow ])
     }
     
     private func updateColors() {
@@ -42,6 +42,12 @@ final class ColorPickerVC : BaseBottomSheetVC {
         let result = Row()
         weatherView.constrainSize(to: CGSize(uniform: (UIScreen.main.bounds.width - 32 - 16) / 2))
         result.addSubview(weatherView, constrainedToCenterWithOffset: .zero)
+        return result
+    }()
+    
+    private lazy var colorItemsRow: ColorItemsRow = {
+        let result = ColorItemsRow()
+        result.gradientHandler = { [unowned self] in self.weatherView.gradient = $0 }
         return result
     }()
     

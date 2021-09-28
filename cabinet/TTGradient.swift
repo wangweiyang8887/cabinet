@@ -41,6 +41,19 @@ public struct TTGradient : Equatable {
     public static let denimToJava = TTGradient(components: [ .cabinetDarkBlue, .cabinetJava ])
     public static let goldenrodToJava = TTGradient(components: [ .cabinetYellow, .cabinetJava ])
     public static let tacaoToDallas = TTGradient(components: [ .cabinetTacao, .cabinetDallas ])
+    public static let first = TTGradient(components: [ .cabinetTacao, .cabinetDallas ])
+    public static let second = TTGradient(components: [ .cabinetTacao, .cabinetDallas ])
+    public static let third = TTGradient(components: [ .cabinetTacao, .cabinetDallas ])
+    public static let fouth = TTGradient(components: [ .cabinetTacao, .cabinetDallas ])
+    public static let fifth = TTGradient(components: [ .cabinetTacao, .cabinetDallas ])
+    public static let sixth = TTGradient(components: [ .cabinetTacao, .cabinetDallas ])
+    public static let seventh = TTGradient(components: [ .cabinetTacao, .cabinetDallas ])
+    public static let eighth = TTGradient(components: [ .cabinetTacao, .cabinetDallas ])
+    public static let ninth = TTGradient(components: [ .cabinetTacao, .cabinetDallas ])
+    public static let tenth = TTGradient(components: [ .cabinetTacao, .cabinetDallas ])
+    public static let eleventh = TTGradient(components: [ .cabinetTacao, .cabinetDallas ])
+    public static let twelfth = TTGradient(components: [ .cabinetTacao, .cabinetDallas ])
+    public static let thirteenth = TTGradient(components: [ .cabinetTacao, .cabinetDallas ])    
 
     /// Applies self to a given layer.
     ///
@@ -125,6 +138,11 @@ extension TTGradient {
         layer.bounds = bounds
         return layer
     }
+}
+
+extension TTGradient {
+    /// All the predefined gradients, organized so they seemlessly transition between one gradient and the next one.
+    static var allCases: [TTGradient] = [ .curiousBlueToVividViolet, .curiousBlueToBrinkPink, .shockingPinkToChalky, .goldenrodToMandyToVividViolet, .heliotropeToCerulean, .denimToJava, .goldenrodToJava, .tacaoToDallas, .first, .second, .third, .fouth, .fifth, .sixth, .seventh, .eighth, .ninth, .tenth, .eleventh, .twelfth, .thirteenth ]
 }
 
 extension TTGradient : ExpressibleByArrayLiteral {

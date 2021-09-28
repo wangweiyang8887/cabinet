@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D229B612702F4C3006DD1F8 /* ColorItemsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D229B602702F4C3006DD1F8 /* ColorItemsRow.swift */; };
 		9D66D1B826E5FA0E00411D75 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66D1B726E5FA0E00411D75 /* Server.swift */; };
 		9D66D1BB26E5FB3E00411D75 /* KeyedDecodingContainer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66D1BA26E5FB3E00411D75 /* KeyedDecodingContainer+Extension.swift */; };
 		9D66D1BD26E5FBDF00411D75 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66D1BC26E5FBDF00411D75 /* API.swift */; };
@@ -330,6 +331,7 @@
 /* Begin PBXFileReference section */
 		2084E720CBB70812F8CEADA7 /* Pods-cabinet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cabinet.release.xcconfig"; path = "Target Support Files/Pods-cabinet/Pods-cabinet.release.xcconfig"; sourceTree = "<group>"; };
 		4970BD821DAEA3849FC9D057 /* Pods_cabinet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cabinet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D229B602702F4C3006DD1F8 /* ColorItemsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorItemsRow.swift; sourceTree = "<group>"; };
 		9D66D1B726E5FA0E00411D75 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		9D66D1BA26E5FB3E00411D75 /* KeyedDecodingContainer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyedDecodingContainer+Extension.swift"; sourceTree = "<group>"; };
 		9D66D1BC26E5FBDF00411D75 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -1000,6 +1002,7 @@
 				9DCD1ED426F596EF004A4E98 /* ColorSliderRow.swift */,
 				9DCD1EDA26F5C2CD004A4E98 /* PreviewColorRow.swift */,
 				9DCD1EDC26F5C2EF004A4E98 /* PreviewColorRow.xib */,
+				9D229B602702F4C3006DD1F8 /* ColorItemsRow.swift */,
 			);
 			name = ColorPicker;
 			sourceTree = "<group>";
@@ -1412,6 +1415,7 @@
 				9DAC538E26FAF83B003F2D4C /* SettingVC.swift in Sources */,
 				9D7B91FF26E21951001C11AD /* UIView+Helper.m in Sources */,
 				9DAC539A26FB1612003F2D4C /* FileManager+Helper.swift in Sources */,
+				9D229B612702F4C3006DD1F8 /* ColorItemsRow.swift in Sources */,
 				9D7B91DF26E21001001C11AD /* Math.swift in Sources */,
 				9DB7581626D38D43006D2246 /* HomePageVC.swift in Sources */,
 				9D6BC28926F0A2FA00F000C9 /* Navigation+Utilities.swift in Sources */,
