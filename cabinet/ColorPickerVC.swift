@@ -15,7 +15,7 @@ class ColorPickerVC : BaseBottomSheetVC {
     }
 
     lazy var containerRow: BaseRow = {
-        class Row : BaseRow { override class var height: RowHeight { .fixed((UIScreen.main.bounds.width - 32 - 16) / 2) } }
+        class Row : BaseRow { override class var height: RowHeight { .auto(estimate: (UIScreen.main.bounds.width - 32 - 16) / 2) } }
         let result = Row()
         return result
     }()
@@ -150,4 +150,34 @@ final class CalendarColorPickerVC : ColorPickerVC {
     }
     
     private lazy var calendarView = CalendarView.loadFromNib()
+}
+
+final class DailyColorPickerVC : ColorPickerVC {
+    static func show(with viewController: UIViewController, text: String?, completion: ActionClosure? = nil) {
+        let vc = DailyColorPickerVC(style: .action(cancelRowStyle: .default, title: ""))
+        vc.actionHandler = { [weak vc ] in
+            guard let vc = vc else { return }
+            if let image = vc.dailyRow.image, let data = image.jpegData(compressionQuality: 1) {
+                UserDefaults.shared[.dailyBackground] = data
+            } else {
+                let result = vc.dailyRow.gradient.components.compactMap { $0.hexString }.joined(separator: " ").data(using: .utf8)
+                UserDefaults.shared[.dailyBackground] = result
+            }
+            if let data = vc.dailyRow.foregroundColor.hexString?.data(using: .utf8) {
+                UserDefaults.shared[.dailyForeground] = data
+            }
+            completion?()
+        }
+        vc.dailyRow.title = text
+        viewController.presentPanModal(vc)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        dailyRow.margin = .zero
+        containerRow.addSubview(dailyRow, pinningEdges: .all, withInsets: UIEdgeInsets(uniform: 16))
+        pallet = dailyRow
+    }
+    
+    private lazy var dailyRow = DailyRow()
 }

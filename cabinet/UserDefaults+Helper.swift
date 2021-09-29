@@ -98,4 +98,7 @@ extension UserDefaults.Property {
     // Calendar View
     public static var calendarForeground: UserDefaults.Property<Data> { return .init(keyName: "calendarForeground", isUserSpecific: false) }
     public static var calendarBackground: UserDefaults.Property<Data> { return .init(keyName: "calendarBackground", isUserSpecific: false) }
+    // Daily View
+    public static var dailyForeground: UserDefaults.Property<Data> { return .init(keyName: "dailyForeground", isUserSpecific: false) }
+    public static var dailyBackground: UserDefaults.Property<Data> { return .init(keyName: "dailyBackground", isUserSpecific: false) }
 }
