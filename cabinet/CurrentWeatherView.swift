@@ -2,18 +2,18 @@
 
 final class CurrentWeatherView : UIView, Palletable {
     @IBOutlet private var locationImageView: UIImageView!
-    @IBOutlet private var addressLabel: UILabel!
-    @IBOutlet private var stateLabel: UILabel!
+    @IBOutlet private var addressLabel: ColorableLabel!
+    @IBOutlet private var stateLabel: ColorableLabel!
     @IBOutlet private var stateImageView: UIImageView!
-    @IBOutlet private var temperatureLabel: UILabel!
-    @IBOutlet private var windLabel: UILabel!
-    
+    @IBOutlet private var temperatureLabel: ColorableLabel!
+    @IBOutlet private var windLabel: ColorableLabel!
+        
     var currentWeather: CurrentWeather? {
         didSet {
             updateContent()
         }
     }
-    
+        
     override func awakeFromNib() {
         super.awakeFromNib()
         addSubview(imageView, pinningEdges: .all)
@@ -27,12 +27,21 @@ final class CurrentWeatherView : UIView, Palletable {
         getUserDefaultIfNeeded()
     }
     
+    override func tintColorDidChange() {
+        super.tintColorDidChange()
+        viewIterator { $0.tintColor = tintColor }
+    }
+
     func getUserDefaultIfNeeded() {
-        guard let data = UserDefaults.shared[.weatherBackground] else { return }
-        if let image = UIImage(data: data) {
-            self.image = image
-        } else if let hex = String(data: data, encoding: .utf8) {
-            gradient = TTGradient(components: hex.components(separatedBy: .whitespaces).map { UIColor(hex: $0) })
+        if let data = UserDefaults.shared[.weatherBackground] {
+            if let image = UIImage(data: data) {
+                self.image = image
+            } else if let hex = String(data: data, encoding: .utf8) {
+                gradient = TTGradient(components: hex.components(separatedBy: .whitespaces).map { UIColor(hex: $0) })
+            }
+        }
+        if let data = UserDefaults.shared[.weatherForeground], let hex = String(data: data, encoding: .utf8) {
+            foregroundColor = UIColor(hex: hex)
         }
     }
     
@@ -77,5 +86,10 @@ final class CurrentWeatherView : UIView, Palletable {
     var image: UIImage? {
         get { return imageView.image }
         set { imageView.image = newValue }
+    }
+    
+    var foregroundColor: UIColor {
+        get { return tintColor }
+        set { tintColor = newValue }
     }
 }

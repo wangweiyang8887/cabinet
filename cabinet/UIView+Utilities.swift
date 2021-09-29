@@ -2,7 +2,16 @@
 
 import UIKit
 
+typealias ViewHandler = (UIView) -> Void
+
 extension UIView {
+    func viewIterator(_ viewHandler: ViewHandler) {
+        subviews.forEach {
+            viewHandler($0)
+            $0.viewIterator(viewHandler)
+            print($0)
+        }
+    }
 
     @IBInspectable public var autoAdjustsTintColor: Bool {
         get { return tintAdjustmentMode == .automatic }

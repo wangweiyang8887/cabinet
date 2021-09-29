@@ -60,6 +60,7 @@
 		9D6BC2A826F1F57400F000C9 /* Codable+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC2A726F1F57400F000C9 /* Codable+Helper.swift */; };
 		9D6BC2A926F1F58800F000C9 /* Codable+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC2A726F1F57400F000C9 /* Codable+Helper.swift */; };
 		9D70891826D8F76500716054 /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D70891726D8F76500716054 /* Blur.swift */; };
+		9D72350E2704474B00DEB9D0 /* ColorableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D72350D2704474B00DEB9D0 /* ColorableLabel.swift */; };
 		9D7B91B026E0E914001C11AD /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91AF26E0E914001C11AD /* TimerManager.swift */; };
 		9D7B91B226E1EC7B001C11AD /* PushTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91B126E1EC7B001C11AD /* PushTransitionDelegate.swift */; };
 		9D7B91B426E200FB001C11AD /* UICollectionView+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91B326E200FB001C11AD /* UICollectionView+Utilities.swift */; };
@@ -381,6 +382,7 @@
 		9D6BC2A426F1F2B000F000C9 /* WidgetServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetServer.swift; sourceTree = "<group>"; };
 		9D6BC2A726F1F57400F000C9 /* Codable+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+Helper.swift"; sourceTree = "<group>"; };
 		9D70891726D8F76500716054 /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
+		9D72350D2704474B00DEB9D0 /* ColorableLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorableLabel.swift; sourceTree = "<group>"; };
 		9D7B91AF26E0E914001C11AD /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		9D7B91B126E1EC7B001C11AD /* PushTransitionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushTransitionDelegate.swift; sourceTree = "<group>"; };
 		9D7B91B326E200FB001C11AD /* UICollectionView+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Utilities.swift"; sourceTree = "<group>"; };
@@ -1006,6 +1008,7 @@
 				9DCD1EDA26F5C2CD004A4E98 /* PreviewColorRow.swift */,
 				9DCD1EDC26F5C2EF004A4E98 /* PreviewColorRow.xib */,
 				9D229B602702F4C3006DD1F8 /* ColorItemsRow.swift */,
+				9D72350D2704474B00DEB9D0 /* ColorableLabel.swift */,
 			);
 			name = ColorPicker;
 			sourceTree = "<group>";
@@ -1414,6 +1417,7 @@
 				9DAC539726FB1314003F2D4C /* SettingTableViewCell.swift in Sources */,
 				9DAC53A726FC4D4D003F2D4C /* PlainRow.swift in Sources */,
 				9D82637126D8D30500981A3E /* NSLayoutConstraint+Utilities.swift in Sources */,
+				9D72350E2704474B00DEB9D0 /* ColorableLabel.swift in Sources */,
 				9DB7582C26D39CF3006D2246 /* BaseDateFormatter.swift in Sources */,
 				9DAC538E26FAF83B003F2D4C /* SettingVC.swift in Sources */,
 				9D7B91FF26E21951001C11AD /* UIView+Helper.m in Sources */,

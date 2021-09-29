@@ -26,7 +26,7 @@ final class CurrentWeatherRow : BaseRow {
         longPressEvent.addTarget(self, action: #selector(longPressEvent(_:)))
         currentEventView.addGestureRecognizer(longPressEvent)
     }
-    
+        
     @objc private func longPressWeather(_ longPress: UILongPressGestureRecognizer) {
         switch longPress.state {
         case .began:

@@ -19,6 +19,11 @@ class CurrentEventView : UIView, Palletable {
         addShadow(radius: 16, yOffset: -1)
     }
     
+    override func tintColorDidChange() {
+        super.tintColorDidChange()
+        viewIterator { $0.tintColor = tintColor }
+    }
+    
     private func handleEventModelChanged() {
         guard let model = eventModel else { return }
         eventNameLabel.text = model.name
@@ -52,5 +57,10 @@ class CurrentEventView : UIView, Palletable {
     var image: UIImage? {
         get { return imageView.image }
         set { imageView.image = newValue }
+    }
+    
+    var foregroundColor: UIColor {
+        get { return tintColor }
+        set { tintColor = newValue }
     }
 }

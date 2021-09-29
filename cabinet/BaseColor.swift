@@ -118,3 +118,7 @@ extension UIColor {
         }
     }
 }
+
+extension UIColor {
+    static var allCases: [UIColor] = [ .white, .black, .cabinetBlossom, cabinetGreenV2, .cabinetLightestGray, .cabinetLighterGray, .cabinetLightGray, .cabinetGray, .cabinetMediumGray, .cabinetDarkGray, .cabinetDarkerGray, .cabinetDarkestGray, .cabinetYellowV2, .cabinetRose, .cabinetTuna, .cabinetBlue, .cabinetDarkBlue, .cabinetGreen, .cabinetPurple, .cabinetRed, .cabinetYellow, .cabinetDarkYellow, .cabinetPurpleV2, .cabinetYellowV3, .lightestBlue, .darkBlue, .cabinetPureBlue, .cabinetRoseRed ]
+}

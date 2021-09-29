@@ -3,12 +3,15 @@
 import FMPhotoPicker
 
 class ColorItemsRow : BaseRow {
+    enum Kind { case normal, gradient }
     
-    override class var margins: UIEdgeInsets { return UIEdgeInsets(horizontal: 0, vertical: 48) }
+    override class var margins: UIEdgeInsets { return .zero }
     override class var height: RowHeight { return .fixed(60) }
     
     var gradientHandler: ValueChangedHandler<TTGradient>?
+    var colorHandler: ValueChangedHandler<UIColor>?
     var imageHandler: ValueChangedHandler<UIImage>?
+    var kind: Kind = .normal
     
     override func initialize() {
         super.initialize()
@@ -35,29 +38,39 @@ class ColorItemsRow : BaseRow {
 
 extension ColorItemsRow : UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return TTGradient.allCases.count + 1
+        return kind == .normal ? UIColor.allCases.count : (TTGradient.allCases.count + 1)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if indexPath.row == 0 {
-            let cell = collectionView.dequeueReusableCell(with: PhotoCell.self, for: indexPath)
+        if kind == .normal {
+            let cell = collectionView.dequeueReusableCell(with: Cell.self, for: indexPath)
+            cell.gradient = [ UIColor.allCases[indexPath.row] ]
             return cell
         } else {
-            let cell = collectionView.dequeueReusableCell(with: Cell.self, for: indexPath)
-            cell.gradient = TTGradient.allCases[indexPath.row - 1]
-            return cell
+            if indexPath.row == 0 {
+                let cell = collectionView.dequeueReusableCell(with: PhotoCell.self, for: indexPath)
+                return cell
+            } else {
+                let cell = collectionView.dequeueReusableCell(with: Cell.self, for: indexPath)
+                cell.gradient = TTGradient.allCases[indexPath.row - 1]
+                return cell
+            }
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if indexPath.row == 0 {
-            AuthorizationView.showAlert(with: .photoLibrary) { [unowned self] in
-                let picker = FMPhotoPickerViewController(config: FMPhotoPickerConfig.defaultConfig)
-                picker.delegate = self
-                UIViewController.current().present(picker, animated: true)
-            }
+        if kind == .normal {
+            colorHandler?(UIColor.allCases[indexPath.row])
         } else {
-            gradientHandler?(TTGradient.allCases[indexPath.row - 1])
+            if indexPath.row == 0 {
+                AuthorizationView.showAlert(with: .photoLibrary) { [unowned self] in
+                    let picker = FMPhotoPickerViewController(config: FMPhotoPickerConfig.defaultConfig)
+                    picker.delegate = self
+                    UIViewController.current().present(picker, animated: true)
+                }
+            } else {
+                gradientHandler?(TTGradient.allCases[indexPath.row - 1])
+            }
         }
     }
 }
@@ -83,6 +96,9 @@ extension ColorItemsRow {
             super.init(frame: frame)
             contentView.addSubview(gradientView, pinningEdges: .all)
             gradientView.cornerRadius = 16
+            contentView.cornerRadius = 30
+            contentView.borderWidth = 1
+            contentView.borderColor = .cabinetSeparator
         }
         
         required init?(coder: NSCoder) {
@@ -100,9 +116,9 @@ extension ColorItemsRow {
             super.init(frame: frame)
             contentView.addSubview(titleLabel, pinningEdges: .all)
             contentView.addSubview(imageView, pinningEdges: .all)
-            contentView.cornerRadius = 16
+            contentView.cornerRadius = 30
             contentView.borderWidth = 1
-            contentView.borderColor = .nonStandardColor(withRGBHex: 0x333333)
+            contentView.borderColor = .cabinetSeparator
         }
         
         required init?(coder: NSCoder) {
