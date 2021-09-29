@@ -57,7 +57,7 @@ final class WeatherColorPickerVC : ColorPickerVC {
     private var currentWeather: CurrentWeather?
     
     static func show(with viewController: UIViewController, currentWeather: CurrentWeather?, completion: ActionClosure? = nil) {
-        let vc = WeatherColorPickerVC.self.init(style: .action(cancelRowStyle: .default, title: ""))
+        let vc = WeatherColorPickerVC(style: .action(cancelRowStyle: .default, title: ""))
         vc.actionHandler = { [weak vc] in
             guard let vc = vc else { return }
             if let image = vc.weatherView.image, let data = image.jpegData(compressionQuality: 1) {
@@ -90,7 +90,7 @@ final class EventColorPickerVC : ColorPickerVC {
     private var event: EventModel?
     
     static func show(with viewController: UIViewController, event: EventModel?, completion: ActionClosure? = nil) {
-        let vc = EventColorPickerVC.self.init(style: .action(cancelRowStyle: .default, title: ""))
+        let vc = EventColorPickerVC(style: .action(cancelRowStyle: .default, title: ""))
         vc.actionHandler = { [weak vc ] in
             guard let vc = vc else { return }
             if let image = vc.eventView.image, let data = image.jpegData(compressionQuality: 1) {
@@ -117,4 +117,37 @@ final class EventColorPickerVC : ColorPickerVC {
     }
     
     private lazy var eventView = CurrentEventView.loadFromNib()
+}
+
+final class CalendarColorPickerVC : ColorPickerVC {
+    private var calendar: ChineseCalendarModel?
+    
+    static func show(with viewController: UIViewController, calendar: ChineseCalendarModel?, completion: ActionClosure? = nil) {
+        let vc = CalendarColorPickerVC(style: .action(cancelRowStyle: .default, title: ""))
+        vc.actionHandler = { [weak vc ] in
+            guard let vc = vc else { return }
+            if let image = vc.calendarView.image, let data = image.jpegData(compressionQuality: 1) {
+                UserDefaults.shared[.calendarBackground] = data
+            } else {
+                let result = vc.calendarView.gradient.components.compactMap { $0.hexString }.joined(separator: " ").data(using: .utf8)
+                UserDefaults.shared[.calendarBackground] = result
+            }
+            if let data = vc.calendarView.foregroundColor.hexString?.data(using: .utf8) {
+                UserDefaults.shared[.calendarForeground] = data
+            }
+            completion?()
+        }
+        vc.calendar = calendar
+        viewController.presentPanModal(vc)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        containerRow.addSubview(calendarView, pinningEdges: .all, withInsets: UIEdgeInsets(uniform: 16))
+        calendarView.constrainHeight(to: 168)
+        pallet = calendarView
+        calendarView.chineseCalendar = calendar
+    }
+    
+    private lazy var calendarView = CalendarView.loadFromNib()
 }

@@ -9,7 +9,6 @@ extension UIView {
         subviews.forEach {
             viewHandler($0)
             $0.viewIterator(viewHandler)
-            print($0)
         }
     }
 

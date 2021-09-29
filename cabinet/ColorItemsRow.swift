@@ -77,9 +77,7 @@ extension ColorItemsRow : UICollectionViewDataSource, UICollectionViewDelegateFl
 
 extension ColorItemsRow : FMPhotoPickerViewControllerDelegate {
     func fmPhotoPickerController(_ picker: FMPhotoPickerViewController, didFinishPickingPhotoWith photos: [UIImage]) {
-        guard let cell = uiCollectionView.visibleCells.first as? PhotoCell else { return }
-        cell.image = photos.first
-        if let image = photos.first { imageHandler?(image) }
+        if let image = photos.first?.tinted(with: UIColor.black.withAlphaComponent(0.1)) { imageHandler?(image) }
         UIViewController.current().dismissSelf()
     }
 }

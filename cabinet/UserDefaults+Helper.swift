@@ -95,5 +95,7 @@ extension UserDefaults.Property {
     // Event View
     public static var eventForeground: UserDefaults.Property<Data> { return .init(keyName: "eventForeground", isUserSpecific: false) }
     public static var eventBackground: UserDefaults.Property<Data> { return .init(keyName: "eventBackground", isUserSpecific: false) }
-
+    // Calendar View
+    public static var calendarForeground: UserDefaults.Property<Data> { return .init(keyName: "calendarForeground", isUserSpecific: false) }
+    public static var calendarBackground: UserDefaults.Property<Data> { return .init(keyName: "calendarBackground", isUserSpecific: false) }
 }
