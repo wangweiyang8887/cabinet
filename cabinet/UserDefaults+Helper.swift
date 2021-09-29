@@ -86,4 +86,5 @@ extension UserDefaults.Property {
     public static var todayYI: UserDefaults.Property<String> { return .init(keyName: "todayYI", isUserSpecific: false) }
     public static var todayJI: UserDefaults.Property<String> { return .init(keyName: "todayJI", isUserSpecific: false) }
     public static var userImage: UserDefaults.Property<Data> { return .init(keyName: "userImage", isUserSpecific: false) }
+    public static var weatherBackground: UserDefaults.Property<Data> { return .init(keyName: "weatherBackground", isUserSpecific: true) }
 }

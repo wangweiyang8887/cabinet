@@ -24,6 +24,16 @@ final class CurrentWeatherView : UIView, Palletable {
         gradientView.cornerRadius = 16
         cornerRadius = 16
         addShadow(radius: 16, yOffset: -1)
+        getUserDefaultIfNeeded()
+    }
+    
+    func getUserDefaultIfNeeded() {
+        guard let data = UserDefaults.shared[.weatherBackground] else { return }
+        if let image = UIImage(data: data) {
+            self.image = image
+        } else if let hex = String(data: data, encoding: .utf8) {
+            gradient = TTGradient(components: hex.components(separatedBy: .whitespaces).map { UIColor(hex: $0) })
+        }
     }
     
     private func updateContent() {

@@ -30,9 +30,17 @@ class ColorPickerVC : BaseBottomSheetVC {
 final class WeatherColorPickerVC : ColorPickerVC {
     private var currentWeather: CurrentWeather?
     
-    static func show(with viewController: UIViewController, currentWeather: CurrentWeather?) {
+    static func show(with viewController: UIViewController, currentWeather: CurrentWeather?, completion: ActionClosure? = nil) {
         let vc = WeatherColorPickerVC.self.init(style: .action(cancelRowStyle: .default, title: ""))
-        vc.actionHandler = { print("aaaaaaa") }
+        vc.actionHandler = {
+            if let image = vc.weatherView.image, let data = image.jpegData(compressionQuality: 1) {
+                UserDefaults.shared[.weatherBackground] = data
+            } else {
+                let result = vc.weatherView.gradient.components.compactMap { $0.hexString }.joined(separator: " ").data(using: .utf8)
+                UserDefaults.shared[.weatherBackground] = result
+            }
+            completion?()
+        }
         vc.currentWeather = currentWeather
         viewController.presentPanModal(vc)
     }

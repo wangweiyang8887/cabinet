@@ -29,7 +29,10 @@ final class CurrentWeatherRow : BaseRow {
     
     @objc private func longPressWeather(_ longPress: UILongPressGestureRecognizer) {
         switch longPress.state {
-        case .began: WeatherColorPickerVC.show(with: UIViewController.current(), currentWeather: self.weather)
+        case .began:
+            WeatherColorPickerVC.show(with: UIViewController.current(), currentWeather: self.weather) { [unowned self] in
+                self.currentWeatherView.getUserDefaultIfNeeded()
+            }
         default: break
         }
     }
