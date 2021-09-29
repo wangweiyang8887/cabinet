@@ -181,3 +181,32 @@ final class DailyColorPickerVC : ColorPickerVC {
     
     private lazy var dailyRow = DailyRow()
 }
+
+final class ClockColorPickerVC : ColorPickerVC {
+    static func show(with viewController: UIViewController, completion: ActionClosure? = nil) {
+        let vc = ClockColorPickerVC(style: .action(cancelRowStyle: .default, title: ""))
+        vc.actionHandler = { [weak vc ] in
+            guard let vc = vc else { return }
+            if let image = vc.clockRow.image, let data = image.jpegData(compressionQuality: 1) {
+                UserDefaults.shared[.clockBackground] = data
+            } else {
+                let result = vc.clockRow.gradient.components.compactMap { $0.hexString }.joined(separator: " ").data(using: .utf8)
+                UserDefaults.shared[.clockBackground] = result
+            }
+            if let data = vc.clockRow.foregroundColor.hexString?.data(using: .utf8) {
+                UserDefaults.shared[.clockForeground] = data
+            }
+            completion?()
+        }
+        viewController.presentPanModal(vc)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        clockRow.margin = .zero
+        containerRow.addSubview(clockRow, pinningEdges: .all, withInsets: UIEdgeInsets(uniform: 16))
+        pallet = clockRow
+    }
+    
+    private lazy var clockRow = ClockRow()
+}

@@ -101,4 +101,7 @@ extension UserDefaults.Property {
     // Daily View
     public static var dailyForeground: UserDefaults.Property<Data> { return .init(keyName: "dailyForeground", isUserSpecific: false) }
     public static var dailyBackground: UserDefaults.Property<Data> { return .init(keyName: "dailyBackground", isUserSpecific: false) }
+    // Clock View
+    public static var clockForeground: UserDefaults.Property<Data> { return .init(keyName: "clockForeground", isUserSpecific: false) }
+    public static var clockBackground: UserDefaults.Property<Data> { return .init(keyName: "clockBackground", isUserSpecific: false) }
 }
