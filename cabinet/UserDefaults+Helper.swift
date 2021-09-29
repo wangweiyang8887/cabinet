@@ -86,6 +86,14 @@ extension UserDefaults.Property {
     public static var todayYI: UserDefaults.Property<String> { return .init(keyName: "todayYI", isUserSpecific: false) }
     public static var todayJI: UserDefaults.Property<String> { return .init(keyName: "todayJI", isUserSpecific: false) }
     public static var userImage: UserDefaults.Property<Data> { return .init(keyName: "userImage", isUserSpecific: false) }
-    public static var weatherBackground: UserDefaults.Property<Data> { return .init(keyName: "weatherBackground", isUserSpecific: true) }
-    public static var weatherForeground: UserDefaults.Property<Data> { return .init(keyName: "weatherForeground", isUserSpecific: true) }
+}
+
+extension UserDefaults.Property {
+    // Weather View
+    public static var weatherForeground: UserDefaults.Property<Data> { return .init(keyName: "weatherForeground", isUserSpecific: false) }
+    public static var weatherBackground: UserDefaults.Property<Data> { return .init(keyName: "weatherBackground", isUserSpecific: false) }
+    // Event View
+    public static var eventForeground: UserDefaults.Property<Data> { return .init(keyName: "eventForeground", isUserSpecific: false) }
+    public static var eventBackground: UserDefaults.Property<Data> { return .init(keyName: "eventBackground", isUserSpecific: false) }
+
 }

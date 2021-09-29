@@ -89,9 +89,21 @@ final class WeatherColorPickerVC : ColorPickerVC {
 final class EventColorPickerVC : ColorPickerVC {
     private var event: EventModel?
     
-    static func show(with viewController: UIViewController, event: EventModel?) {
+    static func show(with viewController: UIViewController, event: EventModel?, completion: ActionClosure? = nil) {
         let vc = EventColorPickerVC.self.init(style: .action(cancelRowStyle: .default, title: ""))
-        vc.actionHandler = { print("aaaaaaa") }
+        vc.actionHandler = { [weak vc ] in
+            guard let vc = vc else { return }
+            if let image = vc.eventView.image, let data = image.jpegData(compressionQuality: 1) {
+                UserDefaults.shared[.eventBackground] = data
+            } else {
+                let result = vc.eventView.gradient.components.compactMap { $0.hexString }.joined(separator: " ").data(using: .utf8)
+                UserDefaults.shared[.eventBackground] = result
+            }
+            if let data = vc.eventView.foregroundColor.hexString?.data(using: .utf8) {
+                UserDefaults.shared[.eventForeground] = data
+            }
+            completion?()
+        }
         vc.event = event
         viewController.presentPanModal(vc)
     }

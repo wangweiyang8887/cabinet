@@ -1,9 +1,9 @@
 // Copyright © 2021 evan. All rights reserved.
 
 class CurrentEventView : UIView, Palletable {
-    @IBOutlet weak var eventNameLabel: UILabel!
-    @IBOutlet weak var eventDateLabel: UILabel!
-    @IBOutlet weak var eventDayLabel: UILabel!
+    @IBOutlet weak var eventNameLabel: ColorableLabel!
+    @IBOutlet weak var eventDateLabel: ColorableLabel!
+    @IBOutlet weak var eventDayLabel: ColorableLabel!
     
     var eventModel: EventModel? { didSet { handleEventModelChanged() } }
     
@@ -17,11 +17,25 @@ class CurrentEventView : UIView, Palletable {
         gradientView.cornerRadius = 16
         cornerRadius = 16
         addShadow(radius: 16, yOffset: -1)
+        getUserDefaultIfNeeded()
     }
     
     override func tintColorDidChange() {
         super.tintColorDidChange()
         viewIterator { $0.tintColor = tintColor }
+    }
+
+    func getUserDefaultIfNeeded() {
+        if let data = UserDefaults.shared[.eventBackground] {
+            if let image = UIImage(data: data) {
+                self.image = image
+            } else if let hex = String(data: data, encoding: .utf8) {
+                gradient = TTGradient(components: hex.components(separatedBy: .whitespaces).map { UIColor(hex: $0) })
+            }
+        }
+        if let data = UserDefaults.shared[.eventForeground], let hex = String(data: data, encoding: .utf8) {
+            foregroundColor = UIColor(hex: hex)
+        }
     }
     
     private func handleEventModelChanged() {
