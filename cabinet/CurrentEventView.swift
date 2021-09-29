@@ -22,6 +22,7 @@ class CurrentEventView : UIView, Palletable {
     
     override func tintColorDidChange() {
         super.tintColorDidChange()
+        guard tintColor != .clear else { return }
         viewIterator { $0.tintColor = tintColor }
     }
 
@@ -35,6 +36,8 @@ class CurrentEventView : UIView, Palletable {
         }
         if let data = UserDefaults.shared[.eventForeground], let hex = String(data: data, encoding: .utf8) {
             foregroundColor = UIColor(hex: hex)
+        } else {
+            tintColor = .clear
         }
     }
     

@@ -35,6 +35,7 @@ final class CalendarView : UIView, Palletable {
     
     override func tintColorDidChange() {
         super.tintColorDidChange()
+        guard tintColor != .clear else { return }
         viewIterator { $0.tintColor = tintColor }
         redLabel.borderColor = tintColor
         greenLabel.borderColor = tintColor
@@ -50,6 +51,8 @@ final class CalendarView : UIView, Palletable {
         }
         if let data = UserDefaults.shared[.calendarForeground], let hex = String(data: data, encoding: .utf8) {
             foregroundColor = UIColor(hex: hex)
+        } else {
+            tintColor = .clear
         }
     }
     
