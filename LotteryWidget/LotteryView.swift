@@ -7,16 +7,32 @@ struct LotteryView: View {
     
     var entry: LotteryEntry
     
+    var contentView: some View {
+        VStack(spacing: 16) {
+            ResultView(kind: .ssq, model: entry.models.first)
+            ResultView(kind: .dlt, model: entry.models.last)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .padding(.all, 16)
+        .foregroundColor(.white)
+    }
+    
     var body: some View {
         ZStack {
-            VStack(spacing: 16) {
-                ResultView(kind: .ssq, model: entry.models.first)
-                ResultView(kind: .dlt, model: entry.models.last)
+            if let image = entry.theme?.image {
+                contentView
+                    .background(
+                        Image(uiImage: image)
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                    )
+            } else if let hex = entry.theme?.background {
+                contentView
+                    .background(LinearGradient(gradient: Gradient(colors: hex.components(separatedBy: .whitespaces).map { Color(UIColor(hex: $0)) }), startPoint: .leading, endPoint: /*@START_MENU_TOKEN@*/.trailing/*@END_MENU_TOKEN@*/))
+            } else {
+                contentView
+                    .background(LinearGradient(gradient: Gradient(colors: [ Color(UIColor.cabinetRoseRed.withAlphaComponent(0.3)), Color(UIColor.cabinetPureBlue.withAlphaComponent(0.4)) ]), startPoint: .topLeading, endPoint: .bottomTrailing))
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .padding(.all, 16)
-            .foregroundColor(.white)
-            .background(LinearGradient(gradient: Gradient(colors: [ Color(UIColor.cabinetRoseRed.withAlphaComponent(0.3)), Color(UIColor.cabinetPureBlue.withAlphaComponent(0.4)) ]), startPoint: .topLeading, endPoint: .bottomTrailing))
         }
         .background(Color.white)
     }

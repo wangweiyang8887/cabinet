@@ -61,6 +61,7 @@
 		9D6BC2A926F1F58800F000C9 /* Codable+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC2A726F1F57400F000C9 /* Codable+Helper.swift */; };
 		9D70891826D8F76500716054 /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D70891726D8F76500716054 /* Blur.swift */; };
 		9D72350E2704474B00DEB9D0 /* ColorableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D72350D2704474B00DEB9D0 /* ColorableLabel.swift */; };
+		9D7235112705A05F00DEB9D0 /* UserDefaults+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BC27E26F0948C00F000C9 /* UserDefaults+Helper.swift */; };
 		9D7B91B026E0E914001C11AD /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91AF26E0E914001C11AD /* TimerManager.swift */; };
 		9D7B91B226E1EC7B001C11AD /* PushTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91B126E1EC7B001C11AD /* PushTransitionDelegate.swift */; };
 		9D7B91B426E200FB001C11AD /* UICollectionView+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B91B326E200FB001C11AD /* UICollectionView+Utilities.swift */; };
@@ -384,6 +385,7 @@
 		9D70891726D8F76500716054 /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
 		9D72350D2704474B00DEB9D0 /* ColorableLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorableLabel.swift; sourceTree = "<group>"; };
 		9D72351027059E7A00DEB9D0 /* InspireWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = InspireWidgetExtension.entitlements; sourceTree = "<group>"; };
+		9D7235122705A07800DEB9D0 /* LotteryWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LotteryWidgetExtension.entitlements; sourceTree = "<group>"; };
 		9D7B91AF26E0E914001C11AD /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		9D7B91B126E1EC7B001C11AD /* PushTransitionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushTransitionDelegate.swift; sourceTree = "<group>"; };
 		9D7B91B326E200FB001C11AD /* UICollectionView+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Utilities.swift"; sourceTree = "<group>"; };
@@ -809,6 +811,7 @@
 		9DB757EA26D37B24006D2246 = {
 			isa = PBXGroup;
 			children = (
+				9D7235122705A07800DEB9D0 /* LotteryWidgetExtension.entitlements */,
 				9D72351027059E7A00DEB9D0 /* InspireWidgetExtension.entitlements */,
 				9DAC540726FDB127003F2D4C /* ImageWidgetExtension.entitlements */,
 				9DAC53DB26FD759D003F2D4C /* DailyWidgetExtension.entitlements */,
@@ -1362,6 +1365,7 @@
 				9DAC53C226FC67F3003F2D4C /* BaseBuddle.swift in Sources */,
 				9DAC53C826FC8335003F2D4C /* String+Helper.swift in Sources */,
 				9DAC53BE26FC6763003F2D4C /* LotteryEntry.swift in Sources */,
+				9D7235112705A05F00DEB9D0 /* UserDefaults+Helper.swift in Sources */,
 				9DAC53C526FC70A5003F2D4C /* KeyedDecodingContainer+Extension.swift in Sources */,
 				9DAC53D726FC9E5D003F2D4C /* DailyModel.swift in Sources */,
 				9DAC53C026FC67B9003F2D4C /* LotteryView.swift in Sources */,
@@ -1670,6 +1674,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = LotteryWidgetExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EVG8QY6QFT;
@@ -1695,6 +1700,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = LotteryWidgetExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EVG8QY6QFT;

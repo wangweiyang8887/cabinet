@@ -242,6 +242,9 @@ final class LotteryColorPickerVC : ColorPickerVC {
                 UserDefaults.shared[.lotteryBackground] = result
             }
             completion?()
+            if #available(iOS 14.0, *) {
+                WidgetCenter.shared.reloadAllTimelines()
+            }
         }
         vc.lotteryRow.ssqModel = ssqModel
         vc.lotteryRow.dltModel = dltModel

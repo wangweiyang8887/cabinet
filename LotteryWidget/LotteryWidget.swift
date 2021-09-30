@@ -27,7 +27,16 @@ struct Provider: TimelineProvider {
                     if case .success(let value) = dlt {
                         models.append(value)
                     }
-                    let entry = LotteryEntry(date: Date(), models: models)
+                    let data = UserDefaults.shared[.lotteryBackground]
+                    var entry = LotteryEntry(date: Date(), models: models)
+                    var theme = Theme()
+                    if let data = data, let image = UIImage(data: data) {
+                        theme.image = image
+                    }
+                    if let data = data, let background = String(data: data, encoding: .utf8) {
+                        theme.background = background
+                    }
+                    entry.theme = theme
                     let timeline = Timeline(entries: [entry], policy: .after(refreshTime))
                     completion(timeline)
                 }
@@ -39,7 +48,16 @@ struct Provider: TimelineProvider {
                     } else {
                         daily = nil
                     }
-                    let entry = LotteryEntry(date: Date(), models: daily?.lottery ?? [])
+                    let data = UserDefaults.shared[.lotteryBackground]
+                    var entry = LotteryEntry(date: Date(), models: daily?.lottery ?? [])
+                    var theme = Theme()
+                    if let data = data, let image = UIImage(data: data) {
+                        theme.image = image
+                    }
+                    if let data = data, let background = String(data: data, encoding: .utf8) {
+                        theme.background = background
+                    }
+                    entry.theme = theme
                     let timeline = Timeline(entries: [entry], policy: .after(refreshTime))
                     completion(timeline)
                 }
