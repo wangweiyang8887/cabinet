@@ -15,7 +15,6 @@ struct Provider: TimelineProvider {
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         let currentDate = Date()
-        
         /// widget will be refresh every minute
         let refreshTime = Calendar.current.date(byAdding: .minute, value: 1, to: currentDate)!
 
@@ -26,7 +25,20 @@ struct Provider: TimelineProvider {
             } else {
                 daily = nil
             }
-            let entry = InspireEntry(date: Date(), daily: daily)
+            let data = UserDefaults.shared[.dailyBackground]
+            let foreground = UserDefaults.shared[.dailyForeground]
+            var entry = InspireEntry(date: Date(), daily: daily)
+            var theme = Theme()
+            if let data = data, let image = UIImage(data: data) {
+                theme.image = image
+            }
+            if let data = data, let background = String(data: data, encoding: .utf8) {
+                theme.background = background
+            }
+            if let data = foreground, let foreground = String(data: data, encoding: .utf8) {
+                theme.foreground = foreground
+            }
+            entry.theme = theme
             let timeline = Timeline(entries: [entry], policy: .after(refreshTime))
             completion(timeline)
         }

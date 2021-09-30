@@ -181,6 +181,9 @@ final class DailyColorPickerVC : ColorPickerVC {
                 UserDefaults.shared[.dailyForeground] = data
             }
             completion?()
+            if #available(iOS 14.0, *) {
+                WidgetCenter.shared.reloadAllTimelines()
+            }
         }
         vc.dailyRow.title = text
         viewController.presentPanModal(vc)

@@ -383,6 +383,7 @@
 		9D6BC2A726F1F57400F000C9 /* Codable+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+Helper.swift"; sourceTree = "<group>"; };
 		9D70891726D8F76500716054 /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
 		9D72350D2704474B00DEB9D0 /* ColorableLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorableLabel.swift; sourceTree = "<group>"; };
+		9D72351027059E7A00DEB9D0 /* InspireWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = InspireWidgetExtension.entitlements; sourceTree = "<group>"; };
 		9D7B91AF26E0E914001C11AD /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		9D7B91B126E1EC7B001C11AD /* PushTransitionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushTransitionDelegate.swift; sourceTree = "<group>"; };
 		9D7B91B326E200FB001C11AD /* UICollectionView+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Utilities.swift"; sourceTree = "<group>"; };
@@ -808,6 +809,7 @@
 		9DB757EA26D37B24006D2246 = {
 			isa = PBXGroup;
 			children = (
+				9D72351027059E7A00DEB9D0 /* InspireWidgetExtension.entitlements */,
 				9DAC540726FDB127003F2D4C /* ImageWidgetExtension.entitlements */,
 				9DAC53DB26FD759D003F2D4C /* DailyWidgetExtension.entitlements */,
 				9DCD1E6E26F3234C004A4E98 /* CountDownWidgetExtension.entitlements */,
@@ -2053,6 +2055,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = InspireWidgetExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -2079,6 +2082,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = InspireWidgetExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

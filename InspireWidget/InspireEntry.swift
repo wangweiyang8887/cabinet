@@ -5,4 +5,5 @@ import WidgetKit
 struct InspireEntry : TimelineEntry {
     let date: Date
     let daily: DailyModel?
+    var theme: Theme?
 }

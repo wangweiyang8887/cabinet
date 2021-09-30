@@ -6,21 +6,46 @@ import Foundation
 struct InspireView: View {
     var entry: InspireEntry
     
+    var contentView: some View {
+        VStack {
+            Text(getText())
+                .font(.system(size: 15, weight: .medium))
+                .padding(24)
+                .multilineTextAlignment(.center)
+                .shadow(color: Color(UIColor.black.withAlphaComponent(0.5)), radius: 2, x: 1, y: 2)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .foregroundColor(getForegroundColor())
+    }
+    
     var body: some View {
         ZStack {
-            VStack {
-                Text(getText())
-                    .font(.system(size: 15, weight: .medium))
-                    .padding(24)
-                    .multilineTextAlignment(.center)
-                    .shadow(color: Color(UIColor.black.withAlphaComponent(0.5)), radius: 2, x: 1, y: 2)
+            if let image = entry.theme?.image {
+                contentView
+                    .background(
+                        Image(uiImage: image)
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                    )
+            } else if let hex = entry.theme?.background {
+                contentView
+                    .background(LinearGradient(gradient: Gradient(colors: hex.components(separatedBy: .whitespaces).map { Color(UIColor(hex: $0)) }), startPoint: .leading, endPoint: /*@START_MENU_TOKEN@*/.trailing/*@END_MENU_TOKEN@*/))
+            } else {
+                contentView
+                    .background(LinearGradient(gradient: Gradient(colors: [ Color(UIColor.cabinetRoseRed.withAlphaComponent(0.3)), Color(UIColor.cabinetPureBlue.withAlphaComponent(0.4)) ]), startPoint: .topLeading, endPoint: .bottomTrailing))
+
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .foregroundColor(.white)
-            .background(LinearGradient(gradient: Gradient(colors: [ Color(UIColor.cabinetRoseRed.withAlphaComponent(0.3)), Color(UIColor.cabinetPureBlue.withAlphaComponent(0.4)) ]), startPoint: .topLeading, endPoint: .bottomTrailing))
         }
         .background(Color.white)
 
+    }
+    
+    private func getForegroundColor() -> Color {
+        if let hex = entry.theme?.foreground {
+            return Color(UIColor(hex: hex))
+        } else {
+            return .white
+        }
     }
     
     private func getText() -> String {
