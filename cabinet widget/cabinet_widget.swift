@@ -25,7 +25,21 @@ struct Provider: TimelineProvider {
             } else {
                 currentWeather = nil
             }
-            let entry = CalendarModel(date: Date(), currentWeather: currentWeather)
+            var entry = CalendarModel(date: Date(), currentWeather: currentWeather)
+            var theme = Theme()
+            let data = UserDefaults.shared[.weatherBackground]
+            let foreground = UserDefaults.shared[.weatherForeground]
+            if let data = data {
+                if let hex = String(data: data, encoding: .utf8) {
+                    theme.hex = hex
+                } else if let image = UIImage(data: data) {
+                    theme.image = image
+                }
+            }
+            if let data = foreground, let hex = String(data: data, encoding: .utf8) {
+                theme.foreground = hex
+            }
+            entry.theme = theme
             let timeline = Timeline(entries: [entry], policy: .after(refreshTime))
             completion(timeline)
         }
