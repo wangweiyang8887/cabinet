@@ -7,8 +7,22 @@ struct CalendarView: View {
     
     var body: some View {
         ZStack {
-            WeatherView(weather: calendar.currentWeather)
-                .background(LinearGradient(gradient: Gradient(colors: [ Color(UIColor.cabinetYellow), Color(UIColor.cabinetRed) ]), startPoint: .topLeading, endPoint: .bottomTrailing))
+            if let data = UserDefaults.shared[.weatherBackground] {
+                if let image = UIImage(data: data) {
+                    WeatherView(weather: calendar.currentWeather)
+                        .background(
+                            Image(uiImage: image)
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                        )
+                } else if let hex = String(data: data, encoding: .utf8) {
+                    WeatherView(weather: calendar.currentWeather)
+                        .background(LinearGradient(gradient: Gradient(colors: hex.components(separatedBy: .whitespaces).map { Color(UIColor(hex: $0)) }), startPoint: .leading, endPoint: /*@START_MENU_TOKEN@*/.trailing/*@END_MENU_TOKEN@*/))
+                }
+            } else {
+                WeatherView(weather: calendar.currentWeather)
+                    .background(LinearGradient(gradient: Gradient(colors: [ Color(UIColor.cabinetYellow), Color(UIColor.cabinetRed) ]), startPoint: .topLeading, endPoint: .bottomTrailing))
+            }
         }
     }
 }
@@ -39,8 +53,16 @@ private struct WeatherView : View {
                 Spacer()
             }
         }
-        .foregroundColor(.white)
+        .foregroundColor(getForegroundColor())
         .padding(16)
+    }
+    
+    private func getForegroundColor() -> Color {
+        if let data = UserDefaults.shared[.weatherForeground], let hex = String(data: data, encoding: .utf8) {
+            return Color(UIColor(hex: hex))
+        } else {
+            return .white
+        }
     }
 }
 

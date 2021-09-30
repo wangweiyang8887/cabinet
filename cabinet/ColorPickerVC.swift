@@ -1,5 +1,7 @@
 // Copyright © 2021 evan. All rights reserved.
 
+import WidgetKit
+
 protocol Palletable {
     var gradient: TTGradient { get set }
     var image: UIImage? { get set }
@@ -73,6 +75,9 @@ final class WeatherColorPickerVC : ColorPickerVC {
                 UserDefaults.shared[.weatherForeground] = data
             }
             completion?()
+            if #available(iOS 14.0, *) {
+                WidgetCenter.shared.reloadAllTimelines()
+            }
         }
         vc.currentWeather = currentWeather
         viewController.presentPanModal(vc)
