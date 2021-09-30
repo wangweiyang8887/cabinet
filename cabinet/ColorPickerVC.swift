@@ -147,6 +147,9 @@ final class CalendarColorPickerVC : ColorPickerVC {
                 UserDefaults.shared[.calendarForeground] = data
             }
             completion?()
+            if #available(iOS 14.0, *) {
+                WidgetCenter.shared.reloadAllTimelines()
+            }
         }
         vc.calendar = calendar
         viewController.presentPanModal(vc)

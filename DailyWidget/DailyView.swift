@@ -5,7 +5,7 @@ import SwiftUI
 struct DailyView: View {
     var entry: DailyEntry
     
-    var body: some View {
+    var contentView: some View {
         ZStack {
             HStack {
                 DailyLeftView(daily: entry.daily)
@@ -13,8 +13,32 @@ struct DailyView: View {
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .foregroundColor(.white)
-        .background(LinearGradient(gradient: Gradient(colors: [ Color(UIColor.darkBlue), Color(UIColor.cabinetJava) ]), startPoint: .topLeading, endPoint: .bottomTrailing))
+        .foregroundColor(getForegroundColor())
+    }
+    
+    var body: some View {
+        if let image = entry.theme?.image {
+            contentView
+                .background(
+                    Image(uiImage: image)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                )
+        } else if let hex = entry.theme?.background {
+            contentView
+                .background(LinearGradient(gradient: Gradient(colors: hex.components(separatedBy: .whitespaces).map { Color(UIColor(hex: $0)) }), startPoint: .leading, endPoint: /*@START_MENU_TOKEN@*/.trailing/*@END_MENU_TOKEN@*/))
+        } else {
+            contentView
+                .background(LinearGradient(gradient: Gradient(colors: [ Color(UIColor.darkBlue), Color(UIColor.cabinetJava) ]), startPoint: .topLeading, endPoint: .bottomTrailing))
+        }
+    }
+    
+    private func getForegroundColor() -> Color {
+        if let hex = entry.theme?.foreground {
+            return Color(UIColor(hex: hex))
+        } else {
+            return .white
+        }
     }
 }
 
@@ -52,7 +76,7 @@ private struct DailyRightView : View {
                     .frame(width: 44, height: 44)
                     .overlay(
                         RoundedRectangle(cornerRadius: 22)
-                            .stroke(Color.white, lineWidth: 1)
+                            .stroke(lineWidth: 1)
                     )
                 Text(UserDefaults.shared[.todayYI] ?? "诸事不宜")
                     .font(.system(size: 15, weight: .medium))
@@ -63,7 +87,7 @@ private struct DailyRightView : View {
                     .frame(width: 44, height: 44)
                     .overlay(
                         RoundedRectangle(cornerRadius: 22)
-                            .stroke(Color.white, lineWidth: 1)
+                            .stroke(lineWidth: 1)
                     )
                 Text(UserDefaults.shared[.todayJI] ?? "-")
                     .font(.system(size: 15, weight: .medium))
