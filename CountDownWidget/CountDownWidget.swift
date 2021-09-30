@@ -14,15 +14,29 @@ struct Provider: TimelineProvider {
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        /// widget will be refresh every minute
-        let refreshTime = Calendar.current.date(byAdding: .minute, value: 1, to: Date())!
-
+        let currentDate = Date()
+        let refreshTime = Calendar.current.date(byAdding: .minute, value: 1, to: currentDate)!
+        
         let name = UserDefaults.shared[.eventName]
         let eventDate = UserDefaults.shared[.eventDate]
-        let model = EventModel(name: name, date: eventDate)
-        let entry = CountDownEntry(date: Date(), model: model)
-        let timeline = Timeline(entries: [entry], policy: .after(refreshTime))
-        completion(timeline)
+        let data = UserDefaults.shared[.eventBackground]
+        let foreground = UserDefaults.shared[.eventForeground]
+        DispatchQueue.main.async {
+            var model = EventModel(name: name, date: eventDate)
+            if let data = data {
+                if let hex = String(data: data, encoding: .utf8) {
+                    model.hex = hex
+                } else if let image = UIImage(data: data) {
+                    model.image = image
+                }
+            }
+            if let data = foreground, let hex = String(data: data, encoding: .utf8) {
+                model.foreground = hex
+            }
+            let entry = CountDownEntry(date: Date(), model: model)
+            let timeline = Timeline(entries: [entry], policy: .after(refreshTime))
+            completion(timeline)
+        }
     }
 }
 

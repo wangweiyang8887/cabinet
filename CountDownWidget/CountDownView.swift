@@ -7,17 +7,26 @@ struct CountDownView: View {
     var entry: CountDownEntry
     
     var body: some View {
-        HStack {
-            ContentView(model: entry.model)
+        if let image = entry.model.image {
+            HStack {
+                ContentView(model: entry.model)
+            }
+            .background(
+                Image(uiImage: image)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+            )
+        } else if let hex = entry.model.hex {
+            HStack {
+                ContentView(model: entry.model)
+            }
+            .background(LinearGradient(gradient: Gradient(colors: hex.components(separatedBy: .whitespaces).map { Color(UIColor(hex: $0)) }), startPoint: .leading, endPoint: /*@START_MENU_TOKEN@*/.trailing/*@END_MENU_TOKEN@*/))
+        } else {
+            HStack {
+                ContentView(model: entry.model)
+            }
+            .background(LinearGradient(gradient: Gradient(colors: [ Color(UIColor.cabinetHeliotrope), Color(UIColor.cabinetCerulean) ]), startPoint: .topLeading, endPoint: .bottomTrailing))
         }
-        .background(LinearGradient(gradient: Gradient(colors: [ Color(UIColor.cabinetHeliotrope), Color(UIColor.cabinetCerulean) ]), startPoint: .topLeading, endPoint: .bottomTrailing))
-    }
-    
-    private func generateText() -> NSAttributedString {
-        let attributes: [NSAttributedString.Key:Any] = [ .font: UIFont.systemFont(ofSize: 42, weight: .bold) ]
-        let a = NSMutableAttributedString(string: "227", attributes: attributes)
-        a.append(NSAttributedString(string: "天", attributes: [ .font: UIFont.systemFont(ofSize: 13, weight: .medium) ]))
-        return a
     }
 }
 
@@ -45,7 +54,7 @@ private struct ContentView : View {
             Text(model.date ?? "2022.02.01")
                 .font(.system(size: 15, weight: .medium))
         }
-        .foregroundColor(.white)
+        .foregroundColor(getForegroundColor())
         .padding(16)
     }
     
@@ -56,6 +65,14 @@ private struct ContentView : View {
         let date2 = CalendarDate(date: date, timeZone: .current)
         let distant = CalendarDate.component(.day, from: date1, to: date2)
         return "\(abs(distant))"
+    }
+    
+    private func getForegroundColor() -> Color {
+        if let hex = model.foreground {
+            return Color(UIColor(hex: hex))
+        } else {
+            return .white
+        }
     }
 }
 

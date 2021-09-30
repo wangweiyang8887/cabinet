@@ -111,6 +111,9 @@ final class EventColorPickerVC : ColorPickerVC {
                 UserDefaults.shared[.eventForeground] = data
             }
             completion?()
+            if #available(iOS 14.0, *) {
+                WidgetCenter.shared.reloadAllTimelines()
+            }
         }
         vc.event = event
         viewController.presentPanModal(vc)
