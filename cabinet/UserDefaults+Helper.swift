@@ -104,4 +104,7 @@ extension UserDefaults.Property {
     // Clock View
     public static var clockForeground: UserDefaults.Property<Data> { return .init(keyName: "clockForeground", isUserSpecific: false) }
     public static var clockBackground: UserDefaults.Property<Data> { return .init(keyName: "clockBackground", isUserSpecific: false) }
+    // Lottery View
+    public static var lotteryForeground: UserDefaults.Property<Data> { return .init(keyName: "lotteryForeground", isUserSpecific: false) }
+    public static var lotteryBackground: UserDefaults.Property<Data> { return .init(keyName: "lotteryBackground", isUserSpecific: false) }
 }

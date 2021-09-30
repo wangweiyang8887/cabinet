@@ -7,11 +7,14 @@ protocol Palletable {
 }
 
 class ColorPickerVC : BaseBottomSheetVC {
+    class var textColorEnabled: Bool { return true }
     var pallet: Palletable?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.sections += BaseSection([ containerRow, colorTitleRow, colorItemsRow, gradientTitleRow, textColorItemsRow, SpacerRow(height: 60) ])
+        collectionView.sections += BaseSection([ containerRow, gradientTitleRow, colorItemsRow, colorTitleRow, textColorItemsRow, SpacerRow(height: 60) ])
+        colorTitleRow.isHidden = !Self.textColorEnabled
+        textColorItemsRow.isHidden = !Self.textColorEnabled
     }
 
     lazy var containerRow: BaseRow = {
@@ -209,4 +212,34 @@ final class ClockColorPickerVC : ColorPickerVC {
     }
     
     private lazy var clockRow = ClockRow()
+}
+
+final class LotteryColorPickerVC : ColorPickerVC {
+    class override var textColorEnabled: Bool { return false }
+
+    static func show(with viewController: UIViewController, ssqModel: LotteryModel?, dltModel: LotteryModel?, completion: ActionClosure? = nil) {
+        let vc = LotteryColorPickerVC(style: .action(cancelRowStyle: .default, title: ""))
+        vc.actionHandler = { [weak vc ] in
+            guard let vc = vc else { return }
+            if let image = vc.lotteryRow.image, let data = image.jpegData(compressionQuality: 1) {
+                UserDefaults.shared[.lotteryBackground] = data
+            } else {
+                let result = vc.lotteryRow.gradient.components.compactMap { $0.hexString }.joined(separator: " ").data(using: .utf8)
+                UserDefaults.shared[.lotteryBackground] = result
+            }
+            completion?()
+        }
+        vc.lotteryRow.ssqModel = ssqModel
+        vc.lotteryRow.dltModel = dltModel
+        viewController.presentPanModal(vc)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        lotteryRow.margin = .zero
+        containerRow.addSubview(lotteryRow, pinningEdges: .all, withInsets: UIEdgeInsets(uniform: 16))
+        pallet = lotteryRow
+    }
+    
+    private lazy var lotteryRow = LotteryRow()
 }

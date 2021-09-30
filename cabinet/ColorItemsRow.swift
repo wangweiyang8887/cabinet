@@ -123,7 +123,7 @@ extension ColorItemsRow {
             fatalError("init(coder:) has not been implemented")
         }
         
-        private lazy var titleLabel = UILabel(text: "相册", font: .systemFont(ofSize: 17, weight: .medium), color: .nonStandardColor(withRGBHex: 0x333333), alignment: .center, lines: 0)
+        private lazy var titleLabel = UILabel(text: "相册", font: .systemFont(ofSize: 17, weight: .medium), color: .cabinetBlack, alignment: .center, lines: 0)
         
         private lazy var imageView: UIImageView = {
             let result = UIImageView()
