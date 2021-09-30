@@ -71,7 +71,7 @@ final class WeatherColorPickerVC : ColorPickerVC {
                 let result = vc.weatherView.gradient.components.compactMap { $0.hexString }.joined(separator: " ").data(using: .utf8)
                 UserDefaults.shared[.weatherBackground] = result
             }
-            if let data = vc.weatherView.foregroundColor.hexString?.data(using: .utf8) {
+            if vc.weatherView.foregroundColor != .clear, let data = vc.weatherView.foregroundColor.hexString?.data(using: .utf8) {
                 UserDefaults.shared[.weatherForeground] = data
             }
             completion?()
@@ -107,7 +107,7 @@ final class EventColorPickerVC : ColorPickerVC {
                 let result = vc.eventView.gradient.components.compactMap { $0.hexString }.joined(separator: " ").data(using: .utf8)
                 UserDefaults.shared[.eventBackground] = result
             }
-            if let data = vc.eventView.foregroundColor.hexString?.data(using: .utf8) {
+            if vc.eventView.foregroundColor != .clear, let data = vc.eventView.foregroundColor.hexString?.data(using: .utf8) {
                 UserDefaults.shared[.eventForeground] = data
             }
             completion?()
@@ -143,7 +143,7 @@ final class CalendarColorPickerVC : ColorPickerVC {
                 let result = vc.calendarView.gradient.components.compactMap { $0.hexString }.joined(separator: " ").data(using: .utf8)
                 UserDefaults.shared[.calendarBackground] = result
             }
-            if let data = vc.calendarView.foregroundColor.hexString?.data(using: .utf8) {
+            if vc.calendarView.foregroundColor != .clear, let data = vc.calendarView.foregroundColor.hexString?.data(using: .utf8) {
                 UserDefaults.shared[.calendarForeground] = data
             }
             completion?()
@@ -177,7 +177,7 @@ final class DailyColorPickerVC : ColorPickerVC {
                 let result = vc.dailyRow.gradient.components.compactMap { $0.hexString }.joined(separator: " ").data(using: .utf8)
                 UserDefaults.shared[.dailyBackground] = result
             }
-            if let data = vc.dailyRow.foregroundColor.hexString?.data(using: .utf8) {
+            if vc.dailyRow.foregroundColor != .clear, let data = vc.dailyRow.foregroundColor.hexString?.data(using: .utf8) {
                 UserDefaults.shared[.dailyForeground] = data
             }
             completion?()
@@ -210,7 +210,7 @@ final class ClockColorPickerVC : ColorPickerVC {
                 let result = vc.clockRow.gradient.components.compactMap { $0.hexString }.joined(separator: " ").data(using: .utf8)
                 UserDefaults.shared[.clockBackground] = result
             }
-            if let data = vc.clockRow.foregroundColor.hexString?.data(using: .utf8) {
+            if vc.clockRow.foregroundColor != .clear, let data = vc.clockRow.foregroundColor.hexString?.data(using: .utf8) {
                 UserDefaults.shared[.clockForeground] = data
             }
             completion?()

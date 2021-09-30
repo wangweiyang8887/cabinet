@@ -13,7 +13,7 @@ APPSTORE_PROVISIONING_PROFILE = "appstore"
 CODE_SIGNING_ALLOWED = "NO"
 CONFIGURATION = "Release"
 SDK = "iphoneos"
-ADHOC_EXPORT_OPTIONS = "./ExportOptions.plist"
+ADHOC_EXPORT_OPTIONS = "./ADHOCExportOptions.plist"
 APPSTORE_EXPORT_OPTIONS = "./ExportOptions.plist"
 # configuration for pgyer
 PGYER_UPLOAD_URL = "http://www.pgyer.com/apiv1/app/upload"

@@ -33,6 +33,15 @@ final class SupportingVC : BaseCollectionViewController {
         let result = PlainRow()
         result.title = "问题/意见"
         result.subtitle = "98708887@qq.com"
+        result.selectionHandler = {
+            UIPasteboard.general.string = "98708887@qq.com"
+            let alertController = UIAlertController(title: "", message: "已添加到剪切板", preferredStyle: .alert)
+            UIViewController.current().present(alertController, animated: true, completion: {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    alertController.dismissSelf()
+                }
+            })
+        }
         return result
     }()
     
