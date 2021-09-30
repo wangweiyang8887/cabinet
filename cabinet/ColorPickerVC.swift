@@ -243,3 +243,31 @@ final class LotteryColorPickerVC : ColorPickerVC {
     
     private lazy var lotteryRow = LotteryRow()
 }
+
+final class CountingColorPickerVC : ColorPickerVC {
+    class override var textColorEnabled: Bool { return false }
+
+    static func show(with viewController: UIViewController, completion: ActionClosure? = nil) {
+        let vc = CountingColorPickerVC(style: .action(cancelRowStyle: .default, title: ""))
+        vc.actionHandler = { [weak vc ] in
+            guard let vc = vc else { return }
+            if let image = vc.countingRow.image, let data = image.jpegData(compressionQuality: 1) {
+                UserDefaults.shared[.countingBackground] = data
+            } else {
+                let result = vc.countingRow.gradient.components.compactMap { $0.hexString }.joined(separator: " ").data(using: .utf8)
+                UserDefaults.shared[.countingBackground] = result
+            }
+            completion?()
+        }
+        viewController.presentPanModal(vc)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        countingRow.margin = .zero
+        containerRow.addSubview(countingRow, pinningEdges: .all, withInsets: UIEdgeInsets(uniform: 16))
+        pallet = countingRow
+    }
+    
+    private lazy var countingRow = CountingRow()
+}

@@ -107,4 +107,7 @@ extension UserDefaults.Property {
     // Lottery View
     public static var lotteryForeground: UserDefaults.Property<Data> { return .init(keyName: "lotteryForeground", isUserSpecific: false) }
     public static var lotteryBackground: UserDefaults.Property<Data> { return .init(keyName: "lotteryBackground", isUserSpecific: false) }
+    // Counting View
+    public static var countingForeground: UserDefaults.Property<Data> { return .init(keyName: "countingForeground", isUserSpecific: false) }
+    public static var countingBackground: UserDefaults.Property<Data> { return .init(keyName: "countingBackground", isUserSpecific: false) }
 }
