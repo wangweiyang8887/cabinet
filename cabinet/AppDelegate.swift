@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         updateUserDefaultsIfNeeded()
         checkLocalJson()
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = BaseNavigationController(rootViewController: HomePageVC())
+        window?.rootViewController = BaseNavigationController(rootViewController: StationViewController())
         window?.makeKeyAndVisible()
         return true
     }

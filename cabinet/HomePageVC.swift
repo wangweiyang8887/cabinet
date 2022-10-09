@@ -97,6 +97,7 @@ class HomePageVC : BaseCollectionViewController {
         case .lottery: return lotteryRow
         case .image: return imageRow
         case .mockLottery: return countingRow
+        case .marquee: return MarqueeRow()
         }
     }
     

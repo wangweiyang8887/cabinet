@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>destination</key>
+	<string>export</string>
+	<key>method</key>
+	<string>app-store</string>
+	<key>provisioningProfiles</key>
+	<dict>
+		<key>com.evan.cabinet</key>
+		<string>appstore</string>
+		<key>com.evan.cabinet.Cabinet-Widget</key>
+		<string>weather</string>
+		<key>com.evan.cabinet.CountDownWidget</key>
+		<string>countDown</string>
+		<key>com.evan.cabinet.DailyWidget</key>
+		<string>daily</string>
+		<key>com.evan.cabinet.ImageWidget</key>
+		<string>image</string>
+		<key>com.evan.cabinet.InspireWidget</key>
+		<string>inspire</string>
+		<key>com.evan.cabinet.LotteryWidget</key>
+		<string>lottery</string>
+	</dict>
+	<key>signingCertificate</key>
+	<string>Apple Distribution</string>
+	<key>signingStyle</key>
+	<string>manual</string>
+	<key>stripSwiftSymbols</key>
+	<true/>
+	<key>teamID</key>
+	<string>EVG8QY6QFT</string>
+	<key>uploadBitcode</key>
+	<false/>
+	<key>uploadSymbols</key>
+	<true/>
+</dict>
+</plist>

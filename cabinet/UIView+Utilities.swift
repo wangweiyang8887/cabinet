@@ -160,7 +160,7 @@ extension UIView {
         subviews.forEach { ($0 as? Separator)?.removeFromSuperview() }
     }
 
-    private func addSeparator(on edge: CGRectEdge, thickness: CGFloat, color: UIColor = .cabinetSeparator) -> UIView {
+    private func addSeparator(on edge: CGRectEdge, thickness: CGFloat, color: UIColor = .nonStandardColor(withRGBHex: 0xE9E9E9)) -> UIView {
         let separator = Separator()
         separator.backgroundColor = color
         switch edge {

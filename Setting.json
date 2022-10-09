@@ -33,5 +33,10 @@
         "title":"模拟机选",
         "kind":7,
         "isEnabled":0
+    },
+    {
+        "title":"滚动播报",
+        "kind":8,
+        "isEnabled":0
     }
 ]

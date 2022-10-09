@@ -254,6 +254,11 @@
 		9DCD1ED926F5BA59004A4E98 /* CurrentWeatherView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DCD1ED826F5BA59004A4E98 /* CurrentWeatherView.xib */; };
 		9DCD1EDB26F5C2CD004A4E98 /* PreviewColorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCD1EDA26F5C2CD004A4E98 /* PreviewColorRow.swift */; };
 		9DCD1EDD26F5C2EF004A4E98 /* PreviewColorRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DCD1EDC26F5C2EF004A4E98 /* PreviewColorRow.xib */; };
+		9DD539A4272A8BFE007B6EA9 /* MarqueeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD539A3272A8BFE007B6EA9 /* MarqueeView.swift */; };
+		9DD539A6272A8C4C007B6EA9 /* MarqueeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DD539A5272A8C4C007B6EA9 /* MarqueeView.xib */; };
+		9DD539A8272A8CDC007B6EA9 /* MarqueenLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD539A7272A8CDC007B6EA9 /* MarqueenLabel.swift */; };
+		9DD539B1272A9964007B6EA9 /* MarqueeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD539B0272A9964007B6EA9 /* MarqueeVC.swift */; };
+		9DE039BA28F277350024683C /* StationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE039B928F277350024683C /* StationViewController.swift */; };
 		9DE5E74226D4A48500FF8B0A /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DB7583426D3A7C0006D2246 /* WidgetKit.framework */; };
 		9DE5E74326D4A48500FF8B0A /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DB7583626D3A7C0006D2246 /* SwiftUI.framework */; };
 		9DE5E74626D4A48500FF8B0A /* cabinet_widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE5E74526D4A48500FF8B0A /* cabinet_widget.swift */; };
@@ -523,6 +528,11 @@
 		9DCD1ED826F5BA59004A4E98 /* CurrentWeatherView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentWeatherView.xib; sourceTree = "<group>"; };
 		9DCD1EDA26F5C2CD004A4E98 /* PreviewColorRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewColorRow.swift; sourceTree = "<group>"; };
 		9DCD1EDC26F5C2EF004A4E98 /* PreviewColorRow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreviewColorRow.xib; sourceTree = "<group>"; };
+		9DD539A3272A8BFE007B6EA9 /* MarqueeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarqueeView.swift; sourceTree = "<group>"; };
+		9DD539A5272A8C4C007B6EA9 /* MarqueeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarqueeView.xib; sourceTree = "<group>"; };
+		9DD539A7272A8CDC007B6EA9 /* MarqueenLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarqueenLabel.swift; sourceTree = "<group>"; };
+		9DD539B0272A9964007B6EA9 /* MarqueeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarqueeVC.swift; sourceTree = "<group>"; };
+		9DE039B928F277350024683C /* StationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationViewController.swift; sourceTree = "<group>"; };
 		9DE5E74126D4A48500FF8B0A /* cabinet widgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "cabinet widgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DE5E74526D4A48500FF8B0A /* cabinet_widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cabinet_widget.swift; sourceTree = "<group>"; };
 		9DE5E74726D4A48600FF8B0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -847,6 +857,7 @@
 		9DB757F526D37B24006D2246 /* cabinet */ = {
 			isa = PBXGroup;
 			children = (
+				9DE039B828F2763B0024683C /* Station */,
 				9DCD1E5426F2F0FE004A4E98 /* cabinet.entitlements */,
 				9DB7581D26D39605006D2246 /* Helper */,
 				9DB7581C26D38DAC006D2246 /* HomePage */,
@@ -909,6 +920,10 @@
 				9DAC53A426FC4B28003F2D4C /* SupportingVC.swift */,
 				9DAC5426270178C7003F2D4C /* CountingRow.swift */,
 				9DAC542827019021003F2D4C /* CountingRow.xib */,
+				9DD539A3272A8BFE007B6EA9 /* MarqueeView.swift */,
+				9DD539A5272A8C4C007B6EA9 /* MarqueeView.xib */,
+				9DD539A7272A8CDC007B6EA9 /* MarqueenLabel.swift */,
+				9DD539B0272A9964007B6EA9 /* MarqueeVC.swift */,
 			);
 			name = HomePage;
 			sourceTree = "<group>";
@@ -1016,6 +1031,14 @@
 				9D72350D2704474B00DEB9D0 /* ColorableLabel.swift */,
 			);
 			name = ColorPicker;
+			sourceTree = "<group>";
+		};
+		9DE039B828F2763B0024683C /* Station */ = {
+			isa = PBXGroup;
+			children = (
+				9DE039B928F277350024683C /* StationViewController.swift */,
+			);
+			name = Station;
 			sourceTree = "<group>";
 		};
 		9DE5E74426D4A48500FF8B0A /* cabinet widget */ = {
@@ -1268,6 +1291,7 @@
 				9D6BC26526F07C9D00F000C9 /* StringEditorRow.xib in Resources */,
 				9DB7580026D37B25006D2246 /* Assets.xcassets in Resources */,
 				9DAC542927019021003F2D4C /* CountingRow.xib in Resources */,
+				9DD539A6272A8C4C007B6EA9 /* MarqueeView.xib in Resources */,
 				9D6BC25826F04CD300F000C9 /* ReminderRow.xib in Resources */,
 				9DB757FE26D37B24006D2246 /* Main.storyboard in Resources */,
 			);
@@ -1410,6 +1434,7 @@
 				9DAC539F26FB458C003F2D4C /* LotteryModel.swift in Sources */,
 				9D6BC28D26F0A39800F000C9 /* DatePickerView.swift in Sources */,
 				9D6BC27326F07FB100F000C9 /* UIResponder+Utilities.swift in Sources */,
+				9DE039BA28F277350024683C /* StationViewController.swift in Sources */,
 				9D6BC26F26F07ED300F000C9 /* TTTextView.swift in Sources */,
 				9D7B91D226E20DA6001C11AD /* Constants.swift in Sources */,
 				9D6BC27726F0832600F000C9 /* String+Helper.swift in Sources */,
@@ -1434,6 +1459,7 @@
 				9D6BC28926F0A2FA00F000C9 /* Navigation+Utilities.swift in Sources */,
 				9DAC539026FAF86B003F2D4C /* UIViewController+Helper.swift in Sources */,
 				9D7B91BB26E20AFB001C11AD /* BaseCollectionViewCell.swift in Sources */,
+				9DD539A8272A8CDC007B6EA9 /* MarqueenLabel.swift in Sources */,
 				9D6BC27526F082F800F000C9 /* TrimmedStringEditor.swift in Sources */,
 				9DB7582226D39656006D2246 /* NSObject+Helper.swift in Sources */,
 				9DAC53EB26FD7F8E003F2D4C /* ImagePickerController.swift in Sources */,
@@ -1442,6 +1468,7 @@
 				9DAC53E526FD7E0D003F2D4C /* UIAlertViewController+Utilities.swift in Sources */,
 				9D7B91C126E20B82001C11AD /* GroupedSection.swift in Sources */,
 				9D7B91B926E20AD0001C11AD /* BaseCollectionView.swift in Sources */,
+				9DD539A4272A8BFE007B6EA9 /* MarqueeView.swift in Sources */,
 				9D7B91D526E20E11001C11AD /* Operation.swift in Sources */,
 				9D7B91EC26E213B5001C11AD /* UIViewController+Helper.m in Sources */,
 				9D6BC26426F07C9D00F000C9 /* StringEditorRow.swift in Sources */,
@@ -1470,6 +1497,7 @@
 				9D82636D26D8D26900981A3E /* UIView+Utilities.swift in Sources */,
 				9D7B91B026E0E914001C11AD /* TimerManager.swift in Sources */,
 				9DCD1E5726F2F4C7004A4E98 /* AppGroup.swift in Sources */,
+				9DD539B1272A9964007B6EA9 /* MarqueeVC.swift in Sources */,
 				9D7B920A26E2285A001C11AD /* UILabel+Utilities.swift in Sources */,
 				9DAC53F326FD810E003F2D4C /* PhotoConfirmationPopUpVC.swift in Sources */,
 				9D6BC25226F0480400F000C9 /* NavigationBarStyle.swift in Sources */,
@@ -1908,7 +1936,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.evan.cabinet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1938,7 +1966,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.evan.cabinet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
