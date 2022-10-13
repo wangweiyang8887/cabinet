@@ -151,14 +151,14 @@ final class CountingLabel : EFCountingLabel {
         }
     }
 
-    func count(from startValue: Int? = nil, to endValue: Int, animated: Bool = true, completion: ActionClosure?) {
+    func count(from startValue: Int? = nil, to endValue: Int, duration: TimeInterval = 1, animated: Bool = true, completion: ActionClosure? = nil) {
         guard endValue != lastValue else { return }
         lastValue = endValue
-        let duration: TimeInterval = animated ? 1 : 0
+        let totalDuration: TimeInterval = animated ? duration : 0
         if !isAnimating, let startValue = startValue {
-            countFrom(CGFloat(startValue), to: CGFloat(endValue), withDuration: duration)
+            countFrom(CGFloat(startValue), to: CGFloat(endValue), withDuration: totalDuration)
         } else {
-            countFromCurrentValueTo(CGFloat(endValue), withDuration: duration)
+            countFromCurrentValueTo(CGFloat(endValue), withDuration: totalDuration)
         }
         setCompletionBlock { _ in
             completion?()

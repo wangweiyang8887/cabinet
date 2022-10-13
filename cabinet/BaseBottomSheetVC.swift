@@ -88,7 +88,7 @@ class BaseBottomSheetVC : BaseCollectionViewController, PanModalPresentable {
     }
 
     // MARK: Settings
-    class var automaticKeyboardManagement: Bool { return false }
+    class var automaticKeyboardManagement: Bool { return true }
     class var shouldRespondPanModalGestureRecognizer: Bool { return true }
 
     // MARK: Keyboard management

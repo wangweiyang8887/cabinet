@@ -21,6 +21,19 @@ public extension UIBarButtonItem {
         return button
     }
     
+    // MARK: Helpers
+    static func textButtonItem(with text: String, action: @escaping ActionClosure) -> UIBarButtonItem {
+        let button = TTButton(type: .custom, title: text, titleColor: .cabinetDarkestGray, block: action)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 17, weight: .medium)
+        return UIBarButtonItem(customView: button)
+    }
+    static func cancelButtonItem(action: @escaping ActionClosure) -> UIBarButtonItem {
+        let button = TTButton(type: .custom, title: "取消", titleColor: .cabinetDarkestGray, block: action)
+        button.tintColor = .cabinetDarkestGray
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 15)
+        return UIBarButtonItem(customView: button)
+    }
+    
     static func settingButtonItem(_ completion: ActionClosure?) -> UIBarButtonItem {
         let button = TTButton(type: .custom, icon: #imageLiteral(resourceName: "64-setting").tinted(with: .cabinetBlack).withRenderingMode(.alwaysTemplate)) { UIViewController.current().showSetting(completion) }
         button.constrainSize(to: CGSize(uniform: 30))

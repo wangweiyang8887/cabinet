@@ -259,6 +259,11 @@
 		9DD539A8272A8CDC007B6EA9 /* MarqueenLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD539A7272A8CDC007B6EA9 /* MarqueenLabel.swift */; };
 		9DD539B1272A9964007B6EA9 /* MarqueeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD539B0272A9964007B6EA9 /* MarqueeVC.swift */; };
 		9DE039BA28F277350024683C /* StationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE039B928F277350024683C /* StationViewController.swift */; };
+		9DE039BC28F2ABBE0024683C /* RandomNumberVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE039BB28F2ABBE0024683C /* RandomNumberVC.swift */; };
+		9DE039BE28F3CE870024683C /* RandomEditSheetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE039BD28F3CE870024683C /* RandomEditSheetVC.swift */; };
+		9DE039C028F414A60024683C /* RandomChooseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE039BF28F414A60024683C /* RandomChooseVC.swift */; };
+		9DE039C228F421440024683C /* EditCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE039C128F421440024683C /* EditCategoryVC.swift */; };
+		9DE039C428F422520024683C /* GameOneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE039C328F422520024683C /* GameOneVC.swift */; };
 		9DE5E74226D4A48500FF8B0A /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DB7583426D3A7C0006D2246 /* WidgetKit.framework */; };
 		9DE5E74326D4A48500FF8B0A /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DB7583626D3A7C0006D2246 /* SwiftUI.framework */; };
 		9DE5E74626D4A48500FF8B0A /* cabinet_widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE5E74526D4A48500FF8B0A /* cabinet_widget.swift */; };
@@ -533,6 +538,11 @@
 		9DD539A7272A8CDC007B6EA9 /* MarqueenLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarqueenLabel.swift; sourceTree = "<group>"; };
 		9DD539B0272A9964007B6EA9 /* MarqueeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarqueeVC.swift; sourceTree = "<group>"; };
 		9DE039B928F277350024683C /* StationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationViewController.swift; sourceTree = "<group>"; };
+		9DE039BB28F2ABBE0024683C /* RandomNumberVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNumberVC.swift; sourceTree = "<group>"; };
+		9DE039BD28F3CE870024683C /* RandomEditSheetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomEditSheetVC.swift; sourceTree = "<group>"; };
+		9DE039BF28F414A60024683C /* RandomChooseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomChooseVC.swift; sourceTree = "<group>"; };
+		9DE039C128F421440024683C /* EditCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCategoryVC.swift; sourceTree = "<group>"; };
+		9DE039C328F422520024683C /* GameOneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOneVC.swift; sourceTree = "<group>"; };
 		9DE5E74126D4A48500FF8B0A /* cabinet widgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "cabinet widgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DE5E74526D4A48500FF8B0A /* cabinet_widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cabinet_widget.swift; sourceTree = "<group>"; };
 		9DE5E74726D4A48600FF8B0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -1037,6 +1047,11 @@
 			isa = PBXGroup;
 			children = (
 				9DE039B928F277350024683C /* StationViewController.swift */,
+				9DE039C328F422520024683C /* GameOneVC.swift */,
+				9DE039C128F421440024683C /* EditCategoryVC.swift */,
+				9DE039BF28F414A60024683C /* RandomChooseVC.swift */,
+				9DE039BB28F2ABBE0024683C /* RandomNumberVC.swift */,
+				9DE039BD28F3CE870024683C /* RandomEditSheetVC.swift */,
 			);
 			name = Station;
 			sourceTree = "<group>";
@@ -1421,6 +1436,7 @@
 				9D7B91B726E20AA9001C11AD /* ItemRows.swift in Sources */,
 				9D6BC24F26EF692B00F000C9 /* ReminderVC.swift in Sources */,
 				9D66D1CB26E7617E00411D75 /* DailyModel.swift in Sources */,
+				9DE039C228F421440024683C /* EditCategoryVC.swift in Sources */,
 				9DB7581926D38D90006D2246 /* CurrentDateVC.swift in Sources */,
 				9D7B91D926E20E7A001C11AD /* Groups.swift in Sources */,
 				9DAC53E726FD7EAF003F2D4C /* MediaPicker.swift in Sources */,
@@ -1443,6 +1459,7 @@
 				9D6BC28F26F0A55000F000C9 /* SpacerRow.swift in Sources */,
 				9D7B91F826E21871001C11AD /* KeyboardObserver.swift in Sources */,
 				9DAC53DE26FD797E003F2D4C /* ImageRow.swift in Sources */,
+				9DE039BC28F2ABBE0024683C /* RandomNumberVC.swift in Sources */,
 				9D66D1BB26E5FB3E00411D75 /* KeyedDecodingContainer+Extension.swift in Sources */,
 				9D7B91C426E20BAD001C11AD /* BaseRow.swift in Sources */,
 				9DAC539726FB1314003F2D4C /* SettingTableViewCell.swift in Sources */,
@@ -1496,8 +1513,10 @@
 				9D6BC29A26F1CDD800F000C9 /* NSAttributedString+Utilities.swift in Sources */,
 				9D82636D26D8D26900981A3E /* UIView+Utilities.swift in Sources */,
 				9D7B91B026E0E914001C11AD /* TimerManager.swift in Sources */,
+				9DE039C428F422520024683C /* GameOneVC.swift in Sources */,
 				9DCD1E5726F2F4C7004A4E98 /* AppGroup.swift in Sources */,
 				9DD539B1272A9964007B6EA9 /* MarqueeVC.swift in Sources */,
+				9DE039C028F414A60024683C /* RandomChooseVC.swift in Sources */,
 				9D7B920A26E2285A001C11AD /* UILabel+Utilities.swift in Sources */,
 				9DAC53F326FD810E003F2D4C /* PhotoConfirmationPopUpVC.swift in Sources */,
 				9D6BC25226F0480400F000C9 /* NavigationBarStyle.swift in Sources */,
@@ -1522,6 +1541,7 @@
 				9DB7582A26D39A50006D2246 /* BaseBuddle.swift in Sources */,
 				9D6BC26B26F07D2C00F000C9 /* StringEditor.swift in Sources */,
 				9D7B91DD26E20FDB001C11AD /* Geometry.swift in Sources */,
+				9DE039BE28F3CE870024683C /* RandomEditSheetVC.swift in Sources */,
 				9D7B91DB26E20F9A001C11AD /* TTButtonAction.swift in Sources */,
 				9D6BC28526F0A20500F000C9 /* UIButton+Utilities.swift in Sources */,
 				9D6BC29126F0B76D00F000C9 /* DailyRow.swift in Sources */,
